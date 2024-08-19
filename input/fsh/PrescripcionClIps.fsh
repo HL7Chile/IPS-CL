@@ -8,20 +8,20 @@ Alias: $medicine-route-of-administration = http://hl7.org/fhir/uv/ips/ValueSet/m
 Profile: PrescripcionClIps
 Parent: MedicationRequest
 Id: MedicationRequest-cl-ips
-Title: "Medication Request (IPS)"
+Title: "Medication Request (IPS-CL)"
 Description: "Este perfil representa las restricciones aplicadas al recurso MedicationRequest por la Guía de Implementación FHIR del Resumen Internacional del Paciente (IPS), basada en FHIR R4. Un registro de una solicitud de medicación se representa en el resumen del paciente como una instancia de un recurso MedicationRequest restringido por este perfil."
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
-* ^extension[=].valueInteger = 2
+* ^extension[=].valueInteger = 1
 * ^extension[=].valueInteger.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
 * ^extension[=].valueInteger.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
-* ^extension[=].valueCode = #trial-use
+* ^extension[=].valueCode = #draft
 * ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
 * ^extension[=].valueCode.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
 
 * ^version = "0.1.0"
-* ^status = #active
+* ^status = #draft
 * ^experimental = false
 * ^publisher = "HL7 Chile"
 * ^contact.telecom.system = #url

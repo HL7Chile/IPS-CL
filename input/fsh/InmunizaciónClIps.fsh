@@ -13,16 +13,16 @@ Description: """Este perfil representa las restricciones aplicadas al recurso In
 
 Describe el evento de un paciente al que se le ha administrado una vacuna o un registro de una vacuna notificado por un paciente, un clínico u otra parte."""
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
-* ^extension[=].valueInteger = 2
+* ^extension[=].valueInteger = 1
 * ^extension[=].valueInteger.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
 * ^extension[=].valueInteger.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
-* ^extension[=].valueCode = #trial-use
+* ^extension[=].valueCode = #draft
 * ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
 * ^extension[=].valueCode.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
 
 * ^version = "0.1.0"
-* ^status = #active
+* ^status = #draft
 * ^experimental = false
 * ^publisher = "HL7 Chile"
 * ^contact.telecom.system = #url
@@ -66,7 +66,7 @@ Describe el evento de un paciente al que se le ha administrado una vacuna o un r
 * vaccineCode ^binding.extension[0].extension[0].url = "purpose"
 * vaccineCode ^binding.extension[=].extension[=].valueCode = #candidate
 * vaccineCode ^binding.extension[=].extension[+].url = "valueSet"
-* vaccineCode ^binding.extension[=].extension[=].valueCanonical = "https://hl7chile.cl/fhir/ig/clcore2/ValueSet/VSTiposVacunas"
+* vaccineCode ^binding.extension[=].extension[=].valueCanonical = Canonical(VSTiposVacunas)
 * vaccineCode ^binding.extension[=].extension[+].url = "documentation"
 * vaccineCode ^binding.extension[=].extension[=].valueMarkdown = "Códigos de ejemplo según la referencia nacional para vacunas"
 * vaccineCode ^binding.extension[=].extension[+].url = "shortDoco"
@@ -90,12 +90,13 @@ Describe el evento de un paciente al que se le ha administrado una vacuna o un r
 * route ^binding.extension[=].valueString = "ImmunizationRoute"
 * protocolApplied.targetDisease from $target-diseases-uv-ips (preferred)
 * protocolApplied.targetDisease ^short = "Enfermedades prevenibles mediante vacunación"
-* protocolApplied.targetDisease ^definition = "La enfermedad concreta contra la que se ha inmunizado al paciente. Los enlaces de conformidad adicionales proporcionados para el uso de este elemento en contextos específicos (jurisdiccionales o de otro tipo) incluyen (estos enlaces se representan en la StructureDefinition como instancias de la extensión [elementdefinition-additionalBinding](http://hl7.org/fhir/tools/StructureDefinition/additional-binding)):\n[targetDiseases-uv-ips](./ValueSet-target-diseases-uv-ips.html)"
+* protocolApplied.targetDisease ^definition = "La enfermedad concreta contra la que se ha inmunizado al paciente. Los enlaces de conformidad adicionales proporcionados para el uso de este elemento en contextos específicos (jurisdiccionales o de otro tipo) incluyen (estos enlaces se representan en la StructureDefinition como instancias de la extensión [elementdefinition-additionalBinding](http://hl7.org/fhir/tools/StructureDefinition/additional-binding)):\n[targetDiseases-uv-ips](http://hl7.org/fhir/uv/ips/ValueSet/target-diseases-uv-ips)"
 * protocolApplied.targetDisease ^binding.extension[0].extension[0].url = "purpose"
 * protocolApplied.targetDisease ^binding.extension[=].extension[=].valueCode = #candidate
 * protocolApplied.targetDisease ^binding.extension[=].extension[+].url = "valueSet"
 * protocolApplied.targetDisease ^binding.extension[=].extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/ValueSet/target-diseases-snomed-ct-ips-free-set"
 * protocolApplied.targetDisease ^binding.extension[=].extension[+].url = "documentation"
-* protocolApplied.targetDisease ^binding.extension[=].extension[=].valueMarkdown = "Additional conformance binding to a target diseases value set from the SNOMED CT IPS free set for use globally (in SNOMED member and non-member jurisdictions)."
+* protocolApplied.targetDisease ^binding.extension[=].extension[=].valueMarkdown = "Vinculación de conformidad adicional a un conjunto de valores de enfermedades objetivo del conjunto gratuito de SNOMED CT IPS para uso global (en jurisdicciones miembros y no miembros de SNOMED)."
 * protocolApplied.targetDisease ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+
 * protocolApplied.targetDisease ^binding.description = "La enfermedad o enfermedades concretas contra las que se ha inmunizado al paciente."

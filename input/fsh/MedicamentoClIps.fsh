@@ -11,16 +11,16 @@ Id: Medicamento-cl-ips
 Title: "Medicamento  (IPS-CL)"
 Description: "Este perfil representa las restricciones aplicadas al recurso Medicamento por la Guía de Implementación FHIR del Resumen Internacional del Paciente (IPS), basada en FHIR R4. Un medicamento se describe en el resumen del paciente como una instancia de un recurso Medicamento restringido por este perfil."
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
-* ^extension[=].valueInteger = 2
+* ^extension[=].valueInteger = 1
 * ^extension[=].valueInteger.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
 * ^extension[=].valueInteger.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
-* ^extension[=].valueCode = #trial-use
+* ^extension[=].valueCode = #draft
 * ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
 * ^extension[=].valueCode.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
 
 * ^version = "1.1.0"
-* ^status = #active
+* ^status = #draft
 * ^experimental = false
 * ^publisher = "HL7 Chile"
 * ^contact.telecom.system = #url

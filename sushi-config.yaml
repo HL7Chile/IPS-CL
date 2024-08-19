@@ -14,7 +14,7 @@ fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
 releaseLabel: ci-build
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
-# jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
+jurisdiction: urn:iso:std:iso:3166#CL "Chile" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
   name: HL7 Chile
   url: http://hl7chile.cl
@@ -25,7 +25,8 @@ publisher:
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-   hl7.fhir.cl.clcore: dev
+   #hl7.fhir.cl.clcore: dev
+   hl7.fhir.cl.clcore: 1.9.0
    hl7.fhir.uv.ips: 1.1.0
 #   hl7.fhir.us.mcode:
 #     id: mcode

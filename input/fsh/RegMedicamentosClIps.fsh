@@ -9,7 +9,7 @@ Alias: $allergy-reaction-snomed-ct-ips-free-set = http://hl7.org/fhir/uv/ips/Val
 Profile: RegMedicamentosClIps
 Parent: MedicationStatement
 Id: RegMedicamentos-cl-ips
-Title: "Medication Statement (IPS)"
+Title: "Medication Statement (IPS-CL)"
 Description: "This profile represents the constraints applied to the MedicationStatement resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A record of a medication statement is represented in the patient summary as an instance of a MedicationStatement resource constrained by this profile."
 
 

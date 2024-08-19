@@ -13,16 +13,16 @@ Title: "Alergias e Intolerancias IPS-CL"
 Description: "Este perfil restringe el recurso de Alergias e Intolerancias para representar este modelo a nivel nacional"
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
-* ^extension[=].valueInteger = 3
+* ^extension[=].valueInteger = 1
 * ^extension[=].valueInteger.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
 * ^extension[=].valueInteger.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
-* ^extension[=].valueCode = #trial-use
+* ^extension[=].valueCode = #draft
 * ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
 * ^extension[=].valueCode.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
 
 * ^version = "0.1.0"
-* ^status = #active
+* ^status = #draft
 * ^publisher = "Hl7 Chile"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.hl7chile.cl"
@@ -36,7 +36,7 @@ Description: "Este perfil restringe el recurso de Alergias e Intolerancias para 
 * clinicalStatus from 	http://hl7.org/fhir/ValueSet/allergyintolerance-clinical (required)
 * verificationStatus only CodeableConceptIPS
   * ^short = "Concept - reference to a terminology or just text"
-* verificationStatus from http://hl7.org/fhir/ValueSet/allergyintolerance-clinical (required)
+* verificationStatus from http://hl7.org/fhir/ValueSet/allergyintolerance-verification (required)
 //* verificationStatus ^comment = "In the scope of the IPS the entered-in-error concept is not allowed."
 * type MS
 * type from 	http://hl7.org/fhir/ValueSet/allergy-intolerance-type (required)
