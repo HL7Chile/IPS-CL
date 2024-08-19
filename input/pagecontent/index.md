@@ -1,3 +1,3 @@
-# clips
+# Resumen Clínico del Paciente de Chile
 
-Feel free to modify this index page with your own awesome content!
+Adapatación del "International Patient Summary (IPS)" para Chile. Está es una guía en Construcción. 
