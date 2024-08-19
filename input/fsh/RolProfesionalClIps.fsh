@@ -1,7 +1,7 @@
 Profile: RolPrestadorClIps
 Parent: CoreRolClinicoCl
 Id: RolPrestador-cl-ips
-Title: "Prestador Individual IPS-CL"
+Title: "Función o Rol de Prestador Individual IPS-CL"
 Description: "Este perfil restringe el recurso profesional para representar a un profesional que actúa como observador de resultaos expresados"
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
