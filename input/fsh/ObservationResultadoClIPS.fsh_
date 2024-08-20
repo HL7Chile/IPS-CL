@@ -2,7 +2,7 @@ Profile: ObservationIpsCl
 Parent: CoreObservacionCL
 Id: Observation-ips-cl
 Title: "Observation Resultados (IPS-CL)"
-Description: "Observaciones que pueden ser resultados de algún examén, laboratorio, imagen u otro"
+Description: "Observaciones que pueden ser resultados de algún examén de laboratorio, imagen u otro"
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 1
@@ -26,6 +26,18 @@ Description: "Observaciones que pueden ser resultados de algún examén, laborat
 * code 1..1 MS
 * subject 1..1 MS
 * subject only Reference(Paciente-cl-ips or Group or Device or CoreLocalizacionCl)
+
+/*
+* subject ^type.targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* subject ^type.targetProfile[=].extension.valueBoolean = true
+* subject ^type.targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* subject ^type.targetProfile[=].extension.valueBoolean = false
+* subject ^type.targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* subject ^type.targetProfile[=].extension.valueBoolean = false
+* subject ^type.targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* subject ^type.targetProfile[=].extension.valueBoolean = false
+*/
+
 * effective[x] 1..1 MS
 * effective[x] only dateTime or Period
 * effective[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS

@@ -29,9 +29,9 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Medi
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
 * status ^comment = "En el alcance de IPS en \"entered-in-error\" no es aceptable"
-* medication[x] only CodeableConcept or Reference(MedicamentoClIps)
+* medication[x] only CodeableConceptIPS  or Reference(MedicamentoClIps)
 * medication[x] MS
-* medication[x] from $medication-snomed-absent-unknown-uv-ips (preferred)
+* medication[x] from MedicationsUvIps (preferred)
 * medication[x] ^definition = "Identifica la medicación administrada. Puede ser un enlace a un recurso que represente los detalles de la medicación o un simple atributo que contenga un código. Para mejorar la interoperabilidad global, se recomienda encarecidamente utilizar la referencia a un recurso de medicación, limitando el uso de medicationCodeableConcept únicamente a los casos en los que no se disponga de más información que un simple código."
 * medication[x] ^binding.description = "SNOMED CT medicamentos (Producto farmacéutico / biológico) o un código para medicamento ausente/desconocido"
 * subject only Reference(PacienteCLIps)
@@ -40,8 +40,8 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Medi
 * dosageInstruction MS
 * dosageInstruction.text MS
 * dosageInstruction.timing MS
-* dosageInstruction.route only $CodeableConcept-uv-ips
-* dosageInstruction.route from $medicine-route-of-administration (preferred)
+* dosageInstruction.route only CodeableConceptIPS 
+* dosageInstruction.route from MedicineRouteOfAdministrationUvIps (preferred)
 * dosageInstruction.route ^binding.description = "EDQM"
 * dispenseRequest.validityPeriod.extension contains DataAbsentReason named data-absent-reason 0..1
 * dispenseRequest.validityPeriod.extension[data-absent-reason] ^short = "validityPeriod razón de ausencia"

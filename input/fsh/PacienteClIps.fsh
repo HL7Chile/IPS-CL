@@ -44,10 +44,9 @@ Description: "Perfil basado en IPS para paciente Chileno."
 * generalPractitioner MS
 
 Invariant: ips-pat-1
-Description: "Patient.name.given, Patient.name.family o Patient.name.text DEBEN estar presentes, teniendo en cuenta que family es obligado por Core"
-* severity = #error
-* expression = "family.exists() or given.exists() or text.exists()"
-* xpath = "f:given or f:family or f:text"
+Description: "Patient.name.given, Patient.name.family o Patient.name.text DEBEN estar presentes"
+Severity: #error
+Expression: "family.exists() or given.exists() or text.exists()"
 
 /*
 Invariant: pat-cnt-2or3-char

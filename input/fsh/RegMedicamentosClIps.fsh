@@ -14,9 +14,9 @@ Description: "This profile represents the constraints applied to the MedicationS
 
 
 * status ^comment = "En IPS el alcance del proyecto impide el uso del concepto  entered-in-error ."
-* medication[x] only $CodeableConcept-uv-ips or Reference(MedicamentoClIps)
+* medication[x] only CodeableConceptIPS or Reference(MedicamentoClIps)
 * medication[x] MS
-* medication[x] from $medication-snomed-absent-unknown-uv-ips (preferred)
+* medication[x] from MedicationsUvIps (preferred)
 * medication[x] ^definition = "Identifica la medicación que se está administrando o el motivo de ausencia o desconocimiento de la medicación. Se trata de un enlace a un recurso que representa los detalles de la medicación o de un simple atributo que contiene un código. Para mejorar la interoperabilidad global se recomienda encarecidamente que se utilice la referencia a un recurso de medicación, limitando el uso de medicationCodeableConcept únicamente a los casos en los que no se disponga de más información que un simple código."
 * medication[x] ^binding.description = "SNOMED CT medicamentos (Producto farmacéutico / biológico) o un código para medicamento ausente/desconocido"
 * subject only Reference(PacienteCLIps)
@@ -29,6 +29,6 @@ Description: "This profile represents the constraints applied to the MedicationS
 * dosage MS
 * dosage.text MS
 * dosage.timing MS
-* dosage.route only $CodeableConcept-uv-ips
-* dosage.route from $medicine-route-of-administration (preferred)
+* dosage.route only CodeableConceptIPS
+* dosage.route from MedicineRouteOfAdministrationUvIps (preferred)
 * dosage.route ^binding.description = "Términos estándar EDQM"

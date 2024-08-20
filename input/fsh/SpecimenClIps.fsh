@@ -22,13 +22,6 @@ Description: "Muestra por la cual hicieron el estudio"
 * type 1..1 MS
 * type only CodeableConceptIPS
 * type from ResultsSpecimenTypeUvIps (preferred)
-* type ^binding.extension[0].extension[0].url = "purpose"
-* type ^binding.extension[=].extension[=].valueCode = #candidate
-* type ^binding.extension[=].extension[+].url = "valueSet"
-* type ^binding.extension[=].extension[=].valueCanonical = Canonical(ResultsSpecimenTypeSnomedCtIpsFreeSet)
-* type ^binding.extension[=].extension[+].url = "documentation"
-* type ^binding.extension[=].extension[=].valueMarkdown = "Tipo de Substancia/Producto, condición de alergia o intolerancia."
-* type ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 
 * subject MS
 * subject only Reference(PacienteCLIps)
@@ -36,7 +29,7 @@ Description: "Muestra por la cual hicieron el estudio"
 
 * collection MS
   * method only CodeableConceptIPS
-  * method from http://hl7.org/fhir/ValueSet/specimen-collection-method (preferred)
+  * method from ResultsSpecimenCollectionMethodUvIps (preferred)
   * bodySite only CodeableConceptIPS
   * bodySite from BodySiteUvIps (preferred)
   * fastingStatus[x] MS

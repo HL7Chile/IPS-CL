@@ -39,3 +39,12 @@ Description: "Reporte resultado de un o varios estudios para diagnosticar una en
 * specimen MS
 * specimen only Reference(Speciment-cl-ips)
 
+* result MS
+* result ^slicing.discriminator.type = #profile
+* result ^slicing.discriminator.path = "resolve()"
+* result ^slicing.rules = #open
+* result ^slicing.ordered = false
+* result contains 
+  observacion-resultados 0..* MS
+* result[observacion-resultados] only Reference(Observation-resultado-laboratorio-patologico-cl-ips or Observation-resultado-radiology-cl-ips)
+

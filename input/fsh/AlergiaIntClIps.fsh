@@ -43,30 +43,15 @@ Description: "Este perfil restringe el recurso de Alergias e Intolerancias para 
 * code ..1 MS
 * code only CodeableConceptIPS
   * ^short = "Código Relacionado con la Substancia o condición generada"
-* code from $allergy-intolerance-uv-ips (preferred)
+* code from AllergyIntoleranceUvIps (preferred)
 * code ^binding.extension[0].extension[0].url = "purpose"
 * code ^binding.extension[=].extension[=].valueCode = #candidate
 * code ^binding.extension[=].extension[+].url = "valueSet"
-* code ^binding.extension[=].extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/ValueSet/allergy-intolerance-snomed-ct-ips-free-set"
+* code ^binding.extension[=].extension[=].valueCanonical = Canonical(WhoAtcUvIps)
 * code ^binding.extension[=].extension[+].url = "documentation"
 * code ^binding.extension[=].extension[=].valueMarkdown = "Tipo de Substancia/Producto, condición de alergia o intolerancia."
 * code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
-* code ^binding.extension[+].extension[0].url = "purpose"
-* code ^binding.extension[=].extension[=].valueCode = #candidate
-* code ^binding.extension[=].extension[+].url = "valueSet"
-* code ^binding.extension[=].extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/ValueSet/whoatc-uv-ips"
-* code ^binding.extension[=].extension[+].url = "documentation"
-* code ^binding.extension[=].extension[=].valueMarkdown = "Tipo de Substancia/Producto, condición de alergia o intolerancia."
-* code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
-* code ^binding.extension[+].extension[0].url = "purpose"
-* code ^binding.extension[=].extension[=].valueCode = #candidate
-* code ^binding.extension[=].extension[+].url = "valueSet"
-* code ^binding.extension[=].extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/ValueSet/absent-or-unknown-allergies-uv-ips"
-* code ^binding.extension[=].extension[+].url = "documentation"
-* code ^binding.extension[=].extension[=].valueMarkdown = "Códigos para ausente o desconocido"
-* code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
-* code ^binding.description = "Tipo de Substancia/Producto, condición de alergia o intolerancia. o código para desconocido"
-* patient only Reference(Paciente-cl-ips)
+
 * patient MS
 * patient.reference 1.. MS
 * onset[x] only dateTime or Age or Period or Range or string
@@ -76,6 +61,6 @@ Description: "Este perfil restringe el recurso de Alergias e Intolerancias para 
 * reaction MS
 * reaction.manifestation only CodeableConceptIPS
 * reaction.manifestation MS
-* reaction.manifestation from $allergy-reaction-snomed-ct-ips-free-set (preferred)
+* reaction.manifestation from  AllergyReactionUvIps (preferred)
 * reaction.manifestation ^binding.description = "Código para la manifestación de alergia o reacción de intolerancia del subconjunto SNOMED International Patient Set (IPS) de SNOMED CT (IPS Free Set)."
 * reaction.severity MS
