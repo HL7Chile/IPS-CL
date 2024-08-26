@@ -1,7 +1,7 @@
 Profile: DiagnosticReportClIps
 Parent: DiagnosticReport
 Id: DiagnosticReport-cl-ips
-Title:  "Reporte Diagnóstico IPS-CL"
+Title:  "Reporte Diagnóstico (IPS-CL)"
 Description: "Reporte resultado de un o varios estudios para diagnosticar una enfermedad. Este perfil es el simil al DiagnosticReport(IPS)."
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"

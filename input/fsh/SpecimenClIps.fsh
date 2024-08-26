@@ -1,7 +1,7 @@
 Profile: SpecimentClIPS
 Parent: Specimen 
 Id: Speciment-cl-ips
-Title: "Muestra IPS-CL"
+Title: "Muestra (IPS-CL)"
 Description: "Muestra por la cual hicieron el estudio"
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"

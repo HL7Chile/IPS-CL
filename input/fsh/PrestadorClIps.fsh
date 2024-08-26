@@ -21,8 +21,14 @@ Description: "Este perfil restringe el recurso profesional para representar a un
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
 * name 1.. MS
+  * obeys ips-prac-1
 * name.family MS
 * name.given MS
 * telecom MS
 * address MS
 //* qualification[TituloProfesional]  1..* MS
+
+Invariant: ips-prac-1
+Description: "Practitioner.name.given, Practitioner.name.family o Practiioner.name.text DEBEN estar presentes"
+Severity: #error
+Expression: "family.exists() or given.exists() or text.exists()"
