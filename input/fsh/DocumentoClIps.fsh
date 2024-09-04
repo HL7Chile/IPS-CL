@@ -21,7 +21,7 @@ Alias: $Observation-pregnancy-outcome-uv-ips = http://hl7.org/fhir/uv/ips/Struct
 
 Profile: DocumentoClIps
 Parent: Composition
-Id: Composition-uv-ips
+Id: Composition-cl-ips
 Title: "Documento (IPS-CL)"
 Description: """Documento clínico utilizado para representar el conjunto de datos del Resumen Internacional de Pacientes (IPS). 
 Un documento de Resumen Internacional de Paciente (IPS) es un extracto de historia clínica electrónica que contiene información sanitaria esencial sobre un sujeto de atención. 
@@ -235,9 +235,11 @@ Este perfil se basa en el perfil ClinicalDocument."""
 * section[sectionResultados].entry ^short = "Resultados de observación relevantes recogidos en el paciente o producidos en muestras biológicas in vitro recogidas del paciente."
 * section[sectionResultados].entry ^definition = "Resultados de observación relevantes recogidos en el paciente o producidos en muestras biológicas in vitro recogidas del paciente. Algunos de estos resultados pueden ser de laboratorio, otros de anatomía patológica, otros de radiología y otros clínicos."
 * section[sectionResultados].entry contains
-    resultados-obs 0..* MS and
+    resultados-obs-lab-pato 0..* MS and
+    resultados-obs-radio 0..* MS and
     resultado-reporte 0..* MS
-* section[sectionResultados].entry[resultados-obs] only Reference(ObservationIpsCl)
+* section[sectionResultados].entry[resultados-obs-lab-pato] only Reference(Observation-resultado-laboratorio-patologico-cl-ips)
+* section[sectionResultados].entry[resultados-obs-radio] only Reference(Observation-resultado-radiologia-cl-ips)
 * section[sectionResultados].entry[resultado-reporte] only Reference(DiagnosticReportClIps)
 
 * section[sectionSignosVitales] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"

@@ -58,8 +58,8 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
 
 * entry[composition]
   * resource 1..1
-    * ^short = "Composition del Resumén Internacional de Paciente"
-  * resource only Composition-uv-ips
+    * ^short = "Composition del Resumén Internacional de Paciente versión adaptado a Chile"
+  * resource only Composition-cl-ips
 
 * entry[patient]
   * resource 1..1
@@ -124,7 +124,7 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
 * entry[observation-radiology]
   * resource 1..
     * ^short = "Observaciones de estudios de imagenes del Paciente"
-  * resource only Observation-resultado-radiology-cl-ips
+  * resource only Observation-resultado-radiologia-cl-ips
 
 * entry[specimen]
   * resource 1..
