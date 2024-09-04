@@ -1,5 +1,5 @@
 Profile: ObservationIpsCl
-Parent: CoreObservacionCL
+Parent: Observation
 Id: Observation-ips-cl
 Title: "Observation Resultados (IPS-CL)"
 Description: "Observaciones que pueden ser resultados de algún examén de laboratorio, imagen u otro"

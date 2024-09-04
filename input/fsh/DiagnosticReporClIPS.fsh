@@ -46,5 +46,5 @@ Description: "Reporte resultado de un o varios estudios para diagnosticar una en
 * result ^slicing.ordered = false
 * result contains 
   observacion-resultados 0..* MS
-* result[observacion-resultados] only Reference(Observation-resultado-laboratorio-patologico-cl-ips or Observation-resultado-radiology-cl-ips)
+* result[observacion-resultados] only Reference(ObservationResultadoLaboratorioPatologiaClIps or ObservationResultadoRadiologyClIps)
 

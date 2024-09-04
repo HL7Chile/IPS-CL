@@ -1,5 +1,5 @@
 Profile: ObservationResultadoRadiologyClIps
-Parent: CoreObservacionCL
+Parent: Observation
 Id: Observation-resultado-radiology-cl-ips
 Title: "Observación Resultado: Imagenológico (IPS-CL)"
 Description: "Resultados obtenidos para un examen imagenológico"

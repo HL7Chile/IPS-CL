@@ -20,7 +20,7 @@ Alias: $Observation-pregnancy-status-uv-ips = http://hl7.org/fhir/uv/ips/Structu
 Alias: $Observation-pregnancy-outcome-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-outcome-uv-ips
 
 Profile: DocumentoClIps
-Parent: $clinicaldocument
+Parent: Composition
 Id: Composition-uv-ips
 Title: "Documento (IPS-CL)"
 Description: """Documento clínico utilizado para representar el conjunto de datos del Resumen Internacional de Pacientes (IPS). 
@@ -84,7 +84,7 @@ Este perfil se basa en el perfil ClinicalDocument."""
 * event[careProvisioningEvent].code 1..1 MS
 * event[careProvisioningEvent].code = $v3-ActClass#PCPR
 * event[careProvisioningEvent].period MS
-/*
+
 * section 1.. MS
 * section ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section ^extension[=].valueString = "Sección"
@@ -105,7 +105,7 @@ Este perfil se basa en el perfil ClinicalDocument."""
     sectionMedicamentos 1..1 MS and
     sectionAlergias 1..1 MS and
     sectionProblemas 1..1 MS and
-    sectionProcedimientosHx 0..1 MS and
+    sectionProcedimientos 0..1 MS and
     sectionImmunizaciones 0..1 MS and
     sectionDispMedicos 0..1 MS and
     sectionResultados 0..1 MS and
@@ -123,223 +123,236 @@ Este perfil se basa en el perfil ClinicalDocument."""
 * section[sectionMedicamentos] ^definition = "La sección de resumen de medicación contiene una descripción de los medicamentos del paciente relevantes para el ámbito del resumen del paciente.\r\nSe puede reportar:\r\n- Medicamentos activos; \r\n- medicamentos usados actualmente o usados anteriormente considerados relevantes para el autor; \r\n- Prescripciones o dispensaciones extraidos automáticamente de RCE.\r\n\r\nEn esos casos, los medicamentos se documentan en el Resumen del Paciente como declaraciones de medicación o solicitudes de medicación.\r\nEsta sección requiere o bien una entrada que indique que se sabe que el sujeto no toma ninguna medicación relevante; o bien una entrada que indique que no se dispone de información sobre medicaciones; o bien entradas que resuman las medicaciones relevantes del sujeto."
 * section[sectionMedicamentos].title 1.. MS
 * section[sectionMedicamentos].title ^short = "Sección de Resumen de Medicamentos"
-* section[sectionMedicamentos].title ^definition = "The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents.\r\n\r\nMedication Summary "
+* section[sectionMedicamentos].title ^definition = "Título de la sección específica.  Será parte de la renderización para uso dentro de la la tabla de contenidos.\r\n\r\nResumen de Medicamento "
 * section[sectionMedicamentos].code = $loinc#10160-0
 * section[sectionMedicamentos].entry 1.. MS
 * section[sectionMedicamentos].entry only Reference(MedicationStatement or MedicationRequest or MedicationAdministration or MedicationDispense or DocumentReference)
 * section[sectionMedicamentos].entry ^slicing.discriminator[0].type = #profile
 * section[sectionMedicamentos].entry ^slicing.discriminator[=].path = "resolve()"
 * section[sectionMedicamentos].entry ^slicing.rules = #open
-* section[sectionMedicamentos].entry ^short = "Medications relevant for the scope of the patient summary"
-* section[sectionMedicamentos].entry ^definition = "This list the medications relevant for the scope of the patient summary or it is used to indicate that the subject is known not to be on any relevant medication; either that no information is available about medications."
+* section[sectionMedicamentos].entry ^short = "Medicamentos relevantes para la salud del paciente"
+* section[sectionMedicamentos].entry ^definition = "Esta lista los medicamentos relevantes para el ámbito del resumen del paciente o se utiliza para indicar que se sabe que el sujeto no toma ninguna medicación relevante; o bien que no se dispone de información sobre medicamentos."
 * section[sectionMedicamentos].entry contains
-    medicationStatement 0..* and
-    medicationRequest 0..*
-* section[sectionMedications].entry[medicationStatement] only Reference($MedicationStatement-uv-ips)
-* section[sectionMedications].entry[medicationRequest] only Reference($MedicationRequest-uv-ips)
-* section[sectionAllergies] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionAllergies] ^extension[=].valueString = "Section"
-* section[sectionAllergies] ^short = "IPS Allergies and Intolerances Section"
-* section[sectionAllergies] ^definition = "This section documents the relevant allergies or intolerances (conditions) for that patient, describing the kind of reaction (e.g. rash, anaphylaxis,..); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum, it should list currently active and any relevant historical allergies and adverse reactions.\r\nIf no information about allergies is available, or if no allergies are known this should be clearly documented in the section."
-* section[sectionAllergies].title 1.. MS
-* section[sectionAllergies].code = $loinc#48765-2
-* section[sectionAllergies].entry 1.. MS
-* section[sectionAllergies].entry only Reference(AllergyIntolerance or DocumentReference)
-* section[sectionAllergies].entry ^slicing.discriminator[0].type = #profile
-* section[sectionAllergies].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionAllergies].entry ^slicing.rules = #open
-* section[sectionAllergies].entry ^short = "Relevant allergies or intolerances (conditions) for that patient."
-* section[sectionAllergies].entry ^definition = "It lists the relevant allergies or intolerances (conditions) for that patient, describing the kind of reaction (e.g. rash, anaphylaxis,..); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum, it should list currently active and any relevant historical allergies and adverse reactions.\r\n This entry shall be used to document that no information about allergies is available, or that no allergies are known ."
-* section[sectionAllergies].entry contains allergyOrIntolerance 1..* MS
-* section[sectionAllergies].entry[allergyOrIntolerance] only Reference($AllergyIntolerance-uv-ips)
-* section[sectionProblems] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionProblems] ^extension[=].valueString = "Section"
-* section[sectionProblems] ^short = "IPS Problems Section"
-* section[sectionProblems] ^definition = "The IPS problem section lists and describes clinical problems or conditions currently being monitored for the patient."
-* section[sectionProblems].title 1.. MS
-* section[sectionProblems].code = $loinc#11450-4
-* section[sectionProblems].entry 1.. MS
-* section[sectionProblems].entry only Reference(Condition or DocumentReference)
-* section[sectionProblems].entry ^slicing.discriminator[0].type = #profile
-* section[sectionProblems].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionProblems].entry ^slicing.rules = #open
-* section[sectionProblems].entry ^short = "Clinical problems or conditions currently being monitored for the patient."
-* section[sectionProblems].entry ^definition = "It lists and describes clinical problems or conditions currently being monitored for the patient.  This entry shall be used to document that no information about problems is available, or that no relevant problems are known."
-* section[sectionProblems].entry contains problem 1..* MS
-* section[sectionProblems].entry[problem] only Reference($Condition-uv-ips)
-* section[sectionProceduresHx] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionProceduresHx] ^extension[=].valueString = "Section"
-* section[sectionProceduresHx] ^short = "IPS History of Procedures Section"
-* section[sectionProceduresHx] ^definition = "The History of Procedures Section contains a description of the patient past procedures that are pertinent to the scope of this document.\r\nProcedures may refer for example to:\r\n1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section)\r\n2. Therapeutic procedure: e.g. dialysis;\r\n3. Surgical procedure: e.g. appendectomy"
-* section[sectionProceduresHx].title 1.. MS
-* section[sectionProceduresHx].code = $loinc#47519-4
-* section[sectionProceduresHx].entry 1.. MS
-* section[sectionProceduresHx].entry only Reference(Procedure or DocumentReference)
-* section[sectionProceduresHx].entry ^slicing.discriminator[0].type = #profile
-* section[sectionProceduresHx].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionProceduresHx].entry ^slicing.rules = #open
-* section[sectionProceduresHx].entry ^short = "Patient past procedures pertinent to the scope of this document."
-* section[sectionProceduresHx].entry ^definition = "It lists the patient past procedures that are pertinent to the scope of this document.\r\nProcedures may refer for example to:\r\n1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section)\r\n2. Therapeutic procedure: e.g. dialysis;\r\n3. Surgical procedure: e.g. appendectomy. This entry shall be used to document that no information about past procedures is available, or that no relevant past procedures are known."
-* section[sectionProceduresHx].entry contains procedure 1..* MS
-* section[sectionProceduresHx].entry[procedure] only Reference($Procedure-uv-ips)
-* section[sectionImmunizations] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionImmunizations] ^extension[=].valueString = "Section"
-* section[sectionImmunizations] ^short = "IPS Immunizations Section"
-* section[sectionImmunizations] ^definition = "The Immunizations Section defines a patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nThe section includes the current immunization status, and may contain the entire immunization history that is relevant to the period of time being summarized."
-* section[sectionImmunizations].title 1.. MS
-* section[sectionImmunizations].code = $loinc#11369-6
-* section[sectionImmunizations].entry 1.. MS
-* section[sectionImmunizations].entry only Reference(Immunization or DocumentReference)
-* section[sectionImmunizations].entry ^slicing.discriminator[0].type = #profile
-* section[sectionImmunizations].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionImmunizations].entry ^slicing.rules = #open
-* section[sectionImmunizations].entry ^short = "Patient's immunization status and pertinent history."
-* section[sectionImmunizations].entry ^definition = "It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nIt may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available, or that no immunizations are known."
-* section[sectionImmunizations].entry contains immunization 1..* MS
-* section[sectionImmunizations].entry[immunization] only Reference($Immunization-uv-ips)
-* section[sectionMedicalDevices] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionMedicalDevices] ^extension[=].valueString = "Section"
-* section[sectionMedicalDevices] ^short = "IPS Medical Devices Section"
-* section[sectionMedicalDevices] ^definition = "The medical devices section contains narrative text and coded entries describing the patient history of medical device use."
-* section[sectionMedicalDevices].title 1.. MS
-* section[sectionMedicalDevices].code = $loinc#46264-8
-* section[sectionMedicalDevices].entry 1.. MS
-* section[sectionMedicalDevices].entry only Reference(DeviceUseStatement or DocumentReference)
-* section[sectionMedicalDevices].entry ^slicing.discriminator[0].type = #profile
-* section[sectionMedicalDevices].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionMedicalDevices].entry ^slicing.rules = #open
-* section[sectionMedicalDevices].entry ^short = "Patient history of medical device use."
-* section[sectionMedicalDevices].entry ^definition = "It describes the patient history of medical device use. This entry shall be used to document that no information about medical device use is available, or that no relevant medical device use is known."
-* section[sectionMedicalDevices].entry contains deviceStatement 1..* MS
-* section[sectionMedicalDevices].entry[deviceStatement] only Reference($DeviceUseStatement-uv-ips)
-* section[sectionResults] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionResults] ^extension[=].valueString = "Results Section"
-* section[sectionResults] ^short = "IPS Results Section"
-* section[sectionResults] ^definition = "This section assembles relevant observation results collected on the patient or produced on in-vitro biologic specimens collected from the patient. Some of these results may be laboratory results, others may be anatomic pathology results, others, radiology results, and others, clinical results."
-* section[sectionResults].title 1.. MS
-* section[sectionResults].code = $loinc#30954-2
-* section[sectionResults].entry 1.. MS
-* section[sectionResults].entry only Reference(Observation or DiagnosticReport or DocumentReference)
-* section[sectionResults].entry ^slicing.discriminator[0].type = #type
-* section[sectionResults].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionResults].entry ^slicing.discriminator[+].type = #profile
-* section[sectionResults].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionResults].entry ^slicing.rules = #open
-* section[sectionResults].entry ^short = "Relevant observation results collected on the patient or produced on in-vitro biologic specimens collected from the patient."
-* section[sectionResults].entry ^definition = "Relevant observation results collected on the patient or produced on in-vitro biologic specimens collected from the patient. Some of these results may be laboratory results, others may be anatomic pathology results, others, radiology results, and others, clinical results."
-* section[sectionResults].entry contains
-    results-observation 0..* MS and
-    results-diagnosticReport 0..* MS
-* section[sectionResults].entry[results-observation] only Reference($Observation-results-uv-ips)
-* section[sectionResults].entry[results-diagnosticReport] only Reference($DiagnosticReport-uv-ips)
-* section[sectionVitalSigns] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionVitalSigns] ^extension[=].valueString = "Vital Signs Section"
-* section[sectionVitalSigns] ^label = "Vital signs"
-* section[sectionVitalSigns] ^short = "IPS Vital Signs Section"
-* section[sectionVitalSigns] ^definition = "The Vital signs section includes blood pressure, body temperature, heart rate, and respiratory rate. It may also include other clinical findings, such as height, weight, body mass index, head circumference, and pulse oximetry. In particular, notable vital signs or physical findings such as the most recent, maximum and/or minimum, baseline, or relevant trends may be included"
-* section[sectionVitalSigns].title 1..
-* section[sectionVitalSigns].code = $loinc#8716-3
-* section[sectionVitalSigns].entry only Reference(Observation or DocumentReference)
-* section[sectionVitalSigns].entry ^slicing.discriminator[0].type = #profile
-* section[sectionVitalSigns].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionVitalSigns].entry ^slicing.rules = #open
-* section[sectionVitalSigns].entry ^short = "Notable vital signs or physical findings."
-* section[sectionVitalSigns].entry ^definition = "Notable vital signs or physical findings as: blood pressure, body temperature, heart rate, and respiratory rate. It may also include other clinical findings, such as height, weight, body mass index, head circumference, and pulse oximetry. In particular, notable vital signs or physical findings such as the most recent, maximum and/or minimum, baseline, or relevant trends may be included"
-* section[sectionVitalSigns].entry contains vitalSign 0..*
-* section[sectionVitalSigns].entry[vitalSign] only Reference($vitalsigns)
-* section[sectionPastIllnessHx] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionPastIllnessHx] ^extension[=].valueString = "Section"
-* section[sectionPastIllnessHx] ^short = "IPS History of Past Illness Section"
-* section[sectionPastIllnessHx] ^definition = "The History of Past Illness section contains a description of the conditions the patient suffered in the past."
-* section[sectionPastIllnessHx].title 1..
-* section[sectionPastIllnessHx].code = $loinc#11348-0
-* section[sectionPastIllnessHx].entry 1..
-* section[sectionPastIllnessHx].entry only Reference(Condition or DocumentReference)
-* section[sectionPastIllnessHx].entry ^slicing.discriminator[0].type = #profile
-* section[sectionPastIllnessHx].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionPastIllnessHx].entry ^slicing.rules = #open
-* section[sectionPastIllnessHx].entry ^short = "Conditions the patient suffered in the past."
-* section[sectionPastIllnessHx].entry ^definition = "It contains a description of the conditions the patient suffered in the past."
-* section[sectionPastIllnessHx].entry contains pastProblem 1..*
-* section[sectionPastIllnessHx].entry[pastProblem] only Reference($Condition-uv-ips)
-* section[sectionFunctionalStatus] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionFunctionalStatus] ^extension[=].valueString = "Section"
-* section[sectionFunctionalStatus] ^short = "IPS Functional Status"
-* section[sectionFunctionalStatus] ^definition = "The functional status section shall contain a narrative description of capability of the patient to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments.\r\nProfiles to express disabilities and functional assessments will be specified by future versions of this guide."
-* section[sectionFunctionalStatus].title 1..
-* section[sectionFunctionalStatus].code = $loinc#47420-5
-* section[sectionFunctionalStatus].entry only Reference(Condition or ClinicalImpression or DocumentReference)
-* section[sectionFunctionalStatus].entry ^slicing.discriminator[0].type = #profile
-* section[sectionFunctionalStatus].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionFunctionalStatus].entry ^slicing.rules = #open
-* section[sectionFunctionalStatus].entry ^short = "Optional entry used to represent disabilities and functional assessments"
-* section[sectionFunctionalStatus].entry ^definition = "It describes capabilities of the patient to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments.\r\nProfiles to express disabilities and functional assessments will be specified by future versions of this guide."
-* section[sectionFunctionalStatus].entry contains
-    disability 0..* and
-    functionalAssessment 0..*
-* section[sectionFunctionalStatus].entry[disability] only Reference($Condition-uv-ips)
-* section[sectionFunctionalStatus].entry[functionalAssessment] only Reference(ClinicalImpression)
-* section[sectionPlanOfCare] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionPlanOfCare] ^extension[=].valueString = "Section"
-* section[sectionPlanOfCare] ^short = "IPS Plan of Care Section"
-* section[sectionPlanOfCare] ^definition = "The plan of care section contains a narrative description of the expectations for care including proposals, goals, and order requests for monitoring, tracking, or improving the condition of the patient."
-* section[sectionPlanOfCare].title 1..
-* section[sectionPlanOfCare].code = $loinc#18776-5
-* section[sectionPlanOfCare].entry only Reference(CarePlan or DocumentReference)
-* section[sectionPlanOfCare].entry ^slicing.discriminator[0].type = #profile
-* section[sectionPlanOfCare].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionPlanOfCare].entry ^slicing.rules = #open
-* section[sectionPlanOfCare].entry ^short = "Optional entry used to represent structured care plans"
-* section[sectionPlanOfCare].entry ^definition = "Dynamic, personalized plan including identified needed healthcare activity, health objectives and healthcare goals, relating to one or more specified health issues in a healthcare process [Source EN ISO 13940]"
-* section[sectionPlanOfCare].entry contains carePlan 0..*
-* section[sectionPlanOfCare].entry[carePlan] only Reference(CarePlan)
-* section[sectionSocialHistory] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionSocialHistory] ^extension[=].valueString = "Section"
-* section[sectionSocialHistory] ^short = "IPS Social History Section"
-* section[sectionSocialHistory] ^definition = "The social history section contains a description of the person’s Health related \"lifestyle factors\" or \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets, risky habits.)"
-* section[sectionSocialHistory].title 1..
-* section[sectionSocialHistory].code = $loinc#29762-2
-* section[sectionSocialHistory].entry only Reference(Observation or DocumentReference)
-* section[sectionSocialHistory].entry ^slicing.discriminator[0].type = #profile
-* section[sectionSocialHistory].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionSocialHistory].entry ^slicing.rules = #open
-* section[sectionSocialHistory].entry ^short = "Health related \"lifestyle factors\" or \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets, risky habits.)"
-* section[sectionSocialHistory].entry ^definition = "Description of the person’s Health related “lifestyle factors\" or \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets, risky habits.)"
-* section[sectionSocialHistory].entry contains
-    smokingTobaccoUse 0..1 and
-    alcoholUse 0..1
-* section[sectionSocialHistory].entry[smokingTobaccoUse] only Reference($Observation-tobaccouse-uv-ips)
-* section[sectionSocialHistory].entry[alcoholUse] only Reference($Observation-alcoholuse-uv-ips)
-* section[sectionPregnancyHx] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionPregnancyHx] ^extension[=].valueString = "Section"
-* section[sectionPregnancyHx] ^short = "IPS History of Pregnancy Section"
-* section[sectionPregnancyHx] ^definition = "The history of pregnancy section shall contain information about whether the patient is currently pregnant or not.\r\nIt may contain addition summarizing information about the outcome of earlier pregnancies."
-* section[sectionPregnancyHx].title 1..
-* section[sectionPregnancyHx].code = $loinc#10162-6
-* section[sectionPregnancyHx].entry only Reference(Observation or DocumentReference)
-* section[sectionPregnancyHx].entry ^slicing.discriminator[0].type = #profile
-* section[sectionPregnancyHx].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionPregnancyHx].entry ^slicing.rules = #open
-* section[sectionPregnancyHx].entry ^short = "Current pregnancy status and, optionally, information about the outcome of earlier pregnancies."
-* section[sectionPregnancyHx].entry ^definition = "It contains information about whether the patient is currently pregnant or not.\r\nIt may contain addition summarizing information about the outcome of earlier pregnancies."
-* section[sectionPregnancyHx].entry contains
-    pregnancyStatus 0..* and
-    pregnancyOutcomeSummary 0..*
-* section[sectionPregnancyHx].entry[pregnancyStatus] only Reference($Observation-pregnancy-status-uv-ips)
-* section[sectionPregnancyHx].entry[pregnancyOutcomeSummary] only Reference($Observation-pregnancy-outcome-uv-ips)
-* section[sectionAdvanceDirectives] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionAdvanceDirectives] ^extension[=].valueString = "Section"
-* section[sectionAdvanceDirectives] ^short = "IPS Advance Directives Section"
-* section[sectionAdvanceDirectives] ^definition = "The advance directives section contains a narrative description of patient's advance directive."
-* section[sectionAdvanceDirectives].title 1..
-* section[sectionAdvanceDirectives].code = $loinc#42348-3
-* section[sectionAdvanceDirectives].entry only Reference(Consent or DocumentReference)
-* section[sectionAdvanceDirectives].entry ^slicing.discriminator[0].type = #profile
-* section[sectionAdvanceDirectives].entry ^slicing.discriminator[=].path = "resolve()"
-* section[sectionAdvanceDirectives].entry ^slicing.rules = #open
-* section[sectionAdvanceDirectives].entry ^short = "Narrative description of the patient's advance directive."
-* section[sectionAdvanceDirectives].entry ^definition = "Contains a narrative description or a Consent entry with information about the patient's advance directive."
-* section[sectionAdvanceDirectives].entry contains advanceDirectivesConsent 0..*
-* section[sectionAdvanceDirectives].entry[advanceDirectivesConsent] only Reference(Consent)
+    listMEdicamentos 0..* and
+    prescripciones 0..*
+* section[sectionMedicamentos].entry[listMEdicamentos] only Reference(RegMedicamentosClIps)
+* section[sectionMedicamentos].entry[prescripciones] only Reference(PrescripcionClIps)
 
-*/
+* section[sectionAlergias] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionAlergias] ^extension[=].valueString = "Sección"
+* section[sectionAlergias] ^short = "Sección de Alergias e Intolerancias"
+* section[sectionAlergias] ^definition = "Esta sección documenta las alergias o intolerancias (afecciones) relevantes para ese paciente, describiendo el tipo de reacción (por ejemplo, erupción cutánea, anafilaxia, etc.); preferiblemente los agentes que la causan; y opcionalmente la criticidad y la certeza de la alergia."
+* section[sectionAlergias].title 1.. MS
+* section[sectionAlergias].code = $loinc#48765-2
+* section[sectionAlergias].entry 1.. MS
+* section[sectionAlergias].entry only Reference(AllergyIntolerance or DocumentReference)
+* section[sectionAlergias].entry ^slicing.discriminator[0].type = #profile
+* section[sectionAlergias].entry ^slicing.discriminator[=].path = "resolve()"
+* section[sectionAlergias].entry ^slicing.rules = #open
+* section[sectionAlergias].entry ^short = "Alergias o intolerancias (afecciones) relevantes para ese paciente."
+* section[sectionAlergias].entry ^definition = "Enumera las alergias o intolerancias (afecciones) relevantes para ese paciente, describiendo el tipo de reacción (por ejemplo, erupción cutánea, anafilaxia,..); preferiblemente los agentes que la causan; y opcionalmente la criticidad y la certeza de la alergia.\r\nComo mínimo, debe enumerar las alergias y reacciones adversas actualmente activas y cualquier historial relevante.\r\nEsta entrada se utilizará para documentar que no se dispone de información sobre alergias, o que no se conocen alergias"
+* section[sectionAlergias].entry contains alergias 1..* MS
+* section[sectionAlergias].entry[alergias] only Reference(AlergiaIntClIps)
+
+
+* section[sectionProblemas] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionProblemas] ^extension[=].valueString = "Sección"
+* section[sectionProblemas] ^short = "Problemas de Salud"
+* section[sectionProblemas] ^definition = "La sección de problemas del IPS enumera y describe los problemas o condiciones clínicas que se están controlando actualmente para el paciente."
+* section[sectionProblemas].title 1.. MS
+* section[sectionProblemas].code = $loinc#11450-4
+* section[sectionProblemas].entry 1.. MS
+* section[sectionProblemas].entry only Reference(Condition or DocumentReference)
+* section[sectionProblemas].entry ^slicing.discriminator[0].type = #profile
+* section[sectionProblemas].entry ^slicing.discriminator[=].path = "resolve()"
+* section[sectionProblemas].entry ^slicing.rules = #open
+* section[sectionProblemas].entry ^short = "Problemas o afecciones clínicas que se están controlando actualmente en el paciente."
+* section[sectionProblemas].entry ^definition = "Enumera y describe los problemas o afecciones clínicas que se están controlando actualmente en el paciente.  Esta entrada se utilizará para documentar que no se dispone de información sobre problemas o que no se conocen problemas relevantes."
+* section[sectionProblemas].entry contains problema 1..* MS
+* section[sectionProblemas].entry[problema] only Reference(ConditionClIps)
+
+* section[sectionProcedimientos] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionProcedimientos] ^extension[=].valueString = "Sección"
+* section[sectionProcedimientos] ^short = "Historial de Procedimientos"
+* section[sectionProcedimientos] ^definition = "La sección Historial de procedimientos contiene una descripción de los procedimientos anteriores del paciente que son pertinentes para el ámbito de este documento.\r\nComo por ejemplo:\r\n1. Procedimientos invasivos:e.g. Caterización Cardiaca; (los resultados de este procedimiento se documentan en la sección de resultados)\r\n2. Procedimientos Terapéuticos: e.j. diálisis;\r\n3. Procedimientos Quirúrjicos: e.j. Apendicectomía"
+* section[sectionProcedimientos].title 1.. MS
+* section[sectionProcedimientos].code = $loinc#47519-4
+* section[sectionProcedimientos].entry 1.. MS
+* section[sectionProcedimientos].entry only Reference(Procedure or DocumentReference)
+* section[sectionProcedimientos].entry ^slicing.discriminator[0].type = #profile
+* section[sectionProcedimientos].entry ^slicing.discriminator[=].path = "resolve()"
+* section[sectionProcedimientos].entry ^slicing.rules = #open
+* section[sectionProcedimientos].entry ^short = "Procedimientos anteriores del paciente pertinentes para el ámbito de este documento."
+* section[sectionProcedimientos].entry ^definition = "Enumera los procedimientos anteriores del paciente que son pertinentes para el ámbito de este documento. Procedimiento diagnóstico invasivo: por ejemplo, cateterismo cardíaco (los resultados de este procedimiento se documentan en la sección de resultados). Procedimiento terapéutico: p. ej. diálisis;\r\n3. Procedimiento quirúrgico: por ejemplo, apendicectomía. Esta entrada se utilizará para documentar que no se dispone de información sobre procedimientos anteriores, o que no se conocen procedimientos anteriores relevantes."
+* section[sectionProcedimientos].entry contains procedimiento 1..* MS
+* section[sectionProcedimientos].entry[procedimiento] only Reference($Procedure-uv-ips)
+
+* section[sectionImmunizaciones] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionImmunizaciones] ^extension[=].valueString = "Sección"
+* section[sectionImmunizaciones] ^short = "Sección de Inmunizaciones"
+//* section[sectionImmunizaciones] ^definition = "La Sección de Inmunizaciones define el estado de inmunización actual de un paciente y el historial de inmunizaciones pertinente.\NEl caso de uso principal de la Sección de Inmunizaciones es permitir la comunicación del estado de inmunización de un paciente.La sección incluye el estado de inmunización actual, y puede contener todo el historial de inmunizaciones que sea relevante para el periodo de tiempo que se está resumiendo."
+* section[sectionImmunizaciones].title 1.. MS
+* section[sectionImmunizaciones].code = $loinc#11369-6
+* section[sectionImmunizaciones].entry 1.. MS
+* section[sectionImmunizaciones].entry only Reference(Immunization or DocumentReference)
+* section[sectionImmunizaciones].entry ^slicing.discriminator[0].type = #profile
+* section[sectionImmunizaciones].entry ^slicing.discriminator[=].path = "resolve()"
+* section[sectionImmunizaciones].entry ^slicing.rules = #open
+* section[sectionImmunizaciones].entry ^short = "Estado de vacunación del paciente y antecedentes pertinentes."
+//* section[sectionImmunizaciones].entry ^definition = "Define el estado actual de inmunización del paciente y el historial de inmunización pertinente.\NEl caso de uso principal de la Sección de Inmunización es permitir la comunicación del estado de inmunización de un paciente.\NPuede contener todo el historial de inmunización que sea relevante para el periodo de tiempo que se está resumiendo. Esta entrada se utilizará para documentar que no se dispone de información sobre inmunizaciones o que no se conocen inmunizaciones."
+* section[sectionImmunizaciones].entry contains immunizacion 1..* MS
+* section[sectionImmunizaciones].entry[immunizacion] only Reference(InmunizacionClIps)
+
+* section[sectionDispMedicos] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionDispMedicos] ^extension[=].valueString = "Sección"
+* section[sectionDispMedicos] ^short = "Sección de Dispositivos Médicos"
+* section[sectionDispMedicos] ^definition = "La sección de dispositivos médicos contiene texto narrativo y entradas codificadas que describen el historial de uso de dispositivos médicos por parte del paciente."
+* section[sectionDispMedicos].title 1.. MS
+* section[sectionDispMedicos].code = $loinc#46264-8
+* section[sectionDispMedicos].entry 1.. MS
+* section[sectionDispMedicos].entry only Reference(DeviceUseStatement or DocumentReference)
+* section[sectionDispMedicos].entry ^slicing.discriminator[0].type = #profile
+* section[sectionDispMedicos].entry ^slicing.discriminator[=].path = "resolve()"
+* section[sectionDispMedicos].entry ^slicing.rules = #open
+* section[sectionDispMedicos].entry ^short = "La historia de dispositivos médicos en uso"
+* section[sectionDispMedicos].entry ^definition = "Describe el historial de uso de productos sanitarios del paciente. Esta entrada se utilizará para documentar que no se dispone de información sobre el uso de productos sanitarios o que no se conoce ningún uso relevante de productos sanitarios."
+* section[sectionDispMedicos].entry contains deviceStatement 1..* MS
+* section[sectionDispMedicos].entry[deviceStatement] only Reference($DeviceUseStatement-uv-ips)
+
+* section[sectionResultados] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionResultados] ^extension[=].valueString = "Sección de Resultados"
+* section[sectionResultados] ^short = "Sección de Resultados"
+* section[sectionResultados] ^definition = "Esta sección reúne los resultados de observación pertinentes recogidos en el paciente o producidos en muestras biológicas in vitro recogidas del paciente. Algunos de estos resultados pueden ser de laboratorio, otros de anatomía patológica, otros de radiología y otros clínicos."
+* section[sectionResultados].title 1.. MS
+* section[sectionResultados].code = $loinc#30954-2
+* section[sectionResultados].entry 1.. MS
+* section[sectionResultados].entry only Reference(Observation or DiagnosticReport or DocumentReference)
+* section[sectionResultados].entry ^slicing.discriminator[0].type = #type
+* section[sectionResultados].entry ^slicing.discriminator[=].path = "resolve()"
+* section[sectionResultados].entry ^slicing.discriminator[+].type = #profile
+* section[sectionResultados].entry ^slicing.discriminator[=].path = "resolve()"
+* section[sectionResultados].entry ^slicing.rules = #open
+* section[sectionResultados].entry ^short = "Resultados de observación relevantes recogidos en el paciente o producidos en muestras biológicas in vitro recogidas del paciente."
+* section[sectionResultados].entry ^definition = "Resultados de observación relevantes recogidos en el paciente o producidos en muestras biológicas in vitro recogidas del paciente. Algunos de estos resultados pueden ser de laboratorio, otros de anatomía patológica, otros de radiología y otros clínicos."
+* section[sectionResultados].entry contains
+    resultados-obs 0..* MS and
+    resultado-reporte 0..* MS
+* section[sectionResultados].entry[resultados-obs] only Reference(ObservationIpsCl)
+* section[sectionResultados].entry[resultado-reporte] only Reference(DiagnosticReportClIps)
+
+* section[sectionSignosVitales] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionSignosVitales] ^extension[=].valueString = "Sección Signos Vitales"
+* section[sectionSignosVitales] ^label = "Signos Vitales"
+* section[sectionSignosVitales] ^short = "Sección de Signos Vitales"
+* section[sectionSignosVitales] ^definition = "La sección de signos vitales incluye la tensión arterial, la temperatura corporal, la frecuencia cardiaca y la frecuencia respiratoria. También puede incluir otros hallazgos clínicos, como la altura, el peso, el índice de masa corporal, el perímetro cefálico y la pulsioximetría. En particular, pueden incluirse las constantes vitales o los hallazgos físicos notables, como los más recientes, los máximos y/o mínimos, la línea de base o las tendencias relevantes"
+* section[sectionSignosVitales].title 1..
+* section[sectionSignosVitales].code = $loinc#8716-3
+* section[sectionSignosVitales].entry only Reference(Observation or DocumentReference)
+* section[sectionSignosVitales].entry ^slicing.discriminator[0].type = #profile
+* section[sectionSignosVitales].entry ^slicing.discriminator[=].path = "resolve()"
+* section[sectionSignosVitales].entry ^slicing.rules = #open
+* section[sectionSignosVitales].entry ^short = "Signos vitales o hallazgos físicos de interés."
+* section[sectionSignosVitales].entry ^definition = "Signos vitales o hallazgos físicos de relevancia como: tensión arterial, temperatura corporal, frecuencia cardiaca y frecuencia respiratoria. También puede incluir otros hallazgos clínicos, como altura, peso, índice de masa corporal, perímetro cefálico y pulsioximetría. En particular, pueden incluirse constantes vitales o hallazgos físicos relevantes como los más recientes, máximos y/o mínimos, línea de base, o tendencias relevantes"
+* section[sectionSignosVitales].entry contains vitalSign 0..*
+* section[sectionSignosVitales].entry[vitalSign] only Reference($vitalsigns)
+
+* section[sectionHistoricoHx] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionHistoricoHx] ^extension[=].valueString = "Sección"
+* section[sectionHistoricoHx] ^short = "Histórico de enfermedades"
+* section[sectionHistoricoHx] ^definition = "La sección Historial de enfermedades anteriores contiene una descripción de las afecciones que el paciente padeció en el pasado."
+* section[sectionHistoricoHx].title 1..
+* section[sectionHistoricoHx].code = $loinc#11348-0
+* section[sectionHistoricoHx].entry 1..
+* section[sectionHistoricoHx].entry only Reference(Condition or DocumentReference)
+* section[sectionHistoricoHx].entry ^slicing.discriminator[0].type = #profile
+* section[sectionHistoricoHx].entry ^slicing.discriminator[=].path = "resolve()"
+* section[sectionHistoricoHx].entry ^slicing.rules = #open
+* section[sectionHistoricoHx].entry ^short = "Condiciones sufridas por el paciente en el pasado"
+* section[sectionHistoricoHx].entry ^definition = "Contiene una descripción de las afecciones que sufrió el paciente en el pasado."
+* section[sectionHistoricoHx].entry contains pastProblem 1..*
+* section[sectionHistoricoHx].entry[pastProblem] only Reference(ConditionClIps)
+
+* section[sectionStatusFuncional] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionStatusFuncional] ^extension[=].valueString = "Sección"
+* section[sectionStatusFuncional] ^short = "Status Funcional"
+* section[sectionStatusFuncional] ^definition = "La sección de estado funcional contendrá una descripción narrativa de la capacidad del paciente para realizar actos de la vida diaria, incluidas las posibles necesidades del paciente de ser evaluado continuamente por terceros. De hecho, el estado de invalidez puede influir en las decisiones sobre cómo administrar los tratamientos.\nLos perfiles para expresar las discapacidades y las evaluaciones funcionales se especificarán en futuras versiones de esta guía."
+* section[sectionStatusFuncional].title 1..
+* section[sectionStatusFuncional].code = $loinc#47420-5
+* section[sectionStatusFuncional].entry only Reference(Condition or ClinicalImpression or DocumentReference)
+* section[sectionStatusFuncional].entry ^slicing.discriminator[0].type = #profile
+* section[sectionStatusFuncional].entry ^slicing.discriminator[=].path = "resolve()"
+* section[sectionStatusFuncional].entry ^slicing.rules = #open
+* section[sectionStatusFuncional].entry ^short = "Entrada opcional utilizada para representar discapacidades y evaluaciones funcionales"
+* section[sectionStatusFuncional].entry ^definition = "Describe las capacidades del paciente para realizar actos de la vida diaria, incluidas las posibles necesidades del paciente de ser evaluado continuamente por terceros. De hecho, el estado de invalidez puede influir en las decisiones sobre cómo administrar los tratamientos.\nLos perfiles para expresar las discapacidades y las evaluaciones funcionales se especificarán en futuras versiones de esta guía."
+* section[sectionStatusFuncional].entry contains
+    discapacidad 0..* and
+    evalFuncional 0..*
+* section[sectionStatusFuncional].entry[discapacidad] only Reference(ConditionClIps)
+* section[sectionStatusFuncional].entry[evalFuncional] only Reference(ClinicalImpression)
+
+* section[sectionPlanCuidado] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionPlanCuidado] ^extension[=].valueString = "Sección"
+* section[sectionPlanCuidado] ^short = "Plan de Cuidado"
+* section[sectionPlanCuidado] ^definition = "La sección del plan de cuidados contiene una descripción narrativa de las expectativas de los cuidados, incluidas las propuestas, los objetivos y las solicitudes de órdenes para la supervisión, el seguimiento o la mejora del estado del paciente."
+* section[sectionPlanCuidado].title 1..
+* section[sectionPlanCuidado].code = $loinc#18776-5
+* section[sectionPlanCuidado].entry only Reference(CarePlan or DocumentReference)
+* section[sectionPlanCuidado].entry ^slicing.discriminator[0].type = #profile
+* section[sectionPlanCuidado].entry ^slicing.discriminator[=].path = "resolve()"
+* section[sectionPlanCuidado].entry ^slicing.rules = #open
+* section[sectionPlanCuidado].entry ^short = "Resumen de plan de cuidados"
+* section[sectionPlanCuidado].entry ^definition = "Plan dinámico y personalizado que incluye la actividad sanitaria necesaria identificada, los objetivos sanitarios y las metas sanitarias, en relación con uno o más problemas de salud especificados en un proceso sanitario [Fuente EN ISO 13940]."
+* section[sectionPlanCuidado].entry contains carePlan 0..*
+* section[sectionPlanCuidado].entry[carePlan] only Reference(CarePlan)
+
+* section[sectionHistoriaSocial] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionHistoriaSocial] ^extension[=].valueString = "Section"
+* section[sectionHistoriaSocial] ^short = "IPS Social History Section"
+* section[sectionHistoriaSocial] ^definition = "The social history section contains a description of the person’s Health related \"lifestyle factors\" or \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets, risky habits.)"
+* section[sectionHistoriaSocial].title 1..
+* section[sectionHistoriaSocial].code = $loinc#29762-2
+* section[sectionHistoriaSocial].entry only Reference(Observation or DocumentReference)
+* section[sectionHistoriaSocial].entry ^slicing.discriminator[0].type = #profile
+* section[sectionHistoriaSocial].entry ^slicing.discriminator[=].path = "resolve()"
+* section[sectionHistoriaSocial].entry ^slicing.rules = #open
+* section[sectionHistoriaSocial].entry ^short = "Aspectos relacionados con salud \"factores de estilo de vida\" u \"observaciones asociadas a estilos de vida\" (e.j. Hábitos de fumar; consumo de alcohol; dietas, hábitos de riesgo.)"
+* section[sectionHistoriaSocial].entry ^definition = "Descripción de los «factores de estilo de vida» relacionados con la salud de la persona\" u \"observaciones asociadas a estilos de vida\" (e.j. Hábitos de fumar; consumo de alcohol; dietas, hábitos de riesgo.)"
+* section[sectionHistoriaSocial].entry contains
+    fumador 0..1 and
+    alcohol 0..1
+* section[sectionHistoriaSocial].entry[fumador] only Reference($Observation-tobaccouse-uv-ips)
+* section[sectionHistoriaSocial].entry[alcohol] only Reference($Observation-alcoholuse-uv-ips)
+
+* section[sectionEmbarazoHx] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionEmbarazoHx] ^extension[=].valueString = "Sección"
+* section[sectionEmbarazoHx] ^short = "Historial de Embarazos"
+* section[sectionEmbarazoHx] ^definition = "La sección de antecedentes de embarazo contendrá información sobre si la paciente está o no embarazada en la actualidad."
+* section[sectionEmbarazoHx].title 1..
+* section[sectionEmbarazoHx].code = $loinc#10162-6
+* section[sectionEmbarazoHx].entry only Reference(Observation or DocumentReference)
+* section[sectionEmbarazoHx].entry ^slicing.discriminator[0].type = #profile
+* section[sectionEmbarazoHx].entry ^slicing.discriminator[=].path = "resolve()"
+* section[sectionEmbarazoHx].entry ^slicing.rules = #open
+* section[sectionEmbarazoHx].entry ^short = "Estado actual del embarazo y, opcionalmente, información sobre el resultado de embarazos anteriores."
+* section[sectionEmbarazoHx].entry ^definition = "Contiene información sobre si la paciente está embarazada o no.\r\nPuede contener además información resumida sobre el resultado de embarazos anteriores."
+* section[sectionEmbarazoHx].entry contains
+    statusEmbarazo 0..* and
+    resultadoEmbarazo 0..*
+* section[sectionEmbarazoHx].entry[statusEmbarazo] only Reference($Observation-pregnancy-status-uv-ips)
+* section[sectionEmbarazoHx].entry[resultadoEmbarazo] only Reference($Observation-pregnancy-outcome-uv-ips)
+
+* section[sectionDirectivasAvanzadas] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionDirectivasAvanzadas] ^extension[=].valueString = "Sección"
+* section[sectionDirectivasAvanzadas] ^short = "Sección de Concentimientos"
+* section[sectionDirectivasAvanzadas] ^definition = "La sección de concentimientos contiene una descripción narrativa de las voluntades anticipadas del paciente."
+* section[sectionDirectivasAvanzadas].title 1..
+* section[sectionDirectivasAvanzadas].code = $loinc#42348-3
+* section[sectionDirectivasAvanzadas].entry only Reference(Consent or DocumentReference)
+* section[sectionDirectivasAvanzadas].entry ^slicing.discriminator[0].type = #profile
+* section[sectionDirectivasAvanzadas].entry ^slicing.discriminator[=].path = "resolve()"
+* section[sectionDirectivasAvanzadas].entry ^slicing.rules = #open
+* section[sectionDirectivasAvanzadas].entry ^short = "Descripción narrativa del documento de declaraciones de acceso del paciente."
+* section[sectionDirectivasAvanzadas].entry ^definition = "Contiene una descripción narrativa o una entrada de Consentimiento con información sobre la directiva anticipada del paciente."
+* section[sectionDirectivasAvanzadas].entry contains advanceDirectivesConsent 0..*
+* section[sectionDirectivasAvanzadas].entry[advanceDirectivesConsent] only Reference(Consent)
+
