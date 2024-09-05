@@ -1,5 +1,5 @@
 Profile: ObservationResultadoLaboratorioPatologiaClIps
-Parent: Observation
+Parent: CoreObservacionCL
 Id: Observation-resultado-laboratorio-patologico-cl-ips
 Title: "Observación Resultado: Laboratorio/Patología (IPS-CL)"
 Description: "Resultados obtenidos para un examen de laboratorio"
