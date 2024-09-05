@@ -124,7 +124,7 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
 * entry[observation-radiology]
   * resource 1..
     * ^short = "Observaciones de estudios de imagenes del Paciente"
-  * resource only Observation-resultado-radiologia-cl-ips
+  * resource only Observation-resultado-radiology-cl-ips
 
 * entry[specimen]
   * resource 1..

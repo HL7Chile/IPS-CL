@@ -239,7 +239,7 @@ Este perfil se basa en el perfil ClinicalDocument."""
     resultados-obs-radio 0..* MS and
     resultado-reporte 0..* MS
 * section[sectionResultados].entry[resultados-obs-lab-pato] only Reference(Observation-resultado-laboratorio-patologico-cl-ips)
-* section[sectionResultados].entry[resultados-obs-radio] only Reference(Observation-resultado-radiologia-cl-ips)
+* section[sectionResultados].entry[resultados-obs-radio] only Reference(Observation-resultado-radiology-cl-ips)
 * section[sectionResultados].entry[resultado-reporte] only Reference(DiagnosticReportClIps)
 
 * section[sectionSignosVitales] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
