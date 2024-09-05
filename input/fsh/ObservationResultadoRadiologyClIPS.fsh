@@ -1,5 +1,5 @@
 Profile: ObservationResultadoRadiologyClIps
-Parent: CoreObservacionCL
+Parent: Observation
 Id: Observation-resultado-radiology-cl-ips
 Title: "Observación Resultado: Imagenológico (IPS-CL)"
 Description: "Resultados obtenidos para un examen imagenológico"
@@ -65,7 +65,7 @@ Description: "Resultados obtenidos para un examen imagenológico"
 * referenceRange 0..*
   * ^short = "Utilizados como guía para la interpretación"
 
-* hasMember only Reference(Observation-resultado-radiology-cl-ips)
+* hasMember only Reference(Observation-resultado-radiologia-cl-ips)
 
 * component ^slicing.discriminator.type = #type
 * component ^slicing.discriminator.path = "value"
