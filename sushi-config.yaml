@@ -5,8 +5,8 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.cl.clips
 canonical: https://hl7chile.cl/fhir/ig/clips
-name: clips
-title: IPS-CL 
+name: ips-cl
+title: Resumen Clínico de Paciente de Chile (IPS-CL)
 description: Guía IPS homologada para la realidad Chilena.
 status: draft # draft | active | retired | unknown
 version: 0.1.0
@@ -25,7 +25,7 @@ publisher:
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-   hl7.fhir.cl.clcore: dev
+   hl7.fhir.cl.clcore: 1.9.1
    #hl7.fhir.cl.clcore: 1.9.0
    hl7.fhir.uv.ips: 2.0.0
 #   hl7.fhir.us.mcode:
@@ -47,7 +47,7 @@ dependencies:
 #
 pages:
   index.md:
-    title: Inicio
+    title: Resumen Clínico del Paciente de Chile
   artifacts.html:
     title: Artefactos Generados
   changes.md:
@@ -77,7 +77,7 @@ pages:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Inicio: index.html
-  Artifactos: artifacts.html
+  Artefactos: artifacts.html
   Historial de Cambios: changes.html
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

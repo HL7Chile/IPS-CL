@@ -50,6 +50,7 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
   medicationstatement 0..* and
   practitioner 0..* and
   practitionerrole 0..* and
+  procedimientos 0..* and
   organization 0..* and
   observation-laboratory 0..* and
   observation-radiology 0..* and
@@ -110,6 +111,11 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
   * resource 1..
     * ^short = "Roles de los Profesionales de la Salud"
   * resource only RolPrestador-cl-ips
+
+* entry[procedimientos]
+  * resource 1..
+    * ^short = "Histotial de procedimientos realizados al paciente"
+  * resource only Procedimientos-cl-ips
 
 * entry[organization]
   * resource 1..

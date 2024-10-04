@@ -4,7 +4,7 @@
 Profile: PacienteCLIps
 Parent: PacienteCl
 Id: Paciente-cl-ips
-Title: "Paciente IPS-CL"
+Title: "Paciente (IPS-CL)"
 Description: "Perfil basado en IPS para paciente Chileno."
 
 //Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips

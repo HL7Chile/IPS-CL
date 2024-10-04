@@ -10,8 +10,7 @@ Profile: RegMedicamentosClIps
 Parent: MedicationStatement
 Id: RegMedicamentos-cl-ips
 Title: "Medication Statement (IPS-CL)"
-Description: "This profile represents the constraints applied to the MedicationStatement resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A record of a medication statement is represented in the patient summary as an instance of a MedicationStatement resource constrained by this profile."
-
+Description: "Este perfil representa las restricciones aplicadas al recurso MedicationStatement según la Guía de Implementación FHIR del Resumen Internacional del Paciente (IPS), basada en FHIR R4. Un registro de una declaración de medicación se representa en el resumen del paciente como una instancia de un recurso MedicationStatement restringido por este perfil."
 
 * status ^comment = "En IPS el alcance del proyecto impide el uso del concepto  entered-in-error ."
 * medication[x] only CodeableConceptIPS or Reference(MedicamentoClIps)
