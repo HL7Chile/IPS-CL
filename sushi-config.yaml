@@ -48,6 +48,10 @@ dependencies:
 pages:
   index.md:
     title: Resumen Clínico del Paciente de Chile
+  EstructuraIPS.md: 
+   title: Estructura del IPS
+  OperacionesIPS.md:
+    title: Operaciones del IPS
   artifacts.html:
     title: Artefactos Generados
   changes.md:
@@ -77,6 +81,10 @@ pages:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Inicio: index.html
+  Especificaciones Negocio:
+    Estructura del IPS: EstructuraIPS.html
+  Especificaciones Técnicas:
+    Operaciones del IPS: OperacionesIPS.html
   Artefactos: artifacts.html
   Historial de Cambios: changes.html
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮

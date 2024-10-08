@@ -26,6 +26,8 @@ Está operación nace de la operación [IPS Summary](https://build.fhir.org/ig/H
 * system = false
 * type = true
 * instance = true
+* inputProfile = Canonical(ParametrosDeEntradasIPS)
+* outputProfile = Canonical(Bundle-documento-ips-cl)
 
 * parameter[0]
   * name = #identifier

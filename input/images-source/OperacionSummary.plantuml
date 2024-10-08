@@ -1,0 +1,15 @@
+@startuml 
+
+title Operación $summary
+
+hide footbox
+
+!include ./style.iuml
+
+actor Usuario
+database Servidor
+
+Usuario -> Servidor: Operación $summary 
+Usuario <- Servidor: Bundle IPS Documento 
+
+@enduml
