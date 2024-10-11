@@ -3,38 +3,41 @@ Alias: $Patient-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-
 Alias: $Device-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips
 Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 
-Profile: DeviceUseStatementUvIps
+Profile: DeclaracionUsoDispositivoClIps
 Parent: DeviceUseStatement
-Id: DeviceUseStatement-uv-ips
-Title: "Device Use Statement (IPS)"
-Description: "This profile represents the constraints applied to the DeviceUseStatement resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A statement about a device used by or implanted on the patient is described in the patient summary as an instance of a DeviceUseStatement resource constrained by this profile."
-* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
-* ^extension[=].valueCode = #pc
+Id: Declaracion-uso-dispositivo-cl-ips
+Title: "Declaración de uso del dispositivo (IPS-CL)"
+Description: "Este perfil representa las restricciones aplicadas al recurso DeviceUseStatement por la Guía de implementación de FHIR del Resumen Internacional del Paciente Adaptación Chile (IPS-CL). Una declaración sobre un dispositivo utilizado por el paciente o implantado en él se describe en el resumen del paciente como una instancia de un recurso DeviceUseStatement restringido por este perfil."
+
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
-* ^extension[=].valueInteger = 2
+* ^extension[=].valueInteger = 1
 * ^extension[=].valueInteger.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
-* ^extension[=].valueInteger.extension.valueCanonical = "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"
+* ^extension[=].valueInteger.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
-* ^extension[=].valueCode = #trial-use
+* ^extension[=].valueCode = #draft
 * ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
-* ^extension[=].valueCode.extension.valueCanonical = "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"
-* ^version = "2.0.0-ballot"
-* ^status = #active
+* ^extension[=].valueCode.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
+
+* ^version = "0.1.0"
+* ^status = #draft
 * ^experimental = false
-* ^date = "2024-06-19T10:50:07-05:00"
-* ^publisher = "HL7 International / Patient Care"
-* ^contact.name = "HL7 International / Patient Care"
+* ^publisher = "Hl7 Chile"
+* ^contact.name = "Hl7 Chile"
 * ^contact.telecom.system = #url
-* ^contact.telecom.value = "http://www.hl7.org/Special/committees/patientcare"
-* ^jurisdiction = $m49.htm#001 "World"
-* ^purpose = "This profile constrains the representation of a statement about a medical device used by or impanted on the patient, part of the \"Medical Devices\" section of the Composition resource representing the international patient summary, as specified by the IPS project of HL7 International."
-* subject only Reference($Patient-uv-ips)
+* ^contact.telecom.value = "http://www.hl7chile.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+//* ^purpose = "Este perfil restringe la representación de una declaración sobre un dispositivo médico utilizado o implantado en el paciente, parte de la sección \"Dispositivos médicos\" del recurso Composición que representa el resumen internacional del paciente, según lo especificado por el proyecto IPS de HL7 Chile."
+
+* subject only Reference(Paciente-cl-ips)
 * subject MS
-* subject ^definition = "The patient using the device."
+* subject ^definition = "Paciente que utiliza el dispositivo."
 * subject.reference 1.. MS
-* timing[x] 1.. MS
+
+* timing[x] 1.. MS //PREGUNTAR POR 1..
 * timing[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
-* timing[x].extension[data-absent-reason] ^definition = "Provides a reason why the timing is missing."
-* device only Reference($Device-uv-ips)
+* timing[x].extension[data-absent-reason] ^definition = "Proporciona una razón por la cual no se encuentra la frecuencia con la que se utilizó el dispositivo."
+
+* device only Reference(Dispositivo-cl-ips)
 * device MS
-* bodySite only $CodeableConcept-uv-ips
+
+* bodySite only CodeableConceptIPS

@@ -4,7 +4,7 @@ Profile: DispositivoObservadorClIps
 Parent: Device
 Id: Dispositivo-observador-cl-ips
 Title: "Dispositivo - Ejecutante, Observador (IPS-CL)"
-Description: "Este perfil representa las restricciones aplicadas al recurso Dispositivo por la Guía de implementación de FHIR del Resumen internacional de pacientes (IPS), basada en el estándar FHIR R4.;
+Description: "Este perfil representa las restricciones aplicadas al recurso Device por la Guía de implementación de FHIR del Resumen Internacional del Paciente Adaptación Chile (IPS-CL).;
 
 Este perfil describe un dispositivo que desempeña el papel de observador o ejecutante."
 
