@@ -11,8 +11,6 @@ Id: Observation-estado-del-embarazo-cl-ips
 Title: "Observación - Embarazo: Estado (IPS-CL)"
 Description: "Este perfil restringe el recurso Observation para representar el estado del embarazo."
 
-* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
-//* ^extension[=].valueCode = #pc
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 1
 * ^extension[=].valueInteger.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
@@ -34,9 +32,9 @@ Description: "Este perfil restringe el recurso Observation para representar el e
 * code = $loinc#82810-3
 * code 1..1 MS
 
-* subject 1.. MS
+* subject 1..1 MS
 * subject only Reference(Paciente-cl-ips)
-* subject.reference 1.. MS
+* subject.reference 1..1 MS
 
 * effective[x] 1..1 MS
 * effective[x] only dateTime
@@ -65,7 +63,7 @@ Description: "Este perfil restringe el recurso Observation para representar el e
 * hasMember only Reference(Observation-embarazo-fecha-estimada-de-parto-cl-ips)
 * hasMember MS
 * hasMember ^short = "Fecha de parto estimada"
-* hasMember ^definition = "Referencia a la observación de la fecha de parto estimada."
+//* hasMember ^definition = "Referencia a la observación de la fecha de parto estimada."
 * hasMember.reference 1.. MS
 
 * component ..0

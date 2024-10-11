@@ -8,8 +8,7 @@ Parent: CoreObservacionCL
 Id: Observation-embarazo-fecha-estimada-de-parto-cl-ips
 Title: "Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)"
 Description: "Este perfil restringe el recurso Observation para representar la fecha de parto estimada de un embarazo."
-* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
-//* ^extension[=].valueCode = #pc
+
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 1
 * ^extension[=].valueInteger.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
@@ -33,9 +32,9 @@ Description: "Este perfil restringe el recurso Observation para representar la f
 * code ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
 * code ^binding.extension.valueString = "Códigos de Observaciones"
 
-* subject 1.. MS
+* subject 1..1 MS
 * subject only Reference(Paciente-cl-ips)
-* subject.reference 1.. MS
+* subject.reference 1..1 MS
 
 * effective[x] 1..1 MS
 * effective[x] only dateTime

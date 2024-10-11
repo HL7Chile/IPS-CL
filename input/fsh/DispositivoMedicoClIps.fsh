@@ -8,8 +8,7 @@ Parent: Device
 Id: Dispositivo-cl-ips
 Title: "Dispositivo (IPS-CL)"
 Description: "Este perfil representa las restricciones aplicadas al recurso Dispositivo por la Guía de implementación de FHIR del Resumen internacional de pacientes (IPS), basada en FHIR R4. Un dispositivo utilizado por el paciente o implantado en él se describe como una instancia del recurso Dispositivo restringido por este perfil."
-* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
-//* ^extension[=].valueCode = #pc
+
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 1
 * ^extension[=].valueInteger.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
