@@ -1,7 +1,7 @@
-Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
-Alias: $Patient-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
-Alias: $Device-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips
-Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+//Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
+//Alias: $Patient-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
+//Alias: $Device-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips
+//Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 
 Profile: DeclaracionUsoDispositivoClIps
 Parent: DeviceUseStatement
@@ -33,7 +33,7 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Devi
 * subject ^definition = "Paciente que utiliza el dispositivo."
 * subject.reference 1.. MS
 
-* timing[x] 1.. MS //PREGUNTAR POR 1..
+* timing[x] 1.. MS
 * timing[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
 * timing[x].extension[data-absent-reason] ^definition = "Proporciona una razón por la cual no se encuentra la frecuencia con la que se utilizó el dispositivo."
 

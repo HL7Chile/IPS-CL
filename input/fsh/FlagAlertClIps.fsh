@@ -1,5 +1,5 @@
-Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
-Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+//Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
+//Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 
 Profile: FlagAlertClIps
 Parent: Flag
@@ -28,7 +28,6 @@ Flag se utiliza para transmitir información sobre una alerta específica de una
 * extension contains FlagPriority named flag-priority 0..1 MS
 
 * status = #active (exactly)
-//* status 1..1
 
 * category only CodeableConceptIPS
 * category MS

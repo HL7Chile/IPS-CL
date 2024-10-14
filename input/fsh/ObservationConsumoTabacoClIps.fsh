@@ -1,16 +1,15 @@
-Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
-Alias: $loinc = http://loinc.org
-Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-Alias: $Patient-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
-Alias: $current-smoking-status-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/current-smoking-status-uv-ips
+//Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
+Alias: loinc = http://loinc.org
+//Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+//Alias: $Patient-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
+//Alias: $current-smoking-status-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/current-smoking-status-uv-ips
 
 Profile: ObservationUsoTabacoClIps
 Parent: CoreObservacionCL
 Id: Observation-uso-de-tabaco-cl-ips
 Title: "Observación - SH: Uso de tabaco (IPS CL)"
 Description: "Este perfil restringe el recurso Observation para representar la evaluación del consumo de tabaco del paciente."
-* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
-//* ^extension[=].valueCode = #pc
+
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 1
 * ^extension[=].valueInteger.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
@@ -29,7 +28,7 @@ Description: "Este perfil restringe el recurso Observation para representar la e
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
 * code only CodeableConceptIPS
-* code = $loinc#72166-2
+* code = loinc#72166-2
 * code 1..1 MS
 
 * subject 1..1 MS

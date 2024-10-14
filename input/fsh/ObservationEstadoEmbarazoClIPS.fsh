@@ -1,9 +1,9 @@
-Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
-Alias: $loinc = http://loinc.org
-Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-Alias: $Patient-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
-Alias: $Observation-pregnancy-edd-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips
-Alias: $pregnancy-status-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/pregnancy-status-uv-ips
+//Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
+Alias: loinc = http://loinc.org
+//Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+//Alias: $Patient-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
+//Alias: $Observation-pregnancy-edd-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips
+//Alias: $pregnancy-status-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/pregnancy-status-uv-ips
 
 Profile: ObservationEstadoEmbarazoClIps
 Parent: CoreObservacionCL
@@ -29,7 +29,7 @@ Description: "Este perfil restringe el recurso Observation para representar el e
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
 * code only CodeableConceptIPS
-* code = $loinc#82810-3
+* code = loinc#82810-3
 * code 1..1 MS
 
 * subject 1..1 MS

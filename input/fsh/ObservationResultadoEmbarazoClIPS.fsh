@@ -1,7 +1,7 @@
-Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
-Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-Alias: $Patient-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
-Alias: $pregnancies-summary-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/pregnancies-summary-uv-ips
+//Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
+//Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+//Alias: $Patient-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
+//Alias: $pregnancies-summary-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/pregnancies-summary-uv-ips
 
 Profile: ObservationResultadoEmbarazoClIps
 Parent: CoreObservacionCL

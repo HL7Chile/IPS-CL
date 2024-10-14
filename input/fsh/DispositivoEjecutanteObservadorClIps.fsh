@@ -1,4 +1,4 @@
-Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
+//Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
 
 Profile: DispositivoObservadorClIps
 Parent: Device

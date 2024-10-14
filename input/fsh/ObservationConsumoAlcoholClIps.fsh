@@ -1,8 +1,8 @@
-Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
-Alias: $loinc = http://loinc.org
-Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-Alias: $Patient-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
-Alias: $Quantity-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Quantity-uv-ips
+//Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
+Alias: loinc = http://loinc.org
+//Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+//Alias: $Patient-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
+//Alias: $Quantity-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Quantity-uv-ips
 
 Profile: ObservationUsoAlcoholClIps
 Parent: CoreObservacionCL
@@ -27,7 +27,7 @@ Description: "Este perfil restringe el recurso Observation para representar la e
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
 * code only CodeableConceptIPS
-* code = $loinc#74013-4
+* code = loinc#74013-4
 * code 1..1 MS
 
 * subject 1..1 MS
