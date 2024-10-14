@@ -44,6 +44,9 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
   allergyintolerance 0..* and
   condition 0..* and
   diagnosticreport 0..* and
+  device 0..* and
+  deviceusestatement 0..* and
+  //deviceperformerobserver 0..* and
   imagingstudy 0..* and
   immunization 0..* and
   medicationrequest 0..* and
@@ -54,7 +57,16 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
   organization 0..* and
   observation-laboratory 0..* and
   observation-radiology 0..* and
+  observation-pregnancy-edd 0..* and
+  observation-pregnancy-outcome 0..* and
+  observation-pregnancy-status 0..* and
+  observation-alcohol-use 0..* and
+  observation-tobacco-use 0..* and
+  observation-vital-signs 0..* and
   specimen 0..* and
+  flag 0..* and
+  careplan 0..* and
+  consent 0..* and
   medication 0..*
 
 * entry[composition]

@@ -1,6 +1,6 @@
-Profile: AdvanceDirectivesClIps
+Profile: ConsentClIps
 Parent: Consent
-Id: Advance-directives-cl-ips
+Id: Consent-cl-ips
 Title: "Directivas Anticipadas (IPS-CL)"
 Description: """
 
