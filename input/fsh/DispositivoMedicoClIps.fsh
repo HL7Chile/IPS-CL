@@ -17,7 +17,7 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Devi
 * ^extension[=].valueCode = #draft
 * ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
 * ^extension[=].valueCode.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
-* ^url = "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips"
+* ^url = "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Dispositivo-cl-ips"
 
 * ^version = "0.1.0"
 * ^status = #draft

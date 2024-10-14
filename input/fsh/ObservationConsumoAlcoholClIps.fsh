@@ -46,4 +46,4 @@ Description: "Este perfil restringe el recurso Observation para representar la e
 * valueQuantity ^sliceName = "valueQuantity"
 
 * component ..0
-* component ^mustSupport = false
+//* component ^mustSupport = false

@@ -54,7 +54,7 @@ Description: "Este perfil restringe el recurso Observation para representar la f
 * method ^mustSupport = false
 
 * specimen ..0
-* specimen ^mustSupport = false
+//* specimen ^mustSupport = false
 
 * device ..0
 * device ^mustSupport = false
@@ -63,4 +63,4 @@ Description: "Este perfil restringe el recurso Observation para representar la f
 * referenceRange ^mustSupport = false
 
 * component ..0
-* component ^mustSupport = false
+//* component ^mustSupport = false

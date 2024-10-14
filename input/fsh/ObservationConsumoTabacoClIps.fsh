@@ -48,4 +48,4 @@ Description: "Este perfil restringe el recurso Observation para representar la e
 * valueCodeableConcept ^sliceName = "valueCodeableConcept"
 
 * component ..0
-* component ^mustSupport = false
+//* component ^mustSupport = false
