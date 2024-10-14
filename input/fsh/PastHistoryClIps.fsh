@@ -10,7 +10,7 @@ Title: "Condición: Historial Médico Pasado (IPS-CL)"
 Description: """
 Este perfil representa las restricciones aplicadas al recurso Condition por la Guía de Implementación FHIR del Resumen Internacional del Paciente Adaptación de Chile (IPS-CL). Un registro de un problema se representa en el resumen del paciente como una instancia del recurso Condition restringido por este perfil.
 
-Representación de un problema en el resumen internacional del paciente.
+Representación de las condiciones que sufrió el paciente en el pasado.
 
 """
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"

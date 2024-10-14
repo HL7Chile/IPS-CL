@@ -6,14 +6,13 @@ Alias: ConditionBodySite = http://hl7.org/fhir/ValueSet/body-site
 Profile: FuncionalStatussClIps
 Parent: DiagnosticoCl
 Id: Funcional-statuss-cl-ips
-//Title: "Estado Funcional: Autonomía (IPS-CL)"
-Title: "Condición (IPS-CL)"
-Description: """
+Title: "Condición: Estado Funcional (IPS-CL)"
+Description: "
 Este perfil representa las restricciones aplicadas al recurso Condition por la Guía de Implementación FHIR del Resumen Internacional del Paciente Adaptación de Chile (IPS-CL). Un registro de un problema se representa en el resumen del paciente como una instancia del recurso Condition restringido por este perfil.
 
-Representación de un problema en el resumen internacional del paciente.
+Este perfil busca representar condiciones crónicas o permanentes sobre la capacidad funcional del paciente como su invalidez o dependencia en un momento específico.
+El estado funcional es la capacidad del paciente para realizar actos de la vida diaria además de las posibles necesidades del paciente de ser evaluado continuamente por terceros."
 
-"""
 * clinicalStatus only CodeableConceptIPS
   * ^short = "El estatus en el cual se encuentra la condición: active| recurrece | relapse | inactive | remission | resolved"
 * clinicalStatus from ConditionClinicalStatus
