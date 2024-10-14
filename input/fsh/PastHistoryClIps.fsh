@@ -3,9 +3,9 @@ Alias: ConditionClinicalStatus = http://hl7.org/fhir/ValueSet/condition-clinical
 Alias: ConditionVerificationSeverity = http://hl7.org/fhir/ValueSet/condition-ver-status
 Alias: ConditionBodySite = http://hl7.org/fhir/ValueSet/body-site
 
-Profile: ConditionClIps
+Profile: PastHistoryClIps
 Parent: DiagnosticoCl
-Id: Condition-cl-ips
+Id: Past-history-cl-ips
 Title: "Condición (IPS-CL)"
 Description: """
 Este perfil representa las restricciones aplicadas al recurso Condition por la Guía de Implementación FHIR del Resumen Internacional del Paciente Adaptación de Chile (IPS-CL). Un registro de un problema se representa en el resumen del paciente como una instancia del recurso Condition restringido por este perfil.

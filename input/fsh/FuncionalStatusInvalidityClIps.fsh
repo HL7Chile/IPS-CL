@@ -1,4 +1,4 @@
-Profile: FuncionalStatus
+Profile: FuncionalStatusClIps
 Parent: ClinicalImpression
 Id: Funcional-status-cl-ips
 Title: "Estado Funcional: Invalidez (IPS-CL)"

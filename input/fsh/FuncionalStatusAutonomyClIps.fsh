@@ -3,9 +3,9 @@ Alias: ConditionClinicalStatus = http://hl7.org/fhir/ValueSet/condition-clinical
 Alias: ConditionVerificationSeverity = http://hl7.org/fhir/ValueSet/condition-ver-status
 Alias: ConditionBodySite = http://hl7.org/fhir/ValueSet/body-site
 
-Profile: ConditionClIps
+Profile: FuncionalStatussClIps
 Parent: DiagnosticoCl
-Id: Condition-cl-ips
+Id: Funcional-statuss-cl-ips
 //Title: "Estado Funcional: Autonomía (IPS-CL)"
 Title: "Condición (IPS-CL)"
 Description: """
