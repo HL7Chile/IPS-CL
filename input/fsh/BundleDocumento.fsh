@@ -62,7 +62,7 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
   observation-pregnancy-status 0..* and
   observation-alcohol-use 0..* and
   observation-tobacco-use 0..* and
-  observation-vital-signs 0..* and
+  vital-signs 0..* and
   specimen 0..* and
   flag 0..* and
   careplan 0..* and
@@ -179,12 +179,12 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
     * ^short = "Observaciones sobre el consumo de alcohol"
   * resource only Observation-uso-de-alcohol-cl-ips
 
-  * entry[observation-tobacco-use]
+* entry[observation-tobacco-use]
   * resource 1..
     * ^short = "Observaciones sobre el consumo de tabaco"
   * resource only Observation-uso-de-tabaco-cl-ips
 
-  * entry[vital-signs]
+* entry[vital-signs]
   * resource 1..
     * ^short = "Observaciones sobre los signos vitales del paciente"
   * resource only vitalsigns-cl-ips

@@ -11,10 +11,9 @@
 
 - Los perfiles a continuación contienen lo siguiente:
     - Se modifica la versión del perfil a 0.1.0
-    - Se modifica extension[=].valueInteger = 2 -> extension[=].valueInteger = 1
-    - Se modifica la canonica de la extension[=].valueInteger.extension.valueCanonical y extension[=].valueCode.extension.valueCanonical a la canonica de HL7 Chile para guías de implementación https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips
+    - Se modifica la versión = 2 -> 1
+    - Se modifica la canonica de la extension.valueInteger y extension.valueCode a la canonica de HL7 Chile para guías de implementación https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips
     - Se modifica todo dato de contacto al estándar chileno
-
 
 - Perfil [DeclaraciónUsoDispositivo](StructureDefinition-DeclaracionUsoDispositivoClIps.html)
     - Se agrega el perfil Declaración de uso del dispositivo
@@ -44,45 +43,45 @@
     - Se basa en el recurso Observation de la CoreCl
     - Se modifica la referencia Patient-uv-ips a Paciente-cl-ips
     - Se agrega lo siguiente a la extensión de efective[x]:
-        - effective[x].extension[data-absent-reason].value[x] from $VSdataabsentreason (required)
-        - effective[x].extension[data-absent-reason].value[x] ^binding.description = ""
+        - ValueSet $VSdataabsentreason que es requerido
+        - El binding description
     - Se modifica el mustSupport del component; se omite por la CoreCl.
 
 - Perfil [ObservationConsumoTabaco](StructureDefinition-ObservationUsoTabacoClIps.html)
     - Se agrega el perfil Observación - Consumo de Tabaco
     - Se basa en el recurso Observation de la CoreCl
     - Se modifica la referencia Patient-uv-ips a Paciente-cl-ips
-    - Se agrega lo siguiente a la extensión de efective[x]:
-        - effective[x].extension[data-absent-reason].value[x] from $VSdataabsentreason (required)
-        - effective[x].extension[data-absent-reason].value[x] ^binding.description = ""
+    - Se agrega lo siguiente a la extensión de effective[x]:
+        - ValueSet $VSdataabsentreason que es requerido
+        - El binding description
     - Se modifica el mustSupport del component; se omite por la CoreCl.
 
 - Perfil [ObservationEstadoEmbarazo](StructureDefinition-ObservationEstadoEmbarazoClIps.html)
     - Se agrega el perfil Observación - Estado del Embarazo
     - Se basa en el recurso Observation de la CoreCl
     - Se modifica la referencia Patient-uv-ips a Paciente-cl-ips
-    - Se agrega lo siguiente a la extensión de efective[x]:
-        - effective[x].extension[data-absent-reason].value[x] from $VSdataabsentreason (required)
-        - effective[x].extension[data-absent-reason].value[x] ^binding.description = ""
+    - Se agrega lo siguiente a la extensión de effective[x]:
+        - ValueSet $VSdataabsentreason que es requerido
+        - El binding description
     - Se modifica el mustSupport del component y de specimen; se omite por la CoreCl. 
-    - Se modifica la referencia Observation-pregnancy-edd-uv-ips a Observation-embarazo-fecha-estimada-de-parto-cl-ips.
+    - Se modifica la referencia "Observation-pregnancy-edd-uv-ips" a ["Observation-embarazo-fecha-estimada-de-parto-cl-ips"](https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-embarazo-fecha-estimada-de-parto-cl-ips)
 
 - Perfil [ObservationFechaEstimadaParto](StructureDefinition-ObservationEmbarazoFechaEstimadaDePartoClIps.html)
     - Se agrega el perfil Observación - Fecha Estimada de Parto
     - Se basa en el recurso Observation de la CoreCl
     - Se modifica la referencia Patient-uv-ips a Paciente-cl-ips
-    - Se agrega lo siguiente a la extensión de efective[x]:
-        - effective[x].extension[data-absent-reason].value[x] from $VSdataabsentreason (required)
-        - effective[x].extension[data-absent-reason].value[x] ^binding.description = ""
+    - Se agrega lo siguiente a la extensión de effective[x]:
+        - ValueSet $VSdataabsentreason que es requerido
+        - El binding description
     - Se modifica el mustSupport del component y de specimen; se omite por la CoreCl.
 
 - Perfil [ObservationResultadoEmbarazo](StructureDefinition-ObservationResultadoEmbarazoClIps.html)
     - Se agrega el perfil Observación - Resultado de Embarazo
     - Se basa en el recurso Observation de la CoreCl
     - Se modifica la referencia Patient-uv-ips a Paciente-cl-ips
-    - Se agrega lo siguiente a la extensión de efective[x]:
-        - effective[x].extension[data-absent-reason].value[x] from $VSdataabsentreason (required)
-        - effective[x].extension[data-absent-reason].value[x] ^binding.description = ""
+    - Se agrega lo siguiente a la extensión de effective[x]:
+        - ValueSet $VSdataabsentreason que es requerido
+        - El binding description
     - Se modifica el mustSupport del component y de specimen; se omite por la CoreCl.
 
 - Perfil [SignosVitales](StructureDefinition-VitalSignsClIps.html)
