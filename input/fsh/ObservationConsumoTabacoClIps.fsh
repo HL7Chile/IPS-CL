@@ -29,13 +29,13 @@ Description: "Este perfil restringe el recurso Observation para representar la e
 
 * code only CodeableConceptIPS
 * code = loinc#72166-2
-* code 1..1 MS
+* code MS
 
-* subject 1..1 MS
+* subject 1.. MS
 * subject only Reference(Paciente-cl-ips)
 * subject.reference 1.. MS
 
-* effective[x] 1..1 MS
+* effective[x] 1.. MS
 * effective[x] only dateTime
 * effective[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
 * effective[x].extension[data-absent-reason] ^short = "Motivo por el cual no se encuentra el dato"

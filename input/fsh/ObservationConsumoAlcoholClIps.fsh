@@ -18,6 +18,7 @@ Description: "Este perfil restringe el recurso Observation para representar la e
 * ^extension[=].valueCode = #draft
 * ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
 * ^extension[=].valueCode.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
+* ^url = https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-uso-de-alcohol-cl-ips
 
 * ^version = "0.1.0"
 * ^publisher = "Hl7 Chile"
@@ -28,11 +29,11 @@ Description: "Este perfil restringe el recurso Observation para representar la e
 
 * code only CodeableConceptIPS
 * code = loinc#74013-4
-* code 1..1 MS
+* code MS
 
-* subject 1..1 MS
+* subject 1.. MS
 * subject only Reference(Paciente-cl-ips)
-* subject.reference 1..1 MS
+* subject.reference 1.. MS
 
 * effective[x] 1.. MS
 * effective[x] only dateTime

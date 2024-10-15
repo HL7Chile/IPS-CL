@@ -6,6 +6,6 @@ Description: """
 
 Este perfil se deriva del recurso Clinical Impression del estándar FHIR. Permite realizar una evaluación clínica para determinar qué problemas afectan al paciente, antes de planificar tratamientos.
 
-Este perfil busca representar evaluaciones generales o temporales sobre la capacidad funcional del paciente como su invalidez o dependencia en un momento específico."
+Este perfil busca representar evaluaciones generales o temporales sobre la capacidad funcional del paciente."
 
 """

@@ -26,17 +26,17 @@ Description: "Este perfil restringe el recurso Observation para representar un r
 * ^contact.telecom.value = "http://www.hl7chile.cl"
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-* code 1..1 MS
+* code MS
 * code only CodeableConceptIPS
 * code from http://hl7.org/fhir/uv/ips/ValueSet/pregnancies-summary-uv-ips (required)
 * code ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
 * code ^binding.extension.valueString = "Códigos de Observaciones"
 
-* subject 1..1 MS
+* subject 1.. MS
 * subject only Reference(Paciente-cl-ips)
-* subject.reference 1..1 MS
+* subject.reference 1.. MS
 
-* effective[x] 1..1 MS
+* effective[x] 1.. MS
 * effective[x] only dateTime
 * effective[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
 * effective[x].extension[data-absent-reason] ^short = "Motivo por el cual no se encuentra el dato"

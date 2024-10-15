@@ -17,6 +17,7 @@ Description: "Este perfil restringe el recurso Observation para representar la f
 * ^extension[=].valueCode = #draft
 * ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
 * ^extension[=].valueCode.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
+* ^url = https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-embarazo-fecha-estimada-de-parto-cl-ips
 
 * ^version = "0.1.0"
 * ^status = #draft
@@ -26,17 +27,17 @@ Description: "Este perfil restringe el recurso Observation para representar la f
 * ^contact.telecom.value = "http://www.hl7chile.cl"
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-* code 1..1 MS
+* code MS
 * code only CodeableConceptIPS
 * code from http://hl7.org/fhir/uv/ips/ValueSet/edd-method-uv-ips (required)
 * code ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
 * code ^binding.extension.valueString = "Códigos de Observaciones"
 
-* subject 1..1 MS
+* subject 1.. MS
 * subject only Reference(Paciente-cl-ips)
-* subject.reference 1..1 MS
+* subject.reference 1.. MS
 
-* effective[x] 1..1 MS
+* effective[x] 1.. MS
 * effective[x] only dateTime
 * effective[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
 * effective[x].extension[data-absent-reason] ^short = "Motivo por el cual no se encuentra el dato"

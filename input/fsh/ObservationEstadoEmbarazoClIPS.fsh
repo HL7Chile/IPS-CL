@@ -19,6 +19,7 @@ Description: "Este perfil restringe el recurso Observation para representar el e
 * ^extension[=].valueCode = #draft
 * ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
 * ^extension[=].valueCode.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
+* ^url = https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-estado-del-embarazo-cl-ips
 
 * ^version = "0.1.0"
 * ^status = #draft
@@ -30,13 +31,13 @@ Description: "Este perfil restringe el recurso Observation para representar el e
 
 * code only CodeableConceptIPS
 * code = loinc#82810-3
-* code 1..1 MS
+* code MS
 
-* subject 1..1 MS
+* subject 1.. MS
 * subject only Reference(Paciente-cl-ips)
-* subject.reference 1..1 MS
+* subject.reference 1.. MS
 
-* effective[x] 1..1 MS
+* effective[x] 1.. MS
 * effective[x] only dateTime
 * effective[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
 * effective[x].extension[data-absent-reason] ^short = "Motivo por el cual no se encuentra el dato"

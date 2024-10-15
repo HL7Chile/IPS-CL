@@ -19,6 +19,7 @@ Flag se utiliza para transmitir información sobre una alerta específica de una
 * ^extension[=].valueCode.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
 * ^version = "0.1.0"
 * ^status = #draft
+* ^experimental = false
 * ^publisher = "Hl7 Chile"
 * ^contact.name = "Hl7 Chile"
 * ^contact.telecom.system = #url
@@ -33,4 +34,4 @@ Flag se utiliza para transmitir información sobre una alerta específica de una
 * category MS
 
 * code only CodeableConceptIPS
-* code 1..1 MS
+* code MS
