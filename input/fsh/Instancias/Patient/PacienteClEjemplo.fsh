@@ -23,9 +23,9 @@ Description: "Ejemplo de paciente según el estándar IPS nacional"
 * active = true //Registro activo
 
 //Nombre principal del paciente
-* name.use = #official
-* name.family = "Henriquez"
-* name.given = "Valentina"
+//* name.use = #official
+//* name.family = "Henriquez"
+//* name.given = "Valentina"
 
 //Nombre Oficial
 * name[NombreOficial].use = #official
@@ -33,7 +33,7 @@ Description: "Ejemplo de paciente según el estándar IPS nacional"
 //* name[NombreOficial].family.extension[segundoApellido] = SegundoApellidoPacienteCL
 * name[NombreOficial].given[0] = "Valentina"
 * name[NombreOficial].given[+] = "Ester"
-//* name[NombreOficial].given[+] = "Ximena"
+//* name[NombreOficial].given[+] = ""
 
 //nombre social
 * name[NombreSocial].use = #usual

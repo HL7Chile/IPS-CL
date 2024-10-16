@@ -13,5 +13,5 @@ Description: "Ejemplo de una observación sobre el estado del embarazo"
 * subject = Reference(PacienteClIpsEjemplo)
 * effectiveDateTime = "2020-01-10"
 //* performer = Reference(EjemploPrestadorCL2)
-* valueCodeableConcept = snomed#77386006 "Pregnant"
-* hasMember = Reference(Observation/pregnancy-edd-example)
+* valueCodeableConcept = snomed#77386006 "Embarazada"
+* hasMember = Reference(ObservacionFechaEstimadaPartoEjemplo)
