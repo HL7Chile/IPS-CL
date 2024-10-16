@@ -3,7 +3,7 @@ Alias: loinc = http://loinc.org
 //Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 //Alias: $Patient-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
 //Alias: $Observation-pregnancy-edd-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips
-//Alias: $pregnancy-status-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/pregnancy-status-uv-ips
+Alias: pregnancy-status-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/pregnancy-status-uv-ips
 
 Profile: ObservationEstadoEmbarazoClIps
 Parent: CoreObservacionCL
@@ -46,7 +46,7 @@ Description: "Este perfil restringe el recurso Observation para representar el e
 
 * valueCodeableConcept  0..1 MS
 * valueCodeableConcept only CodeableConceptIPS
-* valueCodeableConcept from http://hl7.org/fhir/uv/ips/ValueSet/pregnancy-status-uv-ips (preferred)
+* valueCodeableConcept from pregnancy-status-uv-ips (preferred)
 * valueCodeableConcept ^sliceName = "valueCodeableConcept"
 
 * bodySite ..0
