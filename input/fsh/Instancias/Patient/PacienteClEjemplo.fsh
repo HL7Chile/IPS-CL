@@ -1,5 +1,5 @@
 Instance:    PacienteClIpsEjemplo
-InstanceOf:  CorePacienteCl
+InstanceOf:  PacienteCLIps
 Usage:       #example
 Title:       "Ejemplo de Paciente CL - IPS"
 Description: "Ejemplo de paciente según el estándar IPS nacional"

@@ -3,7 +3,7 @@ Alias: snomed = https://www.snomed.org
 
 
 Instance:    ObservacionEstadoEmbarazoEjemplo
-InstanceOf:  CoreObservacionCL
+InstanceOf:  ObservationEstadoEmbarazoClIps
 Usage:       #example
 Title:       "Observación: Estado del embarazo - Ejemplo"
 Description: "Ejemplo de una observación sobre el estado del embarazo"

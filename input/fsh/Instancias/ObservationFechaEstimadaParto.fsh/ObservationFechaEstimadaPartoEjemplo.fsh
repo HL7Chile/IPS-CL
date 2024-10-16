@@ -1,7 +1,7 @@
 Alias: loinc = http://loinc.org
 
 Instance:    ObservacionFechaEstimadaPartoEjemplo
-InstanceOf:  CoreObservacionCL
+InstanceOf:  ObservationEmbarazoFechaEstimadaDePartoClIps
 Usage:       #example
 Title:       "Observación: Fecha Estimada de Parto - Ejemplo"
 Description: "Ejemplo de una observación sobre la fecha estimada de parto"
