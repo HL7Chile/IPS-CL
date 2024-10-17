@@ -1,19 +1,19 @@
 Instance:    PacienteClIpsEjemplo
 InstanceOf:  PacienteCLIps
 Usage:       #example
-Title:       "Ejemplo de Paciente CL - IPS"
+Title:       "Ejemplo de Paciente Internacional - IPS"
 Description: "Ejemplo de paciente según el estándar IPS nacional"
 
 * identifier.use = #official    // Obligado
 * identifier.type.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodigoDNI"
-* identifier.type.coding.code = #NNCHL
-* identifier.type.coding.display = "Chile"
+* identifier.type.coding.code = #NNMEX
+* identifier.type.coding.display = "México"
 
 // Extensión para el País de Emisión del Documento
 * identifier.type.extension.url = "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises"
 * identifier.type.extension.valueCodeableConcept.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CodPais"
-* identifier.type.extension.valueCodeableConcept.coding.code = #152
-* identifier.type.extension.valueCodeableConcept.coding.display = "Chile"
+* identifier.type.extension.valueCodeableConcept.coding.code = #484
+* identifier.type.extension.valueCodeableConcept.coding.display = "Mexico"
 
 // Definir el sistema y valor del identificador
 * identifier.system = "http://regcivil.cl/Validacion/RUN"
@@ -51,13 +51,13 @@ Description: "Ejemplo de paciente según el estándar IPS nacional"
 * address.line[0] = "Av. General Vidaurre, casa 84 G"
 
 // Ciudad (Comuna)
-* address.city = "Santiago Centro"
+* address.city = "Santiago"
 
 // Extensión de comuna
 * address.city.extension[0].url = "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/ComunasCl"
 * address.city.extension[0].valueCodeableConcept.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodComunasCL"
 * address.city.extension[0].valueCodeableConcept.coding.code = #13101  // Código para Santiago
-* address.city.extension[0].valueCodeableConcept.coding.display = "Santiago Centro"
+* address.city.extension[0].valueCodeableConcept.coding.display = "Santiago"
 
 // Provincia
 //* district = "Santiago"
@@ -68,13 +68,13 @@ Description: "Ejemplo de paciente según el estándar IPS nacional"
 //* extension[1].valueCodeableConcept.coding.display = "Santiago"
 
 // Región
-* address.state = "Metropolitana de Santiago"
+* address.state = "Región Metropolitana"
 
 // Extensión de región
 * address.state.extension[0].url = "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/RegionesCl"
 * address.state.extension[0].valueCodeableConcept.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodRegionCL"
 * address.state.extension[0].valueCodeableConcept.coding.code = #13  // Código para Región Metropolitana
-* address.state.extension[0].valueCodeableConcept.coding.display = "Metropolitana de Santiago"
+* address.state.extension[0].valueCodeableConcept.coding.display = "Región Metropolitana"
 
 // País
 * address.country = "Chile"
