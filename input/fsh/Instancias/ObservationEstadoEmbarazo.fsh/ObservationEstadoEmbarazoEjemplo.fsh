@@ -19,6 +19,6 @@ Description: "Ejemplo de una observación sobre el estado del embarazo"
 //* valueCodeableConcept = snomed#77386006 "Embarazada"
 * valueCodeableConcept.coding.system = "http://snomed.info/sct"
 * valueCodeableConcept.coding.code = #77386006
-* valueCodeableConcept.coding.display = "Embarazada"
+* valueCodeableConcept.coding.display = "Pregnancy"
 
 * hasMember = Reference(ObservacionFechaEstimadaPartoEjemplo)
