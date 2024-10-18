@@ -1,0 +1,37 @@
+Alias: snomed = https://snomed.info/sct
+
+CodeSystem: PregnancyStatusTranslation
+Id: pregnancy-status-translation
+Title: "Traducciones de Estado de Embarazo"
+Description: "Traducciones para los estados de embarazo."
+
+CodeSystem: PregnancyStatusCS
+Id: pregnancy-status-cs
+Title: "Código de Estado de Embarazo"
+Description: "Código de los estados de embarazo, tradiciones al español."
+
+* Concept: 
+  * #77386006 "Pregnant" {
+      extension[http://hl7.org/fhir/StructureDefinition/translation] {
+        extension[lang].valueCode = "es"
+        extension[content].valueString = "Embarazada"
+      }
+    }
+  * #60001007 "Not pregnant" {
+      extension[http://hl7.org/fhir/StructureDefinition/translation] {
+        extension[lang].valueCode = "es"
+        extension[content].valueString = "No embarazada"
+      }
+    }
+  * #152231000119106 "Pregnancy not yet confirmed" {
+      extension[http://hl7.org/fhir/StructureDefinition/translation] {
+        extension[lang].valueCode = "es"
+        extension[content].valueString = "Embarazo no confirmado"
+      }
+    }
+  * #146799005 "Possible pregnancy" {
+      extension[http://hl7.org/fhir/StructureDefinition/translation] {
+        extension[lang].valueCode = "es"
+        extension[content].valueString = "Posible embarazo"
+      }
+    }
