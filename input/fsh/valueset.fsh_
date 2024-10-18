@@ -1,9 +1,11 @@
+Alias: snomed = https://snomed.info/sct
+
 ValueSet: PregnancyStatusUV
 Id: pregnancy-status-uv-ips  // Debe coincidir con el ID del ValueSet original
 Title: "Estados de Embarazo"
 Description: "Este ValueSet contiene los estados de embarazo con traducción al español."
 
-* compose.include[0].system = "http://snomed.info/sct"
+* compose.include[0].system = snomed
 * compose.include[0].concept[0].code = "77386006"
 * compose.include[0].concept[0].display = "Pregnant"
 * compose.include[0].concept[1].code = "60001007"

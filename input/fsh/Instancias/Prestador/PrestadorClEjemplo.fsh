@@ -30,4 +30,4 @@ Description: "Ejemplo de prestador que atiende al paciente según el estándar I
 * qualification[EspecialidadMedica].code.text = "Medicina Interna"
 
 * qualification[Subespecialidad].identifier.value = "subesp"
-* qualification[Subespecialidad].code.text = "Medicina Familiar"
+* qualification[Subespecialidad].code.text = "Medicina General"

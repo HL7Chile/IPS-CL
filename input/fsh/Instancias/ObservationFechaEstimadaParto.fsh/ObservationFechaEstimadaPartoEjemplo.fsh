@@ -13,6 +13,6 @@ Description: "Ejemplo de una observación sobre la fecha estimada de parto"
 * code.coding.display = "Delivery date Estimated"
 
 * subject = Reference(PacienteClIpsEjemplo)
-* effectiveDateTime = "2020-01-10"
-//* performer = Reference(EjemploPrestadorCL2)
-* valueDateTime = "2020-08-02"
+* effectiveDateTime = "2023-01-20"
+* performer = Reference(PrestadorClIpsEjemplo)
+* valueDateTime = "2023-10-02"

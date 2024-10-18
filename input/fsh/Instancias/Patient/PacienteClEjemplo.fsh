@@ -17,7 +17,7 @@ Description: "Ejemplo de paciente según el estándar IPS nacional"
 
 // Definir el sistema y valor del identificador
 * identifier.system = "http://regcivil.cl/Validacion/RUN"
-* identifier.value = "12.241.323-8"
+* identifier.value = "19.241.323-8"
 
 
 * active = true //Registro activo
@@ -44,7 +44,7 @@ Description: "Ejemplo de paciente según el estándar IPS nacional"
 * telecom.value = "932785678"
 
 * gender = #female
-* birthDate = "1992-05-01"
+* birthDate = "1995-05-01"
 
 //Address
 * address.use = #home
