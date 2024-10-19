@@ -10,12 +10,12 @@ Description: "Ejemplo de una observación sobre un resumen de los resultados de 
 * status = #final
 * code.coding.system = loinc
 * code.coding.code = #11640-0
-* code.coding.display = "Births total"
+* code.coding.display = "[#] Births total"
 
 * subject = Reference(PacienteClIpsEjemplo)
 * effectiveDateTime = "2022-08-18"
 * performer = Reference(PrestadorClIpsEjemplo)
 
-* valueQuantity.value = 1
+//* valueQuantity.value = 1
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #1
