@@ -13,5 +13,11 @@ Description: "Ejemplo sobre un dispositivo médico en rol de observador o ejecut
 * manufacturer = "Ortopedia-Care"
 
 * deviceName.name = "Férula para codo"
-* deviceName.type = #OTC-EB001
+//* deviceName.type.code.system = "http://hl7.org/fhir/device-nametype"
+* deviceName.type = #manufacturer-name
+
 * modelNumber = "2.0.1"
+
+* type.coding.system = snomed
+* type.coding.code = #16349000
+* type.coding.display = "Orthopedic device"
