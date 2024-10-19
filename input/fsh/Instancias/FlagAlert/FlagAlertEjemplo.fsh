@@ -14,16 +14,20 @@ Description: "Ejemplo de una alerta sobre un problema  que sufre el paciente"
 * extension[flag-priority].url = "http://hl7.org/fhir/StructureDefinition/flag-priority"
 * extension[flag-priority].valueCodeableConcept.coding.system = flag-priority-code
 * extension[flag-priority].valueCodeableConcept.coding.code = #PH  // Código para Santiago
-* extension[flag-priority].valueCodeableConcept.coding.display = "High priority"
+//* extension[flag-priority].valueCodeableConcept.coding.display = "High priority"
+* extension[flag-priority].valueCodeableConcept.coding.display = "Alta Prioridad"
 
 * status = #active
 
 * category.coding.system = flag-category
 * category.coding.code = #contact
-* category.coding.display = "Subject Contact"
+* category.coding.display = "Contacto con Paciente"
+//* category.coding.display = "Subject Contact"
 
 * code.coding.system = snomed
 * code.coding.code = #370388006
-* code.coding.display = "Patient Inmunocompromised"
+* code.coding.display = "Paciente Inmunocomprometido"
+
+//* code.coding.display = "Patient Inmunocompromised"
 
 * subject = Reference(PacienteClIpsEjemplo)
