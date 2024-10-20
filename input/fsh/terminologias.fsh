@@ -26,15 +26,10 @@ SNOMED CT® ECL definition:\
 * ^immutable = false
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 
-//* SNOMED_CT_INT#77386006 "Pregnant"
-//* SNOMED_CT_INT#60001007 "Not pregnant"
-//* SNOMED_CT_INT#152231000119106 "Pregnancy not yet confirmed"
-//* SNOMED_CT_INT#146799005 "Possible pregnancy"
-
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/translation"
-* ^extension[0].valueCoding.system = "http://hl7.org/fhir/sid/us-languages"
+* ^extension[0].valueCoding.system = "urn:ietf:bcp:47"
 * ^extension[0].valueCoding.code = #es // Código de idioma para español
-* ^extension[0].valueCoding.display = "Español"
+* ^extension[0].valueCoding.display = "Spanish"
 
 * SNOMED_CT_INT#77386006 "Pregnant" 
   * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/display-translation"
