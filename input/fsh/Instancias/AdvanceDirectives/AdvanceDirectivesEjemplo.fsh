@@ -15,7 +15,7 @@ Description: "Ejemplo sobre el consentimiento de un paciente de algo específico
 
 * category.coding.system = loinc
 * category.coding.code = #59284-0
-* category.coding.display = "Patient Consent"
+* category.coding.display = "Consent Document" //en https://hl7.org/fhir/R4/valueset-consent-category.html aparece como "Patient Consent", pero es Consent Document en loinc
 
 * patient = Reference(PacienteClIpsEjemplo)
 
