@@ -21,6 +21,9 @@ Description: "Ejemplo sobre el consentimiento de un paciente de algo específico
 
 * dateTime = "2018-03-12"
 
+* policyRule.coding.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+* policyRule.coding.code = #OPTIN //indica que el paciente da explícitamente su consentimiento para que su información sea usada
+
 * verification.verified = true
 * verification.verifiedWith = Reference(PacienteClIpsEjemplo)
 * verification.verificationDate = "2018-03-12"
