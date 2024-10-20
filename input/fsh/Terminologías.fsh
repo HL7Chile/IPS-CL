@@ -4,7 +4,7 @@ Title: "Códigos de Estados de Embarazo"
 Description: "Códigos de estados de embarazo."
 
 * ^experimental = false
-//* ^caseSensitive = true
+* ^caseSensitive = true
 * ^version = "0.1.0" //Estado de prueba o desarrollo; traduccion en revision
 * ^status = #active
 * ^date = "2024-10-20T00:00:00-03:00"
@@ -35,3 +35,4 @@ Description: "Códigos de estados de embarazo."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement" 
 
 * codes from system CSEstadoEmbarazo
+
