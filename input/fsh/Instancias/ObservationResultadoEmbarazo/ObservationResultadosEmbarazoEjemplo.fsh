@@ -18,4 +18,4 @@ Description: "Ejemplo de una observación sobre un resumen de los resultados de 
 
 //* valueQuantity.value = 1
 * valueQuantity.system = "http://unitsofmeasure.org"
-* valueQuantity.code = #1
+* valueQuantity.code = #1 //se refiere al numero de nacimientos totales segun el codigo de arriba

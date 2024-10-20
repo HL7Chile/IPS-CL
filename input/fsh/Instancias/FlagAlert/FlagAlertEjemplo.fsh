@@ -9,14 +9,14 @@ Usage:       #example
 Title:       "Alerta Paciente- Ejemplo"
 Description: "Ejemplo de una alerta sobre un problema  que sufre el paciente"
 
-* language = #es
+* language = #es //idioma legible
 
 * extension[flag-priority].url = "http://hl7.org/fhir/StructureDefinition/flag-priority"
 * extension[flag-priority].valueCodeableConcept.coding.system = flag-priority-code
-* extension[flag-priority].valueCodeableConcept.coding.code = #PH  // Código para Santiago
+* extension[flag-priority].valueCodeableConcept.coding.code = #PH  // se refiere a alta prioridad
 * extension[flag-priority].valueCodeableConcept.coding.display = "High priority"
 
-* status = #active
+* status = #active //alerta se encuentra activa
 
 * category.coding.system = flag-category
 * category.coding.code = #contact
@@ -24,6 +24,6 @@ Description: "Ejemplo de una alerta sobre un problema  que sufre el paciente"
 
 * code.coding.system = snomed
 * code.coding.code = #370388006
-* code.coding.display = "Patient Inmunocompromised"
+* code.coding.display = "Patient Inmunocompromised" //la alerta se debe a que el paciente es inmunocomprometido
 
 * subject = Reference(PacienteClIpsEjemplo)

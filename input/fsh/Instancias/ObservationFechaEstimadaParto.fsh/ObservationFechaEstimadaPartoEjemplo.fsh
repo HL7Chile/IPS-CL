@@ -15,4 +15,4 @@ Description: "Ejemplo de una observación sobre la fecha estimada de parto"
 * subject = Reference(PacienteClIpsEjemplo)
 * effectiveDateTime = "2023-01-20"
 * performer = Reference(PrestadorClIpsEjemplo)
-* valueDateTime = "2023-10-02"
+* valueDateTime = "2023-10-02" //corresponde a la fecha estimada de parto segun el prestador

@@ -26,7 +26,7 @@ Description: "Ejemplo sobre el consentimiento de un paciente de algo específico
 
 * verification.verified = true
 * verification.verifiedWith = Reference(PacienteClIpsEjemplo)
-* verification.verificationDate = "2018-03-12"
+* verification.verificationDate = "2018-03-12" //fecha de verificación del consentimiento por parte del paciente
 
-* provision.period.start = "2018-03-22"
+* provision.period.start = "2018-03-22" //fechas en las que el consentimiento estuvo activo
 * provision.period.end = "2018-05-20"

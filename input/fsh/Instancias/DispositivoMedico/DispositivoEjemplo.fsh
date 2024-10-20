@@ -11,6 +11,6 @@ Description: "Ejemplo sobre el dispositivo médico que utiliza el paciente"
 * type.coding.code = #16349000
 * type.coding.display = "Orthopedic device"
 
-* manufacturer = "Ortopedia-Care"
+* manufacturer = "Ortopedia-Care" //fabricante
 
 * patient = Reference(PacienteClIpsEjemplo)

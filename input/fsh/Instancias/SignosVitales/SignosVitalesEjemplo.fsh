@@ -15,11 +15,11 @@ Description: "Ejemplo de una observación sobre los signos vitales de un pacient
 
 * code.coding.system = loinc
 * code.coding.code = #8867-4
-* code.coding.display = "Heart rate"
+* code.coding.display = "Heart rate" //frecuencia cardiaca
 
 * subject = Reference(PacienteClIpsEjemplo)
 
-* effectiveDateTime = "2024-02-14"
+* effectiveDateTime = "2024-02-14" //fecha en la que se registró
 
 * valueQuantity.value = 75
 * valueQuantity.system = "http://unitsofmeasure.org"

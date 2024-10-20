@@ -19,4 +19,4 @@ Description: "Ejemplo de una observación sobre el consumo de alcohol del pacien
 * valueQuantity.value = 2
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #d
-* valueQuantity.unit = "wine glasses per day"
+* valueQuantity.unit = "wine glasses per day" //2 copas de vino por dia
