@@ -46,7 +46,7 @@ Description: "Este perfil restringe el recurso Observation para representar el e
 
 * valueCodeableConcept  0..1 MS
 * valueCodeableConcept only CodeableConceptIPS
-* valueCodeableConcept from VSEstadoEmbarazo (preferred)
+* valueCodeableConcept from PregnancyStatusUvIps (preferred)
 * valueCodeableConcept ^sliceName = "valueCodeableConcept"
 
 * bodySite ..0
