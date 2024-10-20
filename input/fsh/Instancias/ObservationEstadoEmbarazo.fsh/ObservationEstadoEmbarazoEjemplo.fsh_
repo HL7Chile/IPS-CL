@@ -17,8 +17,8 @@ Description: "Ejemplo de una observación sobre el estado del embarazo"
 * effectiveDateTime = "2023-01-10"
 * performer = Reference(PrestadorClIpsEjemplo)
 //* valueCodeableConcept = snomed#77386006 "Embarazada"
-* valueCodeableConcept.coding.system = "http://snomed.info/sct"
+* valueCodeableConcept.coding.system = CSEstadoEmbarazo
 * valueCodeableConcept.coding.code = #77386006
-* valueCodeableConcept.coding.display = "Pregnant"
+* valueCodeableConcept.coding.display = "Embarazada"
 
 * hasMember = Reference(ObservacionFechaEstimadaPartoEjemplo)
