@@ -18,4 +18,4 @@ Description: "Ejemplo de una observación sobre el consumo de tabaco del pacient
 
 * valueCodeableConcept.coding.system = "http://snomed.info/sct"
 * valueCodeableConcept.coding.code = #428041000124106
-* valueCodeableConcept.coding.display = "Occasional tobacco smoker (finding)"
+* valueCodeableConcept.coding.display = "Fumador ocasional de tabaco (hallazgo)"
