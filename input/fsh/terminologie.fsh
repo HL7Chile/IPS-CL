@@ -70,3 +70,6 @@ SNOMED CT® ECL definition:\
 //Fecha estimada de parto: requerido
 //Data absent reason: requerido
 //Resultados embarazo: requerido
+//device: preferred pero tiene mas de 1000 codigos
+//device use statement status: requerido
+//flag code: mas de 1000 codigos, es example

@@ -9,9 +9,13 @@ Description: "Ejemplo sobre el consentimiento de un paciente de algo específico
 
 * status = #inactive
 
-* scope.coding.system = "http://terminology.hl7.org/CodeSystem/consentscope"
-* scope.coding.code = #patient-privacy
-* scope.coding.display = "Privacy Consent"
+* scope 
+  * coding = http://terminology.hl7.org/CodeSystem/consentscope#patient-privacy "Privacy Consent"
+  * text = "Consentimiento privado"
+
+//* scope.coding.system = "http://terminology.hl7.org/CodeSystem/consentscope"
+//* scope.coding.code = #patient-privacy
+//* scope.coding.display = "Privacy Consent"
 
 * category.coding.system = loinc
 * category.coding.code = #59284-0
