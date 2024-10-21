@@ -16,6 +16,6 @@ Description: "Ejemplo de una observación sobre el consumo de tabaco del pacient
 * effectiveDateTime = "2023-08-10"
 * performer = Reference(PrestadorClIpsEjemplo)
 
-* valueCodeableConcept.coding.system = "http://snomed.info/sct"
+* valueCodeableConcept.coding.system = snomed
 * valueCodeableConcept.coding.code = #428041000124106
 * valueCodeableConcept.coding.display = "Fumador ocasional de tabaco (hallazgo)"
