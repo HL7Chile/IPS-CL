@@ -17,7 +17,7 @@ SNOMED CT® ECL definition:\
 * ^extension[=].valueCode.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
 * ^version = "0.1.0" //Estado de prueba o desarrollo; traduccion en revision
 * ^experimental = false
-* ^status = #active
+* ^status = #draft
 * ^date = "2024-10-20T00:00:00-03:00"
 * ^contact.name = "HL7 Chile"
 * ^contact.telecom.system = #email
@@ -31,28 +31,28 @@ SNOMED CT® ECL definition:\
 //* ^extension[0].extension[0].valueCode = #es // Código de idioma para español
 
 * SNOMED_CT_INT#77386006 "Pregnant" 
-  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/display-translation"
+  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/translation"
   * ^extension[0].extension[0].url = "lang" 
   * ^extension[0].extension[0].valueCode = #es // Código de idioma para español
   * ^extension[0].extension[1].url = "content"
   * ^extension[0].extension[1].valueString = "Embarazada"
 
 * SNOMED_CT_INT#60001007 "Not pregnant"
-  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/display-translation"
+  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/translation"
   * ^extension[0].extension[0].url = "lang" 
   * ^extension[0].extension[0].valueCode = #es // Código de idioma para español
   * ^extension[0].extension[1].url = "content"
   * ^extension[0].extension[1].valueString = "No Embarazada"
 
 * SNOMED_CT_INT#152231000119106 "Pregnancy not yet confirmed"
-  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/display-translation"
+  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/translation"
   * ^extension[0].extension[0].url = "lang" 
   * ^extension[0].extension[0].valueCode = #es // Código de idioma para español
   * ^extension[0].extension[1].url = "content"
   * ^extension[0].extension[1].valueString = "Embarazo no confirmado"
 
 * SNOMED_CT_INT#146799005 "Possible pregnancy"
-  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/display-translation"
+  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/translation"
   * ^extension[0].extension[0].url = "lang" 
   * ^extension[0].extension[0].valueCode = #es // Código de idioma para español
   * ^extension[0].extension[1].url = "content"
