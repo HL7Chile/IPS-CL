@@ -16,10 +16,13 @@ Description: "Ejemplo sobre el consentimiento de un paciente de algo específico
 //* scope.coding.system = "http://terminology.hl7.org/CodeSystem/consentscope"
 //* scope.coding.code = #patient-privacy
 //* scope.coding.display = "Privacy Consent"
+* category
+  * coding = loinc#59284-0 "Consent Document"
+  * text = "Documento de consentimiento"
 
-* category.coding.system = loinc
-* category.coding.code = #59284-0
-* category.coding.display = "Consent Document" //en https://hl7.org/fhir/R4/valueset-consent-category.html aparece como "Patient Consent", pero es Consent Document en loinc
+//* category.coding.system = loinc
+//* category.coding.code = #59284-0
+//* category.coding.display = "Consent Document" //en https://hl7.org/fhir/R4/valueset-consent-category.html aparece como "Patient Consent", pero es Consent Document en loinc
 
 * patient = Reference(PacienteClIpsEjemplo)
 

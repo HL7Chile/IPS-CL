@@ -16,6 +16,10 @@ Description: "Ejemplo sobre la declaración de uso de un dispositivo médico"
 
 * device = Reference(Dispositivo-CL-Ejemplo)
 
-* bodySite.coding.system = snomed
-* bodySite.coding.code = #1927002
-* bodySite.coding.display = "Left elbow"
+//* bodySite.coding.system = snomed
+//* bodySite.coding.code = #1927002
+//* bodySite.coding.display = "Left elbow"
+
+* bodySite 
+  * coding = snomed#1927002 "Left elbow"
+  * text = "Codo izquierdo"
