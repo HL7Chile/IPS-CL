@@ -1,3 +1,5 @@
+Alias: CSTipoIdentificador = https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSTipoIdentificador
+
 Instance:    PrestadorClIpsEjemplo
 InstanceOf:  PrestadorClIps
 Usage:       #example
@@ -7,7 +9,7 @@ Description: "Ejemplo de prestador que atiende al paciente según el estándar I
 //Identificación por Cédula Chilena
 * identifier[run].use = #official
 * identifier[run].value = "17435678-2"
-* identifier[run].type.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSTipoIdentificador"
+* identifier[run].type.coding.system = CSTipoIdentificador
 * identifier[run].type.coding.code = #01
 * identifier[run].type.coding.display = "RUN"
 

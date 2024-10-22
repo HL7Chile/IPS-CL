@@ -1,5 +1,7 @@
 Alias: loinc = http://loinc.org
 Alias: snomed = https://snomed.info/sct
+Alias: ucum = http://unitsofmeasure.org
+Alias: CSObsCat = http://terminology.hl7.org/CodeSystem/observation-category
 
 Instance:    SignosVitales-CL-Ejemplo
 InstanceOf:  VitalSignsClIps
@@ -9,7 +11,7 @@ Description: "Ejemplo de una observación sobre los signos vitales de un pacient
 
 * status = #registered
 
-* category[VSCat].coding.system = 	"http://terminology.hl7.org/CodeSystem/observation-category"
+* category[VSCat].coding.system = CSObsCat
 * category[VSCat].coding.code = #vital-signs
 * category[VSCat].coding.display = "Vital Signs"
 
@@ -22,10 +24,6 @@ Description: "Ejemplo de una observación sobre los signos vitales de un pacient
 * effectiveDateTime = "2024-02-14" //fecha en la que se registró
 
 * valueQuantity.value = 75
-* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.system = ucum
 * valueQuantity.code = #/min
-* valueQuantity.unit = "per minute"
-
-//* component.dataAbsentReason.coding.system = "http://terminology.hl7.org/CodeSystem/data-absent-reason"
-//* component.dataAbsentReason.coding.code = #not-performed	
-//* component.dataAbsentReason.coding.display = "Not Performed"
+* valueQuantity.unit = "por minuto"

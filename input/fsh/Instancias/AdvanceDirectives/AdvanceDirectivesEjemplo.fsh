@@ -1,5 +1,7 @@
 Alias: loinc = http://loinc.org
 Alias: snomed = https://snomed.info/sct
+Alias: CSConsent = http://terminology.hl7.org/CodeSystem/consentscope
+Alias: CSv3 = http://terminology.hl7.org/CodeSystem/v3-ActCode
 
 Instance:    AdvanceDirectives-CL-Ejemplo
 InstanceOf:  ConsentClIps
@@ -10,7 +12,7 @@ Description: "Ejemplo sobre el consentimiento de un paciente de algo específico
 * status = #inactive
 
 * scope 
-  * coding = http://terminology.hl7.org/CodeSystem/consentscope#patient-privacy "Privacy Consent"
+  * coding = CSConsent#patient-privacy "Privacy Consent"
   * text = "Consentimiento privado"
 
 //* scope.coding.system = "http://terminology.hl7.org/CodeSystem/consentscope"
@@ -28,7 +30,7 @@ Description: "Ejemplo sobre el consentimiento de un paciente de algo específico
 
 * dateTime = "2018-03-12"
 
-* policyRule.coding.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+* policyRule.coding.system = CSv3
 * policyRule.coding.code = #OPTIN //indica que el paciente da explícitamente su consentimiento para que su información sea usada
 
 * verification.verified = true

@@ -7,9 +7,9 @@ Usage:       #example
 Title:       "Dispositivo Médico - Ejemplo"
 Description: "Ejemplo sobre el dispositivo médico que utiliza el paciente"
 
-* type.coding.system = snomed
-* type.coding.code = #16349000
-* type.coding.display = "Orthopedic device"
+* type
+  * coding = snomed#16349000 "Orthopedic device" //tipo de dispositivo
+  * text = "Dispositivo ortopédico"
 
 * manufacturer = "Ortopedia-Care" //fabricante
 

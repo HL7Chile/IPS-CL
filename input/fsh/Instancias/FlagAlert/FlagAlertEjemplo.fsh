@@ -18,9 +18,9 @@ Description: "Ejemplo de una alerta sobre un problema  que sufre el paciente"
 
 * status = #active //alerta se encuentra activa
 
-* category.coding.system = flag-category
-* category.coding.code = #contact
-* category.coding.display = "Subject Contact"
+* category
+  * coding = flag-category#contact "Subject Contact"
+  * text = "Contacto con sujeto"
 
 * code.coding.system = snomed
 * code.coding.code = #370388006

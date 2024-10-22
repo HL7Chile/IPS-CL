@@ -18,6 +18,6 @@ Description: "Ejemplo sobre un dispositivo médico en rol de observador o ejecut
 
 * modelNumber = "2.0.1"
 
-* type.coding.system = snomed
-* type.coding.code = #16349000
-* type.coding.display = "Orthopedic device" //tipo de dispositivo
+* type
+  * coding = snomed#16349000 "Orthopedic device" //tipo de dispositivo
+  * text = "Dispositivo ortopédico"
