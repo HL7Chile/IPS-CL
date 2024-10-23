@@ -1,0 +1,31 @@
+Alias: loinc = http://loinc.org
+Alias: snomed = https://snomed.info/sct
+Alias: CSConsent = http://terminology.hl7.org/CodeSystem/consentscope
+Alias: CSv3 = http://terminology.hl7.org/CodeSystem/v3-ActCode
+Alias: EDQM = http://standardterms.edqm.eu
+
+Instance:    MedicationStatement-CL-Ejemplo
+InstanceOf:  RegMedicamentosClIps
+Usage:       #example
+Title:       "Medication Statement - Ejemplo"
+Description: "Ejemplo sobre la declaración de uso de medicación que utiliza el paciente."
+
+* status = #active
+
+* medicationReference = Reference(MedicamentoCLEjemplo)
+* medicationReference.display = "medicamento...."
+
+* subject = Reference(PacienteClIpsEjemplo)
+
+* effectivePeriod.start = "2015"
+
+* dosage.text = "40 mg/día"
+* dosage.timing.repeat.frequency = 1 //con que frecuencia ocurre el evento: el tratamiento es una vez
+* dosage.timing.repeat.period = 1 //con que frecuencia ocurre el evento: un día; seria una vez al día
+* dosage.timing.repeat.periodUnit = #d //unidad de medida de la frecuencia
+
+* dosage.doseAndRate.doseQuantity = 40 ucum#mg "mg" //cantidad de medicamento administrado
+
+* dosage.route
+  * coding = EDQM#20002500 "Buccal use"
+  * text = "Vía de administración bucal"
