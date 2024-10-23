@@ -10,21 +10,23 @@ Usage:       #example
 Title:       "Medication Statement - Ejemplo"
 Description: "Ejemplo sobre la declaración de uso de medicación que utiliza el paciente."
 
-* status = #active
+* status = #inactive
+
 
 * medicationReference = Reference(MedicamentoCLEjemplo)
-* medicationReference.display = "medicamento...."
+* medicationReference.display = "Pastilla Aspirina"
 
 * subject = Reference(PacienteClIpsEjemplo)
 
-* effectivePeriod.start = "2015"
+* effectivePeriod.start = "2019-02-04"
+* effectivePeriod.end = "2019-02-07"
 
-* dosage.text = "40 mg/día"
+* dosage.text = "500 mg/día"
 * dosage.timing.repeat.frequency = 1 //con que frecuencia ocurre el evento: el tratamiento es una vez
 * dosage.timing.repeat.period = 1 //con que frecuencia ocurre el evento: un día; seria una vez al día
 * dosage.timing.repeat.periodUnit = #d //unidad de medida de la frecuencia
 
-* dosage.doseAndRate.doseQuantity = 40 ucum#mg "mg" //cantidad de medicamento administrado
+* dosage.doseAndRate.doseQuantity = 500 ucum#mg "mg" //cantidad de medicamento administrado
 
 * dosage.route
   * coding = EDQM#20002500 "Buccal use"

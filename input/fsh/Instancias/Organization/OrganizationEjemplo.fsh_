@@ -1,0 +1,13 @@
+Alias: loinc = http://loinc.org
+Alias: snomed = https://snomed.info/sct
+Alias: CSAtc = http://www.whocc.no/atc
+Alias: ucum = http://unitsofmeasure.org
+Alias: CSCodigoVacunas = https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodigoVacunas
+Alias: EDQM = http://standardterms.edqm.eu
+
+Instance:    Organization-CL-Ejemplo
+InstanceOf:  OrganizacionClIps
+Usage:       #example
+Title:       "Organización - Ejemplo"
+Description: "Ejemplo sobre la organización."
+

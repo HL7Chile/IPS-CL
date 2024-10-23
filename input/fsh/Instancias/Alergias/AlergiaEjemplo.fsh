@@ -21,7 +21,7 @@ Description: "Ejemplo sobre el padecimiento de una o más alergias por parte del
   * text = "Confirmado"
 
 * code
-  * coding[=] = snomed#3829006 "Iron"
+  * coding[0] = snomed#3829006 "Iron"
   * text = "Hierro"
 
   * coding[+] = CSAtc#A01AB18 "clotrimazole"
@@ -39,10 +39,8 @@ Description: "Ejemplo sobre el padecimiento de una o más alergias por parte del
 //* reaction.manifestation.coding.display =
 * reaction
   * manifestation
-    * coding[=] = snomed#4556007 "Gastritis (disorder)"
+    * coding[0] = snomed#4556007 "Gastritis (disorder)"
     * text = "Gastritis"
 
-* reaction
-  * manifestation
     * coding[+] = snomed#703938007 "Inflammatory dermatosis (disorder)"
     * text = "Dermatitis inflamatoria"

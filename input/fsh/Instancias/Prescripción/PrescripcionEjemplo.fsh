@@ -12,26 +12,29 @@ Description: "Ejemplo sobre la solicitud de medicación relacionada con un pacie
 
 * status = #active
 
+* intent = #original-order
+
 * medicationReference = Reference(MedicamentoCLEjemplo)
-* medicationReference.display = "medicamento...."
+* medicationReference.display = "Pastilla Aspirina"
 
 * subject = Reference(PacienteClIpsEjemplo) //Para quien es la prescripción de medicacion
 
 //Son las instrucciones sobre cómo se debe tomar el medicamento
-* dosageInstruction.text = "Administrar 40 mg/día" //instrucciones de dosificacion
+* dosageInstruction.text = "Administrar 500 mg/día" //instrucciones de dosificacion
 * dosageInstruction.timing.repeat.frequency = 1 //Instrucciones: con que frecuencia ocurre el evento: una vez al día
-* dosageInstruction.timing.repeat.period = 1 //Instrucciones: con que frecuencia ocurre el evento: un día; seria una vez al día
+* dosageInstruction.timing.repeat.period = 3 //Instrucciones: con que frecuencia ocurre el evento: día; seria una vez al día por 3 días
 * dosageInstruction.timing.repeat.periodUnit = #d //unidad de medida de la frecuencia
 
-* dosageInstruction.doseAndRate.doseQuantity = 40 'mg' "mg" //permite definir la dosis y su frecuencia o velocidad de administracion
+* dosageInstruction.doseAndRate.doseQuantity = 500 ucum#mg "mg" //permite definir la dosis y su frecuencia o velocidad de administracion
 
 //* dosageInstruction.doseAndRate.doseQuantity.value = 40
 //* dosageInstruction.doseAndRate.doseQuantity.system = ucum
 //* dosageInstruction.doseAndRate.doseQuantity.code = #mg
 //* dosageInstruction.doseAndRate.doseQuantity.unit = "mg"
 
-* dosage.route
-  * coding = EDQM#20002500 "Buccal use"
-  * text = "Vía de administración bucal"
+* dosageInstruction
+  * route
+    * coding = EDQM#20002500 "Buccal use"
+    * text = "Vía de administración bucal"
 
-* dispenseRequest.validityPeriod.start = "2021-01-05" //periodo de validez de la prescripción. fecha en la que es valida la solicitud para dispensacion
+* dispenseRequest.validityPeriod.start = "2019-02-04" //periodo de validez de la prescripción. fecha en la que es valida la solicitud para dispensacion

@@ -11,6 +11,8 @@ Usage:       #example
 Title:       "Inmunización - Ejemplo"
 Description: "Ejemplo sobre las inmunizaciones que posee el paciente."
 
+* language = #es
+
 * status = #completed
 
 * vaccineCode.coding[0] = snomed#871765008 "Measles vaccine"
