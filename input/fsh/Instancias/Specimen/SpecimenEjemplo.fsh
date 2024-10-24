@@ -7,7 +7,7 @@ Alias: muestra = 	http://terminology.hl7.org/CodeSystem/v2-0916
 Instance:    SpecimenCLEjemplo
 InstanceOf:  SpecimentClIPS
 Usage:       #example
-Title:       "Procedimiento - Ejemplo"
+Title:       "Muestra - Ejemplo"
 Description: "Ejemplo sobre una muestra biológica que se le extrajo al paciente para posteriormente hacer un estudio."
 
 // Corresponde al tipo de muestra biológica; se utiliza translation
