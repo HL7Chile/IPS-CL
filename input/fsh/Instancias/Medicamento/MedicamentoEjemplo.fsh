@@ -31,27 +31,19 @@ Description: "Ejemplo sobre un medicamento que utiliza el paciente."
 
 * code.text = "Producto que contiene aspirina (medicamento)"
 
-//* manufacturer = Reference(OrganizationEjemplo...) //laboratorio del medicamento
+//* manufacturer = Reference(Organization-CL-Ejemplo) //laboratorio del medicamento
 //* manufacturer.display = "Bayer"
 
 * form
   * coding = EDQM#10323000 "Pastille" //En que forma se proporciona el medicamento, en este caso es en formato pastilla
   * text = "Pastilla"
 
-* ingredient[0]
+* ingredient
   * itemCodeableConcept //componente del medicamento
     * coding[0] = snomed#387458008 "Acetylsalicylic acid"
-    * text = "Ácido acetilsalicílico"
-
-* ingredient[1]
-  * itemCodeableConcept //componente del medicamento
-    * coding[0] = snomed#78439009 "Product containing citrate salt"
-    * text = "Producto que contiene sal de citrato"
-
-* ingredient[2]
-  * itemCodeableConcept //componente del medicamento
-    * coding[0] = snomed#420616006 "Sodium carbonate (substance)"
-    * text = "Carbonato de sodio"
+    * coding[1] = snomed#78439009 "Product containing citrate salt"
+    * coding[2] = snomed#420616006 "Sodium carbonate (substance)"
+    * text = "Ácido acetilsalicílico, Producto que contiene sal de citrato y Carbonato de sodio"
 
 * ingredient.strength.numerator.value = 500
 * ingredient.strength.numerator.unit = "mg"

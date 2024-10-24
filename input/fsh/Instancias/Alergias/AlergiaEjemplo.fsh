@@ -35,12 +35,8 @@ Description: "Ejemplo sobre el padecimiento de una o más alergias por parte del
 //* reaction.manifestation.coding.system =
 //* reaction.manifestation.coding.code =
 //* reaction.manifestation.coding.display =
-* reaction[0]
-  * manifestation[0]
+* reaction
+  * manifestation
     * coding[0] = snomed#4556007 "Gastritis (disorder)"
-    * text = "Gastritis"
-
-* reaction[1]
-  * manifestation[0]
-    * coding[0] = snomed#703938007 "Inflammatory dermatosis (disorder)"
-    * text = "Dermatitis inflamatoria"
+    * coding[1] = snomed#703938007 "Inflammatory dermatosis (disorder)"
+    * text = "Gastritis y Dermatitis inflamatoria"
