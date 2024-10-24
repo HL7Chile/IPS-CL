@@ -8,9 +8,9 @@ Instance:    MedicationStatement-CL-Ejemplo
 InstanceOf:  RegMedicamentosClIps
 Usage:       #example
 Title:       "Medication Statement - Ejemplo"
-Description: "Ejemplo sobre la declaración de uso de medicación que utiliza el paciente."
+Description: "Ejemplo sobre la declaración de uso de medicación del paciente."
 
-* status = #inactive
+* status = #completed
 
 
 * medicationReference = Reference(MedicamentoCLEjemplo)
@@ -21,9 +21,9 @@ Description: "Ejemplo sobre la declaración de uso de medicación que utiliza el
 * effectivePeriod.start = "2019-02-04"
 * effectivePeriod.end = "2019-02-07"
 
-* dosage.text = "500 mg/día"
+* dosage.text = "Administrar 500 mg/día"
 * dosage.timing.repeat.frequency = 1 //con que frecuencia ocurre el evento: el tratamiento es una vez
-* dosage.timing.repeat.period = 1 //con que frecuencia ocurre el evento: un día; seria una vez al día
+* dosage.timing.repeat.period = 3 //con que frecuencia ocurre el evento: un día; seria una vez al día
 * dosage.timing.repeat.periodUnit = #d //unidad de medida de la frecuencia
 
 * dosage.doseAndRate.doseQuantity = 500 ucum#mg "mg" //cantidad de medicamento administrado

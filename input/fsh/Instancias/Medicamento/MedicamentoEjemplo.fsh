@@ -38,15 +38,19 @@ Description: "Ejemplo sobre un medicamento que utiliza el paciente."
   * coding = EDQM#10323000 "Pastille" //En que forma se proporciona el medicamento, en este caso es en formato pastilla
   * text = "Pastilla"
 
-* ingredient
+* ingredient[0]
   * itemCodeableConcept //componente del medicamento
     * coding[0] = snomed#387458008 "Acetylsalicylic acid"
     * text = "Ácido acetilsalicílico"
 
-    * coding[+] = snomed#78439009 "Product containing citrate salt"
+* ingredient[1]
+  * itemCodeableConcept //componente del medicamento
+    * coding[0] = snomed#78439009 "Product containing citrate salt"
     * text = "Producto que contiene sal de citrato"
 
-    * coding[+] = snomed#420616006 "Sodium carbonate (substance)"
+* ingredient[2]
+  * itemCodeableConcept //componente del medicamento
+    * coding[0] = snomed#420616006 "Sodium carbonate (substance)"
     * text = "Carbonato de sodio"
 
 * ingredient.strength.numerator.value = 500

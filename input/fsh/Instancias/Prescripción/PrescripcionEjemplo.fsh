@@ -20,17 +20,11 @@ Description: "Ejemplo sobre la solicitud de medicación relacionada con un pacie
 * subject = Reference(PacienteClIpsEjemplo) //Para quien es la prescripción de medicacion
 
 //Son las instrucciones sobre cómo se debe tomar el medicamento
-* dosageInstruction.text = "Administrar 500 mg/día" //instrucciones de dosificacion
+* dosageInstruction.text = "Administrar 500 mg por 3 días" //instrucciones de dosificacion
 * dosageInstruction.timing.repeat.frequency = 1 //Instrucciones: con que frecuencia ocurre el evento: una vez al día
 * dosageInstruction.timing.repeat.period = 3 //Instrucciones: con que frecuencia ocurre el evento: día; seria una vez al día por 3 días
 * dosageInstruction.timing.repeat.periodUnit = #d //unidad de medida de la frecuencia
-
 * dosageInstruction.doseAndRate.doseQuantity = 500 ucum#mg "mg" //permite definir la dosis y su frecuencia o velocidad de administracion
-
-//* dosageInstruction.doseAndRate.doseQuantity.value = 40
-//* dosageInstruction.doseAndRate.doseQuantity.system = ucum
-//* dosageInstruction.doseAndRate.doseQuantity.code = #mg
-//* dosageInstruction.doseAndRate.doseQuantity.unit = "mg"
 
 * dosageInstruction
   * route
@@ -38,3 +32,4 @@ Description: "Ejemplo sobre la solicitud de medicación relacionada con un pacie
     * text = "Vía de administración bucal"
 
 * dispenseRequest.validityPeriod.start = "2019-02-04" //periodo de validez de la prescripción. fecha en la que es valida la solicitud para dispensacion
+* dispenseRequest.validityPeriod.end = "2019-02-05" //periodo de validez de la prescripción. fecha en la que es valida la solicitud para dispensacion

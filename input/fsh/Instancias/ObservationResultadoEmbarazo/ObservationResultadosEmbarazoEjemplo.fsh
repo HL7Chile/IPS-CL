@@ -22,5 +22,6 @@ Description: "Ejemplo de una observación sobre un resumen de los resultados de 
 * performer = Reference(PrestadorClIpsEjemplo)
 
 * valueQuantity.value = 1
+* valueQuantity.unit = "Hijo"
 * valueQuantity.system = ucum
 * valueQuantity.code = #1 //se refiere al numero de nacimientos totales segun el codigo de arriba
