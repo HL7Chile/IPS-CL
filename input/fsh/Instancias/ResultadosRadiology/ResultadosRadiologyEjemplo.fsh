@@ -13,9 +13,9 @@ Description: "Ejemplo sobre el resultado de radiología de un paciente."
 
 * status = #final //Observación completa y no se necesian más acciones
 
-* category[laboratorio].coding[0].system = CScategoria //categoria de los resultados de radiologia
-* category[laboratorio].coding[0].code = #imaging
-* category[laboratorio].coding[0].display = "Imaging"
+* category[0][laboratorio].coding[0].system = CScategoria //categoria de los resultados de radiologia
+* category[0][laboratorio].coding[0].code = #imaging
+* category[0][laboratorio].coding[0].display = "Imaging"
 
 * code //tipo de prueba de imagenologia
   * coding = loinc#103284-6	"Portable XR Abdomen 2 Views"
