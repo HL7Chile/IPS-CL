@@ -1,3 +1,5 @@
+Alias: CScaterogy = http://terminology.hl7.org/CodeSystem/observation-category
+
 Profile: ObservationResultadoRadiologyClIps
 Parent: CoreObservacionCL
 Id: Observation-resultado-radiology-cl-ips
@@ -32,13 +34,15 @@ Description: "Resultados obtenidos para un examen imagenológico"
 * category 1..*
 * category ^slicing.discriminator.type = #value
 //* category ^slicing.discriminator.path = "coding.code"
-* category ^slicing.discriminator.path = "code"
+* category ^slicing.discriminator.path = "coding.code"
 * category ^slicing.rules = #open
 * category ^slicing.description = "Slicing para obligar el uso de una categoria de tipo: \"Laboratorio\""
 * category ^slicing.ordered = false
 * category contains laboratorio 1..1 MS
-* category[laboratorio] = CategoryRadiologia
+//* category[laboratorio] = CategoryRadiologia
+* category[laboratorio]
   * ^short = "Categoría de tipo: Laboratorio"
+  * coding = CScaterogy#imaging "Imaging"
 
 * code from ResultsRadiologyObservationUvIps (extensible)
 
