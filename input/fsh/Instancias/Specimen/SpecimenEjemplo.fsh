@@ -1,5 +1,5 @@
 Alias: loinc = http://loinc.org
-Alias: snomed = https://snomed.info/sct
+Alias: snomed = http://snomed.info/sct
 Alias: CSAtc = http://www.whocc.no/atc
 Alias: EDQM = http://standardterms.edqm.eu
 Alias: muestra = 	http://terminology.hl7.org/CodeSystem/v2-0916

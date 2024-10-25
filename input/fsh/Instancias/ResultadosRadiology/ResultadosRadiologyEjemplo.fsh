@@ -1,5 +1,5 @@
 Alias: loinc = http://loinc.org
-Alias: snomed = https://snomed.info/sct
+Alias: snomed = http://snomed.info/sct
 Alias: CScategoria = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: CSDicom = http://dicom.nema.org/resources/ontology/DCM
 
@@ -13,9 +13,9 @@ Description: "Ejemplo sobre el resultado de radiología de un paciente."
 
 * status = #final //Observación completa y no se necesian más acciones
 
-* category[laboratorio].coding.system = CScategoria //categoria de los resultados de radiologia
-* category[laboratorio].coding.code = #imaging
-* category[laboratorio].coding.display = "Imaging"
+* category.coding.system = CScategoria //categoria de los resultados de radiologia
+* category.coding.code = #imaging
+* category.coding.display = "Imaging"
 
 * code //tipo de prueba de imagenologia
   * coding = loinc#103284-6	"Portable XR Abdomen 2 Views"

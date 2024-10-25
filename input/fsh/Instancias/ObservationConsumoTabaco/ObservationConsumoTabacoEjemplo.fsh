@@ -1,5 +1,5 @@
 Alias: loinc = http://loinc.org
-Alias: snomed = https://snomed.info/sct
+Alias: snomed = http://snomed.info/sct
 
 Instance:    ObservacionConsumoTabacoEjemplo
 InstanceOf:  ObservationUsoTabacoClIps

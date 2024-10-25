@@ -1,5 +1,5 @@
 Alias: loinc = http://loinc.org
-Alias: snomed = https://snomed.info/sct
+Alias: snomed = http://snomed.info/sct
 Alias: function = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
 Alias: CSDicom = http://dicom.nema.org/resources/ontology/DCM
 

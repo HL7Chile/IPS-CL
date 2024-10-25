@@ -1,5 +1,5 @@
 Alias: loinc = http://loinc.org
-Alias: snomed = https://snomed.info/sct
+Alias: snomed = http://snomed.info/sct
 Alias: CSConsent = http://terminology.hl7.org/CodeSystem/consentscope
 Alias: CSallergy = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
 Alias: CSallergyver = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification

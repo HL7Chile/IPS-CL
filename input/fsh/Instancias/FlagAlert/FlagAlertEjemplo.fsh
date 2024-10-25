@@ -1,5 +1,5 @@
 Alias: loinc = http://loinc.org
-Alias: snomed = https://snomed.info/sct
+Alias: snomed = http://snomed.info/sct
 Alias: flag-priority-code = http://hl7.org/fhir/flag-priority-code
 Alias: flag-category = http://terminology.hl7.org/CodeSystem/flag-category
 

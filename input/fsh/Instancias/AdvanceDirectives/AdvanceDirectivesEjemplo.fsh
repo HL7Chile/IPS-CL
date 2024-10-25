@@ -1,5 +1,5 @@
 Alias: loinc = http://loinc.org
-Alias: snomed = https://snomed.info/sct
+Alias: snomed = http://snomed.info/sct
 Alias: CSConsent = http://terminology.hl7.org/CodeSystem/consentscope
 Alias: CSv3 = http://terminology.hl7.org/CodeSystem/v3-ActCode
 

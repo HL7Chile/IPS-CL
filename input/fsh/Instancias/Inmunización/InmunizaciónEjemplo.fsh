@@ -1,5 +1,5 @@
 Alias: loinc = http://loinc.org
-Alias: snomed = https://snomed.info/sct
+Alias: snomed = http://snomed.info/sct
 Alias: CSAtc = http://www.whocc.no/atc
 Alias: ucum = http://unitsofmeasure.org
 Alias: CSCodigoVacunas = https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodigoVacunas

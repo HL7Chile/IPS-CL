@@ -1,5 +1,5 @@
 Alias: loinc = http://loinc.org
-Alias: snomed = https://snomed.info/sct
+Alias: snomed = http://snomed.info/sct
 Alias: ucum = http://unitsofmeasure.org
 Alias: CSObsCat = http://terminology.hl7.org/CodeSystem/observation-category
 
