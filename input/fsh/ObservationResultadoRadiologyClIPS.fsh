@@ -32,7 +32,7 @@ Description: "Resultados obtenidos para un examen imagenológico"
 * status from ResultsStatusUvIps (required)
 
 * category 1..*
-* category ^slicing.discriminator.type = #value
+* category ^slicing.discriminator.type = #pattern
 //* category ^slicing.discriminator.path = "coding.code"
 * category ^slicing.discriminator.path = "coding.code"
 * category ^slicing.rules = #open

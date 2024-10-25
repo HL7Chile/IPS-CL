@@ -1,0 +1,23 @@
+Alias: loinc = http://loinc.org
+Alias: snomed = http://snomed.info/sct
+Alias: ucum = http://unitsofmeasure.org
+Alias: CScondition = http://terminology.hl7.org/CodeSystem/condition-clinical
+
+Instance:    Condition-CL-Ejemplo
+InstanceOf:  ConditionClIps
+Usage:       #example
+Title:       "Condición - Ejemplo"
+Description: "Ejemplo de una condición que padece el paciente."
+
+* clinicalStatus //estado de la condicion del paciente, en este caso se encuentra inactiva
+ * coding = CScondition#inactive "Inactive"
+ * text = "Inactiva"
+
+* category //categoria de la condicion, en este caso es un problema
+  * coding = loinc#75326-9 "Problem"
+  * text = "Problema"
+
+* code //codigo de la condicion clinica
+  * coding = 
+  * text = 
+
