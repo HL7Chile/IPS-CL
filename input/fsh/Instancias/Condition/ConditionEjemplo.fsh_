@@ -18,6 +18,14 @@ Description: "Ejemplo de una condición que padece el paciente."
   * text = "Problema"
 
 * code //codigo de la condicion clinica
-  * coding = 
-  * text = 
+  * coding = snomed#1532007 "Viral pharyngitis"
+  * text = "Faringitis viral"
+
+* severity //grado de severidad de la condicion
+  * coding = snomed#6736007 "Moderate"
+  * text = "Moderado"
+
+* subject = Reference(PacienteClIpsEjemplo)
+
+
 
