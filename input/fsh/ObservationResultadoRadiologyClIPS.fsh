@@ -31,7 +31,8 @@ Description: "Resultados obtenidos para un examen imagenológico"
 
 * category 1..*
 * category ^slicing.discriminator.type = #value
-* category ^slicing.discriminator.path = "coding.code"
+//* category ^slicing.discriminator.path = "coding.code"
+* category ^slicing.discriminator.path = "code"
 * category ^slicing.rules = #open
 * category ^slicing.description = "Slicing para obligar el uso de una categoria de tipo: \"Laboratorio\""
 * category ^slicing.ordered = false

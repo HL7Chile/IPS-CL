@@ -23,10 +23,13 @@ Description: "Ejemplo sobre el resultado de radiología de un paciente."
 //* category ^slicing.description = ""
 // Inicializamos el primer elemento del array category[0]
 
-* category[laboratorio].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category" //categoria de los resultados de radiologia
-* category[laboratorio].coding.code = #imaging
-* category[laboratorio].coding.display = "Imaging"
-
+//* category[laboratorio].coding[0].system = "http://terminology.hl7.org/CodeSystem/observation-category" //categoria de los resultados de radiologia
+//* category[laboratorio].coding[0].code = #imaging
+//* category[laboratorio].coding[0].display = "Imaging"
+* category[laboratorio]
+  * coding = CScategoria#imaging "Imaging"
+  * text = "Imágenes"
+  
 * code //tipo de prueba de imagenologia
   * coding = loinc#103284-6	"Portable XR Abdomen 2 Views"
   * text = "Radiografía portátil de abdomen 2 vistas"
