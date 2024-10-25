@@ -1,8 +1,7 @@
 Alias: loinc = http://loinc.org
 Alias: snomed = https://snomed.info/sct
-Alias: CSAtc = http://www.whocc.no/atc
-Alias: EDQM = http://standardterms.edqm.eu
 Alias: function = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
+Alias: CSDicom = http://dicom.nema.org/resources/ontology/DCM
 
 Instance:    EstudioImagenologiaCLEjemplo
 InstanceOf:  ImagingStudyClIps
@@ -24,11 +23,17 @@ Description: "Ejemplo sobre el estudio imagenológico de un paciente."
   * coding = snomed#2919008 "Nausea, vomiting and diarrhea"
   * text = "Náuseas, vómitos y diarrea."
 
+* series.uid = "2.16.124.113543.6003.2588828330.45298.17418.2723805630"
+
+//modalidad del estudio: bajo que tipo de modalidad se hará
+* series.modality.system = CSDicom
+* series.modality.code = #DX
+* series.modality.display = "Digital Radiography"
+
 * series.performer.actor = Reference(PrestadorClIpsEjemplo)
 * series.performer.function = function#CON "consultant" //Funcion del prestador de salud
 * series.performer.function.text = "Consultante: Realiza evaluaciones y recomendaciones"
 
-* series
-  * bodySite //sitio del cuerpo donde se realizó el estudio
-    * coding = snomed#818983003 "Abdomen"
-    * text = "Abdomen"
+* series.bodySite.system = snomed //sitio del cuerpo donde se realizó el estudio
+* series.bodySite.code = #818983003
+* series.bodySite.display = "Abdomen"

@@ -13,7 +13,7 @@ Description: "Ejemplo sobre el resultado de radiología de un paciente."
 
 * status = #final //Observación completa y no se necesian más acciones
 
-* category //categoria de los resultados de radiologia
+* category[laboratorio] //categoria de los resultados de radiologia
   * coding = CScategoria#imaging "Imaging"
   * text = "Imágenes"
 
@@ -27,7 +27,7 @@ Description: "Ejemplo sobre el resultado de radiología de un paciente."
 
 * performer = Reference(PrestadorClIpsEjemplo)
 
-* component
+* component[observacionTextual]
   * code
     * coding = CSDicom#121069 "Previous Finding"
     * text = "Hallazgo previo"
