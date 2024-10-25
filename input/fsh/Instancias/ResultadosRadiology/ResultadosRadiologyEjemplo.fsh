@@ -16,15 +16,16 @@ Description: "Ejemplo sobre el resultado de radiología de un paciente."
 //El slicing se especifica porque el elemento category es un array de codeableconcept (puede repetirse varias veces). se requiere diferenciar la categoria con la cual se va a trabajar
 //discriminador = coding.code, lo que permite que la categoria "laboratorio" se identifique por el codigo "imaging"
 //un discriminador permite identificar las partes o slices de un elemento. en este caso el discriminador define que se usará para distinguir entre categorias, en este caso el código.
-* category ^slicing.discriminator.type = #value //tipo de dato, en este caso coding.code
-* category ^slicing.discriminator.path = "coding.code"
-* category ^slicing.rules = #open
+//* category ^slicing.discriminator.type = #value //tipo de dato, en este caso coding.code
+//* category ^slicing.discriminator.path = "coding.code"
+//* category ^slicing.ordered = false
+//* category ^slicing.rules = #open
 //* category ^slicing.description = ""
-* category ^slicing.ordered = false
+// Inicializamos el primer elemento del array category[0]
 
-* category[laboratorio].coding[0].system = CScategoria //categoria de los resultados de radiologia
-* category[laboratorio].coding[0].code = #imaging
-* category[laboratorio].coding[0].display = "Imaging"
+* category[laboratorio].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category" //categoria de los resultados de radiologia
+* category[laboratorio].coding.code = #imaging
+* category[laboratorio].coding.display = "Imaging"
 
 * code //tipo de prueba de imagenologia
   * coding = loinc#103284-6	"Portable XR Abdomen 2 Views"
