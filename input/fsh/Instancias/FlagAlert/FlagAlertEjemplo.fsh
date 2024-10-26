@@ -24,6 +24,6 @@ Description: "Ejemplo de una alerta sobre un problema  que sufre el paciente"
 
 * code.coding.system = snomed
 * code.coding.code = #370388006
-* code.coding.display = "Patient Inmunocompromised" //la alerta se debe a que el paciente es inmunocomprometido
+* code.coding.display = "Patient inmunocompromised" //la alerta se debe a que el paciente es inmunocomprometido
 
 * subject = Reference(PacienteClIpsEjemplo)

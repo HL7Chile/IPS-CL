@@ -21,5 +21,5 @@ Description: "Ejemplo sobre la declaración de uso de un dispositivo médico"
 //* bodySite.coding.display = "Left elbow"
 
 * bodySite 
-  * coding = snomed#1927002 "Left elbow"
-  * text = "Codo izquierdo"
+  * coding = snomed#1927002 "Entire left elbow region"
+  * text = "Toda región del codo izquierdo"

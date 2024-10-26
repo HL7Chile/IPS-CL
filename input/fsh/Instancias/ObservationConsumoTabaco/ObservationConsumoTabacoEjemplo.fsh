@@ -21,7 +21,7 @@ Description: "Ejemplo de una observación sobre el consumo de tabaco del pacient
 * performer = Reference(PrestadorClIpsEjemplo)
 
 * valueCodeableConcept
-  * coding = snomed#428041000124106 "Fumador ocasional de tabaco (hallazgo)"
+  * coding = SNOMED_CT_INT#428041000124106 "Fumador ocasional de tabaco (hallazgo)"
   * text = "Fumador ocasional de tabaco (hallazgo)"
 //* valueCodeableConcept.coding.system = snomed
 //* valueCodeableConcept.coding.code = #428041000124106
