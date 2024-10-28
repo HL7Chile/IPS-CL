@@ -19,6 +19,7 @@ Description: "Ejemplo de una observación sobre la fecha estimada de parto"
 
 * effectiveDateTime = "2023-01-20"
 
-* performer = Reference(PrestadorClIpsEjemplo)
+* performer = Reference(PrestadorMedFamiliarClIpsEjemplo)
 
 * valueDateTime = "2023-10-02" //corresponde a la fecha estimada de parto segun el prestador
+  * text = "Fecha estimada de parto"

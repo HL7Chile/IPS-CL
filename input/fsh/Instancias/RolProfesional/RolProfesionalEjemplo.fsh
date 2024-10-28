@@ -7,10 +7,10 @@ Alias: especialidad = https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSEspecialid
 Instance:    RolProfesionalCLEjemplo
 InstanceOf:  RolPrestadorClIps
 Usage:       #example
-Title:       "Rol Profesional - Ejemplo"
-Description: "Ejemplo sobre el rol de un profesional de la salud."
+Title:       "Rol Profesional Medicina Familiar - Ejemplo"
+Description: "Ejemplo sobre el rol de un profesional de la salud, específicamente de medicina familiar."
 
-* practitioner = Reference(PrestadorClIpsEjemplo) //hace referencia al prestador de salud
+* practitioner = Reference(PrestadorMedFamiliarClIpsEjemplo) //hace referencia al prestador de salud
 
 * organization = Reference(Organization-CL-Ejemplo) //hace referencia a la organizacion a la que pertenece el prestador
 

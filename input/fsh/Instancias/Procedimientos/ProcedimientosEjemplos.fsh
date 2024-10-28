@@ -10,9 +10,10 @@ Title:       "Procedimiento - Ejemplo"
 Description: "Ejemplo sobre un procedimiento al que se somete un paciente."
 
 * status = #completed //el procedimiento ya fue completado
+
 * code
-  * coding = snomed#1417002 "Operation on face" //procedimiento
-  * text = "Operación en la cara"
+  * coding = snomed#2598006 "Open heart surgery" //procedimiento
+  * text = "Cirugía a corazón abierto"
 
 * category //tipo/clasificacion del procedimiento
   * coding = snomed#387713003 "Surgical procedure"
@@ -22,8 +23,8 @@ Description: "Ejemplo sobre un procedimiento al que se somete un paciente."
 
 * performedDateTime = "2011-06-17" //cuando se hizo el procedimiento
 
-* performer.actor = Reference(PrestadorClIpsEjemplo) //quien participó en el procedimiento 
+* performer.actor = Reference(PrestadorMedInternaClIpsEjemplo) //quien participó en el procedimiento 
 
 * bodySite //estructura del cuerpo donde se realizó el procedimiento
-  * coding = snomed#89545001 "Face structure"
-  * text = "Cara"
+  * coding = snomed#89545001 "Heart structure"
+  * text = "Corazón"

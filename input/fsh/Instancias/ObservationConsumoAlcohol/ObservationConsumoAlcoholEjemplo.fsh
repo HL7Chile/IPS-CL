@@ -19,7 +19,7 @@ Description: "Ejemplo de una observación sobre el consumo de alcohol del pacien
 
 * subject = Reference(PacienteClIpsEjemplo)
 * effectiveDateTime = "2023-08-10"
-* performer = Reference(PrestadorClIpsEjemplo)
+* performer = Reference(PrestadorMedFamiliarClIpsEjemplo)
 
 * valueQuantity.value = 2
 * valueQuantity.system = ucum

@@ -19,7 +19,7 @@ Description: "Ejemplo de una observación sobre un resumen de los resultados de 
 
 * subject = Reference(PacienteClIpsEjemplo)
 * effectiveDateTime = "2022-08-18"
-* performer = Reference(PrestadorClIpsEjemplo)
+* performer = Reference(PrestadorMedFamiliarClIpsEjemplo)
 
 * valueQuantity.value = 1
 * valueQuantity.unit = "Hijo"

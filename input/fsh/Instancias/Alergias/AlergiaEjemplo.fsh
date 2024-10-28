@@ -27,7 +27,7 @@ Description: "Ejemplo sobre el padecimiento de una o más alergias por parte del
 
 * patient = Reference(PacienteClIpsEjemplo) //Para quien es la prescripción de medicacion
 
-* onsetAge.value = 6
+* onsetAge.value = 11
 * onsetAge.system = ucum
 * onsetAge.code = #a
 * onsetAge.unit = "años"

@@ -25,7 +25,14 @@ Description: "Ejemplo de una condición que padece el paciente."
   * coding = snomed#6736007 "Moderate"
   * text = "Moderado"
 
+* bodySite
+  * coding = snomed#54066008 "Pharynx"
+  * text = "Faringe"
+
 * subject = Reference(PacienteClIpsEjemplo)
 
+* onsetPeriod.start = "2017-08-04" //periodo de inicio de la condicion
+* onsetPeriod.end = "2017-08-20" //periodo de termino de la condicion
 
+* asserter = Reference(PrestadorMedInternaClIpsEjemplo)
 

@@ -1,24 +1,24 @@
 Alias: CSTipoIdentificador = https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSTipoIdentificador
 
-Instance:    PrestadorMedInternaClIpsEjemplo
+Instance:    PrestadorMedFamiliarClIpsEjemplo
 InstanceOf:  PrestadorClIps
 Usage:       #example
-Title:       "Ejemplo de Prestador Medicina Interna CL - IPS"
-Description: "Ejemplo de prestador de medicina interna que atiende al paciente según el estándar IPS nacional"
+Title:       "Ejemplo de Prestador Medicina Familiar CL - IPS"
+Description: "Ejemplo de prestador de medicina familiar que atiende al paciente según el estándar IPS nacional"
 
 //Identificación por Cédula Chilena
 * identifier[run].use = #official
-* identifier[run].value = "17435678-2"
+* identifier[run].value = "12829325-k"
 * identifier[run].type.coding.system = CSTipoIdentificador
 * identifier[run].type.coding.code = #01
 * identifier[run].type.coding.display = "RUN"
 
 //Nombre Prestador
 * name.use = #official
-* name.family = "Figueroa"
+* name.family = "Donoso"
 //* family.extension[segundoApellido] = SegundoApellidoPrestadorCL2
-* name.given = "Nicolás"
-* name.given[1] = "Bastian"
+* name.given = "Catalina"
+* name.given[1] = "Alexandra"
 
 //* telecom.system = #phone
 //* telecom.use = #mobile
@@ -26,10 +26,7 @@ Description: "Ejemplo de prestador de medicina interna que atiende al paciente s
 
 * telecom.system = #email
 * telecom.use = #work
-* telecom.value = "DrNicolasB@hotmail.com"
+* telecom.value = "DraCatalinaAle@hotmail.com"
 
 * qualification[EspecialidadMedica].identifier.value = "esp"
-* qualification[EspecialidadMedica].code.text = "Medicina Interna"
-
-* qualification[Subespecialidad].identifier.value = "subesp"
-* qualification[Subespecialidad].code.text = "Cirugía cardiovascular"
+* qualification[EspecialidadMedica].code.text = "Medicina Familiar"

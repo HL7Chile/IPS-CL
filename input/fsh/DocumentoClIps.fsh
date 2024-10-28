@@ -116,7 +116,7 @@ Este perfil se basa en el perfil ClinicalDocument."""
     sectionPlanCuidado 0..1 and
     sectionHistoriaSocial 0..1 and
     sectionEmbarazoHx 0..1 and
-    //sectionAlerts 0..1 and
+    sectionFlagAlerts 0..1 and
     sectionDirectivasAvanzadas 0..1
 
 * section[sectionMedicamentos] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
@@ -219,13 +219,6 @@ Este perfil se basa en el perfil ClinicalDocument."""
 * section[sectionDispMedicos].entry ^short = "La historia de dispositivos médicos en uso"
 * section[sectionDispMedicos].entry ^definition = "Describe el historial de uso de productos sanitarios del paciente. Esta entrada se utilizará para documentar que no se dispone de información sobre el uso de productos sanitarios o que no se conoce ningún uso relevante de productos sanitarios."
 * section[sectionDispMedicos].entry contains deviceStatement 1..* MS
-//* section[sectionDispMedicos].entry contains 
-//    deviceStatement 0..* MS and
-//    device 0..* MS and
-//    devicePerformerObserver 0..* MS
-//* section[sectionDispMedicos].entry[deviceStatement] only Reference(DeclaracionUsoDispositivoClIps)
-//* section[sectionDispMedicos].entry[device] only Reference(DispositivoClIps)
-//* section[sectionDispMedicos].entry[devicePerformerObserver] only Reference(DispositivoObservadorClIps)
 * section[sectionDispMedicos].entry[deviceStatement] only Reference(DeclaracionUsoDispositivoClIps)
 
 * section[sectionResultados] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
@@ -352,6 +345,21 @@ Este perfil se basa en el perfil ClinicalDocument."""
 * section[sectionEmbarazoHx].entry[statusEmbarazo] only Reference(ObservationEstadoEmbarazoClIps)
 * section[sectionEmbarazoHx].entry[resultadoEmbarazo] only Reference(ObservationResultadoEmbarazoClIps)
 //Y fecha de embarazo??
+* section[sectionFlagAlerts] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionFlagAlerts] ^extension[=].valueString = "Sección"
+* section[sectionFlagAlerts] ^short = "Flag - Alertas"
+* section[sectionFlagAlerts] ^definition = "La sección de alertas señala posibles preocupaciones y/o peligros para/del paciente y también puede incluir obstáculos para la atención."
+* section[sectionFlagAlerts].title 1..
+* section[sectionFlagAlerts].code = loinc#104605-1
+* section[sectionFlagAlerts].entry only Reference(Flag or DocumentReference)
+* section[sectionFlagAlerts].entry ^slicing.discriminator[0].type = #profile
+* section[sectionFlagAlerts].entry ^slicing.discriminator[=].path = "resolve()"
+* section[sectionFlagAlerts].entry ^slicing.rules = #open
+* section[sectionFlagAlerts].entry ^short = "Información sobre alertas relacionadas al paciente."
+* section[sectionFlagAlerts].entry ^definition = "Contiene información de alertas que se deben comunicar. Opcionalmente, puede hacer referencia a otros recursos en IPS-CL."
+* section[sectionFlagAlerts].entry contains alertsFlag 0..*
+* section[sectionFlagAlerts].entry[alertsFlag] only Reference(FlagAlertClIps)
+
 * section[sectionDirectivasAvanzadas] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionDirectivasAvanzadas] ^extension[=].valueString = "Sección"
 * section[sectionDirectivasAvanzadas] ^short = "Sección de Consentimientos"

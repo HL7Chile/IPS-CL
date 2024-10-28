@@ -18,10 +18,10 @@ Description: "Ejemplo de una observación sobre el estado del embarazo"
 
 * subject = Reference(PacienteClIpsEjemplo)
 * effectiveDateTime = "2023-01-10"
-* performer = Reference(PrestadorClIpsEjemplo)
+* performer = Reference(PrestadorMedFamiliarClIpsEjemplo)
 
 * valueCodeableConcept
-  * coding = snomed#77386006 "Embarazada"
+  * coding = snomed#77386006 "Pregnancy"
   * text = "Embarazada"
 //* valueCodeableConcept.coding.system = snomed
 //* valueCodeableConcept.coding.code = #77386006

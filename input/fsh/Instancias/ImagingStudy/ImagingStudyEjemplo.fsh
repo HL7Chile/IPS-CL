@@ -30,9 +30,9 @@ Description: "Ejemplo sobre el estudio imagenológico de un paciente."
 * series.modality.code = #DX
 * series.modality.display = "Digital Radiography"
 
-* series.performer.actor = Reference(PrestadorClIpsEjemplo)
+* series.performer.actor = Reference(OrganizationHospital-CL-Ejemplo)
 * series.performer.function = function#CON "consultant" //Funcion del prestador de salud
-* series.performer.function.text = "Consultante: Realiza evaluaciones y recomendaciones"
+* series.performer.function.text = "Consultante: Realiza evaluación inicial y recomendaciones"
 
 * series.bodySite.system = snomed //sitio del cuerpo donde se realizó el estudio
 * series.bodySite.code = #818983003

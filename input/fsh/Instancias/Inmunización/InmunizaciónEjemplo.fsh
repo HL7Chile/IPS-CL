@@ -26,7 +26,7 @@ Description: "Ejemplo sobre las inmunizaciones que posee el paciente."
 
 * patient = Reference(PacienteClIpsEjemplo) //Para quien es la prescripción de medicacion
 
-* occurrenceDateTime = "2000-04-23"
+* occurrenceDateTime = "2005-04-23"
 
 * site.coding = snomed#368208006 "Left upper arm structure (body structure)"
 * site.coding.display.extension.extension[0].url = "lang"

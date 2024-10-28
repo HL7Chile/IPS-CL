@@ -38,7 +38,7 @@ Description: "Ejemplo sobre el resultado de radiología de un paciente."
 
 * effectiveDateTime = "2014-07-09"
 
-* performer = Reference(PrestadorClIpsEjemplo)
+* performer = Reference(OrganizationHospital-CL-Ejemplo)
 
 * component[observacionTextual]
   * code

@@ -21,6 +21,8 @@ Description: "Ejemplo de una observación sobre los signos vitales de un pacient
 
 * subject = Reference(PacienteClIpsEjemplo)
 
+* performer = Reference(PrestadorMedInternaClIpsEjemplo)
+
 * effectiveDateTime = "2024-02-14" //fecha en la que se registró
 
 * valueQuantity.value = 75
