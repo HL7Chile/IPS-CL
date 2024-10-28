@@ -10,8 +10,8 @@ Title:       "Condición - Ejemplo"
 Description: "Ejemplo de una condición que padece el paciente."
 
 * clinicalStatus //estado de la condicion del paciente, en este caso se encuentra inactiva
- * coding = CScondition#inactive "Inactive"
- * text = "Inactiva"
+  * coding = CScondition#inactive "Inactive"
+  * text = "Inactiva"
 
 * category //categoria de la condicion, en este caso es un problema
   * coding = loinc#75326-9 "Problem"

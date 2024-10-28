@@ -7,12 +7,10 @@ Profile: ConditionClIps
 Parent: DiagnosticoCl
 Id: Condition-cl-ips
 Title: "Condición (IPS-CL)"
-Description: """
-Este perfil representa las restricciones aplicadas al recurso Condition por la Guía de Implementación FHIR del Resumen Internacional del Paciente Adaptación de Chile (IPS-CL). Un registro de un problema se representa en el resumen del paciente como una instancia del recurso Condition restringido por este perfil.
+Description: "Este perfil representa las restricciones aplicadas al recurso Condition por la Guía de Implementación FHIR del Resumen Internacional del Paciente Adaptación de Chile (IPS-CL). Un registro de un problema se representa en el resumen del paciente como una instancia del recurso Condition restringido por este perfil.
 
-Representación de un problema en el resumen internacional del paciente.
+Representación de un problema en el resumen internacional del paciente."
 
-"""
 * clinicalStatus only CodeableConceptIPS
   * ^short = "El estatus en el cual se encuentra la condición: active| recurrece | relapse | inactive | remission | resolved"
 * clinicalStatus from ConditionClinicalStatus

@@ -22,4 +22,3 @@ Description: "Ejemplo de una observación sobre la fecha estimada de parto"
 * performer = Reference(PrestadorMedFamiliarClIpsEjemplo)
 
 * valueDateTime = "2023-10-02" //corresponde a la fecha estimada de parto segun el prestador
-  * text = "Fecha estimada de parto"
