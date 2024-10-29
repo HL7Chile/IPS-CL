@@ -21,7 +21,7 @@ Description: "Ejemplo sobre un documento clínico que representa un conjunto de 
 
 * author = Reference(PrestadorMedInternaClIpsEjemplo)
 
-* title = "	International Patient Summary Genérico para uso en Chile"
+* title = "International Patient Summary Genérico para uso en Chile"
 
 * custodian = Reference(OrganizationHospital-CL-Ejemplo) //organizacion que mantiene el documento
 
@@ -32,10 +32,10 @@ Description: "Ejemplo sobre un documento clínico que representa un conjunto de 
 * relatesTo.targetIdentifier.value = "IPS-CL-2024-001"
 
 * section[sectionMedicamentos].title = "Medicamentos"
-* section[sectionMedicamentos]
-  * code
-    * coding = loinc#10160-0 "History of medication use Narrative"
-    * text = "Historial de uso de medicamentos"
+* section[sectionMedicamentos].code.coding.system = loinc
+* section[sectionMedicamentos].code.coding.code = #10160-0
+* section[sectionMedicamentos].code.coding.display = "History of medication use Narrative"
+* section[sectionMedicamentos].code.text = "Historial de uso de medicamentos"
 
 * section[sectionMedicamentos].text.status = #generated
 * section[sectionMedicamentos].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li><div><b>Medication Name</b>: Aspirina (medicamento)</div><div><b>Code</b>: <span>7947003</span></div><div><b>Status</b>: <span>completed, started 2019-02-04</span></div><div>Instructions: Administrar 500 mg por 3 días</div></li></ul></div>"
@@ -44,10 +44,10 @@ Description: "Ejemplo sobre un documento clínico que representa un conjunto de 
 * section[sectionMedicamentos].entry[prescripciones] = Reference(MedicationRequest-CL-Ejemplo)
 
 * section[sectionAlergias].title = "Alergias"
-* section[sectionAlergias]
-  * code
-    * coding = loinc#48765-2 "Allergies and adverse reactions Document"
-    * text = "Documento de alergias y reacciones adversas"
+* section[sectionAlergias].code.coding.system = loinc
+* section[sectionAlergias].code.coding.code = #48765-2
+* section[sectionAlergias].code.coding.display = "Allergies and adverse reactions Document"
+* section[sectionAlergias].code.text = "Documento de alergias y reacciones adversas"
 
 * section[sectionAlergias].text.status = #generated
 * section[sectionAlergias].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li><div><b>Allergy Name</b>: Hierro y Clotrimazol</div><div><b>Verification Status</b>: Confirmado</div><div><b>Reaction</b>: <span>Gastritis y Dermatitis inflamatoria</span></div></li></ul></div>"
@@ -55,10 +55,10 @@ Description: "Ejemplo sobre un documento clínico que representa un conjunto de 
 * section[sectionAlergias].entry[alergias] = Reference(Alergia-CL-Ejemplo)
 
 * section[sectionProblemas].title = "Problemas de salud - Condiciones"
-* section[sectionProblemas]
-  * code
-    * coding = loinc#57852-6 "Problem list Narrative - Reported"
-    * text = "Lista de problemas"
+* section[sectionProblemas].code.coding.system = loinc
+* section[sectionProblemas].code.coding.code = #11450-4
+* section[sectionProblemas].code.coding.display = "Problem list - Reported"
+* section[sectionProblemas].code.text = "Lista de problemas"
 
 * section[sectionProblemas].text.status = #generated
 * section[sectionProblemas].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li><div><b>Condition Name</b>: Faringitis viral</div><div><b>Code</b>: <span>1532007</span></div><div><b>Status</b>: <span>Inactiva</span></div></li></ul></div>"
