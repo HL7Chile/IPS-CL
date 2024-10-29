@@ -1,0 +1,19 @@
+Alias: loinc = http://loinc.org
+Alias: snomed = http://snomed.info/sct
+Alias: ucum = http://unitsofmeasure.org
+Alias: CSIntent = http://hl7.org/fhir/request-intent
+
+Instance:    Bundle-CL-Ejemplo
+InstanceOf:  BundleDocumentoIPSCl
+Usage:       #example
+Title:       "Composition - Ejemplo"
+Description: "Ejemplo sobre un documento clínico que representa un conjunto de datos para el Resumen Internacional de Pacientes (IPS)."
+
+* identifier.system = "urn:oid:2.16.152.1.10.1" //identificador ficticio del documento; el OID 2.16.152.1 es del MINSAL, para identificar a Chile
+* identifier.value = "IPS-Bundle-2024-001"
+
+* type = #document //Tipo de bundle, en este caso es un documento
+
+* timestamp = "2024-05-30" //instante de tiempo; fecha de creación del documento
+
+
