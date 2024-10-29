@@ -33,17 +33,18 @@ Description: "Resultados obtenidos para un examen imagenológico"
 
 * category 1..*
 * category only CodeableConceptIPS
-* category ^slicing.discriminator.type = #pattern
-* category ^slicing.discriminator.path = "code"
+* category ^slicing.discriminator.type = #value
+* category ^slicing.discriminator.path = "coding.code"
 //* category ^slicing.discriminator.path = "$this"
-* category ^slicing.rules = #closed
+* category ^slicing.rules = #open
 * category ^slicing.description = "Slicing para obligar el uso de una categoria de tipo: \"Laboratorio\""
 * category ^slicing.ordered = false
 * category contains laboratorio 1..1 MS
 //* category[laboratorio] = CategoryRadiologia
-* category[laboratorio]
-  * coding = CScaterogy#imaging "Imaging"
-  * ^short = "Categoría de tipo: Laboratorio"
+* category[laboratorio].coding.code = #imaging
+//* category[laboratorio].coding.display = "Imaging"
+
+ // * ^short = "Categoría de tipo: Laboratorio"
 
 * code from ResultsRadiologyObservationUvIps (extensible)
 

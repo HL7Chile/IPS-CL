@@ -22,7 +22,7 @@ Description: "Ejemplo de una condición que padece el paciente."
   * text = "Faringitis viral"
 
 * severity //grado de severidad de la condicion
-  * coding = snomed#6736007 "Moderate"
+  * coding = snomed#6736007 "Moderate severity"
   * text = "Moderado"
 
 * bodySite

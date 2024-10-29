@@ -20,7 +20,7 @@ Description: "Ejemplo sobre un medicamento que utiliza el paciente."
 * code.coding[=].display.extension.extension[0].url = "lang"
 * code.coding[=].display.extension.extension[=].valueCode = #es
 * code.coding[=].display.extension.extension[+].url = "content"
-* code.coding[=].display.extension.extension[=].valueString = "Producto que contiene aspirina (medicamento)"
+* code.coding[=].display.extension.extension[=].valueString = "Aspirina (medicamento)"
 * code.coding[=].display.extension.url = "http://hl7.org/fhir/StructureDefinition/translation"
 * code.coding[+] = CSAtc#A01AD05 "acetylsalicylic acid"
 * code.coding[=].display.extension.extension[0].url = "lang"
@@ -29,7 +29,7 @@ Description: "Ejemplo sobre un medicamento que utiliza el paciente."
 * code.coding[=].display.extension.extension[=].valueString = "Ácido acetilsalicílico"
 * code.coding[=].display.extension.url = "http://hl7.org/fhir/StructureDefinition/translation"
 
-* code.text = "Producto que contiene aspirina (medicamento)"
+* code.text = "Aspirina (medicamento)"
 
 //* manufacturer = Reference(Organization-CL-Ejemplo) //laboratorio del medicamento
 //* manufacturer.display = "Bayer"

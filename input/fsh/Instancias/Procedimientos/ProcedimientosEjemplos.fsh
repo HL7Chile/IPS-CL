@@ -26,5 +26,5 @@ Description: "Ejemplo sobre un procedimiento al que se somete un paciente."
 * performer.actor = Reference(PrestadorMedInternaClIpsEjemplo) //quien participó en el procedimiento 
 
 * bodySite //estructura del cuerpo donde se realizó el procedimiento
-  * coding = snomed#89545001 "Heart structure"
+  * coding = snomed#80891009 "Heart structure"
   * text = "Corazón"

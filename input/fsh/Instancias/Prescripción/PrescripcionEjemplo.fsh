@@ -10,7 +10,7 @@ Usage:       #example
 Title:       "Medication Request - Ejemplo"
 Description: "Ejemplo sobre la solicitud de medicación relacionada con un paciente. Esta es prescrita por un profesional de salud"
 
-* status = #active
+* status = #completed
 
 * intent = #original-order
 
