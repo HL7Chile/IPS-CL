@@ -156,7 +156,6 @@ Este perfil se basa en el perfil ClinicalDocument."""
 * section[sectionAlergias].entry contains alergias 1..* MS
 * section[sectionAlergias].entry[alergias] only Reference(AlergiaIntClIps)
 
-
 * section[sectionProblemas] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionProblemas] ^extension[=].valueString = "Sección"
 * section[sectionProblemas] ^short = "Problemas de Salud"
