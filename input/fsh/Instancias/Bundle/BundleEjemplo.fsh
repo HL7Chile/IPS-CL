@@ -12,8 +12,8 @@ Alias: CScondition = http://terminology.hl7.org/CodeSystem/condition-clinical
 Instance:    Bundle-CL-Ejemplo
 InstanceOf:  BundleDocumentoIPSCl
 Usage:       #example
-Title:       "Composition - Ejemplo"
-Description: "Ejemplo sobre un documento clínico que representa un conjunto de datos para el Resumen Internacional de Pacientes (IPS)."
+Title:       "Bundle - Ejemplo"
+Description: "Ejemplo sobre un documento clínico tipo Bundle que representa el conjunto mínimo de datos para el Resumen Internacional de Pacientes (IPS)."
 
 * meta.profile = "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Bundle-documento-ips-cl"
 * identifier.system = "urn:oid:2.16.152.1.10.1" //identificador ficticio del documento; el OID 2.16.152.1 es del MINSAL, para identificar a Chile
@@ -60,15 +60,15 @@ Usage: #inline
   * coding = loinc#60591-5 "Patient summary Document"
   * text = "Documento resumen del paciente"
 
-* subject = Reference(a4104fff-1237-4cc4-8b7e-6c4c235f282a)
+* subject = Reference(urn:uuid:a4104fff-1237-4cc4-8b7e-6c4c235f282a)
 
 * date = "2024-05-28" //tiempo de edición del documento
 //prestador
-* author = Reference(503a0267-1cfd-44cc-a382-e052a78fa5cc)
+* author = Reference(urn:uuid:503a0267-1cfd-44cc-a382-e052a78fa5cc)
 
 * title = "International Patient Summary Genérico para uso en Chile"
 //organizacion
-* custodian = Reference(e80c16ae-eec7-4ff7-99c4-27e756ace6fa) //organizacion que mantiene el documento
+* custodian = Reference(urn:uuid:e80c16ae-eec7-4ff7-99c4-27e756ace6fa) //organizacion que mantiene el documento
 
 * relatesTo.code = #appends //este documento agrega informacion adicional al documento de destino
 
@@ -83,7 +83,7 @@ Usage: #inline
 * section[=].code.text = "Historial de uso de medicamentos"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li><div><b>Medication Name</b>: Aspirina (medicamento)</div><div><b>Code</b>: <span>7947003</span></div><div><b>Status</b>: <span>completed, started 2019-02-04</span></div><div>Instructions: Administrar 500 mg por 3 días</div></li></ul></div>"
-* section[=].entry = Reference(f6759f7e-630f-400e-bbe2-c8378fa6a1a5)
+* section[=].entry = Reference(urn:uuid:f6759f7e-630f-400e-bbe2-c8378fa6a1a5)
 
 * section[+].title = "Alergias"
 * section[=].code.coding.system = loinc
@@ -92,7 +92,7 @@ Usage: #inline
 * section[=].code.text = "Documento de alergias y reacciones adversas"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li><div><b>Allergy Name</b>: Hierro y Clotrimazol</div><div><b>Verification Status</b>: Confirmado</div><div><b>Reaction</b>: <span>Gastritis y Dermatitis inflamatoria</span></div></li></ul></div>"
-* section[=].entry = Reference(4383be84-d431-47e1-85e7-80d995742514)
+* section[=].entry = Reference(urn:uuid:4383be84-d431-47e1-85e7-80d995742514)
 
 * section[+].title = "Problemas de salud - Condiciones"
 * section[=].code.coding.system = loinc
@@ -101,7 +101,7 @@ Usage: #inline
 * section[=].code.text = "Lista de problemas"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li><div><b>Condition Name</b>: Faringitis viral</div><div><b>Code</b>: <span>1532007</span></div><div><b>Status</b>: <span>Inactiva</span></div></li></ul></div>"
-* section[=].entry = Reference(fd5676b3-0011-49a3-9c21-d1bd8458f350)
+* section[=].entry = Reference(urn:uuid:fd5676b3-0011-49a3-9c21-d1bd8458f350)
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -228,10 +228,10 @@ Usage: #inline
 
 * status = #completed
 
-* medicationReference = Reference(edbe2197-1ead-44d3-b572-4b26de4fb427)
+* medicationReference = Reference(urn:uuid:edbe2197-1ead-44d3-b572-4b26de4fb427)
 * medicationReference.display = "Pastilla Aspirina"
 
-* subject = Reference(a4104fff-1237-4cc4-8b7e-6c4c235f282a)
+* subject = Reference(urn:uuid:a4104fff-1237-4cc4-8b7e-6c4c235f282a)
 
 * effectivePeriod.start = "2019-02-04"
 * effectivePeriod.end = "2019-02-07"
@@ -293,7 +293,7 @@ Usage: #inline
   * coding[1] = CSAtc#A01AB18 "clotrimazole"
   * text = "Hierro y Clotrimazol"
 
-* patient = Reference(a4104fff-1237-4cc4-8b7e-6c4c235f282a) //Para quien es la prescripción de medicacion
+* patient = Reference(urn:uuid:a4104fff-1237-4cc4-8b7e-6c4c235f282a) //Para quien es la prescripción de medicacion
 
 * onsetAge.value = 11
 * onsetAge.system = ucum
@@ -319,7 +319,7 @@ Usage: #inline
   * coding = snomed#1532007 "Viral pharyngitis"
   * text = "Faringitis viral"
 
-* subject = Reference(a4104fff-1237-4cc4-8b7e-6c4c235f282a)
+* subject = Reference(urn:uuid:a4104fff-1237-4cc4-8b7e-6c4c235f282a)
 
 * onsetPeriod.start = "2017-08-04" //periodo de inicio de la condicion
 * onsetPeriod.end = "2017-08-20" //periodo de termino de la condicion
