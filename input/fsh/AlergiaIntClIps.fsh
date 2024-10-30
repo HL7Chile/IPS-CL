@@ -13,7 +13,7 @@ Title: "Alergias e Intolerancias (IPS-CL)"
 Description: "Este perfil restringe el recurso de Alergias e Intolerancias para representar este modelo a nivel nacional"
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
-* ^extension[=].valueInteger = 1
+* ^extension[=].valueInteger = 1 //nivel de madurez del perfil dentro del estándar
 * ^extension[=].valueInteger.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
 * ^extension[=].valueInteger.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
@@ -54,6 +54,8 @@ Description: "Este perfil restringe el recurso de Alergias e Intolerancias para 
 
 * patient MS
 * patient.reference 1.. MS
+* patient only Reference(Paciente-cl-ips)
+
 * onset[x] only dateTime or Age or Period or Range or string
 * onset[x] MS
 * onset[x] ^type.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
