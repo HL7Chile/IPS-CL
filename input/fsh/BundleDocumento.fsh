@@ -46,9 +46,10 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
   diagnosticreport 0..* and
   device 0..* and
   deviceusestatement 0..* and
-  deviceperformerobserver 0..* and
+  deviceperformerobserver 0..* and //se agrego
   imagingstudy 0..* and
   immunization 0..* and
+  medication 0..* and
   medicationrequest 0..* and
   medicationstatement 0..* and
   practitioner 0..* and
@@ -62,12 +63,12 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
   observation-pregnancy-status 0..* and
   observation-alcohol-use 0..* and
   observation-tobacco-use 0..* and
-  vital-signs 0..* and
+  observation-vital-signs 0..* and
   specimen 0..* and
   flag 0..* and
+  clinicalimpression 0..* and
   careplan 0..* and
-  consent 0..* and
-  medication 0..*
+  consent 0..*
 
 * entry[composition]
   * resource 1..1
@@ -118,6 +119,11 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
   * resource 1..
     * ^short = "Vacunas e inmunizaciones del Paciente"
   * resource only Inmunizacion-cl-ips
+
+* entry[medication]
+  * resource 1..
+    * ^short = "Medicamentos utilizados en registros o prescripciones para el Paciente"
+  * resource only Medicamento-cl-ips
 
 * entry[medicationrequest]
   * resource 1..
@@ -184,7 +190,7 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
     * ^short = "Observaciones sobre el consumo de tabaco"
   * resource only Observation-uso-de-tabaco-cl-ips
 
-* entry[vital-signs]
+* entry[observation-vital-signs]
   * resource 1..
     * ^short = "Observaciones sobre los signos vitales del paciente"
   * resource only vitalsigns-cl-ips
@@ -199,6 +205,11 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
     * ^short = "Alerta específica de IPS"
   * resource only Flag-alerta-cl-ips
 
+* entry[clinicalimpression] //agregado recientemente
+  * resource 1..
+    * ^short = "Plan de cuidados de un paciente"
+  * resource only FuncionalStatusClinicalImpressionClIps //hace referencia al recurso del estándar
+
 * entry[careplan]
   * resource 1..
     * ^short = "Plan de cuidados de un paciente"
@@ -209,10 +220,6 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
     * ^short = "Voluntades anticipadas de un paciente"
   * resource only Consent-cl-ips
 
-* entry[medication]
-  * resource 1..
-    * ^short = "Medicamentos utilizados en registros o prescripciones para el Paciente"
-  * resource only Medicamento-cl-ips
 
 
 

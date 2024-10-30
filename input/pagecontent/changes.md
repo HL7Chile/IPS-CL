@@ -24,15 +24,26 @@
     - Se modifica la versión de la extension.valueInteger = 2 -> 1. Indica el nivel de madurez del perfil dentro del estándar.
     - Se modifica la canonica de la extension.valueInteger y extension.valueCode a la canonica de HL7 IPS Chile para la guía de implementación https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips
     - Se modifica todo dato de contacto al estándar chileno.
+
 - Perfil [AlergiasIntolerancias](StructureDefinition-AllergiaInt-cl-ips.html)
     - Se agrega el perfil de Alergias e Intolerancias
     - Se basa en el recurso AlergiaCL de la CoreCl
     - Status se establece como #draft
     - Se modifica la referencia Patient-uv-ips a Paciente-cl-ips
-    
+    - Se mantienen los valueSet provenientes de la guía IPS internacional.
+    - Se habilita el ejemplo: 
+      * [Alergias - Ejemplo](AllergyIntolerance-Alergia-CL-Ejemplo.html)
+
+- Perfil [Bundle](StructureDefinition-Bundle-documento-ips-cl.html)
+    - Se agrega el perfil Bundle de Resumen Clínico
+    - Se basa en el recurso Bundle del estándar
+    - El elemento type se establece como MS
+    - Se agregó recientemente el entry[clinicalimpression], el cual referencia al perfil de la guía funcional status que se basa en el recurso ClinicalImpression del estándar.
+
+
 - Perfil [DeclaraciónUsoDispositivo](StructureDefinition-Declaracion-uso-dispositivo-cl-ips.html)
     - Se agrega el perfil Declaración de uso del dispositivo
-    - Se basa en el recurso DeviceUseStatement
+    - Se basa en el recurso DeviceUseStatement del estándar
     - Status se establece como #draft
     - Se modifica la referencia Patient-uv-ips a Paciente-cl-ips
     - Se modifica la referencia Device-uv-ips a Dispositivo-cl-ips
@@ -41,14 +52,14 @@
 
 - Perfil [DispositivoEjecutanteObservador](StructureDefinition-Dispositivo-observador-cl-ips.html)
     - Se agrega el perfil Dispositivo Ejecutante;Observador
-    - Se basa en el recurso Device
+    - Se basa en el recurso Device del estándar
     - Status se establece como #draft
     - Se habilita el ejemplo:
       * [Dispositivo - Ejecutante, Observador Ejemplo](Device-DispositivoEjecutanteObservador-CL-Ejemplo.html)
 
 - Perfil [Dispositivo](StructureDefinition-Dispositivo-cl-ips.html)
     - Se agrega el perfil Dispositivo 
-    - Se basa en el recurso Device
+    - Se basa en el recurso Device del estándar
     - Status se establece como #draft
     - Se modifica la referencia Patient-uv-ips a Paciente-cl-ips
     - Se habilita el ejemplo:
@@ -56,7 +67,7 @@
 
 - Perfil [FlagAlert](StructureDefinition-Flag-alerta-cl-ips.html)
     - Se agrega el perfil FlagAlert 
-    - Se basa en el recurso Flag
+    - Se basa en el recurso Flag del estándar
     - Status se establece como #draft
     - Se habilita el ejemplo:
       * [Alerta Paciente- Ejemplo](Flag-FlagAlertEjemplo.html)

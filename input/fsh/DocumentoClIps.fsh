@@ -291,7 +291,7 @@ Este perfil se basa en el perfil ClinicalDocument."""
     discapacidad 0..* and
     evalFuncional 0..*
 * section[sectionStatusFuncional].entry[discapacidad] only Reference(ConditionClIps)
-* section[sectionStatusFuncional].entry[evalFuncional] only Reference(ClinicalImpression)
+* section[sectionStatusFuncional].entry[evalFuncional] only Reference(FuncionalStatusClinicalImpressionClIps)
 
 * section[sectionPlanCuidado] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionPlanCuidado] ^extension[=].valueString = "Sección"
