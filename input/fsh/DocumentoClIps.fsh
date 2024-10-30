@@ -135,9 +135,9 @@ Este perfil se basa en el perfil ClinicalDocument."""
 * section[sectionMedicamentos].entry ^short = "Medicamentos relevantes para la salud del paciente"
 * section[sectionMedicamentos].entry ^definition = "Esta lista los medicamentos relevantes para el ámbito del resumen del paciente o se utiliza para indicar que se sabe que el sujeto no toma ninguna medicación relevante; o bien que no se dispone de información sobre medicamentos."
 * section[sectionMedicamentos].entry contains
-    listMEdicamentos 0..* and
+    listMedicamentos 0..* and
     prescripciones 0..*
-* section[sectionMedicamentos].entry[listMEdicamentos] only Reference(RegMedicamentosClIps)
+* section[sectionMedicamentos].entry[listMedicamentos] only Reference(RegMedicamentosClIps)
 * section[sectionMedicamentos].entry[prescripciones] only Reference(PrescripcionClIps)
 
 * section[sectionAlergias] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
