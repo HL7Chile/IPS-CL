@@ -90,3 +90,5 @@
     - Se agrega el perfil Signos Vitales
     - Se basa en el perfil Vital Signs proveniente directamente del recurso Observation del estándar FHIR.
 
+
+
