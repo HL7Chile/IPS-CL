@@ -12,7 +12,6 @@ Description: "Ejemplo sobre la declaración de uso de medicación del paciente."
 
 * status = #completed
 
-
 * medicationReference = Reference(MedicamentoCLEjemplo)
 * medicationReference.display = "Pastilla Aspirina"
 
