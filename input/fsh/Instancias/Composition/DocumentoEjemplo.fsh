@@ -40,7 +40,7 @@ Description: "Ejemplo sobre un documento clínico que representa un conjunto de 
 * section[sectionMedicamentos].text.status = #generated
 * section[sectionMedicamentos].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li><div><b>Medication Name</b>: Aspirina (medicamento)</div><div><b>Code</b>: <span>7947003</span></div><div><b>Status</b>: <span>completed, started 2019-02-04</span></div><div>Instructions: Administrar 500 mg por 3 días</div></li></ul></div>"
 
-* section[sectionMedicamentos].entry[listMEdicamentos] = Reference(MedicationStatement-CL-Ejemplo)
+* section[sectionMedicamentos].entry[listMedicamentos] = Reference(MedicationStatement-CL-Ejemplo)
 * section[sectionMedicamentos].entry[prescripciones] = Reference(MedicationRequest-CL-Ejemplo)
 
 * section[sectionAlergias].title = "Alergias"
