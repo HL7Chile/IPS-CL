@@ -4,6 +4,8 @@
 - Perfil [AdvanceDirectives](StructureDefinition-Consent-cl-ips.html)
     - Se agrega el perfil Directivas Anticipadas.
     - Se basa en el recurso Consent directamente del estándar ya que el enlace al perfil es el recurso.
+    - Se habilita el ejemplo:
+      * [Directivas Avanzadas - Recurso Consent - Ejemplo](Consent-AdvanceDirectives-CL-Ejemplo.html)
 
 - Perfil [CarePlan](StructureDefinition-CarePlan-cl-ips.html)
     - Se agrega el perfil CarePlan.
