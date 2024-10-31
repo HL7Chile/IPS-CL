@@ -100,7 +100,7 @@ Usage: #inline
 * section[=].code.coding.display = "Problem list - Reported"
 * section[=].code.text = "Lista de problemas"
 * section[=].text.status = #generated
-* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li><div><b>Condition Name</b>: Faringitis viral</div><div><b>Code</b>: <span>1532007</span></div><div><b>Status</b>: <span>Inactiva</span></div></li></ul></div>"
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li><div><b>Condition Name</b>: Hipertensión esencial benigna</div><div><b>Code</b>: <span>1201005</span></div><div><b>Status</b>: <span>Activa</span></div></li></ul></div>"
 * section[=].entry = Reference(urn:uuid:fd5676b3-0011-49a3-9c21-d1bd8458f350)
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -289,9 +289,8 @@ Usage: #inline
 * type = #allergy
 
 * code
-  * coding[0] = snomed#3829006 "Iron"
-  * coding[1] = CSAtc#A01AB18 "clotrimazole"
-  * text = "Hierro y Clotrimazol"
+  * coding = CSAtc#A01AB18 "clotrimazole"
+  * text = "Clotrimazol"
 
 * patient = Reference(urn:uuid:a4104fff-1237-4cc4-8b7e-6c4c235f282a) //Para quien es la prescripción de medicacion
 
@@ -307,7 +306,7 @@ Usage: #inline
 
 * meta.profile = "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Condition-cl-ips"
 
-* clinicalStatus //estado de la condicion del paciente, en este caso se encuentra inactiva
+* clinicalStatus //estado de la condicion del paciente, en este caso se encuentra activa
   * coding = CScondition#active "Active"
   * text = "Activa"
 
