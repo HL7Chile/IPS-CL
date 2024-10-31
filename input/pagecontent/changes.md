@@ -56,7 +56,7 @@
     - Se agregó recientemente el entry[clinicalimpression], el cual referencia al perfil funcional status que se encuentra dentro de la guía y que se basa en el recurso ClinicalImpression del estándar.
     - Se agregó además el entry[deviceperformerobserver], el cual referencia al perfil Dispositivo - Ejecutante, Observador que se encuentra dentro de la guía y que se basa en el recurso Device del estándar.
     - Se habilita el ejemplo:
-      * [Bundle - Ejemplo](BundleInternationalPatientSummaryGenéricoparausoenChile.html)
+      * [Bundle - Ejemplo](Bundle-Bundle-CL-Ejemplo.html)
 
 - Perfil [Diagnostic Report](StructureDefinition-DiagnosticReport-cl-ips.html)
     - Se agrega el perfil Reporte Diagnóstico
