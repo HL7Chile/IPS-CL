@@ -19,12 +19,12 @@ Description: "Ejemplo de una alerta sobre un problema  que sufre el paciente"
 * status = #active //alerta se encuentra activa
 
 * category
-  * coding = flag-category#contact "Subject Contact"
-  * text = "Contacto con sujeto"
+  * coding = flag-category#drug "Drug"
+  * text = "Alerta relacionada con la medicación del paciente"
 
 * code.coding.system = snomed
-* code.coding.code = #370388006
-* code.coding.display = "Patient immunocompromised" //la alerta se debe a que el paciente es inmunocomprometido
-* code.text = "Paciente inmunocomprometido"
+* code.coding.code = #419511003
+* code.coding.display = "Propensity to adverse reactions to drug" //la alerta se debe a que el paciente es inmunocomprometido
+* code.text = "Paciente propenso a reacciones adversas a medicamentos"
 
 * subject = Reference(PacienteClIpsEjemplo)
