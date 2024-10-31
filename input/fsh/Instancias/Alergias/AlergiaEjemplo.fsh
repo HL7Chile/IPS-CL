@@ -21,9 +21,9 @@ Description: "Ejemplo sobre el padecimiento de una o más alergias por parte del
   * text = "Confirmado"
 
 * code
-  * coding[0] = snomed#3829006 "Iron"
-  * coding[1] = CSAtc#A01AB18 "clotrimazole"
-  * text = "Hierro y Clotrimazol"
+  //* coding[0] = snomed#3829006 "Iron"
+  * coding = CSAtc#A01AB18 "clotrimazole"
+  * text = "Clotrimazol"
 
 * patient = Reference(PacienteClIpsEjemplo) //Para quien es la prescripción de medicacion
 
@@ -32,11 +32,12 @@ Description: "Ejemplo sobre el padecimiento de una o más alergias por parte del
 * onsetAge.code = #a
 * onsetAge.unit = "años"
 
-//* reaction.manifestation.coding.system =
-//* reaction.manifestation.coding.code =
-//* reaction.manifestation.coding.display =
+* recorder = Reference(PrestadorMedInternaClIpsEjemplo) //es quien registro la alergia
+
 * reaction
   * manifestation
-    * coding[0] = snomed#4556007 "Gastritis (disorder)"
-    * coding[1] = snomed#703938007 "Inflammatory dermatosis (disorder)"
-    * text = "Gastritis y Dermatitis inflamatoria"
+    //* coding[0] = snomed#4556007 "Gastritis (disorder)"
+    * coding = snomed#703938007 "Inflammatory dermatosis (disorder)"
+    * text = "Dermatitis inflamatoria"
+
+* reaction.severity = #severe

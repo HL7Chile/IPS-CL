@@ -308,18 +308,17 @@ Usage: #inline
 * meta.profile = "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Condition-cl-ips"
 
 * clinicalStatus //estado de la condicion del paciente, en este caso se encuentra inactiva
-  * coding = CScondition#inactive "Inactive"
-  * text = "Inactiva"
+  * coding = CScondition#active "Active"
+  * text = "Activa"
 
 * category //categoria de la condicion, en este caso es un problema
   * coding = loinc#75326-9 "Problem"
   * text = "Problema"
 
 * code //codigo de la condicion clinica
-  * coding = snomed#1532007 "Viral pharyngitis"
-  * text = "Faringitis viral"
+  * coding = snomed#1201005 "Benign essential hypertension"
+  * text = "Hipertensión esencial benigna"
 
 * subject = Reference(urn:uuid:a4104fff-1237-4cc4-8b7e-6c4c235f282a)
 
-* onsetPeriod.start = "2017-08-04" //periodo de inicio de la condicion
-* onsetPeriod.end = "2017-08-20" //periodo de termino de la condicion
+* onsetPeriod.start = "2023-08-04" //periodo de inicio de la condicion
