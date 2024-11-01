@@ -62,7 +62,7 @@
     - Se habilita el ejemplo:
       * [Medication Statement - Ejemplo](MedicationStatement-MedicationStatement-CL-Ejemplo.html)
 
-~ Los perfiles a continuación contienen lo siguiente:
+- ~ Los perfiles a continuación contienen lo siguiente:
     - Se modifica la versión del perfil a 0.1.0
     - Se modifica la versión de la extension.valueInteger = 2 -> 1. Indica el nivel de madurez del perfil dentro del estándar.
     - Se modifica la canonica de la extension.valueInteger y extension.valueCode a la canonica de HL7 IPS Chile para la guía de implementación https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips
