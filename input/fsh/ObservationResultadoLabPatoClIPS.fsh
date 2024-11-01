@@ -42,7 +42,7 @@ Description: "Resultados obtenidos para un examen de laboratorio"
 * code from ResultsLaboratoryPathologyObservationUvIps (preferred)
 
 * subject 1..1 MS
-* subject only Reference(Paciente-cl-ips or Group or Device or CoreLocalizacionCl)
+* subject only Reference(Paciente-cl-ips or Group or DispositivoClIps or CoreLocalizacionCl)
 
 * effective[x] 1..1 MS
 * effective[x] only dateTime or Period

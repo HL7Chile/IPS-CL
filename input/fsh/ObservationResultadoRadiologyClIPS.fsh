@@ -40,11 +40,9 @@ Description: "Resultados obtenidos para un examen imagenológico"
 * category ^slicing.description = "Slicing para obligar el uso de una categoria de tipo: \"Laboratorio\""
 * category ^slicing.ordered = false
 * category contains laboratorio 1..1 MS
-//* category[laboratorio] = CategoryRadiologia
 * category[laboratorio].coding.code = #imaging
 //* category[laboratorio].coding.display = "Imaging"
-
- // * ^short = "Categoría de tipo: Laboratorio"
+  * ^short = "Categoría de tipo: Laboratorio"
 
 * code from ResultsRadiologyObservationUvIps (extensible)
 
@@ -68,6 +66,8 @@ Description: "Resultados obtenidos para un examen imagenológico"
   * ^short = "Concepto que referencia a una terminología o un texto acorde"
 
 * specimen only Reference(Speciment-cl-ips)
+
+* device only Reference(DispositivoClIps or DeviceMetric)
 
 * referenceRange 0..*
   * ^short = "Utilizados como guía para la interpretación"

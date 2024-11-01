@@ -17,7 +17,7 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Proc
 
 * asserter only Reference(PacienteCl or RelatedPerson or PrestadorCL or CoreRolClinicoCl)
 * performer
-  * actor only Reference(Paciente-cl-ips or RelatedPerson or  DeviceObserverUvIps or Prestador-cl-ips or RolPrestador-cl-ips or Organizacion-cl-ips)
+  * actor only Reference(Paciente-cl-ips or RelatedPerson or  DispositivoObservadorClIps or Prestador-cl-ips or RolPrestador-cl-ips or Organizacion-cl-ips)
   * onBehalfOf only Reference(Organizacion-cl-ips)
 
 * bodySite only CodeableConceptIPS

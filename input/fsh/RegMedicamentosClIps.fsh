@@ -13,12 +13,12 @@ Title: "Medication Statement (IPS-CL)"
 Description: "Este perfil representa las restricciones aplicadas al recurso MedicationStatement según la Guía de Implementación FHIR del Resumen Internacional del Paciente (IPS), basada en FHIR R4. Un registro de una declaración de medicación se representa en el resumen del paciente como una instancia de un recurso MedicationStatement restringido por este perfil."
 
 * status ^comment = "En IPS el alcance del proyecto impide el uso del concepto  entered-in-error ."
-* medication[x] only CodeableConceptIPS or Reference(MedicamentoClIps)
+* medication[x] only CodeableConceptIPS or Reference(Medicamento-cl-ips)
 * medication[x] MS
 * medication[x] from MedicationsUvIps (preferred)
 * medication[x] ^definition = "Identifica la medicación que se está administrando o el motivo de ausencia o desconocimiento de la medicación. Se trata de un enlace a un recurso que representa los detalles de la medicación o de un simple atributo que contiene un código. Para mejorar la interoperabilidad global se recomienda encarecidamente que se utilice la referencia a un recurso de medicación, limitando el uso de medicationCodeableConcept únicamente a los casos en los que no se disponga de más información que un simple código."
 * medication[x] ^binding.description = "SNOMED CT medicamentos (Producto farmacéutico / biológico) o un código para medicamento ausente/desconocido"
-* subject only Reference(PacienteCLIps)
+* subject only Reference(Paciente-cl-ips)
 * subject MS
 * subject.reference 1.. MS
 * effective[x] 1..1 MS

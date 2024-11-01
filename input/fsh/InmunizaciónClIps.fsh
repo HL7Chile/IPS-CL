@@ -34,7 +34,7 @@ Describe el evento de un paciente al que se le ha administrado una vacuna o un r
 * vaccineCode only CodeableConceptIPS
   * ^short = "Código de la Vacuna que fue administrada o será administrada" 
 * vaccineCode from VaccinesUvIps (preferred)
-* vaccineCode ^binding.extension[+].extension[0].url = "purpose"
+* vaccineCode ^binding.extension[0].extension[0].url = "purpose"
 * vaccineCode ^binding.extension[=].extension[=].valueCode = #candidate
 * vaccineCode ^binding.extension[=].extension[+].url = "valueSet"
 * vaccineCode ^binding.extension[=].extension[=].valueCanonical = Canonical(VaccinesWhoAtcUvIps)
@@ -46,7 +46,7 @@ Describe el evento de un paciente al que se le ha administrado una vacuna o un r
 
 * vaccineCode ^binding.description = "El tipo de vacuna para la enfermedad o enfermedades concretas contra las que se ha inmunizado al paciente, o un código para inmunización ausente/desconocida."
 
-* vaccineCode ^binding.extension[0].extension[0].url = "purpose"
+* vaccineCode ^binding.extension[+].extension[0].url = "purpose"
 * vaccineCode ^binding.extension[=].extension[=].valueCode = #candidate
 * vaccineCode ^binding.extension[=].extension[+].url = "valueSet"
 * vaccineCode ^binding.extension[=].extension[=].valueCanonical = Canonical(VSTiposVacunas)
