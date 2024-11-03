@@ -7,9 +7,7 @@
 </div>
 <br>
 
-<br>
-<div align="center">
-  <img src="BloqueoOpcionales.svg" style="width:90%"> 
-  <p>Consideraciones Locales</p>
-</div>
-<br>
+### Lista de Perfiles
+
+- Alergias e Intolerancias (R)
+  [ <a href="StructureDefinition-AllergiaInt-cl-ips.html">Alergias e Intolerancias (IPS-CL)</a> ]
