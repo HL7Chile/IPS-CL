@@ -1,29 +1,11 @@
 ### 0.2.0
 - Versión en construción de la guía IPS-CL basado en la guía ClCore 1.9.1 e IPS 2.0.0
 
-- Perfil [AdvanceDirectives](StructureDefinition-Consent-cl-ips.html)
-    - Se agrega el perfil Directivas Anticipadas.
-    - Se basa en el recurso Consent directamente del estándar ya que el enlace al perfil es el recurso.
-    - Se habilita el ejemplo:
-      * [Directivas Avanzadas - Recurso Consent - Ejemplo](Consent-AdvanceDirectives-CL-Ejemplo.html)
+- Se modificó este archivo, eliminando los perfiles que hacian referencia al estándar, junto con sus ejemplos.
 
-- Perfil [CarePlan](StructureDefinition-CarePlan-cl-ips.html)
-    - Se agrega el perfil CarePlan.
-    - Se basa en el recurso CarePlan directamente del estándar ya que el enlace al perfil es el recurso.
-    - Se habilita el ejemplo:
-      * [Plan de cuidados - Ejemplo]( CarePlan-CarePlan-CL-Ejemplo.html)
-
-- Perfil [SignosVitales](StructureDefinition-vitalsigns-cl-ips.html)
-    - Se agrega el perfil Signos Vitales
-    - Se basa en el perfil Vital Signs proveniente directamente del recurso Observation del estándar FHIR.
-    - Se habilita el ejemplo:
-      * [Signos Vitales - Ejemplo](Observation-SignosVitales-CL-Ejemplo.html)
-
-- Perfil [FuncionalStatus - ClinicalImpression](StructureDefinition-Funcional-status-cl-ips.html)
-    - Se agrega el perfil Impresión clínica: Estado funcional.
-    - Se basa en el recurso ClinicalImpression directamente del estándar ya que el enlace al perfil es  el recurso.
-    - Se habilita el ejemplo:
-      * [Estado funcional: Impresión/Evaluación Clínica - Ejemplo](ClinicalImpression-FuncionalStatusClinicalImpression-CL-Ejemplo.html)
+- Se agregó en la página "EstructuraIPS.md" lo siguiente:
+    - La descripción de cada sección del composition de IPS.
+    - El listado de perfiles que componen IPS además de los perfiles que referencian directamente al estándar FHIR.
 
 - Perfil [Condition](StructureDefinition-Condition-cl-ips.html)
     - Se agrega el perfil Condición

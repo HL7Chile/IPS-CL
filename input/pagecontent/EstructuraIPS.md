@@ -3,7 +3,7 @@
 El IPS está compuesto por las siguientes secciones que se describen a continuación.
 
 <br>
-<div align="center">
+<div align="left">
   <img src="IPS_composition.png" style="width:70%"> 
   <p>Componentes de un IPS (Fuente: International Patient Summary Implementation Guide)</p>
 </div>
@@ -136,7 +136,7 @@ A continuación se muestran los perfiles que se han definido para cada sección:
 - Resumen de medicación (R)
   [ <a href="StructureDefinition-RegMedicamentos-cl-ips.html">Declaración de medicación (IPS-CL)</a> |
   <a href="StructureDefinition-MedicationRequest-cl-ips.html">Solicitud de medicación (IPS-CL)</a> |
-  <a href="StructureDefinition-Medicamento-cl-ips">Medicamento (IPS-CL)</a> ]
+  <a href="StructureDefinition-Medicamento-cl-ips.html">Medicamento (IPS-CL)</a> ]
 
 - Listado de problemas (R)
   [ <a href="StructureDefinition-Condition-cl-ips.html">Condición (IPS-CL)</a> ]
@@ -146,7 +146,7 @@ A continuación se muestran los perfiles que se han definido para cada sección:
   <a href="StructureDefinition-Dispositivo-observador-cl-ips.html">Dispositivo - Ejecutante, Observador (IPS-CL)</a> ]
 
 - Inmunizaciones (S)
-  [ <a href="StructureDefinition-Immunizacion-cl-ips.html">Immunización (IPS-CL)</a> ]
+  [ <a href="StructureDefinition-Inmunizacion-cl-ips.html">Immunización (IPS-CL)</a> ]
 
 - Dispositivos médicos (S)
   [ <a href="StructureDefinition-Declaracion-uso-dispositivo-cl-ips.html">Declaración de uso del dispositivo (IPS-CL)</a> |
@@ -191,7 +191,7 @@ A continuación se muestran los perfiles que se han definido para cada sección:
 
 - Historia social
   [ <a href="StructureDefinition-Observation-uso-de-tabaco-cl-ips.html">Observación - SH: Uso de tabaco (IPS CL)</a> |
-    <a href="StructureDefinition-Observation-Observation-uso-de-alcohol-cl-ips.html">Observación - SH: Uso de Alcohol (IPS CL)</a> ]
+    <a href="StructureDefinition-Observation-uso-de-alcohol-cl-ips.html">Observación - SH: Uso de Alcohol (IPS CL)</a> ]
 
 - Recursos y perfiles utilizados en varias secciones
   [ <a href="StructureDefinition-Organizacion-cl-ips.html">Organización (IPS-CL)</a> | <a href="StructureDefinition-Prestador-cl-ips.html">Prestador Individual (IPS-CL)</a> | <a href="StructureDefinition-RolPrestador-cl-ips.html">Función o Rol de Prestador Individual (IPS-CL)</a> | <a href="{{site.data.fhir.path}}documentreference.html">DocumentReference</a>]
