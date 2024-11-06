@@ -1,10 +1,6 @@
 ### Especificaciones del IPS
 
-<p>El IPS está compuesto por las siguientes secciones que se describen a continuación.
-<div align="left">
-  <img src="IPS_composition.png" style="width:70%"> 
-  <p>Componentes de un IPS (Fuente: International Patient Summary Implementation Guide)</p>
-</div>
+{% include img.html img="IPS_composition.png" caption="Fuente: International Patient Summary Implementation Guide" width="70%" %}
 
 ### Descripción de las secciones
 
