@@ -9,30 +9,24 @@ Usage:       #example
 Title:       "Condición - Ejemplo"
 Description: "Ejemplo de una condición que padece el paciente."
 
-* clinicalStatus //estado de la condicion del paciente, en este caso se encuentra inactiva
-  * coding = CScondition#inactive "Inactive"
-  * text = "Inactiva"
+* clinicalStatus //estado de la condicion del paciente, en este caso se encuentra activa
+  * coding = CScondition#active "Active"
+  * text = "Activa"
 
 * category //categoria de la condicion, en este caso es un problema
   * coding = loinc#75326-9 "Problem"
   * text = "Problema"
 
 * code //codigo de la condicion clinica
-  * coding = snomed#1532007 "Viral pharyngitis"
-  * text = "Faringitis viral"
+  * coding = snomed#1201005 "Benign essential hypertension"
+  * text = "Hipertensión esencial benigna"
 
 * severity //grado de severidad de la condicion
   * coding = snomed#6736007 "Moderate severity"
   * text = "Moderado"
 
-* bodySite
-  * coding = snomed#54066008 "Pharynx"
-  * text = "Faringe"
-
 * subject = Reference(PacienteClIpsEjemplo)
 
-* onsetPeriod.start = "2017-08-04" //periodo de inicio de la condicion
-* onsetPeriod.end = "2017-08-20" //periodo de termino de la condicion
+* onsetPeriod.start = "2023-08-04" //periodo de inicio de la condicion
 
 * asserter = Reference(PrestadorMedInternaClIpsEjemplo)
-

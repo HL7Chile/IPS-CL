@@ -20,7 +20,7 @@ Description: "Ejemplo de un reporte de un estudio diagnóstico de las alergias q
   * text = "Historial de alergias, reportado"
 
 * subject = Reference(PacienteClIpsEjemplo)
-* subject.display = "Este es un reporte de alergias confirmadas por un profesional de la salud y declaradas por el paciente: Hierro y Clotrimazol"
+* subject.display = "Este es un reporte de alergias confirmadas por un profesional de la salud y declaradas por el paciente: Clotrimazol"
 
 * effectiveDateTime = "2006-06-10" //periodo relevante para el informe, tiempo en el que se hizo el informe?
 

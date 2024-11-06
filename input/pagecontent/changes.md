@@ -254,6 +254,7 @@
     - Status se establece como draft.
     - Se agrega un valueSet adicional: Códigos de medicamentos del MINSAL para uso nacional.
     - El elemento Item[x] se transformó en un Slice (proviene de la CoreCl), el cual hace referencia al valueSet MedicationsUvIps.
+    - Se eliminó el elemento ingredient.itemCodeableConcept
     - El resto se hereda de la CoreCl.
     - Se habilita el ejemplo:
       * [Medicamento - Ejemplo](Medication-MedicamentoCLEjemplo.html)

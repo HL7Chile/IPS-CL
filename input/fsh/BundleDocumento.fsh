@@ -193,7 +193,7 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
 * entry[observation-vital-signs]
   * resource 1..
     * ^short = "Observaciones sobre los signos vitales del paciente"
-  * resource only vitalsigns-cl-ips
+  * resource only observation-vitalsigns
 
 * entry[specimen]
   * resource 1..
@@ -208,17 +208,17 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
 * entry[clinicalimpression] //agregado recientemente
   * resource 1..
     * ^short = "Plan de cuidados de un paciente"
-  * resource only FuncionalStatusClinicalImpressionClIps //hace referencia al recurso del estándar
+  * resource only ClinicalImpression //hace referencia al recurso del estándar
 
 * entry[careplan]
   * resource 1..
     * ^short = "Plan de cuidados de un paciente"
-  * resource only CarePlan-cl-ips
+  * resource only CarePlan
 
 * entry[consent]
   * resource 1..
     * ^short = "Voluntades anticipadas de un paciente"
-  * resource only Consent-cl-ips
+  * resource only Consent
 
 
 

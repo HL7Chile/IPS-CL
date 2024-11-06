@@ -257,7 +257,7 @@ Este perfil se basa en el perfil ClinicalDocument."""
 * section[sectionSignosVitales].entry ^short = "Signos vitales o hallazgos físicos de interés."
 * section[sectionSignosVitales].entry ^definition = "Signos vitales o hallazgos físicos de relevancia como: tensión arterial, temperatura corporal, frecuencia cardiaca y frecuencia respiratoria. También puede incluir otros hallazgos clínicos, como altura, peso, índice de masa corporal, perímetro cefálico y pulsioximetría. En particular, pueden incluirse constantes vitales o hallazgos físicos relevantes como los más recientes, máximos y/o mínimos, línea de base, o tendencias relevantes"
 * section[sectionSignosVitales].entry contains vitalSign 0..*
-* section[sectionSignosVitales].entry[vitalSign] only Reference(VitalSignsClIps)
+* section[sectionSignosVitales].entry[vitalSign] only Reference(observation-vitalsigns)
 
 * section[sectionHistoricoHx] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionHistoricoHx] ^extension[=].valueString = "Sección"
@@ -291,7 +291,7 @@ Este perfil se basa en el perfil ClinicalDocument."""
     discapacidad 0..* and
     evalFuncional 0..*
 * section[sectionStatusFuncional].entry[discapacidad] only Reference(ConditionClIps)
-* section[sectionStatusFuncional].entry[evalFuncional] only Reference(FuncionalStatusClinicalImpressionClIps)
+* section[sectionStatusFuncional].entry[evalFuncional] only Reference(ClinicalImpression)
 
 * section[sectionPlanCuidado] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionPlanCuidado] ^extension[=].valueString = "Sección"
@@ -306,7 +306,7 @@ Este perfil se basa en el perfil ClinicalDocument."""
 * section[sectionPlanCuidado].entry ^short = "Resumen de plan de cuidados"
 * section[sectionPlanCuidado].entry ^definition = "Plan dinámico y personalizado que incluye la actividad sanitaria necesaria identificada, los objetivos sanitarios y las metas sanitarias, en relación con uno o más problemas de salud especificados en un proceso sanitario [Fuente EN ISO 13940]."
 * section[sectionPlanCuidado].entry contains carePlan 0..*
-* section[sectionPlanCuidado].entry[carePlan] only Reference(CarePlanClIps)
+* section[sectionPlanCuidado].entry[carePlan] only Reference(CarePlan)
 
 * section[sectionHistoriaSocial] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionHistoriaSocial] ^extension[=].valueString = "Sección"
@@ -372,5 +372,5 @@ Este perfil se basa en el perfil ClinicalDocument."""
 * section[sectionDirectivasAvanzadas].entry ^short = "Descripción narrativa del documento de declaraciones de acceso del paciente."
 * section[sectionDirectivasAvanzadas].entry ^definition = "Contiene una descripción narrativa o una entrada de Consentimiento con información sobre la directiva anticipada del paciente."
 * section[sectionDirectivasAvanzadas].entry contains advanceDirectivesConsent 0..*
-* section[sectionDirectivasAvanzadas].entry[advanceDirectivesConsent] only Reference(ConsentClIps)
+* section[sectionDirectivasAvanzadas].entry[advanceDirectivesConsent] only Reference(Consent)
 
