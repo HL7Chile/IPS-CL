@@ -1,6 +1,6 @@
 ### Especificaciones del IPS
 
-{% include img.html img="IPS_composition.png" caption="Fuente: International Patient Summary Implementation Guide" width="70%" %}
+{% include img.html img="IPS_composition.png" caption="Fuente: International Patient Summary Implementation Guide" width="60%" %}
 
 ### Descripción de las secciones
 
