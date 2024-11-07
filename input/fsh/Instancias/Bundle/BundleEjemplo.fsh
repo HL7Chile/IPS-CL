@@ -79,7 +79,7 @@ Usage: #inline
 * section[0].title = "Medicamentos"
 * section[=].code.coding.system = loinc
 * section[=].code.coding.code = #10160-0
-* section[=].code.coding.display = "History of medication use Narrative"
+* section[=].code.coding.display = "History of Medication use Narrative"
 * section[=].code.text = "Historial de uso de medicamentos"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li><div><b>Medication Name</b>: Aspirina (medicamento)</div><div><b>Code</b>: <span>7947003</span></div><div><b>Status</b>: <span>completed, started 2019-02-04</span></div><div>Instructions: Administrar 500 mg por 3 días</div></li></ul></div>"

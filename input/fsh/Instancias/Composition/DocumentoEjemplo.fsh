@@ -34,7 +34,7 @@ Description: "Ejemplo sobre un documento clínico que representa un conjunto de 
 * section[sectionMedicamentos].title = "Medicamentos"
 * section[sectionMedicamentos].code.coding.system = loinc
 * section[sectionMedicamentos].code.coding.code = #10160-0
-* section[sectionMedicamentos].code.coding.display = "History of medication use Narrative"
+* section[sectionMedicamentos].code.coding.display = "History of Medication use Narrative"
 * section[sectionMedicamentos].code.text = "Historial de uso de medicamentos"
 
 * section[sectionMedicamentos].text.status = #generated

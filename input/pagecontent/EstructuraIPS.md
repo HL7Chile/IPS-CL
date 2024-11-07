@@ -4,13 +4,13 @@ El IPS está compuesto por las siguientes secciones que se describen a continuac
 
 <br> 
 <div align="left"> 
- <img src="IPS_composition.png" style="width:50%"> <p>Componentes de un IPS (Fuente: International Patient Summary Implementation Guide)</p> 
+ <img src="IPS_composition.png" style="width:60%"> <p>Componentes de un IPS (Fuente: International Patient Summary Implementation Guide)</p> 
 </div>
 <br> 
 
 ### Descripción de las secciones
 
-### Información de la cabecera del documento
+#### Información de la cabecera del documento
 
 La cabecera del documento contiene datos para la identificación de las siguientes secciones:
 
@@ -19,13 +19,13 @@ La cabecera del documento contiene datos para la identificación de las siguient
 - Attester, donde se deben indicar datos sobre cuándo y quién dio fe de la composición del documento.
 - Custodian, donde se debe indicar la organización que mantiene el documento.
 
-### Alergias e Intolerancias
+#### Alergias e Intolerancias
 
 Esta sección documenta las alergias y/o intolerancias relevantes para un paciente, describiendo el tipo de reacción (por ejemplo, erupción cutánea, anafilaxia, inflamaciones, etc.); indicando preferiblemente los agentes que la causan; y opcionalmente la criticidad y certeza de la alergia.
 
 Como mínimo, debe incluir las alergias y reacciones adversas actuales y las alergias históricas relevantes del paciente. Si no hay información disponible o si no se conocen alergias, debe documentarse en el recurso de referencia de la sección (en el Composition.section.entry).
 
-#### Resúmen de medicación
+##### Resúmen de medicación
 
 La sección de resumen de la medicación contiene una descripción de los medicamentos relevantes del paciente para el alcance del resumen del paciente.
 
@@ -42,11 +42,11 @@ Para completar esta sección se debe utilizar una de las siguientes opciones:
 - Una entrada que indique que se sabe que el paciente no está tomando ningún medicamento relevante u otra información sobre "ausencia de medicación".
 - Una o más entradas que enumeren la medicación relevante del paciente (una entrada por medicación).
 
-### Listado de problemas
+#### Listado de problemas
 
 La sección de problemas del IPS enumera y describe los problemas o condiciones clínicas que se está monitoreando actualmente el paciente. Si no hay información sobre los problemas o no hay problemas conocidos, debe documentarse en el recurso de referencia de la sección (en el Composition.section.entry).
 
-### Historial de procedimientos
+#### Historial de procedimientos
 
 La sección Historial de procedimientos contiene una descripción de los procedimientos pasados del paciente que son pertinentes al alcence del IPS.
 
@@ -56,15 +56,15 @@ Por ejemplo, los procedimientos pueden referirse a:
 2. Procedimiento terapéutico: por ejemplo, diálisis, oxigenoterapia, etc
 3. Procedimiento quirúrgico: por ejemplo, apendicectomía, cirugía de tiroides, cirguía de hernia umbilical, etc.
 
-### Inmunizaciones
+#### Inmunizaciones
 
 La sección de inmunizaciones define el estado de inmunización actual de un paciente y el historial de inmunización pertinente que se conoce. El caso de uso principal de esta sección es permitir la comunicación del estado de inmunización de un paciente.
 
-### Dispositivos médicos
+#### Dispositivos médicos
 
 La secicón de dispositivos médicos contiene texto narrativo y entradas codificadas que describen el historial del paciente sobre el uso de dispositivos médicos.
 
-### Resultados del diagnóstico 
+#### Resultados del diagnóstico 
 
 En esta sección se reúnen los resultados de las observaciones pertinentes obtenidas del paciente o de muestras biológicas in vitro del mismo. Estos resultados pueden incluir resultados de laboratorio, patología y radiología.
 
@@ -77,15 +77,15 @@ U observaciones referenciadas en DiagnosticReport:
 
 - Reporte-Diagnóstico
 
-### Directivas anticipadas
+#### Directivas anticipadas
 
 La sección de directivas anticipadas contiene una descripción narrativa de las directivas anticipadas del paciente con enlaces a documentos de respaldo y consentimientos.
 
-### Estado funcional
+#### Estado funcional
 
 La sección sobre el estado funcional contiene una descripción narrativa sobre la capacidad del paciente para realizar actos de la vida diaria, incluidas las posibles necesidades del paciente de ser evaluado continuamente por terceros. El estado de invalidez puede influir en las decisiones sobre cómo administrar los tratamientos. En futuras versionas de esta guía se podrán especificar perfiles para expresar discapacidades y evaluaciones funcionales.
 
-### Embarazo (resumen del estado y antecedentes)
+#### Embarazo (resumen del estado y antecedentes)
 
 El estado y la historia del embarazo se componen de:
 
@@ -93,27 +93,27 @@ El estado y la historia del embarazo se componen de:
 
 - Una entrada como Observación de la historia del embarazo (resumen.)
 
-### Plan de cuidados
+#### Plan de cuidados
 
 La sección del plan de cuidados contiene una descripción narrativa de las expectativas de atención, incluidas propuestas, objetivos y solicitudes de órdenes para monitorear, seguir o mejorar la condición del paciente.
 
-### Signos vitales
+#### Signos vitales
 
 La sección de signos vitales incluye la presión arterial, la temperatura corporal, la frecuencia cardíaca y la frecuencia respiratoria. También puede incluir otros hallazgos clínicos, como la altura, el peso, el índice de masa corporal, la circunferencia de la cabeza y la oximetría de pulso. En particular, se pueden incluir signos vitales o hallazgos físicos notables, como los más recientes, máximos y/o mínimos, de referencia o tendencias relevantes.
 
-### Alertas
+#### Alertas
 
 La sección de alertas se utiliza para transmitir información y crear conciencia sobre posibles preocupaciones y/o peligros para/del paciente de la IPS.
 
-### Historial de enfermedades pasadas
+#### Historial de enfermedades pasadas
 
 La sección Historial de enfermedades pasadas contiene una descripción de las condiciones que sufrió el paciente en el pasado.
 
-### Historia del paciente
+#### Historia del paciente
 
 La sección Historia del paciente contiene texto narrativo junto con recursos opcionales que expresan lo que le importa al paciente. Esto puede incluir necesidades, fortalezas, valores, inquietudes y preferencias con respecto a otras personas que brindan apoyo y atención. Se puede utilizar cualquier tipo de recurso para respaldar la narración.
 
-### Historia social
+#### Historia social
 
 La sección Historia social se compone de las siguientes entradas:
 
