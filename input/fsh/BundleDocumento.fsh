@@ -44,8 +44,12 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
   allergyintolerance 0..* and
   condition 0..* and
   diagnosticreport 0..* and
+  device 0..* and
+  deviceusestatement 0..* and
+  deviceperformerobserver 0..* and //se agrego
   imagingstudy 0..* and
   immunization 0..* and
+  medication 0..* and
   medicationrequest 0..* and
   medicationstatement 0..* and
   practitioner 0..* and
@@ -54,8 +58,17 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
   organization 0..* and
   observation-laboratory 0..* and
   observation-radiology 0..* and
+  observation-pregnancy-edd 0..* and
+  observation-pregnancy-outcome 0..* and
+  observation-pregnancy-status 0..* and
+  observation-alcohol-use 0..* and
+  observation-tobacco-use 0..* and
+  observation-vital-signs 0..* and
   specimen 0..* and
-  medication 0..*
+  flag 0..* and
+  clinicalimpression 0..* and
+  careplan 0..* and
+  consent 0..*
 
 * entry[composition]
   * resource 1..1
@@ -82,6 +95,21 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
     * ^short = "Informes de Diagnostico del Paciente"
   * resource only DiagnosticReport-cl-ips
 
+* entry[device]
+  * resource 1..
+    * ^short = "Dispositivo utilizado por el Paciente"
+  * resource only Dispositivo-cl-ips
+
+* entry[deviceusestatement]
+  * resource 1..
+    * ^short = "Declaración de uso del dispositivo"
+  * resource only Declaracion-uso-dispositivo-cl-ips
+
+* entry[deviceperformerobserver]
+  * resource 1..
+    * ^short = "Dispositivo en rol de observador o ejecutante"
+  * resource only Dispositivo-observador-cl-ips
+
 * entry[imagingstudy]
   * resource 1..
     * ^short = "Estudios de Imagen del Paciente"
@@ -91,6 +119,11 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
   * resource 1..
     * ^short = "Vacunas e inmunizaciones del Paciente"
   * resource only Inmunizacion-cl-ips
+
+* entry[medication]
+  * resource 1..
+    * ^short = "Medicamentos utilizados en registros o prescripciones para el Paciente"
+  * resource only Medicamento-cl-ips
 
 * entry[medicationrequest]
   * resource 1..
@@ -132,15 +165,61 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
     * ^short = "Observaciones de estudios de imagenes del Paciente"
   * resource only Observation-resultado-radiology-cl-ips
 
+* entry[observation-pregnancy-edd]
+  * resource 1..
+    * ^short = "Observaciones sobre la fecha estimada de parto"
+  * resource only Observation-embarazo-fecha-estimada-de-parto-cl-ips
+
+* entry[observation-pregnancy-outcome]
+  * resource 1..
+    * ^short = "Observaciones sobre resultados del embarazo"
+  * resource only Observation-resultado-del-embarazo-cl-ips
+
+* entry[observation-pregnancy-status]
+  * resource 1..
+    * ^short = "Observaciones sobre el estado del embarazo"
+  * resource only Observation-estado-del-embarazo-cl-ips
+
+* entry[observation-alcohol-use]
+  * resource 1..
+    * ^short = "Observaciones sobre el consumo de alcohol"
+  * resource only Observation-uso-de-alcohol-cl-ips
+
+* entry[observation-tobacco-use]
+  * resource 1..
+    * ^short = "Observaciones sobre el consumo de tabaco"
+  * resource only Observation-uso-de-tabaco-cl-ips
+
+* entry[observation-vital-signs]
+  * resource 1..
+    * ^short = "Observaciones sobre los signos vitales del paciente"
+  * resource only observation-vitalsigns
+
 * entry[specimen]
   * resource 1..
     * ^short = "Muestras utilizadas para laboratorio o estudios patológicos del Paciente"
   * resource only Speciment-cl-ips
 
-* entry[medication]
+* entry[flag]
   * resource 1..
-    * ^short = "Medicamentos utilizados en registros o prescripciones para el Paciente"
-  * resource only Medicamento-cl-ips
+    * ^short = "Alerta específica de IPS"
+  * resource only Flag-alerta-cl-ips
+
+* entry[clinicalimpression] //agregado recientemente
+  * resource 1..
+    * ^short = "Plan de cuidados de un paciente"
+  * resource only ClinicalImpression //hace referencia al recurso del estándar
+
+* entry[careplan]
+  * resource 1..
+    * ^short = "Plan de cuidados de un paciente"
+  * resource only CarePlan
+
+* entry[consent]
+  * resource 1..
+    * ^short = "Voluntades anticipadas de un paciente"
+  * resource only Consent
+
 
 
 

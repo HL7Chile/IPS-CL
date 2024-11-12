@@ -1,3 +1,5 @@
+Alias: CScaterogy = http://terminology.hl7.org/CodeSystem/observation-category
+
 Profile: ObservationResultadoRadiologyClIps
 Parent: CoreObservacionCL
 Id: Observation-resultado-radiology-cl-ips
@@ -30,13 +32,16 @@ Description: "Resultados obtenidos para un examen imagenológico"
 * status from ResultsStatusUvIps (required)
 
 * category 1..*
+* category only CodeableConceptIPS
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "coding.code"
+//* category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category ^slicing.description = "Slicing para obligar el uso de una categoria de tipo: \"Laboratorio\""
 * category ^slicing.ordered = false
 * category contains laboratorio 1..1 MS
-* category[laboratorio] = CategoryRadiologia
+* category[laboratorio].coding.code = #imaging
+//* category[laboratorio].coding.display = "Imaging"
   * ^short = "Categoría de tipo: Laboratorio"
 
 * code from ResultsRadiologyObservationUvIps (extensible)
@@ -61,6 +66,8 @@ Description: "Resultados obtenidos para un examen imagenológico"
   * ^short = "Concepto que referencia a una terminología o un texto acorde"
 
 * specimen only Reference(Speciment-cl-ips)
+
+* device only Reference(DispositivoClIps or DeviceMetric)
 
 * referenceRange 0..*
   * ^short = "Utilizados como guía para la interpretación"

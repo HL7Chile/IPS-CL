@@ -9,7 +9,7 @@ name: ips-cl
 title: Resumen Clínico de Paciente de Chile (IPS-CL)
 description: Guía IPS homologada para la realidad Chilena.
 status: draft # draft | active | retired | unknown
-version: 0.1.0
+version: 0.2.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
 releaseLabel: ci-build
@@ -32,6 +32,7 @@ dependencies:
 #     id: mcode
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
 #     version: 1.0.0
+#   hl7.fhir.r4.core: 4.0.1
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can

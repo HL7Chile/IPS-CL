@@ -2,7 +2,7 @@ Profile: ParametrosDeEntradasIPS
 Parent: Parameters
 Id: Parametros-entradas-ips-cl
 Title: "Parametros De Entradas IPS Summary"
-Description: "Paramteros de Entradas para usar la operación IPS-Summary de manera POST"
+Description: "Parámetros de Entradas para usar la operación IPS-Summary de manera POST"
 
 * implicitRules 0..0
 * parameter.modifierExtension 0..0

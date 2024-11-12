@@ -8,7 +8,7 @@ Alias: $medicine-route-of-administration = http://hl7.org/fhir/uv/ips/ValueSet/m
 Profile: PrescripcionClIps
 Parent: MedicationRequest
 Id: MedicationRequest-cl-ips
-Title: "Medication Request (IPS-CL)"
+Title: "Solicitud de medicación (IPS-CL)"
 Description: "Este perfil representa las restricciones aplicadas al recurso MedicationRequest por la Guía de Implementación FHIR del Resumen Internacional del Paciente (IPS), basada en FHIR R4. Un registro de una solicitud de medicación se representa en el resumen del paciente como una instancia de un recurso MedicationRequest restringido por este perfil."
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"

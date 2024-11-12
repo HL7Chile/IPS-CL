@@ -36,6 +36,10 @@ Description: "Reporte resultado de un o varios estudios para diagnosticar una en
 
 * performer MS
 * performer only Reference(PrestadorClIps or RolPrestadorClIps or OrganizacionClIps or CareTeam)
+
+* resultsInterpreter MS
+* resultsInterpreter only Reference(PrestadorClIps or RolPrestadorClIps or OrganizacionClIps or CareTeam)
+
 * specimen MS
 * specimen only Reference(Speciment-cl-ips)
 
@@ -44,7 +48,9 @@ Description: "Reporte resultado de un o varios estudios para diagnosticar una en
 * result ^slicing.discriminator.path = "resolve()"
 * result ^slicing.rules = #open
 * result ^slicing.ordered = false
+* result only Reference(ObservacionCL)
 * result contains 
   observacion-resultados 0..* MS
 * result[observacion-resultados] only Reference(ObservationResultadoLaboratorioPatologiaClIps or ObservationResultadoRadiologyClIps)
 
+* imagingStudy only Reference(ImagingStudyClIps)
