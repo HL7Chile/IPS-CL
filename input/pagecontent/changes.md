@@ -186,7 +186,7 @@
         - ValueSet $VSdataabsentreason que es requerido
         - El binding description
     - Se modifica el mustSupport del component y de specimen; se omite por la CoreCl. 
-    - Se modifica la referencia "Observation-pregnancy-edd-uv-ips" a ["Observation-embarazo-fecha-estimada-de-parto-cl-ips"](https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-embarazo-fecha-estimada-de-parto-cl-ips)
+    - Se modifica la referencia "Observation-pregnancy-edd-uv-ips" a ["Observation-embarazo-fecha-estimada-de-parto-cl-ips"](StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html)
     - Se habilita el ejemplo:
       * [Observación: Estado del embarazo - Ejemplo](Observation-ObservacionEstadoEmbarazoEjemplo.html)
 

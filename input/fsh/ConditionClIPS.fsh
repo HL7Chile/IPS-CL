@@ -25,7 +25,7 @@ Representación de un problema en el resumen internacional del paciente."
 * category MS
   * ^short = "Concepto que referencia a una terminología o un texto acorde"
 
-* category from ProblemTypeLoinc (extensible)
+* category from ProblemTypeUvIps (extensible)
   * ^binding.extension[0].extension[0].url = "purpose"
   * ^binding.extension[=].extension[=].valueCode = #candidate
   * ^binding.extension[=].extension[+].url = "valueSet"
