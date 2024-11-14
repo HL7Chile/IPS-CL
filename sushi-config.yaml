@@ -5,7 +5,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.cl.clips
 canonical: https://hl7chile.cl/fhir/ig/clips
-name: ips-cl
+name: InternationalPatientSummaryChile
 title: Resumen Clínico de Paciente de Chile (IPS-CL)
 description: Guía IPS homologada para la realidad Chilena.
 status: draft # draft | active | retired | unknown
@@ -27,7 +27,7 @@ publisher:
 dependencies:
    hl7.fhir.cl.clcore: 1.9.1
    #hl7.fhir.cl.clcore: 1.9.0
-   hl7.fhir.uv.ips: 2.0.0
+   hl7.fhir.uv.ips: 2.0.0-ballot
 #   hl7.fhir.us.mcode:
 #     id: mcode
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
