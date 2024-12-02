@@ -1,25 +1,3 @@
-Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
-Alias: loinc = http://loinc.org
-Alias: $v3-ActClass = http://terminology.hl7.org/CodeSystem/v3-ActClass
-Alias: $clinicaldocument = http://hl7.org/fhir/StructureDefinition/clinicaldocument
-Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-Alias: $Patient-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
-Alias: $MedicationStatement-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips
-Alias: $MedicationRequest-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationRequest-uv-ips
-Alias: $AllergyIntolerance-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips
-Alias: $Condition-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips
-Alias: $Procedure-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips
-Alias: $Immunization-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips
-Alias: $DeviceUseStatement-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips
-Alias: $Observation-results-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-uv-ips
-Alias: $DiagnosticReport-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips
-Alias: $vitalsigns = http://hl7.org/fhir/StructureDefinition/vitalsigns
-Alias: $Observation-tobaccouse-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips
-Alias: $Observation-alcoholuse-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips
-Alias: $Observation-pregnancy-status-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips
-Alias: $Observation-pregnancy-outcome-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-outcome-uv-ips
-Alias: $Flag-alert-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips
-
 Profile: DocumentoClIps
 Parent: Composition
 Id: Composition-cl-ips
@@ -32,19 +10,14 @@ Este perfil se basa en el perfil ClinicalDocument."""
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 1
-* ^extension[=].valueInteger.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
-* ^extension[=].valueInteger.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
+
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #draft
-* ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
-* ^extension[=].valueCode.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
 
-* ^version = "0.1.0"
+
+* ^version = "0.1.1"
 * ^status = #draft
 * ^experimental = false
-* ^publisher = "HL7 Chile"
-* ^contact.telecom.system = #url
-* ^contact.telecom.value = "http://www.hl7chile.cl"
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 * ^copyright = "HL7 International"
 
@@ -96,7 +69,7 @@ Este perfil se basa en el perfil ClinicalDocument."""
 * section ^short = "Secciones que componen el IPS"
 * section ^definition = "Las seccion es raíz que componen el documento IPS."
 * section.code 1.. MS
-* section.code only $CodeableConcept-uv-ips
+* section.code only CodeableConceptIPS
 * section.text 1.. MS
 * section.emptyReason ..0
 * section.emptyReason ^mustSupport = false

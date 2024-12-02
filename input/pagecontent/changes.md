@@ -1,3 +1,9 @@
+### 0.3.0
+
+- Creación ["CapabilityStatement Servidor Cl Core"](CapabilityStatement-cl-ips-server.html)
+- Limpieza de códigos de los Archivos FSH
+- Se agrega la extension abatement en el perfil [Alergias e Intolerancias](StructureDefinition-AllergiaInt-cl-ips.html)
+
 ### 0.2.0
 - Versión en construción de la guía IPS-CL basado en la guía ClCore 1.9.1 e IPS 2.0.0
 
@@ -78,7 +84,7 @@
     - Se agregan elementos a la extensión data-absent-reason.
     - Se modifican las referencias Practitioner, PractitionerRole, Organization y CareTeam de los elementos Performer y resultsInterpreter a PrestadorClIps, RolPrestadorClIps, OrganizacionClIps y CareTeam.
     - Los elementos resultsInterpreter y specimen se establecen como MS.
-    - Se modifica la referencia del elemento Specimen de Specimen(IPS) a Speciment-cl-ips.
+    - Se modifica la referencia del elemento Specimen de Specimen(IPS) a Specimen-cl-ips.
     - Se modifica la referencia del elemento result de Observation a ObservacionCL.
     - Se modifica la referencia del slice result[observacion-resultados] a ObservationResultadoLaboratorioPatologiaClIps y ObservationResultadoRadiologyClIps.
     - Se modifica la referencia del elemento imagingStudy de ImagingStudy a ImagingStudyClIps.
@@ -252,7 +258,7 @@
         - ValueSet $VSdataabsentreason que es requerido
         - El binding description
     - Se modifica la referencia del elemento performer aPrestador-cl-ips, RolPrestador-cl-ips, Organizacion-cl-ips, CareTeam, Paciente-cl-ips y RelatedPerson.
-    - Se modifica la referencia del elemento specimen a Speciment-cl-ips.
+    - Se modifica la referencia del elemento specimen a Specimen-cl-ips.
     - Se modifica la referencia del elemento hasMember a Observation-resultado-laboratorio-patologico-cl-ips.
     - Se habilita el ejemplo:
       * [Laboratorio Patología - Ejemplo](Observation-LabPatologia-CL-Ejemplo.html)
@@ -268,7 +274,7 @@
         - ValueSet $VSdataabsentreason que es requerido
         - El binding description
     - Se modifica la referencia del elemento performer a Prestador-cl-ips, RolPrestador-cl-ips, Organizacion-cl-ips,  CareTeam, Paciente-cl-ips y RelatedPerson.
-    - Se modifica la referencia del elemento specimen a Speciment-cl-ips.
+    - Se modifica la referencia del elemento specimen a Specimen-cl-ips.
     - Se modifica la referencia del elemento device a DispositivoClIps y DeviceMetric.
     - Se modifica la referencia del elemento hasMember a Observation-resultado-radiology-cl-ips.
     - Se habilita el ejemplo:
@@ -318,7 +324,7 @@
       * [Rol Profesional Medicina Familiar - Ejemplo](PractitionerRole-RolProfesionalCLEjemplo.html)
       * [Rol Profesional Medicina Interna - Ejemplo](PractitionerRole-RolProfesionalMedInternaCLEjemplo.html)
 
-- Perfil [Muestra](StructureDefinition-Speciment-cl-ips.html)
+- Perfil [Muestra](StructureDefinition-Specimen-cl-ips.html)
     - Se agrega el perfil Muestra.
     - Se basa en el recurso Specimen del estándar.
     - Status se establece como draft.

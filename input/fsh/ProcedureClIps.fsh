@@ -4,6 +4,16 @@ Id:          Procedimientos-cl-ips
 Title:       "Procedimientos (IPS-CL)"
 Description: "Este perfil representa las restricciones aplicadas al recurso Procedure por el proyecto IPS, el cual especifica una entrada en el Historial de Procedimientos para el resumen internacional del paciente basado en el estándar FHIR R4."
 
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 1
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
+* ^extension[=].valueCode = #draft
+
+* ^version = "0.1.1"
+* ^status = #draft
+* ^experimental = false
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
 * code 1..1 MS
 * code only CodeableConceptIPS
 * code from ProceduresUvIps (preferred)

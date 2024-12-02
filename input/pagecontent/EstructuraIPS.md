@@ -155,7 +155,7 @@ A continuación se muestran los perfiles que se han definido para cada sección:
   [ <a href="StructureDefinition-DiagnosticReport-cl-ips.html">Reporte Diagnóstico (IPS-CL)</a> ]
   - Resultados de Laboratorio/Patología
     [ <a href="StructureDefinition-Observation-resultado-laboratorio-patologico-cl-ips.html">Observación Resultado: Laboratorio/Patología (IPS-CL)</a> |
-    <a href="StructureDefinition-Speciment-cl-ips.html">Muestra (IPS-CL)</a> ]
+    <a href="StructureDefinition-Specimen-cl-ips.html">Muestra (IPS-CL)</a> ]
   - Resultados de Radiología/Imagenología
     [ <a href="StructureDefinition-Observation-resultado-radiology-cl-ips.html">Observación Resultado: Imagenológico (IPS-CL)</a> |
     <a href="StructureDefinition-Dispositivo-observador-cl-ips.html">Dispositivo - Ejecutante, Observador (IPS-CL)</a> |

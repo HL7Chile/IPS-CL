@@ -4,6 +4,16 @@ Id: Parametros-entradas-ips-cl
 Title: "Parametros De Entradas IPS Summary"
 Description: "Parámetros de Entradas para usar la operación IPS-Summary de manera POST"
 
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 1
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
+* ^extension[=].valueCode = #draft
+
+* ^version = "0.1.1"
+* ^status = #draft
+* ^experimental = false
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
 * implicitRules 0..0
 * parameter.modifierExtension 0..0
 

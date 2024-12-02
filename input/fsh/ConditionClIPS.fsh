@@ -11,6 +11,17 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Cond
 
 Representación de un problema en el resumen internacional del paciente."
 
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 1
+
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
+* ^extension[=].valueCode = #draft
+
+* ^version = "0.1.1"
+* ^status = #draft
+* ^experimental = false
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
 * clinicalStatus only CodeableConceptIPS
   * ^short = "El estatus en el cual se encuentra la condición: active| recurrece | relapse | inactive | remission | resolved"
 * clinicalStatus from ConditionClinicalStatus

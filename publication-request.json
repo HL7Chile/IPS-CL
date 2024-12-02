@@ -1,0 +1,12 @@
+{
+    "package-id": "hl7.fhir.cl.clips",
+    "version": "0.3.0-ballot",
+    "desc": "Versión de desarrollo",
+    "path": "https://hl7chile.cl/fhir/ig/clips/0.3.0-ballot",
+    "changes": "changes.html",
+    "status": "ballot",
+    "sequence": "STU1",
+    "first": false,
+    "mode": "milestone",
+    "fhirversion": "4.0.1"
+}

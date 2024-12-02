@@ -1,9 +1,3 @@
-Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
-Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-Alias: $Patient-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
-Alias: $vaccines-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/vaccines-uv-ips
-Alias: $medicine-route-of-administration = http://hl7.org/fhir/uv/ips/ValueSet/medicine-route-of-administration
-Alias: $target-diseases-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/target-diseases-uv-ips
 
 Profile: InmunizacionClIps
 Parent: ImmunizationCL
@@ -12,21 +6,17 @@ Title: "Immunización (IPS-CL)"
 Description: """Este perfil representa las restricciones aplicadas al recurso Inmunización por la Guía de Implementación FHIR del Resumen Internacional del Paciente (IPS). Un registro de una vacunación se representa en el resumen del paciente como una instancia de un recurso Inmunización restringido por este perfil.
 
 Describe el evento de un paciente al que se le ha administrado una vacuna o un registro de una vacuna notificado por un paciente, un clínico u otra parte."""
+
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 1
-* ^extension[=].valueInteger.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
-* ^extension[=].valueInteger.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
+
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #draft
-* ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
-* ^extension[=].valueCode.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
 
-* ^version = "0.1.0"
+
+* ^version = "0.1.1"
 * ^status = #draft
 * ^experimental = false
-* ^publisher = "HL7 Chile"
-* ^contact.telecom.system = #url
-* ^contact.telecom.value = "http://www.hl7chile.cl"
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
 * status MS

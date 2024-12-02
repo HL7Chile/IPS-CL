@@ -23,9 +23,9 @@ Para adaptar el International Patient Summary (IPS) a una versión chilena, es f
 
 La incorporación de la Guía "CL CORE" en la Adaptación del "IPS", permite establecer un conjunto de perfiles FHIR específicos para datos clínicos que deben integrarse en el IPS chileno, garantizando su compatibilidad con los sistemas de salud locales. Esto implica utilizar los perfiles CORE para representar información como datos de pacientes, medicamentos, diagnósticos y alergias, alineando estos datos con las necesidades de interoperabilidad nacional.
 
-### Objetivos
+### Objetivo
 
-
+Esta guía tiene como objetivo proporcionar una traducción y adaptación del International Patient Summary (IPS) a la realidad chilena, estableciendo una base estandarizada para la creación de resúmenes clínicos nacionales. A través de esta implementación, se busca asegurar que tanto los sectores públicos como los privados puedan generar y compartir resúmenes clínicos con un alto grado de compatibilidad e interoperabilidad, independientemente de los sistemas de información en uso. Este marco permitirá sentar las bases para una historia clínica compartida, facilitando el intercambio seguro y eficiente de información entre prestadores de salud y promoviendo una atención continua y coordinada para los pacientes en todo el país.
 
 ### Perfiles
 

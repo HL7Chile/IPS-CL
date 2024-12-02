@@ -8,12 +8,15 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 1
-* ^extension[=].valueInteger.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
-* ^extension[=].valueInteger.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
+
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #draft
-* ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
-* ^extension[=].valueCode.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
+
+
+* ^version = "0.1.1"
+* ^status = #draft
+* ^experimental = false
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
 * identifier 1..1 MS
   * ^short = "Identificador persistente para el documento"
@@ -198,7 +201,7 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
 * entry[specimen]
   * resource 1..
     * ^short = "Muestras utilizadas para laboratorio o estudios patológicos del Paciente"
-  * resource only Speciment-cl-ips
+  * resource only Specimen-cl-ips
 
 * entry[flag]
   * resource 1..

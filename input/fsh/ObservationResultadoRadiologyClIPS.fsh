@@ -8,17 +8,13 @@ Description: "Resultados obtenidos para un examen imagenológico"
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 1
-* ^extension[=].valueInteger.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
-* ^extension[=].valueInteger.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
+
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #draft
-* ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
-* ^extension[=].valueCode.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
+
 * ^version = "0.1.0"
-* ^publisher = "Hl7 Chile"
 * ^status = #draft
-* ^contact.telecom.system = #url
-* ^contact.telecom.value = "http://www.hl7chile.cl"
+* ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
 * obeys ips-obs-1
@@ -54,8 +50,6 @@ Description: "Resultados obtenidos para un examen imagenológico"
 * effective[x] only dateTime or Period
 * effective[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
 * effective[x].extension[data-absent-reason] ^short = "Motivo por el cual no se encuentra el dato"
-* effective[x].extension[data-absent-reason].value[x] from $VSdataabsentreason (required)
-* effective[x].extension[data-absent-reason].value[x] ^binding.description = "Es usado para especificar porque el elemento esperado  por algún motivo el dato no se encuentra"
 
 * performer 1..* MS
 * performer only Reference(Prestador-cl-ips or RolPrestador-cl-ips or Organizacion-cl-ips or CareTeam or Paciente-cl-ips or RelatedPerson)
@@ -65,7 +59,7 @@ Description: "Resultados obtenidos para un examen imagenológico"
 * interpretation only CodeableConceptIPS
   * ^short = "Concepto que referencia a una terminología o un texto acorde"
 
-* specimen only Reference(Speciment-cl-ips)
+* specimen only Reference(Specimen-cl-ips)
 
 * device only Reference(DispositivoClIps or DeviceMetric)
 

@@ -1,11 +1,3 @@
-Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
-Alias: $abatement-dateTime-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/abatement-dateTime-uv-ips
-Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-Alias: $Patient-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
-Alias: $allergy-intolerance-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/allergy-intolerance-uv-ips
-Alias: $allergy-reaction-snomed-ct-ips-free-set = http://hl7.org/fhir/uv/ips/ValueSet/allergy-reaction-snomed-ct-ips-free-set
-
-
 Profile: AlergiaIntClIps
 Parent: AlergiaIntCL
 Id: AllergiaInt-cl-ips
@@ -14,23 +6,21 @@ Description: "Este perfil restringe el recurso de Alergias e Intolerancias para 
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 1 //nivel de madurez del perfil dentro del estándar
-* ^extension[=].valueInteger.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
-* ^extension[=].valueInteger.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
+
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #draft
-* ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
-* ^extension[=].valueCode.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
 
-* ^version = "0.1.0"
+
+* ^version = "0.1.1"
 * ^status = #draft
-* ^publisher = "Hl7 Chile"
-* ^contact.telecom.system = #url
-* ^contact.telecom.value = "http://www.hl7chile.cl"
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-//* extension[abatement-datetime] ^short = "Abatement datetime"
-//* extension[abatement-datetime] ^definition = "The date or estimated date that the condition resolved or went into remission."
-//* extension contains AbatementDateTimeUvIps named abatement-datetime
+
+* extension contains $allergyintolerance-abatement named abatement 0..1
+* extension[abatement] ^short = "Cuando la alergia o intolerancia se resuelve."
+* extension[abatement] ^definition = "La fecha o la fecha estimada en que la alergia o intolerancia se resolvió. Esto se denomina \"abatimiento\" debido a las múltiples connotaciones asociadas con el término \"resolución\"."
+* extension[abatement] ^comment = "La edad generalmente se utiliza cuando el paciente informa la edad a la que la alergia o intolerancia se resolvió. Si no existe un elemento de abatimiento, se puede usar el clinicalStatus para indicar si la alergia o intolerancia ha sido resuelta o no. Cuando existe abatementString, indica que la alergia o intolerancia ha sido resuelta."
+
 * clinicalStatus  only CodeableConceptIPS
   * ^short = "Concepto - referencia a una terminología o sólo texto"
 * clinicalStatus from 	http://hl7.org/fhir/ValueSet/allergyintolerance-clinical (required)
