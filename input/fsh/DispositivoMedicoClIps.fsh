@@ -25,5 +25,7 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Devi
 * type ^binding.description = "Tipo de dispositivo o un código en caso de dispositivo ausente/desconocido."
 
 * patient 1.. MS
+  * ^short = "Paciente al que está adherido el dispositivo"
 * patient only Reference(Paciente-cl-ips)
 * patient.reference 1.. MS
+  * ^short = "Referencia literal, interna o url absoluta"

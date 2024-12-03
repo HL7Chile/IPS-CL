@@ -5,8 +5,8 @@
     "path": "https://hl7chile.cl/fhir/ig/clips/0.3.0-ballot",
     "changes": "changes.html",
     "status": "ballot",
-    "sequence": "STU1",
+    "sequence": "STU2",
     "first": false,
-    "mode": "milestone",
+    "mode": "working",
     "fhirversion": "4.0.1"
 }

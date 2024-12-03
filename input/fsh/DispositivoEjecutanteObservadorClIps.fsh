@@ -24,7 +24,8 @@ Este perfil describe un dispositivo que desempeña el papel de observador o ejec
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
 * identifier MS
-
+  * ^short = "Identificador de la instancia"
 * manufacturer MS
-
+  * ^short = "Nombre del fabricante del dispositivo"
 * modelNumber MS
+  * ^short = "El número del modelo para el dispositivo"

@@ -15,6 +15,7 @@ Description: "Este perfil restringe el recurso de Alergias e Intolerancias para 
 * ^status = #draft
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
+* . ^short = "Alergia o Intolerancia (generalmente: Riesgo de reacción adversa a una sustancia)"
 
 * extension contains $allergyintolerance-abatement named abatement 0..1
 * extension[abatement] ^short = "Cuando la alergia o intolerancia se resuelve."
@@ -25,7 +26,7 @@ Description: "Este perfil restringe el recurso de Alergias e Intolerancias para 
   * ^short = "Concepto - referencia a una terminología o sólo texto"
 * clinicalStatus from 	http://hl7.org/fhir/ValueSet/allergyintolerance-clinical (required)
 * verificationStatus only CodeableConceptIPS
-  * ^short = "Concept - reference to a terminology or just text"
+  * ^short = "Concepto - referencia a una terminología o sólo texto"
 * verificationStatus from http://hl7.org/fhir/ValueSet/allergyintolerance-verification (required)
 //* verificationStatus ^comment = "In the scope of the IPS the entered-in-error concept is not allowed."
 * type MS
@@ -43,8 +44,9 @@ Description: "Este perfil restringe el recurso de Alergias e Intolerancias para 
 * code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 
 * patient MS
-* patient.reference 1.. MS
 * patient only Reference(Paciente-cl-ips)
+* patient.reference 1.. MS
+  * ^short = "Referencia literal, interna o url absoluta"
 
 * onset[x] only dateTime or Age or Period or Range or string
 * onset[x] MS
@@ -53,6 +55,7 @@ Description: "Este perfil restringe el recurso de Alergias e Intolerancias para 
 * reaction MS
 * reaction.manifestation only CodeableConceptIPS
 * reaction.manifestation MS
+* reaction.manifestation ^short = "Concepto - referencia a una terminología o sólo texto"
 * reaction.manifestation from  AllergyReactionUvIps (preferred)
 * reaction.manifestation ^binding.description = "Código para la manifestación de alergia o reacción de intolerancia del subconjunto SNOMED International Patient Set (IPS) de SNOMED CT (IPS Free Set)."
 * reaction.severity MS

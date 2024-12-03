@@ -24,14 +24,18 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Devi
 
 * subject only Reference(Paciente-cl-ips)
 * subject MS
-* subject ^definition = "Paciente que utiliza el dispositivo."
+* subject ^short = "Paciente que utiliza el dispositivo"
 * subject.reference 1.. MS
+  * ^short = "Referencia literal, interna o url absoluta"
 
 * timing[x] 1.. MS
+* timing[x] ^short = "Con qué frecuencia se utilizó el dispositivo"
 * timing[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
-* timing[x].extension[data-absent-reason] ^definition = "Proporciona una razón por la cual no se encuentra la frecuencia con la que se utilizó el dispositivo."
+* timing[x].extension[data-absent-reason] ^definition = "Proporciona una razón por la cual no se encuentra la frecuencia con la que se utilizó el dispositivo"
 
 * device only Reference(Dispositivo-cl-ips)
 * device MS
+  * ^short = "Referencia al dispositivo" 
 
 * bodySite only CodeableConceptIPS
+  * ^short = "Concepto - referencia a una terminología o sólo texto"

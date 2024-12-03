@@ -1,12 +1,11 @@
 Profile: DocumentoClIps
-Parent: Composition
+Parent: DocumentoCl
 Id: Composition-cl-ips
 Title: "Documento (IPS-CL)"
 Description: """Documento clínico utilizado para representar el conjunto de datos del Resumen Internacional de Pacientes (IPS). 
 Un documento de Resumen Internacional de Paciente (IPS) es un extracto de historia clínica electrónica que contiene información sanitaria esencial sobre un sujeto de atención. 
 El conjunto de datos IPS es mínimo y no exhaustivo; independiente de la especialidad y la afección; pero sigue siendo clínicamente relevante. Tal como se especifica en las normas EN 17269 e ISO 27269, está diseñado para apoyar el caso de uso de la «atención transfronteriza no planificada», pero no se limita a él. Pretende ser internacional, es decir, ofrecer soluciones genéricas para su aplicación global más allá de una región o país concretos.
-
-Este perfil se basa en el perfil ClinicalDocument."""
+"""
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 1
@@ -24,7 +23,9 @@ Este perfil se basa en el perfil ClinicalDocument."""
 * . ^short = "International Patient Summary Documento"
 * . ^definition = "International Patient Summary documento. \r\nUna composición es un conjunto de información relacionada con la asistencia sanitaria que se ensambla en un único documento lógico que proporciona una única declaración coherente de significado, establece su propio contexto y que tiene atestación clínica con respecto a quién realiza la declaración. \r\nAunque una composición define la estructura, en realidad no contiene el contenido: el contenido completo de un documento se encuentra en un paquete, cuyo primer recurso es la composición."
 * text MS
+  * ^short = "Resumen de texto del recurso, para interpretación humana"
 * identifier MS
+  * ^short = "Identificador independiente de la versión para la Composición"
 * status MS
 * type only CodeableConceptIPS
 * type = loinc#60591-5
@@ -32,10 +33,13 @@ Este perfil se basa en el perfil ClinicalDocument."""
 * type ^short = "Tipo de Documento (\"Resumen de Paciente\")"
 * type ^definition = "Especifica que el documento refiere al Resumen de Paciente (Loinc \"60591-5\")\r\n"
 * subject 1.. MS
+  * ^short = "Quién y/o qué trata la composición"
 * subject only Reference(PacienteCLIps)
 * subject ^definition = "Sobre quién o que es el documento. \r\nEn general, una composición puede referirse a una persona (paciente o profesional sanitario), a un dispositivo (por ejemplo, una máquina) o incluso a un grupo de sujetos (como un documento sobre un rebaño de ganado o un conjunto de pacientes que comparten una exposición común).\r\nPara el IPS, el sujeto es siempre el paciente."
 * subject.reference 1.. MS
+  * ^short = "Referencia literal, interna o url absoluta"
 * date MS
+  * ^short = "Hora de edición de la composición"
 * author MS
 * author ^short = "Quién y/o qué fue el autor del IPS"
 * author ^definition = "Identifica al responsable de la información en el IPS, no necesariamente a quien la ingresó.\r\n\r\nEl tipo de autor, de manera de determinar la \"naturaleza\"del resumen de paciente: e.g. a \"Datos curativos\" IPS Vs. uno generado \"automaticamente\"."
@@ -43,14 +47,20 @@ Este perfil se basa en el perfil ClinicalDocument."""
 * title ^short = "International Patient Summary Genérico para uso en Chile"
 * title ^definition = "Etiqueta oficial de lectura humana para el documento.\r\n\r\nPara este documento debiera ser \"Resumen de Paciente Basado en IPS\""
 * attester MS
+  * ^short = "Atestigua la exactitud de la composición"
 * attester.mode MS
 * attester.time MS
+  * ^short = "Hora y fecha que atestigua el composición"
 * attester.party MS
+  * ^short = "Quien atestigua la composición"
 * custodian MS
+  * ^short = "Organización que mantiente la composición"
+* relatesTo.target[x] ^short = "Objetivo de la relación"
 * relatesTo.target[x] only Identifier or Reference(Composition or DocumentoClIps)
 * event ^slicing.discriminator[0].type = #pattern
 * event ^slicing.discriminator[=].path = "code"
 * event ^slicing.rules = #open
+* event ^short = "El(los) servicio(s) clínico(s) que están siendo documentados"
 //* event ^definition = "La principal actividad descrita por un IPS es la prestación de asistencia sanitaria durante un periodo de tiempo. \En la representación CDA del IPS esto se muestra estableciendo el valor de serviceEvent/@classCode a «PCPR» (prestación de asistencia) e indicando la duración durante la cual se prestó la asistencia en serviceEvent/effectiveTime. \En la representación FHIR debe utilizarse al menos un evento para registrar esta información.También pueden incluirse datos adicionales de fuera de esta duración si son relevantes para la atención prestada durante ese intervalo de tiempo (por ejemplo, revisados durante el intervalo de tiempo indicado). Por ejemplo, si el IPS es generado por un GP basado en la información registrada en su EHR-S, entonces el valor de inicio debe representar la fecha en la que comenzó la relación de tratamiento entre el paciente y el GP; y el valor final la fecha del último evento asistencial."
 * event contains careProvisioningEvent 0..1 MS
 * event[careProvisioningEvent] ^short = "La asistencia descrita en el documento"

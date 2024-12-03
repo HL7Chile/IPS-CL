@@ -3,6 +3,7 @@
 - Creación ["CapabilityStatement Servidor Cl Core"](CapabilityStatement-cl-ips-server.html)
 - Limpieza de códigos de los Archivos FSH
 - Se agrega la extension abatement en el perfil [Alergias e Intolerancias](StructureDefinition-AllergiaInt-cl-ips.html)
+- Perfil [Documento - Composition](StructureDefinition-Composition-cl-ips.html) ahora depende del DocumentoCL de la Cl Core de HL7 Chile.
 
 ### 0.2.0
 - Versión en construción de la guía IPS-CL basado en la guía ClCore 1.9.1 e IPS 2.0.0
@@ -93,7 +94,7 @@
       * [Reporte Laboratorio (Diagnóstico) - Ejemplo]( DiagnosticReport-DiagnosticReportLab-CL-Ejemplo.html)
 
 - Perfil [Documento - Composition](StructureDefinition-Composition-cl-ips.html)
-    - Se agrega el perfil Documento (COmposition)
+    - Se agrega el perfil Documento (Composition)
     - Se basa en el recurso Composition del estándar
     - Status se establece como #draft
     - Se modifica la referencia Patient-uv-ips a Paciente-cl-ips.  
