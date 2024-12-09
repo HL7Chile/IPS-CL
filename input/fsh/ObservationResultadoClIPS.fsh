@@ -1,8 +1,8 @@
-Profile: ObservationIpsCl
+Profile: ObservationResultsIpsCl
 Parent: CoreObservacionCL
 Id: Observation-ips-cl
-Title: "Observation Resultados (IPS-CL)"
-Description: "Observaciones que pueden ser resultados de algún examén de laboratorio, imagen u otro"
+Title: "Observación Resultados (IPS-CL)"
+Description: "Observaciones que pueden ser resultados de algún examén de laboratorio, imagen u otro."
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 1
