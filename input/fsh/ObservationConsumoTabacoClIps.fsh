@@ -19,10 +19,12 @@ Description: "Este perfil restringe el recurso Observation para representar la e
 * code only CodeableConceptIPS
 * code = loinc#72166-2
 * code MS
-
+  * ^short = "Concepto que referencia a una terminología o un texto acorde"
+  
 * subject 1.. MS
 * subject only Reference(Paciente-cl-ips)
 * subject.reference 1.. MS
+  * ^short = "Referencia literal, interna o url absoluta"
 
 * effective[x] 1.. MS
 * effective[x] only dateTime
@@ -30,9 +32,10 @@ Description: "Este perfil restringe el recurso Observation para representar la e
 * effective[x].extension[data-absent-reason] ^short = "Motivo por el cual no se encuentra el dato"
 
 * valueCodeableConcept 0..1
+  * ^short = "Concepto que referencia a una terminología o un texto acorde"
 * valueCodeableConcept only CodeableConceptIPS
 * valueCodeableConcept from CurrentSmokingStatusUvIps (preferred)
-* valueCodeableConcept ^sliceName = "valueCodeableConcept"
+
 
 * component ..0
 //* component ^mustSupport = false

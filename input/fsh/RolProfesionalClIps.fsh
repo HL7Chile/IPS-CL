@@ -11,7 +11,7 @@ Description: "Este perfil restringe el recurso profesional para representar a un
 * ^extension[=].valueCode = #draft
 
 
-* ^version = "0.1.0"
+* ^version = "0.1.1"
 * ^status = #draft
 * ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
@@ -19,5 +19,6 @@ Description: "Este perfil restringe el recurso profesional para representar a un
 * practitioner only Reference(Prestador-cl-ips)
 * organization MS
 * organization only Reference(Organizacion-cl-ips)
+* code ^short = "Concepto - referencia a una terminología o simplemente a un texto"
 * code only CodeableConceptIPS
 * code from HealthcareProfessionalRolesUvIps (preferred)

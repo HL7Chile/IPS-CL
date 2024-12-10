@@ -4,6 +4,10 @@
 - Limpieza de códigos de los Archivos FSH
 - Se agrega la extension abatement en el perfil [Alergias e Intolerancias](StructureDefinition-AllergiaInt-cl-ips.html)
 - Perfil [Documento - Composition](StructureDefinition-Composition-cl-ips.html) ahora depende del DocumentoCL de la Cl Core de HL7 Chile.
+- Perfil **Immunización (IPS-CL)** pasa a llamarse [Inmunización (IPS-CL)](StructureDefinition-Inmunizacion-cl-ips.html)
+- Se traduce las indicaciones de los perfiles que no nacén de la Cl Core.
+- Perfil [Observación Resultado: Imagenológico (IPS-CL)](StructureDefinition-Observation-resultado-radiology-cl-ips.html):
+  * Correción de slice de categoría de "laboratorio" a "radiologia" 
 
 ### 0.2.0
 - Versión en construción de la guía IPS-CL basado en la guía ClCore 1.9.1 e IPS 2.0.0

@@ -15,8 +15,6 @@ Description: "Este perfil restringe el recurso de Alergias e Intolerancias para 
 * ^status = #draft
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-* . ^short = "Alergia o Intolerancia (generalmente: Riesgo de reacción adversa a una sustancia)"
-
 * extension contains $allergyintolerance-abatement named abatement 0..1
 * extension[abatement] ^short = "Cuando la alergia o intolerancia se resuelve."
 * extension[abatement] ^definition = "La fecha o la fecha estimada en que la alergia o intolerancia se resolvió. Esto se denomina \"abatimiento\" debido a las múltiples connotaciones asociadas con el término \"resolución\"."

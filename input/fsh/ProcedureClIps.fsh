@@ -15,20 +15,28 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Proc
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
 * code 1..1 MS
+  * ^short = "Concepto - referencia a una terminología o simplemente a un texto"
 * code only CodeableConceptIPS
 * code from ProceduresUvIps (preferred)
 * subject 1..1 MS
+  * ^short = "¿Para quién o para qué grupo es la solicitud de medicación?"
   * reference 1..1 MS
+    * ^short = "Referencia literal, interna o url absoluta"
 * subject only Reference(Paciente-cl-ips)
 * performed[x] 1..1 MS
+  * ^short = "Cuando se realizó el procedimiento"
 * performed[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
 * performed[x].extension[data-absent-reason] ^short = "effective[x] razón de no existencia"
 * performed[x].extension[data-absent-reason] ^definition = "Indica la razón por la cual la fecha no se encuentra registrada."
 
 * asserter only Reference(PacienteCl or RelatedPerson or PrestadorCL or CoreRolClinicoCl)
+* asserter ^short = "Persona que afirma este procedimiento"
 * performer
+  * actor ^short = "La referencia al profesional"
   * actor only Reference(Paciente-cl-ips or RelatedPerson or  DispositivoObservadorClIps or Prestador-cl-ips or RolPrestador-cl-ips or Organizacion-cl-ips)
   * onBehalfOf only Reference(Organizacion-cl-ips)
+  * onBehalfOf ^short = "Organización para la cual actuaba el dispositivo o el profesional"
 
 * bodySite only CodeableConceptIPS
+  * ^short = "Concepto - referencia a una terminología o simplemente a un texto"
 * bodySite from SNOMEDCTBodyStructures (example)

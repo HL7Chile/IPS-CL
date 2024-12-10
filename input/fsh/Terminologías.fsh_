@@ -6,7 +6,7 @@ Description: "Códigos de estados de embarazo."
 * ^experimental = false
 * ^caseSensitive = true
 * ^version = "0.1.0" //Estado de prueba o desarrollo; traduccion en revision
-* ^status = #active
+* ^status = #draft
 * ^date = "2024-10-20T00:00:00-03:00"
 * ^contact.name = "HL7 Chile"
 * ^contact.telecom.system = #email
@@ -25,7 +25,7 @@ Description: "Códigos de estados de embarazo."
 
 * ^experimental = false
 * ^version = "0.1.0" //Estado de prueba o desarrollo; traduccion en revision
-* ^status = #active
+* ^status = #draft
 * ^date = "2024-10-20T00:00:00-03:00"
 * ^contact.name = "HL7 Chile"
 * ^contact.telecom.system = #email
@@ -43,7 +43,7 @@ Description: "Códigos de consumo de tabaco."
 * ^experimental = false
 * ^caseSensitive = true
 * ^version = "0.1.0" //Estado de prueba o desarrollo; traduccion en revision
-* ^status = #active
+* ^status = #draft
 * ^date = "2024-10-20T00:00:00-03:00"
 * ^contact.name = "HL7 Chile"
 * ^contact.telecom.system = #email

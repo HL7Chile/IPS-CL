@@ -11,22 +11,9 @@ Description: "Ejemplo sobre el resultado de radiología de un paciente."
 
 * partOf = Reference(EstudioImagenologiaCLEjemplo)
 
-* status = #final //Observación completa y no se necesian más acciones
+* status = #final 
 
-//El slicing se especifica porque el elemento category es un array de codeableconcept (puede repetirse varias veces). se requiere diferenciar la categoria con la cual se va a trabajar
-//discriminador = coding.code, lo que permite que la categoria "laboratorio" se identifique por el codigo "imaging"
-//un discriminador permite identificar las partes o slices de un elemento. en este caso el discriminador define que se usará para distinguir entre categorias, en este caso el código.
-//* category ^slicing.discriminator.type = #value //tipo de dato, en este caso coding.code
-//* category ^slicing.discriminator.path = "coding.code"
-//* category ^slicing.ordered = false
-//* category ^slicing.rules = #open
-//* category ^slicing.description = ""
-// Inicializamos el primer elemento del array category[0]
-
-//* category[laboratorio].coding[0].system = "http://terminology.hl7.org/CodeSystem/observation-category" //categoria de los resultados de radiologia
-//* category[laboratorio].coding[0].code = #imaging
-//* category[laboratorio].coding[0].display = "Imaging"
-* category[laboratorio]
+* category[radiologia]
   * coding = CScategoria#imaging "Imaging"
   * text = "Imágenes"
   

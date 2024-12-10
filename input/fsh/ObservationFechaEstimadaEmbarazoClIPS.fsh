@@ -18,6 +18,7 @@ Description: "Este perfil restringe el recurso Observation para representar la f
 
 * code MS
 * code only CodeableConceptIPS
+  * ^short = "Concepto que referencia a una terminología o un texto acorde"
 * code from http://hl7.org/fhir/uv/ips/ValueSet/edd-method-uv-ips (required)
 * code ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
 * code ^binding.extension.valueString = "Códigos de Observaciones"
@@ -25,30 +26,33 @@ Description: "Este perfil restringe el recurso Observation para representar la f
 * subject 1.. MS
 * subject only Reference(Paciente-cl-ips)
 * subject.reference 1.. MS
+  * ^short = "Referencia literal, interna o url absoluta"
 
 * effective[x] 1.. MS
 * effective[x] only dateTime
 * effective[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
 * effective[x].extension[data-absent-reason] ^short = "Motivo por el cual no se encuentra el dato"
 
+* value[x] 0..1 MS
+  * ^short = "Resultado Actual"
 * valueDateTime 0..1 MS
-* valueDateTime only dateTime
-* valueDateTime ^sliceName = "valueDateTime"
+* valueDateTime ^short = "Resultado Actual" 
+
 
 * bodySite ..0
-* bodySite ^mustSupport = false
+//* bodySite ^mustSupport = false
 
 * method ..0
-* method ^mustSupport = false
+//* method ^mustSupport = false
 
 * specimen ..0
 //* specimen ^mustSupport = false
 
 * device ..0
-* device ^mustSupport = false
+//* device ^mustSupport = false
 
 * referenceRange ..0
-* referenceRange ^mustSupport = false
+//* referenceRange ^mustSupport = false
 
 * component ..0
 //* component ^mustSupport = false

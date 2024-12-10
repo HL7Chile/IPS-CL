@@ -30,21 +30,21 @@ Description: "Este perfil restringe el recurso Observation para representar un r
 * effective[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
 * effective[x].extension[data-absent-reason] ^short = "Motivo por el cual no se encuentra el dato"
 
-* valueQuantity 0..1 MS
-* valueQuantity only Quantity
-* valueQuantity ^sliceName = "valueQuantity"
+* value[x] 0..1 MS
+//* valueQuantity only Quantity
+* valueQuantity ^short = "Una cantidad medida utilizando UCUM (Unified Code for Units of Measure)."
 
 * bodySite ..0
-* bodySite ^mustSupport = false
+//* bodySite ^mustSupport = false
 
 * specimen ..0
 //* specimen ^mustSupport = false
 
 * device ..0
-* device ^mustSupport = false
+//* device ^mustSupport = false
 
 * referenceRange ..0
-* referenceRange ^mustSupport = false
+//* referenceRange ^mustSupport = false
 
 * component ..0
 //* component ^mustSupport = false

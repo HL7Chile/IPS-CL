@@ -10,7 +10,7 @@ Description: "Este perfil restringe el recurso Observation para representar la e
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #draft
 
-* ^version = "1.1.0"
+* ^version = "0.1.1"
 * ^status = #draft
 * ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
@@ -22,6 +22,7 @@ Description: "Este perfil restringe el recurso Observation para representar la e
 * subject 1.. MS
 * subject only Reference(Paciente-cl-ips)
 * subject.reference 1.. MS
+  * ^short = "Referencia literal, interna o url absoluta"
 
 * effective[x] 1.. MS
 * effective[x] only dateTime
@@ -30,7 +31,7 @@ Description: "Este perfil restringe el recurso Observation para representar la e
 
 * valueQuantity 0..1
 * valueQuantity only QuantityIPS
-* valueQuantity ^sliceName = "valueQuantity"
+* valueQuantity ^short = "Una cantidad medida utilizando UCUM (Unified Code for Units of Measure)."
 
 * component ..0
 //* component ^mustSupport = false

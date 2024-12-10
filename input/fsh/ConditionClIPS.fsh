@@ -23,18 +23,20 @@ Representación de un problema en el resumen internacional del paciente."
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
 * clinicalStatus only CodeableConceptIPS
-  * ^short = "El estatus en el cual se encuentra la condición: active| recurrece | relapse | inactive | remission | resolved"
+//* clinicalStatus ^short = "El estatus en el cual se encuentra la condición: active| recurrece | relapse | inactive | remission | resolved"
+* clinicalStatus ^short = "Concepto que referencia a una terminología o un texto acorde"
 * clinicalStatus from ConditionClinicalStatus
   * ^binding.description = "Códigos definidos por estándar"
 
 * verificationStatus only CodeableConceptIPS
-  * ^short = "Estado de verificación de la condición o diagnóstico: unconfirmed | provisional | differential | confirmed | refuted | entered-in-error"
+//* verificationStatus ^short = "Estado de verificación de la condición o diagnóstico: unconfirmed | provisional | differential | confirmed | refuted | entered-in-error"
+* verificationStatus ^short = "Concepto que referencia a una terminología o un texto acorde"
 * verificationStatus from ConditionVerificationSeverity
   * ^binding.description = "Códigos definidos por estándar"
 
 * category only CodeableConceptIPS
 * category MS
-  * ^short = "Concepto que referencia a una terminología o un texto acorde"
+* category ^short = "Concepto que referencia a una terminología o un texto acorde"
 
 * category from ProblemTypeUvIps (extensible)
   * ^binding.extension[0].extension[0].url = "purpose"

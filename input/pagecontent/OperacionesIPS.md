@@ -1,6 +1,6 @@
 ### Generación de un Documento IPS
 
-El documento IPS esta compuesto por un conjunto de recurson organizados en un *Bundle* Está guía recomienda el uso de la operación "$summary".
+El documento IPS esta compuesto por un conjunto de recursos organizados en un *Bundle*, está guía recomienda el uso de la operación "$summary" para la generación estos.
 
 ### Operación
 

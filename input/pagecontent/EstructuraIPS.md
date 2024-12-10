@@ -14,7 +14,7 @@ El IPS está compuesto por las siguientes secciones que se describen a continuac
 
 La cabecera del documento contiene datos para la identificación de las siguientes secciones:
 
-- Patient, donde se deben indicar datos de identificación del sujeto de atencion.
+- Patient, donde se deben indicar datos de identificación del sujeto de atención.
 - Author, donde se deben indicar datos de identificación del presunto autor del documento.
 - Attester, donde se deben indicar datos sobre cuándo y quién dio fe de la composición del documento.
 - Custodian, donde se debe indicar la organización que mantiene el documento.
@@ -25,7 +25,7 @@ Esta sección documenta las alergias y/o intolerancias relevantes para un pacien
 
 Como mínimo, debe incluir las alergias y reacciones adversas actuales y las alergias históricas relevantes del paciente. Si no hay información disponible o si no se conocen alergias, debe documentarse en el recurso de referencia de la sección (en el Composition.section.entry).
 
-##### Resúmen de medicación
+##### Resumen de medicación
 
 La sección de resumen de la medicación contiene una descripción de los medicamentos relevantes del paciente para el alcance del resumen del paciente.
 
@@ -48,13 +48,13 @@ La sección de problemas del IPS enumera y describe los problemas o condiciones 
 
 #### Historial de procedimientos
 
-La sección Historial de procedimientos contiene una descripción de los procedimientos pasados del paciente que son pertinentes al alcence del IPS.
+La sección Historial de procedimientos contiene una descripción de los procedimientos pasados del paciente que son pertinentes al alcance del IPS.
 
 Por ejemplo, los procedimientos pueden referirse a:
   
 1. Procedimiento diagnóstico invasivo: por ejemplo, cateterismo cardíaco, biopsias de tejidos; (los resultados de estos procedimientos se documentan en la sección de resultados).
 2. Procedimiento terapéutico: por ejemplo, diálisis, oxigenoterapia, etc
-3. Procedimiento quirúrgico: por ejemplo, apendicectomía, cirugía de tiroides, cirguía de hernia umbilical, etc.
+3. Procedimiento quirúrgico: por ejemplo, apendicectomía, cirugía de tiroides, cirugía de hernia umbilical, etc.
 
 #### Inmunizaciones
 
@@ -124,7 +124,7 @@ La sección Historia social se compone de las siguientes entradas:
 
 Los perfiles que se han definido para esta guía de implementación se enumeran <a href="artifacts.html">aquí</a>.
 
-A continuación se muestran los perfiles que se han definido para cada sección:
+A continuación, se muestran los perfiles que se han definido para cada sección:
 * (R) denota una sección obligatoria (es decir, debe estar presente en el documento IPS).
 * (S) denota una sección recomendada.
 * El resto de las secciones son opcionales.
@@ -145,7 +145,7 @@ A continuación se muestran los perfiles que se han definido para cada sección:
   <a href="StructureDefinition-Dispositivo-observador-cl-ips.html">Dispositivo - Ejecutante, Observador (IPS-CL)</a> ]
 
 - Inmunizaciones (S)
-  [ <a href="StructureDefinition-Inmunizacion-cl-ips.html">Immunización (IPS-CL)</a> ]
+  [ <a href="StructureDefinition-Inmunizacion-cl-ips.html">Inmunización (IPS-CL)</a> ]
 
 - Dispositivos médicos (S)
   [ <a href="StructureDefinition-Declaracion-uso-dispositivo-cl-ips.html">Declaración de uso del dispositivo (IPS-CL)</a> |

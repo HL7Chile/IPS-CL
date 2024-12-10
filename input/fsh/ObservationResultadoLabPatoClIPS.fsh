@@ -36,6 +36,8 @@ Description: "Resultados obtenidos para un examen de laboratorio"
   * ^short = "Categoría de tipo: Laboratorio"
 
 * code 1..1 MS
+* code ^short = "Concepto - referencia a una terminología o simplemente a un texto"
+* code only CodeableConceptIPS
 * code from ResultsLaboratoryPathologyObservationUvIps (preferred)
 
 * subject 1..1 MS
@@ -51,9 +53,15 @@ Description: "Resultados obtenidos para un examen de laboratorio"
 * performer 1..* MS
 * performer only Reference(Prestador-cl-ips or RolPrestador-cl-ips or Organizacion-cl-ips or CareTeam or Paciente-cl-ips or RelatedPerson)
 
+* value[x] 1..1 MS
+* value[x] ^short = "Resultado Actual"
 * valueString MS
+  * ^short = "Resultado Actual"
 * valueQuantity MS
+* valueQuantity ^short = "Una cantidad medida utilizando UCUM (Unified Code for Units of Measure)."
 * valueCodeableConcept MS
+  * ^short = "Concepto - referencia a una terminología o simplemente a un texto"
+* valueCodeableConcept only CodeableConceptIPS
 * valueCodeableConcept from ResultsCodedValuesLaboratoryPathologyUvIps (preferred)
 
 

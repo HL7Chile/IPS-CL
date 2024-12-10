@@ -15,13 +15,10 @@ Flag se utiliza para transmitir información sobre una alerta específica de una
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #draft
 
-* ^version = "0.1.0"
+* ^version = "0.1.1"
 * ^status = #draft
 * ^experimental = false
-* ^publisher = "Hl7 Chile"
-* ^contact.name = "Hl7 Chile"
-* ^contact.telecom.system = #url
-* ^contact.telecom.value = "http://www.hl7chile.cl"
+
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
 * extension contains FlagPriority named flag-priority 0..1 MS
@@ -30,6 +27,8 @@ Flag se utiliza para transmitir información sobre una alerta específica de una
 
 * category only CodeableConceptIPS
 * category MS
+  * ^short = "Concepto - referencia a una terminología o sólo texto"
 
 * code only CodeableConceptIPS
 * code MS
+  * ^short = "Concepto - referencia a una terminología o sólo texto"

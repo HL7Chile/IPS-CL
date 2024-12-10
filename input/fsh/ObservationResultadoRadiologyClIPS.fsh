@@ -12,7 +12,7 @@ Description: "Resultados obtenidos para un examen imagenológico"
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #draft
 
-* ^version = "0.1.0"
+* ^version = "0.1.1"
 * ^status = #draft
 * ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
@@ -29,17 +29,17 @@ Description: "Resultados obtenidos para un examen imagenológico"
 
 * category 1..*
 * category only CodeableConceptIPS
-* category ^slicing.discriminator.type = #value
-* category ^slicing.discriminator.path = "coding.code"
-//* category ^slicing.discriminator.path = "$this"
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
-* category ^slicing.description = "Slicing para obligar el uso de una categoria de tipo: \"Laboratorio\""
+* category ^slicing.description = "Slicing para obligar el uso de una categoria de tipo: \"radiologia\""
 * category ^slicing.ordered = false
-* category contains laboratorio 1..1 MS
-* category[laboratorio].coding.code = #imaging
-//* category[laboratorio].coding.display = "Imaging"
-  * ^short = "Categoría de tipo: Laboratorio"
+* category contains radiologia 1..1 MS
+* category[radiologia] = CategoryRadiologia
+  * ^short = "Categoría de tipo: Radiología"
 
+* code only CodeableConceptIPS
+* code ^short = "Concepto - referencia a una terminología o simplemente a un texto"
 * code from ResultsRadiologyObservationUvIps (extensible)
 
 * subject 1..1 MS
@@ -54,7 +54,9 @@ Description: "Resultados obtenidos para un examen imagenológico"
 * performer 1..* MS
 * performer only Reference(Prestador-cl-ips or RolPrestador-cl-ips or Organizacion-cl-ips or CareTeam or Paciente-cl-ips or RelatedPerson)
 
+* value[x] ^short = "Resultado Actual"
 * valueString MS
+* valueString ^short = "Resultado Actual"
 
 * interpretation only CodeableConceptIPS
   * ^short = "Concepto que referencia a una terminología o un texto acorde"
@@ -82,31 +84,37 @@ Description: "Resultados obtenidos para un examen imagenológico"
 
 * component[observacionTextual]
   * code only CodeableConceptIPS
+  * code ^short = "Concepto - referencia a una terminología o simplemente a un texto"
   * code from ResultsRadiologyTextualObservationUvIps (extensible)
   * value[x] only string
 
 * component[observacionCodigo]
   * code only CodeableConceptIPS
+  * code ^short = "Concepto - referencia a una terminología o simplemente a un texto"
   * code from ResultsRadiologyObservationUvIps (extensible)
   * value[x] only CodeableConceptIPS
 
 * component[observacionMedicionNumericaCuantitativa]
   * code only CodeableConceptIPS
+  * code ^short = "Concepto - referencia a una terminología o simplemente a un texto"
   * code from ResultsRadiologyMeasurementObservationUvIps (extensible)
   * value[x] only QuantityIPS
 
 * component[observacionMedicionRangoNumerico]
   * code only CodeableConceptIPS
+  * code ^short = "Concepto - referencia a una terminología o simplemente a un texto"
   * code from ResultsRadiologyMeasurementObservationUvIps (extensible)
   * value[x] only RangeIPS
 
 * component[observacionMedicionRadioNumerico]
   * code only CodeableConceptIPS
+  * code ^short = "Concepto - referencia a una terminología o simplemente a un texto"
   * code from ResultsRadiologyMeasurementObservationUvIps (extensible)
   * value[x] only RatioIPS
 
 * component[observacionMedicionMuestraDatos]
   * code only CodeableConceptIPS
+  * code ^short = "Concepto - referencia a una terminología o simplemente a un texto"
   * code from ResultsRadiologyMeasurementObservationUvIps (extensible)
   * value[x] only SampledData
 
@@ -120,12 +128,7 @@ InstanceOf: CodingIPS
 Usage: #inline
 * system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * code = #imaging
-/*
-* display.extension[translation]
-  * url = "http://hl7.org/fhir/StructureDefinition/translation"
-  * extension[lang].valueCode = #es
-  * extension[content].valueString = "Laboratorio"
-*/
+
 
 Invariant: ips-obs-1
 Description: "hasMember y el component son mutuamente exclusivo"

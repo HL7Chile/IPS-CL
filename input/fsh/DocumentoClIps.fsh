@@ -20,8 +20,8 @@ El conjunto de datos IPS es mínimo y no exhaustivo; independiente de la especia
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 * ^copyright = "HL7 International"
 
-* . ^short = "International Patient Summary Documento"
-* . ^definition = "International Patient Summary documento. \r\nUna composición es un conjunto de información relacionada con la asistencia sanitaria que se ensambla en un único documento lógico que proporciona una única declaración coherente de significado, establece su propio contexto y que tiene atestación clínica con respecto a quién realiza la declaración. \r\nAunque una composición define la estructura, en realidad no contiene el contenido: el contenido completo de un documento se encuentra en un paquete, cuyo primer recurso es la composición."
+* . ^short = "Composición de un Resumen Clínico de Paciente Para Chile"
+* . ^definition = "Composición de un Resumen Clínico de Paciente Para Chile. \r\nUna composición es un conjunto de información relacionada con la asistencia sanitaria que se ensambla en un único documento lógico que proporciona una única declaración coherente de significado, establece su propio contexto y que tiene atestación clínica con respecto a quién realiza la declaración. \r\nAunque una composición define la estructura, en realidad no contiene el contenido: el contenido completo de un documento se encuentra en un paquete, cuyo primer recurso es la composición."
 * text MS
   * ^short = "Resumen de texto del recurso, para interpretación humana"
 * identifier MS

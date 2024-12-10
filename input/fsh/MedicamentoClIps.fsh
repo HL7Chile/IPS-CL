@@ -10,7 +10,7 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Medi
 * ^extension[=].valueCode = #draft
 
 
-* ^version = "1.1.0"
+* ^version = "0.1.1"
 * ^status = #draft
 * ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
@@ -48,3 +48,4 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Medi
 * ingredient.item[x] ^binding.description = "SNOMED CT drogas/substancias"
 * ingredient.strength only RatioIPS
 * ingredient.strength MS
+  * ^short = "Una proporción de dos valores de Cantidad: un numerador y un denominador"
