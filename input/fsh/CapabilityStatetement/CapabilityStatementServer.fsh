@@ -1,6 +1,6 @@
 Instance: cl-ips-server
 InstanceOf: CapabilityStatement
-Title: "CapabilityStatement Servidor Cl Core"
+Title: "CapabilityStatement Servidor del Resumen Clínico de Paciente de Chile"
 Description: "CapabilityStatement para definir las caracteristicas mínimas del servidor para ver las interacciones posibles"
 Usage: #definition
 
