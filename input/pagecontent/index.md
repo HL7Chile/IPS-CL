@@ -1,6 +1,6 @@
 ### Alcance
 
-Está versión del resumen de paciente internacional (IPS, por sus siglas en inglés), busca ser una adaptación de la guía internacional y una base a nivel nacional. Tomando como referencia la misma guía [IPS](https://hl7.org/fhir/uv/ips/) y la guía [Cl Core](https://hl7chile.cl/fhir/ig/clcore/1.9.1/).
+Está versión del resumen de paciente internacional (IPS, por sus siglas en inglés), busca ser una adaptación de la guía internacional y una base a nivel nacional. Tomando como referencia la misma guía [IPS](https://hl7.org/fhir/uv/ips/) y la guía [Cl Core](https://hl7chile.cl/fhir/ig/clcore/).
 
 ### Antecedentes
 

@@ -10,7 +10,7 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Medi
 * ^extension[=].valueCode = #draft
 
 
-* ^version = "0.1.1"
+//* ^version = "0.1.1"
 * ^status = #draft
 * ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"

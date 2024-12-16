@@ -11,7 +11,7 @@ Description: "Este perfil restringe el recurso Observation para representar la e
 * ^extension[=].valueCode = #draft
 
 
-* ^version = "0.1.1"
+//* ^version = "0.1.1"
 * ^status = #draft
 * ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"

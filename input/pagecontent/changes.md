@@ -1,5 +1,6 @@
 ### 0.3.0
 
+- Versión que se espera ser balloteada en el Conectaton 2025
 - Creación ["CapabilityStatement Servidor Cl Core"](CapabilityStatement-cl-ips-server.html)
 - Limpieza de códigos de los Archivos FSH
 - Se agrega la extension abatement en el perfil [Alergias e Intolerancias](StructureDefinition-AllergiaInt-cl-ips.html)
@@ -8,6 +9,7 @@
 - Se traduce las indicaciones de los perfiles que no nacén de la Cl Core.
 - Perfil [Observación Resultado: Imagenológico (IPS-CL)](StructureDefinition-Observation-resultado-radiology-cl-ips.html):
   * Correción de slice de categoría de "laboratorio" a "radiologia" 
+- Se actualiza la versión de la clcore a la **1.9.2**
 
 ### 0.2.0
 - Versión en construción de la guía IPS-CL basado en la guía ClCore 1.9.1 e IPS 2.0.0

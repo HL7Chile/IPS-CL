@@ -5,11 +5,11 @@ Title: "IPS-Cl Summary"
 Description: """
 Esta operación devuelve un documento IPS en respuesta a una solicitud POST/GET (ver Operaciones FHIR). El documento devuelto **PUEDE** generarse bajo demanda y **DEBERÍA** representar la información más reciente disponible. Esta operación no necesariamente crearía una instancia IPS persistida en el servidor que responde a la solicitud. Cuando se desean registros históricos u otros documentos, esta operación no es adecuada. Para operaciones alternativas y guía sobre la generación de IPS, consulte **IPS Generation and Data Inclusion**.
 
-Generalmente, cuando se conoce el id lógico de un paciente, ese id se utilizaría para solicitar el resumen del paciente desde un servidor FHIR (ver patrón [id] a continuación). Cuando no se conoce, los servidores **PUEDEN** admitir el uso de otros identificadores (ver el parámetro identifier a continuación).
+Generalmente, cuando se conoce el id lógico de un paciente, ese id se utilizaría para solicitar el resumen del paciente desde un servidor FHIR (ver patrón [id] a continuación). Cuando no se conoce, los servidores **PUEDEN** admitir el uso de otros identificadores (ver el parámetro identifier a continuación), por ejemplo un RUT.
 
 El servidor **DEBE** permitir el uso del perfil del [Documento (IPS-CL)](StructureDefinition-Composition-cl-ips.html).
 
-Está operación nace de la operación [IPS Summary](https://build.fhir.org/ig/HL7/fhir-ips/OperationDefinition-summary.html) pero especificada para el caso de uso nacional de Chile.
+Está operación nace de la operación [IPS Summary](https://hl7.org/fhir/uv/ips/2024Sep/OperationDefinition-summary.html) pero especificada para el caso de uso nacional de Chile.
 """
 
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"

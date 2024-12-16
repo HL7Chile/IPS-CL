@@ -10,7 +10,7 @@ Description: "Reporte resultado de un o varios estudios para diagnosticar una en
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #draft
 
-* ^version = "0.1.1"
+//* ^version = "0.1.1"
 * ^publisher = "Hl7 Chile"
 * ^status = #draft
 * ^experimental = false

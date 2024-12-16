@@ -14,7 +14,7 @@ Describe el evento de un paciente al que se le ha administrado una vacuna o un r
 * ^extension[=].valueCode = #draft
 
 
-* ^version = "0.1.1"
+//* ^version = "0.1.1"
 * ^status = #draft
 * ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"

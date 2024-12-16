@@ -15,7 +15,7 @@ Este perfil describe un dispositivo que desempeña el papel de observador o ejec
 * ^extension[=].valueCode = #draft
 
 
-* ^version = "0.1.1"
+//* ^version = "0.1.1"
 * ^status = #draft
 * ^publisher = "Hl7 Chile"
 * ^contact.name = "Hl7 Chile"

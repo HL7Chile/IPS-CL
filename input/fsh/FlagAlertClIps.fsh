@@ -15,7 +15,7 @@ Flag se utiliza para transmitir información sobre una alerta específica de una
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #draft
 
-* ^version = "0.1.1"
+//* ^version = "0.1.1"
 * ^status = #draft
 * ^experimental = false
 
