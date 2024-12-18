@@ -110,7 +110,7 @@ Luego de abrir la carpeta en Visual Studio Code, se deberá abrir el terminal. E
 
 Y luego, para iniciar el proyecto en sushi se debe colocar *y*. Esto último permitirá la descarga de archivos como *genonce y publisher*.
 ```
-Initialize SUSHI project in C:\Users\aguil\Desktop\IPS-RESUMEN-EMBARAZOS\GI-EMBARAZOS? [y/n]: y
+Initialize SUSHI project in C:\Users\aguil\Desktop\IPS_Tesis\IPS-CL? [y/n]: y
 ```
 Finalmente, ejecutar el siguiente comando para la generación de artefactos:
 ```
@@ -214,11 +214,11 @@ Esto puede tardar varios minutos, pero finalmente generará la guía en una carp
 
 Una vez establecidas las dependencias, por medio de la URL web de la guía de implementación se puede colocar la extensión **package.tgz** para descargar los paquetes asociados a la guía. Ejemplo: 
 ```
-https://build.fhir.org/ig/HL7Chile-BiomedicaUv/IPS-Embarazo/package.tgz
+https://hl7chile.cl/fhir/ig/clips/0.2.0/package.tgz
 ```
 Esto descargará un archivo comprimido con todos los artefactos FHIR incluidos en la guía de implementación. Se debe descomprimir para visualizar su contenido, como se observa a continuación.
 
-<img src="https://github.com/user-attachments/assets/8b6710c0-c44e-46a1-92d1-aa6a3bf13b82" alt="jekyll" width="630" height="500">
+<img src="https://github.com/user-attachments/assets/88e867da-59d8-4957-8595-ec8ad123830d" alt="jekyll" width="830" height="460">
 
 Tener el package permitirá:
   - Validar los recursos FHIR asociados a los perfiles de la guía.
