@@ -15,6 +15,7 @@ Para más información visitar [Guía IPS - Inicio](https://build.fhir.org/ig/HL
    - ***Para la solicitud del resumen:***
    ```
    POST [base]/Patient/[id]/$summary
+   GET [base]/Patient/[id]/$summary
    ```
 
 4. **Página de Artefactos:** Contiene todos los artefactos FHIR creados a partir de la guía de implementación IPS Internacional y la Core-CL. Estos artefactos comprenden los perfiles y ejemplos de los mismos. En el caso de las terminologías y extensiones, se heredaron de las guías mencionadas anteriormente. Visitar [Artefactos Guía](https://build.fhir.org/ig/HL7Chile/IPS-CL/artifacts.html) para más información. En caso de requerir mayor detalle sobre cómo utilizar e implementar cada uno de los artefactos FHIR visitar el [Manual FHIR Shorthand](https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html).
