@@ -119,7 +119,7 @@ Finalmente, ejecutar el siguiente comando para la generación de artefactos:
 sushi .
 ```
 
-Este último comando permitirá evidenciar si es que la guía está lista como para poder subirla al repositorio y publicar sus cambios para su visualización, o bien, permitirá observar la presencia de erroes y/o advertencias que se hayan generado. Cada vez que se quieran observar posbiles errores o resultados, ejecutar *sushi .*.
+Este último comando permitirá evidenciar si es que la guía está lista como para poder subirla al repositorio y publicar sus cambios para su visualización, o bien, permitirá observar la presencia de errores y/o advertencias que se hayan generado. Cada vez que se quieran observar posibles errores o resultados, ejecutar *sushi .*.
 
 ![vscode](https://github.com/user-attachments/assets/9abb73e6-b23e-4d13-a50b-5aca4d6ec77b)
 
@@ -205,7 +205,7 @@ git push
 
 **Genonce** es un comando que permite ejecutar *IG Publisher* para generar y compilar la guía de manera local. Para ello, ejecutar el siguiente comando en windows:
 ```
-_genonce.bat
+.\_genonce
 ```
 Esto puede tardar varios minutos, pero finalmente generará la guía en una carpeta denominada *output* dentro de la carpeta donde se encuentran almacenados todos los archivos del proyecto. Allí, se encuentra un archivo *html* que corresponde a la guía de implementación. Con esto ya puedes visualizar la guía de manera local!
 
