@@ -1,7 +1,7 @@
 Profile: ObservationUsoAlcoholClIps
 Parent: CoreObservacionCL
 Id: Observation-uso-de-alcohol-cl-ips
-Title: "Observación - SH: Uso de Alcohol"
+Title: "Observación - HS: Uso de Alcohol"
 Description: "Este perfil restringe el recurso Observation para representar la evaluación del consumo de alcohol del paciente."
 
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"

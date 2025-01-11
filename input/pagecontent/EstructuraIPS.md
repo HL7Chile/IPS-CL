@@ -1,6 +1,6 @@
 ### Especificaciones del Resumen Clínico de Chile
 
-El IPS está compuesto por las siguientes secciones que se describen a continuación.
+El resumen está basado en el IPS, por lo tanto, está compuesto por las siguientes secciones que se describen a continuación.
 
 <br> 
 <div align="left"> 
@@ -130,48 +130,48 @@ A continuación, se muestran los perfiles que se han definido para cada sección
 * El resto de las secciones son opcionales.
 
 - Alergias e Intolerancias (R)
-  [ <a href="StructureDefinition-AllergiaInt-cl-ips.html">Alergias e Intolerancias (IPS-CL)</a> ]
+  [ <a href="StructureDefinition-AllergiaInt-cl-ips.html">Alergias e Intolerancias</a> ]
 
 - Resumen de medicación (R)
-  [ <a href="StructureDefinition-RegMedicamentos-cl-ips.html">Declaración de medicación (IPS-CL)</a> |
-  <a href="StructureDefinition-MedicationRequest-cl-ips.html">Solicitud de medicación (IPS-CL)</a> |
-  <a href="StructureDefinition-Medicamento-cl-ips.html">Medicamento (IPS-CL)</a> ]
+  [ <a href="StructureDefinition-RegMedicamentos-cl-ips.html">Declaración de medicación</a> |
+  <a href="StructureDefinition-MedicationRequest-cl-ips.html">Solicitud de medicación</a> |
+  <a href="StructureDefinition-Medicamento-cl-ips.html">Medicamento</a> ]
 
 - Listado de problemas (R)
-  [ <a href="StructureDefinition-Condition-cl-ips.html">Condición (IPS-CL)</a> ]
+  [ <a href="StructureDefinition-Condition-cl-ips.html">Condición</a> ]
 
 - Historial de procedimientos (S)
-  [ <a href="StructureDefinition-Procedimientos-cl-ips.html">Procedimientos (IPS-CL)</a> | 
-  <a href="StructureDefinition-Dispositivo-observador-cl-ips.html">Dispositivo - Ejecutante, Observador (IPS-CL)</a> ]
+  [ <a href="StructureDefinition-Procedimientos-cl-ips.html">Procedimientos</a> | 
+  <a href="StructureDefinition-Dispositivo-observador-cl-ips.html">Dispositivo - Ejecutante, Observador</a> ]
 
 - Inmunizaciones (S)
-  [ <a href="StructureDefinition-Inmunizacion-cl-ips.html">Inmunización (IPS-CL)</a> ]
+  [ <a href="StructureDefinition-Inmunizacion-cl-ips.html">Inmunización</a> ]
 
 - Dispositivos médicos (S)
-  [ <a href="StructureDefinition-Declaracion-uso-dispositivo-cl-ips.html">Declaración de uso del dispositivo (IPS-CL)</a> |
-  <a href="StructureDefinition-Dispositivo-cl-ips.html">Dispositivo (IPS-CL)</a> ]
+  [ <a href="StructureDefinition-Declaracion-uso-dispositivo-cl-ips.html">Declaración de uso del dispositivo</a> |
+  <a href="StructureDefinition-Dispositivo-cl-ips.html">Dispositivo</a> ]
 
 - Resultados de diagnóstico(S)
-  [ <a href="StructureDefinition-DiagnosticReport-cl-ips.html">Reporte Diagnóstico (IPS-CL)</a> ]
+  [ <a href="StructureDefinition-DiagnosticReport-cl-ips.html">Reporte Diagnóstico</a> ]
   - Resultados de Laboratorio/Patología
-    [ <a href="StructureDefinition-Observation-resultado-laboratorio-patologico-cl-ips.html">Observación Resultado: Laboratorio/Patología (IPS-CL)</a> |
+    [ <a href="StructureDefinition-Observation-resultado-laboratorio-patologico-cl-ips.html">Observación Resultado: Laboratorio/Patología</a> |
     <a href="StructureDefinition-Specimen-cl-ips.html">Muestra (IPS-CL)</a> ]
   - Resultados de Radiología/Imagenología
-    [ <a href="StructureDefinition-Observation-resultado-radiology-cl-ips.html">Observación Resultado: Imagenológico (IPS-CL)</a> |
-    <a href="StructureDefinition-Dispositivo-observador-cl-ips.html">Dispositivo - Ejecutante, Observador (IPS-CL)</a> |
-    <a href="StructureDefinition-ImagingStudy-cl-ips.html">Estudio de Imagenología (IPS-Cl)</a> ]
+    [ <a href="StructureDefinition-Observation-resultado-radiology-cl-ips.html">Observación Resultado: Imagenológico</a> |
+    <a href="StructureDefinition-Dispositivo-observador-cl-ips.html">Dispositivo - Ejecutante, Observador</a> |
+    <a href="StructureDefinition-ImagingStudy-cl-ips.html">Estudio de Imagenología</a> ]
 
 - Directivas avanzadas
   [ <a href="{{site.data.fhir.path}}consent.html">Consent</a> ]
 
 - Estado funcional (Autonomía/Invalidez)
-  [ <a href="StructureDefinition-Condition-cl-ips.html">Condición (IPS-CL)</a> |
+  [ <a href="StructureDefinition-Condition-cl-ips.html">Condición</a> |
   <a href="{{site.data.fhir.path}}clinicalimpression.html">Clinical Impression</a> ]
 
 - Embarazo (resumen del estado y antecedentes)
-  [ <a href="StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html">Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)</a> |
-  <a href="StructureDefinition-Observation-resultado-del-embarazo-cl-ips.html">Observación - Embarazo: Resultados (IPS-CL)</a> |
-  <a href="StructureDefinition-Observation-estado-del-embarazo-cl-ips.html">Observación - Embarazo: Estado (IPS-CL)</a> ]
+  [ <a href="StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html">Observación - Embarazo: Fecha Estimada de Parto</a> |
+  <a href="StructureDefinition-Observation-resultado-del-embarazo-cl-ips.html">Observación - Embarazo: Resultados</a> |
+  <a href="StructureDefinition-Observation-estado-del-embarazo-cl-ips.html">Observación - Embarazo: Estado</a> ]
 
 - Plan de cuidado
   [ <a href="{{site.data.fhir.path}}careplan.html">Care Plan</a> ]
@@ -180,17 +180,17 @@ A continuación, se muestran los perfiles que se han definido para cada sección
   [ <a href="{{site.data.fhir.path}}observation-vitalsigns.html">Vital Signs Profiles</a> ]
 
 - Alertas
-  [ <a href="StructureDefinition-Flag-alerta-cl-ips.html">Flag - Alerta (IPS-CL)</a> ]
+  [ <a href="StructureDefinition-Flag-alerta-cl-ips.html">Flag - Alerta</a> ]
 
 - Historial de enfermedades pasadas
-  [ <a href="StructureDefinition-Condition-cl-ips.html">Condición (IPS-CL)</a> ]
+  [ <a href="StructureDefinition-Condition-cl-ips.html">Condición</a> ]
 
 - Historia del paciente
   [ No se requieren recursos específicos. Se puede utilizar cualquiera de ellos para respaldar la narración. ]
 
 - Historia social
-  [ <a href="StructureDefinition-Observation-uso-de-tabaco-cl-ips.html">Observación - SH: Uso de tabaco (IPS CL)</a> |
-    <a href="StructureDefinition-Observation-uso-de-alcohol-cl-ips.html">Observación - SH: Uso de Alcohol (IPS CL)</a> ]
+  [ <a href="StructureDefinition-Observation-uso-de-tabaco-cl-ips.html">Observación - HS: Uso de tabaco</a> |
+    <a href="StructureDefinition-Observation-uso-de-alcohol-cl-ips.html">Observación - HS: Uso de Alcohol</a> ]
 
 - Recursos y perfiles utilizados en varias secciones
-  [ <a href="StructureDefinition-Organizacion-cl-ips.html">Organización (IPS-CL)</a> | <a href="StructureDefinition-Prestador-cl-ips.html">Prestador Individual (IPS-CL)</a> | <a href="StructureDefinition-RolPrestador-cl-ips.html">Función o Rol de Prestador Individual (IPS-CL)</a> | <a href="{{site.data.fhir.path}}documentreference.html">DocumentReference</a>]
+  [ <a href="StructureDefinition-Organizacion-cl-ips.html">Organización</a> | <a href="StructureDefinition-Prestador-cl-ips.html">Prestador Individual</a> | <a href="StructureDefinition-RolPrestador-cl-ips.html">Función o Rol de Prestador Individual</a> | <a href="{{site.data.fhir.path}}documentreference.html">DocumentReference</a>]

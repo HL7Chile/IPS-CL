@@ -1,7 +1,7 @@
 Profile: ObservationUsoTabacoClIps
 Parent: CoreObservacionCL
 Id: Observation-uso-de-tabaco-cl-ips
-Title: "Observación - SH: Uso de tabaco"
+Title: "Observación - HS: Uso de tabaco"
 Description: "Este perfil restringe el recurso Observation para representar la evaluación del consumo de tabaco del paciente."
 
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
