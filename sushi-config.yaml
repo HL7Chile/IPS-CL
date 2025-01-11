@@ -6,7 +6,7 @@
 id: hl7.fhir.cl.clips
 canonical: https://hl7chile.cl/fhir/ig/clips
 name: ResumenClinicoPacienteChile
-title: Resumen Clínico de Paciente de Chile
+title: Resumen Clínico del Paciente de Chile
 description: Guía IPS homologada para la realidad Chilena.
 status: active # draft | active | retired | unknown
 version: 0.4.0
