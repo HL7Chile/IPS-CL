@@ -1,3 +1,11 @@
+### 0.4.0
+ - Versión post prueba de la Conectaton 20205
+ - Se incluye autores
+ - Se elimina el (IPS-CL) de todos los títulos de los perfiles
+ - Se cambia los títulos del menu
+ - Se realiza una correección en las especificación del $summary
+ 
+
 ### 0.3.0
 
 - Versión que se espera ser balloteada en el Conectaton 2025

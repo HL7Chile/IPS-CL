@@ -1,6 +1,6 @@
 ### Alcance
 
-Está versión del resumen de paciente internacional (IPS, por sus siglas en inglés), busca ser una adaptación de la guía internacional y una base a nivel nacional. Tomando como referencia la misma guía [IPS](https://hl7.org/fhir/uv/ips/) y la guía [Cl Core](https://hl7chile.cl/fhir/ig/clcore/).
+El "Resumen Clínico de Chile" toma la indicaciones y requerimientos mínimos del "International Patient Summary" o [IPS](https://hl7.org/fhir/uv/ips/), usando los perfiles de la [Cl Core](https://hl7chile.cl/fhir/ig/clcore/) como base, para generar los perfiles utilizados en está guía.
 
 ### Antecedentes
 
@@ -21,7 +21,7 @@ El documento IPS está compuesto por un conjunto de elementos de datos básicos,
 
 Para adaptar el International Patient Summary (IPS) a una versión chilena, es fundamental integrar los lineamientos establecidos en la Guía CORE de Chile, desarrollada por HL7 Chile con el apoyo del Ministerio de Salud. Esta guía define los perfiles específicos para la interoperabilidad de datos de salud en el país, facilitando la comunicación entre distintos sistemas de información y asegurando que estos cumplan con las normativas y necesidades del sistema chileno.
 
-La incorporación de la Guía "CL CORE" en la Adaptación del "IPS", permite establecer un conjunto de perfiles FHIR específicos para datos clínicos que deben integrarse en el IPS chileno, garantizando su compatibilidad con los sistemas de salud locales. Esto implica utilizar los perfiles CORE para representar información como datos de pacientes, medicamentos, diagnósticos y alergias, alineando estos datos con las necesidades de interoperabilidad nacional.
+La incorporación de la Guía "CL CORE" en la Adaptación del "IPS", permite establecer un conjunto de perfiles FHIR específicos para datos clínicos que deben integrarse en el "Resumen CLínico de Chile", garantizando su compatibilidad con los sistemas de salud locales. Esto implica utilizar los perfiles CORE para representar información como datos de pacientes, medicamentos, diagnósticos y alergias, alineando estos datos con las necesidades de interoperabilidad nacional.
 
 ### Objetivo
 
@@ -42,3 +42,11 @@ Esta guía tiene como objetivo proporcionar una traducción y adaptación del In
 ### Declaracion de propiedad intelectual
 
 {% include ip-statements.xhtml %}
+
+### Autores
+
+|Rol           |Nombre          |Institución               |Contacto                       |
+|--------------|:---------------|:-------------------------|:------------------------------|
+|Autor Primario|Cesar Galindo   | Universidad de Valparaíso, HL7 Chile| cesar.galindo@uv.cl           |
+|Autor Primario|Denisse Aguilera| Universidad de Valparaíso| denisse.aguilera@alumnos.uv.cl|
+|Autor Primario|Franco Ulloa    | Ministerio de Salud, HL7 CHile      | franco.ulloa@minsal.cl        |

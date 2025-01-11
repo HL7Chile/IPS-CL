@@ -3,7 +3,7 @@ Alias: CScaterogy = http://terminology.hl7.org/CodeSystem/observation-category
 Profile: ObservationResultadoRadiologyClIps
 Parent: CoreObservacionCL
 Id: Observation-resultado-radiology-cl-ips
-Title: "Observación Resultado: Imagenológico (IPS-CL)"
+Title: "Observación Resultado: Imagenológico"
 Description: "Resultados obtenidos para un examen imagenológico"
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"

@@ -1,7 +1,7 @@
 Profile: ParametrosDeEntradasIPS
 Parent: Parameters
 Id: Parametros-entradas-ips-cl
-Title: "Parametros De Entradas IPS Summary"
+Title: "Parametros De Entradas Summary"
 Description: "Parámetros de Entradas para usar la operación IPS-Summary de manera POST"
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"

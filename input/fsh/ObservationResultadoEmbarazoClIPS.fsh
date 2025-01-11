@@ -1,7 +1,7 @@
 Profile: ObservationResultadoEmbarazoClIps
 Parent: CoreObservacionCL
 Id: Observation-resultado-del-embarazo-cl-ips
-Title: "Observación - Embarazo: Resultados (IPS-CL)"
+Title: "Observación - Embarazo: Resultados"
 Description: "Este perfil restringe el recurso Observation para representar un resumen de resultados del embarazo."
 
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"

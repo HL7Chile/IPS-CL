@@ -1,4 +1,4 @@
-### Especificaciones del IPS
+### Especificaciones del Resumen Clínico de Chile
 
 El IPS está compuesto por las siguientes secciones que se describen a continuación.
 

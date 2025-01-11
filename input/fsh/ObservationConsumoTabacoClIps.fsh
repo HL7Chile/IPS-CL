@@ -1,7 +1,7 @@
 Profile: ObservationUsoTabacoClIps
 Parent: CoreObservacionCL
 Id: Observation-uso-de-tabaco-cl-ips
-Title: "Observación - SH: Uso de tabaco (IPS CL)"
+Title: "Observación - SH: Uso de tabaco"
 Description: "Este perfil restringe el recurso Observation para representar la evaluación del consumo de tabaco del paciente."
 
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
@@ -15,6 +15,17 @@ Description: "Este perfil restringe el recurso Observation para representar la e
 * ^status = #draft
 * ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
+* category only CodeableConceptIPS
+  * ^short = "Concepto que referencia a una terminología o un texto acorde"
+* category MS
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category ^slicing.description = "Slicing para obligar el uso de una categoria de tipo: \"radiologia\""
+* category ^slicing.ordered = false
+* category contains historialSocial 1..1 MS
+* category[historialSocial] = CategorySocialHistory
 
 * code only CodeableConceptIPS
 * code = loinc#72166-2

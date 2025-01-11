@@ -1,12 +1,12 @@
 {
     "package-id": "hl7.fhir.cl.clips",
-    "version": "0.3.0-ballot",
-    "desc": "Versión de Ballotaje para la conectatón 2025",
-    "path": "https://hl7chile.cl/fhir/ig/clips/0.3.0",
+    "version": "0.4.0",
+    "desc": "Versión Corregida Post Conectaton y publicada para su uso",
+    "path": "https://hl7chile.cl/fhir/ig/clips/0.4.0",
     "changes": "changes.html",
-    "status": "ballot",
+    "status": "draft",
     "sequence": "STU2",
     "first": false,
-    "mode": "working",
+    "mode": "milestone",
     "fhirversion": "4.0.1"
 }

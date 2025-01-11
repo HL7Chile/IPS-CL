@@ -1,7 +1,7 @@
 Profile:     ProcedimientosClIps
 Parent:      Procedure
 Id:          Procedimientos-cl-ips
-Title:       "Procedimientos (IPS-CL)"
+Title:       "Procedimientos"
 Description: "Este perfil representa las restricciones aplicadas al recurso Procedure por el proyecto IPS, el cual especifica una entrada en el Historial de Procedimientos para el resumen internacional del paciente basado en el estándar FHIR R4."
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"

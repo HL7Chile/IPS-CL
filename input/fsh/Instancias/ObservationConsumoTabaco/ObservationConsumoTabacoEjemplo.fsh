@@ -9,6 +9,8 @@ Description: "Ejemplo de una observación sobre el consumo de tabaco del pacient
 
 * status = #final
 
+* category[historialSocial] = CategorySocialHistory
+
 * code
   * coding = loinc#72166-2 "Tobacco smoking status"
   * text = "Estado de tabaquismo"

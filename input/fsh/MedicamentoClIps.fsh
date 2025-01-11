@@ -1,7 +1,7 @@
 Profile: MedicamentoClIps
 Parent: CoreMedicamentoCl
 Id: Medicamento-cl-ips
-Title: "Medicamento (IPS-CL)"
+Title: "Medicamento"
 Description: "Este perfil representa las restricciones aplicadas al recurso Medicamento por la Guía de Implementación FHIR del Resumen Internacional del Paciente (IPS), basada en FHIR R4. Un medicamento se describe en el resumen del paciente como una instancia de un recurso Medicamento restringido por este perfil."
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 1

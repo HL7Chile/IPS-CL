@@ -1,0 +1,19 @@
+Mapping: PacienteToPatientUVIPS
+Source:  Paciente-cl-ips
+Target:  "http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips"
+Id:      PacienteToPatientUVIPS
+Title:    "Patient(IPS)"
+Description: "Es un mapeo necesario para pasar de un paciente del resumen de Chile a un \"Patient (IPS)\""
+
+* -> "Patient"
+* identifier -> "Patient.identifier"
+* name -> "Patient.name"
+* name.text -> "Patient.name.text"
+* name.family -> "Patient.name.family"
+* name.given -> "Patient.name.given"
+* telecom -> "Patient.telecom"
+* gender -> "gender"
+* address -> "Patient.address"
+* contact -> "Patient.contact"
+* contact.relationship -> "Patient.contact.relationship"
+* generalPractitioner -> "Patient.generalPractitioner"

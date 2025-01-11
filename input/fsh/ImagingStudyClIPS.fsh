@@ -1,7 +1,7 @@
 Profile: ImagingStudyClIps
 Parent: ImagingStudy
 Id: ImagingStudy-cl-ips
-Title: "Estudio de Imagenología (IPS-Cl)"
+Title: "Estudio de Imagenología"
 Description: "Estudio de imagenología realizado a un paciente, del cual se obtiene despues una observación para un reporte diagnóstico"
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"

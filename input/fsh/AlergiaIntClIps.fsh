@@ -1,7 +1,7 @@
 Profile: AlergiaIntClIps
 Parent: AlergiaIntCL
 Id: AllergiaInt-cl-ips
-Title: "Alergias e Intolerancias (IPS-CL)"
+Title: "Alergias e Intolerancias"
 Description: "Este perfil restringe el recurso de Alergias e Intolerancias para representar este modelo a nivel nacional"
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"

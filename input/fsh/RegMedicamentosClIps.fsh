@@ -1,7 +1,7 @@
-Profile: RegMedicamentosClIps
-Parent: MedicationStatement
-Id: RegMedicamentos-cl-ips
-Title: "Declaración de medicación (IPS-CL)"
+Profile:      RegMedicamentosClIps
+Parent:       MedicationStatement
+Id:           RegMedicamentos-cl-ips
+Title:        "Declaración de medicación"
 Description: "Este perfil representa las restricciones aplicadas al recurso MedicationStatement según la Guía de Implementación FHIR del Resumen Internacional del Paciente (IPS), basada en FHIR R4. Un registro de una declaración de medicación se representa en el resumen del paciente como una instancia de un recurso MedicationStatement restringido por este perfil."
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"

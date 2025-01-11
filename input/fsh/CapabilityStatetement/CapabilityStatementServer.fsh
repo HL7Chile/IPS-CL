@@ -85,7 +85,7 @@ El Servidor Cl IPS :
     * valueCode = #SHOULD
   * type = #MedicationRequest
   * supportedProfile = Canonical(MedicationRequest-cl-ips)
-  * documentation = "Es posible que algunos sistemas solo admitan Solicitud de medicación (IPS-CL) o Declaración de medicación (IPS-CL)"
+  * documentation = "Es posible que algunos sistemas solo admitan Solicitud de medicación o Declaración de medicación"
 
 * rest.resource[+] //MedicationStatement
   * extension[0]
@@ -93,7 +93,7 @@ El Servidor Cl IPS :
     * valueCode = #SHOULD
   * type = #MedicationStatement
   * supportedProfile = Canonical(RegMedicamentos-cl-ips)
-  * documentation = "Es posible que algunos sistemas solo admitan Solicitud de medicación (IPS-CL) o Declaración de medicación (IPS-CL)"
+  * documentation = "Es posible que algunos sistemas solo admitan Solicitud de medicación o Declaración de medicación"
 
 * rest.resource[+] //CarePlan
   * extension[0]

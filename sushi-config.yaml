@@ -5,14 +5,14 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.cl.clips
 canonical: https://hl7chile.cl/fhir/ig/clips
-name: InternationalPatientSummaryChile
-title: Resumen Clínico de Paciente de Chile (IPS-CL)
+name: ResumenClinicoPacienteChile
+title: Resumen Clínico de Paciente de Chile
 description: Guía IPS homologada para la realidad Chilena.
 status: active # draft | active | retired | unknown
-version: 0.3.0-ballot
+version: 0.4.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
-releaseLabel: STU2 Ballot 1
+releaseLabel: STU2
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 jurisdiction: urn:iso:std:iso:3166#CL "Chile" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
@@ -50,9 +50,9 @@ pages:
   index.md:
     title: Resumen Clínico del Paciente de Chile
   EstructuraIPS.md: 
-   title: Estructura del IPS
+   title: Estructura del Resumen Clínico del Paciente de Chile
   OperacionesIPS.md:
-    title: Operaciones del IPS
+    title: Operaciones del Resumen Clínico del Paciente de Chile
   artifacts.html:
     title: Artefactos Generados
   changes.md:
@@ -83,9 +83,9 @@ pages:
 menu:
   Inicio: index.html
   Especificaciones Negocio:
-    Estructura del IPS: EstructuraIPS.html
+    Estructura del Resumen: EstructuraIPS.html
   Especificaciones Técnicas:
-    Operaciones del IPS: OperacionesIPS.html
+    Operaciones $summary: OperacionesIPS.html
   Artefactos: artifacts.html
   Historial de Cambios: changes.html
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮

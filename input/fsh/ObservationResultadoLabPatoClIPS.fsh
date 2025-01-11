@@ -1,7 +1,7 @@
 Profile: ObservationResultadoLaboratorioPatologiaClIps
 Parent: CoreObservacionCL
 Id: Observation-resultado-laboratorio-patologico-cl-ips
-Title: "Observación Resultado: Laboratorio/Patología (IPS-CL)"
+Title: "Observación Resultado: Laboratorio/Patología"
 Description: "Resultados obtenidos para un examen de laboratorio"
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"

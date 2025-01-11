@@ -1,0 +1,9 @@
+Mapping:        AlergiaToAllergyIPS
+Source:         AlergiaIntClIps
+Target:         "http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"
+Id:             AlergiaToAllergyIPS
+Title:          "Allergy Intolerance (IPS)"
+Description:    "Mapeo de Alergias e Intolerancias al Allergy Intolerance (IPS)"
+
+* -> "AllergyIntolerance"
+*  

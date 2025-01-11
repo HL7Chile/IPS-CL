@@ -2,7 +2,7 @@
 Profile: InmunizacionClIps
 Parent: ImmunizationCL
 Id: Inmunizacion-cl-ips
-Title: "Inmunización (IPS-CL)"
+Title: "Inmunización"
 Description: """Este perfil representa las restricciones aplicadas al recurso Inmunización por la Guía de Implementación FHIR del Resumen Internacional del Paciente (IPS). Un registro de una vacunación se representa en el resumen del paciente como una instancia de un recurso Inmunización restringido por este perfil.
 
 Describe el evento de un paciente al que se le ha administrado una vacuna o un registro de una vacuna notificado por un paciente, un clínico u otra parte."""

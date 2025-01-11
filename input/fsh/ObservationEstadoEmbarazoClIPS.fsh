@@ -1,7 +1,7 @@
 Profile: ObservationEstadoEmbarazoClIps
 Parent: CoreObservacionCL
 Id: Observation-estado-del-embarazo-cl-ips
-Title: "Observación - Embarazo: Estado (IPS-CL)"
+Title: "Observación - Embarazo: Estado"
 Description: "Este perfil restringe el recurso Observation para representar el estado del embarazo."
 
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"

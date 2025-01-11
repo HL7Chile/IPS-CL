@@ -1,7 +1,7 @@
 Profile: ObservationUsoAlcoholClIps
 Parent: CoreObservacionCL
 Id: Observation-uso-de-alcohol-cl-ips
-Title: "Observación - SH: Uso de Alcohol (IPS CL)"
+Title: "Observación - SH: Uso de Alcohol"
 Description: "Este perfil restringe el recurso Observation para representar la evaluación del consumo de alcohol del paciente."
 
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
@@ -14,6 +14,17 @@ Description: "Este perfil restringe el recurso Observation para representar la e
 * ^status = #draft
 * ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
+* category only CodeableConceptIPS
+  * ^short = "Concepto que referencia a una terminología o un texto acorde"
+* category MS
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category ^slicing.description = "Slicing para obligar el uso de una categoria de tipo: \"radiologia\""
+* category ^slicing.ordered = false
+* category contains historialSocial 1..1 MS
+* category[historialSocial] = CategorySocialHistory
 
 * code only CodeableConceptIPS
 * code = loinc#74013-4
@@ -35,3 +46,14 @@ Description: "Este perfil restringe el recurso Observation para representar la e
 
 * component ..0
 //* component ^mustSupport = false
+
+Instance: CategorySocialHistory
+InstanceOf: CodeableConceptIPS
+Usage: #inline
+* coding = CodingSocialHistory
+
+Instance: CodingSocialHistory
+InstanceOf: CodingIPS
+Usage: #inline
+* system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* code = #social-history

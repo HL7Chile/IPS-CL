@@ -1,7 +1,7 @@
 Profile: ObservationEmbarazoFechaEstimadaDePartoClIps
 Parent: CoreObservacionCL
 Id: Observation-embarazo-fecha-estimada-de-parto-cl-ips
-Title: "Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)"
+Title: "Observación - Embarazo: Fecha Estimada de Parto"
 Description: "Este perfil restringe el recurso Observation para representar la fecha de parto estimada de un embarazo."
 
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"

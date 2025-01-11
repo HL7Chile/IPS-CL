@@ -10,6 +10,7 @@ Description: "Ejemplo de una observación sobre el consumo de alcohol del pacien
 
 * status = #final
 
+* category[historialSocial] = CategorySocialHistory
 * code
   * coding = loinc#74013-4 "Alcoholic drinks per day"
   * text = "Bebidas alcohólicas por día"
