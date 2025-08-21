@@ -26,13 +26,9 @@ Description: "Perfil basado en IPS para paciente Chileno."
 * identifier MS
 * name 1..* MS
 * name obeys ips-pat-1
-* name ^requirements = "Debe siempre existir un nombre sobre el cual se pueda requerir información del paciente"
-* name.text MS
-* name.text ^definition = "En caso de no poderse describir adecuadamenre el nombre se puede escribir en este campo de texto como lo interpreta el registrador"
-* name.text ^min = 0
-* name.family  MS
-* name.given MS
-* name.given ^min = 0
+* name[NombreOficial] obeys ips-pat-1
+* name[NombreSocial] obeys ips-pat-1
+
 * telecom MS
 * gender MS
 * birthDate 1.. MS
