@@ -39,7 +39,9 @@ Representación de un problema en el resumen internacional del paciente."
 * category ^short = "Concepto que referencia a una terminología o un texto acorde"
 
 * category from ProblemTypeUvIps (extensible)
-  * ^binding.extension[0].extension[0].url = "purpose"
+  * ^binding.extension[0].extension[0].url = "key"
+  * ^binding.extension[=].extension[=].valueId = "1"
+  * ^binding.extension[=].extension[+].url = "purpose"
   * ^binding.extension[=].extension[=].valueCode = #candidate
   * ^binding.extension[=].extension[+].url = "valueSet"
   * ^binding.extension[=].extension[=].valueCanonical = Canonical(ProblemTypeLoinc)

@@ -33,7 +33,9 @@ Description: "Este perfil restringe el recurso de Alergias e Intolerancias para 
 * code only CodeableConceptIPS
   * ^short = "Código Relacionado con la Substancia o condición generada"
 * code from AllergyIntoleranceUvIps (preferred)
-* code ^binding.extension[0].extension[0].url = "purpose"
+* code ^binding.extension[0].extension[0].url = "key"
+* code ^binding.extension[=].extension[=].valueId = "1"
+* code ^binding.extension[=].extension[+].url = "purpose"
 * code ^binding.extension[=].extension[=].valueCode = #candidate
 * code ^binding.extension[=].extension[+].url = "valueSet"
 * code ^binding.extension[=].extension[=].valueCanonical = Canonical(WhoAtcUvIps)

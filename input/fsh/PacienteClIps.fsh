@@ -18,7 +18,6 @@ Description: "Perfil basado en IPS para paciente Chileno."
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile"
 * ^extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips"
 
-* ^version = "0.1.0"
 * ^status = #draft
 * ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"

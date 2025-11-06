@@ -1,8 +1,8 @@
 {
     "package-id": "hl7.fhir.cl.clips",
-    "version": "0.4.0",
+    "version": "0.5.0-ci-build",
     "desc": "Versión Corregida Post Conectaton y publicada para su uso",
-    "path": "https://hl7chile.cl/fhir/ig/clips/0.4.0",
+    "path": "https://hl7chile.cl/fhir/ig/clips/0.5.0-ci-build",
     "changes": "changes.html",
     "status": "draft",
     "sequence": "STU2",

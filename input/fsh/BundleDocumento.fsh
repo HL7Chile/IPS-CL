@@ -121,7 +121,7 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
 * entry[immunization]
   * resource 1..
     * ^short = "Vacunas e inmunizaciones del Paciente"
-  * resource only Inmunizacion-cl-ips
+  * resource only Inmunizacion-cl-ips or Inmunizacion-cl-ips-icvp
 
 * entry[medication]
   * resource 1..

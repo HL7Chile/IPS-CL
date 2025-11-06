@@ -9,12 +9,13 @@ name: ResumenClinicoPacienteChile
 title: Resumen Clínico del Paciente de Chile
 description: Guía IPS homologada para la realidad Chilena.
 status: active # draft | active | retired | unknown
-version: 0.4.0
+version: 0.5.0-ci-build
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
-releaseLabel: STU2
+releaseLabel: STU3
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 jurisdiction: urn:iso:std:iso:3166#CL "Chile" # https://www.hl7.org/fhir/valueset-jurisdiction.html
+language: en
 publisher:
   name: HL7 Chile
   url: http://hl7chile.cl
@@ -25,14 +26,21 @@ publisher:
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-   hl7.fhir.cl.clcore: 1.9.2
+   hl7.fhir.cl.clcore: 1.9.4
    #hl7.fhir.cl.clcore: 1.9.0
-   hl7.fhir.uv.ips: 2.0.0-ballot
-#   hl7.fhir.us.mcode:
-#     id: mcode
-#     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
-#     version: 1.0.0
-#   hl7.fhir.r4.core: 4.0.1
+   hl7.fhir.uv.ips: 
+     id: hl7_fhir_uv_ips
+     uri: http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips
+     version: 2.0.0 
+   smart.who.int.icvp:
+      id: smart_who_int_icvp
+      uri: http://smart.who.int/icvp/ImplementationGuide/smart.who.int.icvp
+      version: 0.3.0
+   smart.who.int.pcmt:
+      id: smart_who_int_pcmt
+      uri: http://smart.who.int/pcmt/ImplementationGuide/smart.who.int.pcmt
+      version: 0.1.0
+
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
@@ -69,7 +77,8 @@ pages:
 # http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
 #
 parameters:
-  ips-comparison: 2.0.0-ballot
+  ips-comparison: 2.0.0
+  pin-canonicals: pin-multiples
 #   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]
 #

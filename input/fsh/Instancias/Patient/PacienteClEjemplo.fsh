@@ -11,7 +11,7 @@ Description: "Ejemplo de paciente según el estándar IPS nacional"
 
 // Extensión para el País de Emisión del Documento
 * identifier.type.extension.url = "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises"
-* identifier.type.extension.valueCodeableConcept.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CodPais"
+* identifier.type.extension.valueCodeableConcept.coding.system = "urn:iso:std:iso:3166"
 * identifier.type.extension.valueCodeableConcept.coding.code = #152
 * identifier.type.extension.valueCodeableConcept.coding.display = "Chile"
 
@@ -81,6 +81,6 @@ Description: "Ejemplo de paciente según el estándar IPS nacional"
 
 // Extensión de país
 * address.country.extension[0].url = "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises"
-* address.country.extension[0].valueCodeableConcept.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CodPais"
+* address.country.extension[0].valueCodeableConcept.coding.system = "urn:iso:std:iso:3166"
 * address.country.extension[0].valueCodeableConcept.coding.code = #152  // Código para Chile
 * address.country.extension[0].valueCodeableConcept.coding.display = "Chile"

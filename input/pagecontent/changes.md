@@ -1,11 +1,17 @@
+### 0.5.0
+
+ - Se convalida según los perfiles IPS
+ - Se actualiza dependencia de IPS a la 2.0.0 y la core 1.9.4
+ - Se crea el perfil de [Inmunización ICVP](StructureDefinition-Inmunizacion-cl-ips-icvp.html) para homologar a un certificado internacional de vacuna
+
 ### 0.4.0
+
  - Versión post prueba de la Conectaton 20205
  - Se incluye autores
  - Se elimina el (IPS-CL) de todos los títulos de los perfiles
  - Se cambia los títulos del menu
  - Se realiza una correección en las especificación del $summary
  
-
 ### 0.3.0
 
 - Versión que se espera ser balloteada en el Conectaton 2025
@@ -20,7 +26,7 @@
 - Se actualiza la versión de la clcore a la **1.9.2**
 
 ### 0.2.0
-- Versión en construción de la guía IPS-CL basado en la guía ClCore 1.9.1 e IPS 2.0.0
+- Versión en construción de la guía IPS-CL basado en la guía ClCore 1.9.1 e IPS 2.0.0-ballot
 
 - Se modificó este archivo, eliminando los perfiles que hacian referencia al estándar, junto con sus ejemplos.
 

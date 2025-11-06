@@ -24,7 +24,9 @@ Describe el evento de un paciente al que se le ha administrado una vacuna o un r
 * vaccineCode only CodeableConceptIPS
   * ^short = "Código de la Vacuna que fue administrada o será administrada" 
 * vaccineCode from VaccinesUvIps (preferred)
-* vaccineCode ^binding.extension[0].extension[0].url = "purpose"
+* vaccineCode ^binding.extension[0].extension[0].url = "key"
+* vaccineCode ^binding.extension[=].extension[=].valueId = "1"
+* vaccineCode ^binding.extension[=].extension[+].url = "purpose"
 * vaccineCode ^binding.extension[=].extension[=].valueCode = #candidate
 * vaccineCode ^binding.extension[=].extension[+].url = "valueSet"
 * vaccineCode ^binding.extension[=].extension[=].valueCanonical = Canonical(VaccinesWhoAtcUvIps)
@@ -33,10 +35,11 @@ Describe el evento de un paciente al que se le ha administrado una vacuna o un r
 * vaccineCode ^binding.extension[=].extension[+].url = "shortDoco"
 * vaccineCode ^binding.extension[=].extension[=].valueString = "Para cuando se prefiera el sistema de códigos ATC de la OMS"
 * vaccineCode ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
-
 * vaccineCode ^binding.description = "El tipo de vacuna para la enfermedad o enfermedades concretas contra las que se ha inmunizado al paciente, o un código para inmunización ausente/desconocida."
 
-* vaccineCode ^binding.extension[+].extension[0].url = "purpose"
+* vaccineCode ^binding.extension[+].extension[0].url = "key"
+* vaccineCode ^binding.extension[=].extension[=].valueId = "2"
+* vaccineCode ^binding.extension[=].extension[+].url = "purpose"
 * vaccineCode ^binding.extension[=].extension[=].valueCode = #candidate
 * vaccineCode ^binding.extension[=].extension[+].url = "valueSet"
 * vaccineCode ^binding.extension[=].extension[=].valueCanonical = Canonical(VSTiposVacunas)
@@ -66,7 +69,7 @@ Describe el evento de un paciente al que se le ha administrado una vacuna o un r
 /*
 * protocolApplied.targetDisease ^short = "Enfermedades prevenibles mediante vacunación"
 * protocolApplied.targetDisease ^definition = "La enfermedad concreta contra la que se ha inmunizado al paciente. Los enlaces de conformidad adicionales proporcionados para el uso de este elemento en contextos específicos (jurisdiccionales o de otro tipo) incluyen (estos enlaces se representan en la StructureDefinition como instancias de la extensión [elementdefinition-additionalBinding](http://hl7.org/fhir/tools/StructureDefinition/additional-binding)):\n[targetDiseases-uv-ips](http://hl7.org/fhir/uv/ips/ValueSet/target-diseases-uv-ips)"
-* protocolApplied.targetDisease ^binding.extension[0].extension[0].url = "purpose"
+* protocolApplied.targetDisease ^binding.extension[0].extension[+].url = "purpose"
 * protocolApplied.targetDisease ^binding.extension[=].extension[=].valueCode = #candidate
 * protocolApplied.targetDisease ^binding.extension[=].extension[+].url = "valueSet"
 * protocolApplied.targetDisease ^binding.extension[=].extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/ValueSet/target-diseases-snomed-ct-ips-free-set"

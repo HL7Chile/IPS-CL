@@ -23,7 +23,7 @@ Usage: #definition
 
 
 * implementationGuide[0] = "https://hl7chile.cl/fhir/ig/clcore/ImplementationGuide/hl7.fhir.cl.clcore"
-* implementationGuide[1] =  "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"
+* implementationGuide[1] = "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"
 
 * rest
   * mode = #server
@@ -159,7 +159,8 @@ El Servidor Cl IPS :
     * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
     * valueCode = #MAY
   * type = #Immunization
-  * supportedProfile = Canonical(Inmunizacion-cl-ips)
+  * supportedProfile[0] = Canonical(Inmunizacion-cl-ips)
+  * supportedProfile[+] = Canonical(Inmunizacion-cl-ips-icvp)
 
 * rest.resource[+] //Medication
   * extension[0]

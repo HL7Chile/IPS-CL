@@ -185,7 +185,7 @@ El conjunto de datos IPS es mínimo y no exhaustivo; independiente de la especia
 * section[sectionImmunizaciones].entry ^short = "Estado de vacunación del paciente y antecedentes pertinentes."
 //* section[sectionImmunizaciones].entry ^definition = "Define el estado actual de inmunización del paciente y el historial de inmunización pertinente.\NEl caso de uso principal de la Sección de Inmunización es permitir la comunicación del estado de inmunización de un paciente.\NPuede contener todo el historial de inmunización que sea relevante para el periodo de tiempo que se está resumiendo. Esta entrada se utilizará para documentar que no se dispone de información sobre inmunizaciones o que no se conocen inmunizaciones."
 * section[sectionImmunizaciones].entry contains immunizacion 1..* MS
-* section[sectionImmunizaciones].entry[immunizacion] only Reference(InmunizacionClIps)
+* section[sectionImmunizaciones].entry[immunizacion] only Reference(InmunizacionClIps or InmunizacionClICVPIps)
 
 * section[sectionDispMedicos] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionDispMedicos] ^extension[=].valueString = "Sección"
