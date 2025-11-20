@@ -32,7 +32,7 @@ dependencies:
    smart.who.int.icvp:
       id: smart_who_int_icvp
       uri: http://smart.who.int/icvp/ImplementationGuide/smart.who.int.icvp
-      version: 0.3.0
+      version: dev
    smart.who.int.pcmt:
       id: smart_who_int_pcmt
       uri: http://smart.who.int/pcmt/ImplementationGuide/smart.who.int.pcmt
