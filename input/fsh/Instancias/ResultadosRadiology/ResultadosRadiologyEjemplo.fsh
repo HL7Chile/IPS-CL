@@ -27,8 +27,8 @@ Description: "Ejemplo sobre el resultado de radiología de un paciente."
 
 * performer = Reference(OrganizationHospital-CL-Ejemplo)
 
-* component[observacionTextual]
-  * code
-    * coding = CSDicom#121069 "Previous Finding"
-    * text = "Hallazgo previo"
-  * valueString = "Lesión en tejido abdominal e inflamación de estómago."
+* valueString = "Se observa lesión en tejido abdominal e inflamación de estómago."
+
+// * component[0].code.coding = CSDicom#121069 "Previous Finding"
+// * component[0].code.text = "Hallazgo previo"
+// * component[0].valueString = "Lesión en tejido abdominal e inflamación de estómago."

@@ -1,6 +1,9 @@
 // This is a simple example of a FSH file.
 // This file can be renamed, and additional FSH files can be added.
 // SUSHI will look for definitions in any file using the .fsh ending.
+Alias: $genderIdentity = http://hl7.org/fhir/StructureDefinition/individual-genderIdentity
+Alias: $personalPronouns = http://hl7.org/fhir/StructureDefinition/individual-pronouns	
+
 Profile: PacienteCLIps
 Parent: PacienteCl
 Id: Paciente-cl-ips
@@ -15,12 +18,16 @@ Description: "Perfil basado en IPS para paciente Chileno."
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #draft
 
-* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile"
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
 * ^extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips"
 
 * ^status = #draft
 * ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
+* extension contains 
+  $genderIdentity named genderIdentity 0..* 
+  and $personalPronouns named personalPronouns 0..*
 
 * identifier MS
 * name 1..* MS

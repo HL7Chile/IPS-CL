@@ -16,7 +16,7 @@ Description: "Resultados obtenidos para un examen de laboratorio"
 * ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-* obeys ips-obs-3 and ips-obs-4
+* obeys ips-2 and ips-3
 
 * status 1..1 MS
   * ^short = "final | amended | corrected"
@@ -75,6 +75,10 @@ Description: "Resultados obtenidos para un examen de laboratorio"
 
 * hasMember only Reference(Observation-resultado-laboratorio-patologico-cl-ips)
 
+* component 0..*
+  * ^short = "Componente de los resultados del laboratorio o patología"
+  * code ^short = "Tipo de componente de la observación"
+
 Instance: CategoryLaboratorio
 InstanceOf: CodeableConceptIPS
 Usage: #inline
@@ -92,12 +96,12 @@ Usage: #inline
   * extension[content].valueString = "Laboratorio"
 */
 
-Invariant: ips-obs-3
+Invariant: ips-2
 Description: "Debe exisitir al menos uno de los siguientes elementos: value, dataAbsentReason, hasMember o component"
 Severity: #error
 Expression: "value.exists() or hasMember.exists() or component.exists() or dataAbsentReason.exists()"
 
-Invariant: ips-obs-4
+Invariant: ips-3
 Description: "Si el observation tiene un componenete entonces, este elemento debe proveer value o dataAbsentReason"
 Expression: "component.exists() implies (component.value.exists() or component.dataAbsentReason.exists())"
 Severity: #error

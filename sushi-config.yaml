@@ -28,18 +28,15 @@ publisher:
 dependencies:
    hl7.fhir.cl.clcore: 1.9.4
    #hl7.fhir.cl.clcore: 1.9.0
-   hl7.fhir.uv.ips: 
-     id: hl7_fhir_uv_ips
-     uri: http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips
-     version: 2.0.0 
+   hl7.fhir.uv.ips: 2.0.0 
    smart.who.int.icvp:
       id: smart_who_int_icvp
       uri: http://smart.who.int/icvp/ImplementationGuide/smart.who.int.icvp
-      version: current
+      version: 0.3.0
    smart.who.int.pcmt:
       id: smart_who_int_pcmt
       uri: http://smart.who.int/pcmt/ImplementationGuide/smart.who.int.pcmt
-      version: current
+      version: 0.1.0
 
 #
 #

@@ -41,7 +41,6 @@ Description: "Este perfil restringe el recurso Observation para representar la e
 * effective[x].extension[data-absent-reason] ^short = "effective[x] absence reason"
 
 * valueQuantity 0..1
-* valueQuantity only QuantityIPS
 * valueQuantity ^short = "Una cantidad medida utilizando UCUM (Unified Code for Units of Measure)."
 
 * component ..0
