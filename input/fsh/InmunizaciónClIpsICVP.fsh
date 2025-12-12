@@ -11,8 +11,8 @@ Description: """Este perfil representa las restricciones aplicadas al recurso In
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #draft
 
-* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile"
-* ^extension[=].valueCanonical = "http://smart.who.int/icvp/StructureDefinition/Immunization-uv-ips-ICVP"
+//* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile"
+//* ^extension[=].valueCanonical = "http://smart.who.int/icvp/StructureDefinition/Immunization-uv-ips-ICVP"
 
 //* ^version = "0.1.1"
 * ^status = #draft
@@ -50,7 +50,7 @@ Context: Immunization
 Invariant: has-an-icvp-vaccine-product-id-code
 Description: "Check if there is a business identifier of a vaccine product in the ICVP product catalogue, The ICVP product catalogue consists of vaccines listed in the list of Prequalified Vaccines and the Emergency Use Listing. - https://extranet.who.int/prequal/vaccines/prequalified-vaccines - https://www.who.int/teams/regulation-prequalification/eul In FHIR R6, this could also be a reference to an InventoryItem"
 Severity: #error
-Expression: ".valueCoding.code.memberOf('http://smart.who.int/icvp/ValueSet/ICVPProductIds')"
+Expression: "value.memberOf('http://smart.who.int/icvp/ValueSet/ICVPProductIds')"
 
 Invariant: has-an-icvp-vaccine-type
 Description: "Ensure vaccine type is from the prequal vaccine database for ICVP vaccines"

@@ -71,7 +71,7 @@ Description: "Resultados obtenidos para un examen imagenológico"
 * hasMember only Reference(Observation-resultado-radiology-cl-ips)
 
 * component
-  * code from ResultsRadiologyComponentUvIps (preferred)
+  * code from http://hl7.org/fhir/uv/ips/ValueSet/results-radiology-component-uv-ips (preferred)
  
 // * component ^slicing.discriminator.type = #type
 // * component ^slicing.discriminator.path = "value"

@@ -9,7 +9,7 @@ name: ResumenClinicoPacienteChile
 title: Resumen Clínico del Paciente de Chile
 description: Guía IPS homologada para la realidad Chilena.
 status: active # draft | active | retired | unknown
-version: 0.5.0-ci-build
+version: 0.6.0-ci-build
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
 releaseLabel: STU3
@@ -26,18 +26,46 @@ publisher:
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-   hl7.fhir.cl.clcore: 1.9.4
-   #hl7.fhir.cl.clcore: 1.9.0
-   hl7.fhir.uv.ips: 2.0.0 
-   smart.who.int.icvp:
-      id: smart_who_int_icvp
-      uri: http://smart.who.int/icvp/ImplementationGuide/smart.who.int.icvp
-      version: dev
-   smart.who.int.pcmt:
-      id: smart_who_int_pcmt
-      uri: http://smart.who.int/pcmt/ImplementationGuide/smart.who.int.pcmt
-      version: 0.1.0
+  hl7.fhir.cl.clcore: 1.9.4
+  hl7.fhir.uv.ips: current
+  smart.who.int.icvp: 0.2.0
+  smart.who.int.pcmt: 0.1.0
+  smart.who.int.pcmt-vaxprequal: 0.2.0
+  hl7.fhir.uv.extensions.r4: 
+     id: hl7_fhir_uv_extensions_r4
+     uri: http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions
+     version: 5.3.0-ballot-tc1
+ #hl7.fhir.uv.extensions.r4: 5.3.0-ballot-tc1
+  # hl7.fhir.cl.clcore:
+  #  uri: https://hl7chile.cl/fhir/ig/clcore/ImplementationGuide/hl7.fhir.cl.clcore
+  #  version: 1.9.4
+   
+  # hl7.fhir.uv.ips:
+  #  id: hl7_fhir_uv_ips
+  #  uri: http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips
+  #  version: current
+   #smart.who.int.icvp:
+   #  id: smart_who_int_icvp
+   #  uri: http://smart.who.int/icvp/ImplementationGuide/smart.who.int.icvp
+   #  version: dev
+   #smart.who.int.pcmt:
+   #  id: smart_who_int_pcmt
+   #  uri: http://smart.who.int/pcmt/ImplementationGuide/smart.who.int.pcmt
+   #  version: 0.1.0
+   
+   #smart.who.int.icvp:
+   #  uri: http://smart.who.int/icvp/ImplementationGuide/smart.who.int.icvp
+   #  version: 0.2.0
 
+   #smart.who.int.pcmt-vaxprequal:
+   #  uri: http://smart.who.int/pcmt-vaxprequal/ImplementationGuide/smart.who.int.pcmt-vaxprequal
+   #  version: 0.2.0
+
+   #smart.who.int.pcmt: 0.1.0
+
+   #hl7.fhir.uv.extensions.r4:
+   #  version: 5.3.0-ballot-tc1
+   
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can

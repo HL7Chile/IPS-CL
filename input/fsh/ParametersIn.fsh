@@ -32,7 +32,7 @@ Description: "Parámetros de Entradas para usar la operación IPS-Summary de man
   * name 1..1
     * ^short = "Nombre del Parametro"
   * name = "identifier"
-  * value[x] only Identifier
+  * value[x] only string
   * value[x] 1..1
     * ^short = "Identificador del Paciente"
 

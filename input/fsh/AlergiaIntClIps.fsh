@@ -22,7 +22,7 @@ Description: "Este perfil restringe el recurso de Alergias e Intolerancias para 
 
 * clinicalStatus  only CodeableConceptIPS
   * ^short = "Concepto - referencia a una terminología o sólo texto"
-* clinicalStatus from 	http://hl7.org/fhir/ValueSet/allergyintolerance-clinical (required)
+* clinicalStatus from 		http://hl7.org/fhir/ValueSet/allergyintolerance-clinical (required)
 * verificationStatus only CodeableConceptIPS
   * ^short = "Concepto - referencia a una terminología o sólo texto"
 * verificationStatus from http://hl7.org/fhir/ValueSet/allergyintolerance-verification (required)
@@ -32,7 +32,7 @@ Description: "Este perfil restringe el recurso de Alergias e Intolerancias para 
 * code ..1 MS
 * code only CodeableConceptIPS
   * ^short = "Código Relacionado con la Substancia o condición generada"
-* code from $AllergiesIntoleranceUvIps (preferred)
+* code from http://hl7.org/fhir/uv/ips/ValueSet/allergies-intolerances-uv-ips (preferred)
 * code ^binding.extension[0].extension[0].url = "key"
 * code ^binding.extension[=].extension[=].valueId = "1"
 * code ^binding.extension[=].extension[+].url = "purpose"
@@ -56,6 +56,6 @@ Description: "Este perfil restringe el recurso de Alergias e Intolerancias para 
 * reaction.manifestation only CodeableConceptIPS
 * reaction.manifestation MS
 * reaction.manifestation ^short = "Concepto - referencia a una terminología o sólo texto"
-* reaction.manifestation from  AllergyReactionUvIps (preferred)
+* reaction.manifestation from  http://hl7.org/fhir/uv/ips/ValueSet/allergy-reaction-uv-ips (preferred)
 * reaction.manifestation ^binding.description = "Código para la manifestación de alergia o reacción de intolerancia del subconjunto SNOMED International Patient Set (IPS) de SNOMED CT (IPS Free Set)."
 * reaction.severity MS

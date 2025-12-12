@@ -1,4 +1,4 @@
-Alias: loinc = http://loinc.org
+          Alias: loinc = http://loinc.org
 Alias: snomed = http://snomed.info/sct
 Alias: CSAtc = http://www.whocc.no/atc
 Alias: EDQM = http://standardterms.edqm.eu

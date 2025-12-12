@@ -41,23 +41,23 @@ El Servidor Cl IPS :
     * valueCode = #SHALL
   * type = #Bundle
   * profile = Canonical(Bundle-documento-ips-cl)
-    * extension[0]
-      * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-      * valueCode = #SHALL
+    
 
 * rest.resource[+] //Composition
+  * extension[0]
+    * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+    * valueCode = #SHALL
   * type = #Composition
   * profile = Canonical(Composition-cl-ips)
-    * extension[0]
-      * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-      * valueCode = #SHALL
+    
 
 * rest.resource[+] //Patient
+  * extension[0]
+    * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+    * valueCode = #SHALL
   * type = #Patient
   * profile = Canonical(Paciente-cl-ips)
-    * extension[0]
-      * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-      * valueCode = #SHALL
+    
   * operation
     * extension[0]
       * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"

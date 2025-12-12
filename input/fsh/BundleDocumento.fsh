@@ -42,36 +42,36 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
 * entry ^slicing.ordered = false
 
 * entry contains
-  composition 1..1 and
-  patient 1..1 and
-  allergyintolerance 0..* and
-  condition 0..* and
-  diagnosticreport 0..* and
-  device 0..* and
-  deviceusestatement 0..* and
-  deviceperformerobserver 0..* and //se agrego
-  imagingstudy 0..* and
-  immunization 0..* and
-  medication 0..* and
-  medicationrequest 0..* and
-  medicationstatement 0..* and
-  practitioner 0..* and
-  practitionerrole 0..* and
-  procedimientos 0..* and
-  organization 0..* and
-  observation-laboratory 0..* and
-  observation-radiology 0..* and
-  observation-pregnancy-edd 0..* and
-  observation-pregnancy-outcome 0..* and
-  observation-pregnancy-status 0..* and
-  observation-alcohol-use 0..* and
-  observation-tobacco-use 0..* and
-  observation-vital-signs 0..* and
-  specimen 0..* and
-  flag 0..* and
-  clinicalimpression 0..* and
-  careplan 0..* and
-  consent 0..*
+  composition 1..1 MS and
+  patient 1..1 MS and
+  allergyintolerance 0..* MS and
+  condition 0..* MS and
+  diagnosticreport 0..* MS and
+  device 0..* MS and
+  deviceusestatement 0..* MS and
+  deviceperformerobserver 0..* MS and //se agrego
+  imagingstudy 0..* MS and
+  immunization 0..* MS and
+  medication 0..* MS and
+  medicationrequest 0..* MS and
+  medicationstatement 0..* MS and
+  practitioner 0..* MS and
+  practitionerrole 0..* MS and
+  procedimientos 0..* MS and
+  organization 0..* MS and
+  observation-laboratory 0..* MS and
+  observation-radiology 0..* MS and
+  observation-pregnancy-edd 0..* MS and
+  observation-pregnancy-outcome 0..* MS and
+  observation-pregnancy-status 0..* MS and
+  observation-alcohol-use 0..* MS and
+  observation-tobacco-use 0..* MS and
+  observation-vital-signs 0..* MS and
+  specimen 0..* MS and
+  flag 0..* MS and
+  clinicalimpression 0..* MS and
+  careplan 0..* MS and
+  consent 0..* MS
 
 * entry[composition]
   * resource 1..1

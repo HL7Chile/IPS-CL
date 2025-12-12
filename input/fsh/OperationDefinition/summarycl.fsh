@@ -27,8 +27,8 @@ Está operación nace de la operación [IPS Summary](https://hl7.org/fhir/uv/ips
 * type = true
 * instance = true
 * inputProfile = Canonical(ParametrosDeEntradasIPS)
-* outputProfile = Canonical(Bundle-documento-ips-cl)
-
+/*
+*/
 * parameter[0]
   * name = #identifier
   * use = #in
@@ -44,7 +44,7 @@ Está operación nace de la operación [IPS Summary](https://hl7.org/fhir/uv/ips
   * min = 1
   * max = "1"
   * documentation = "Se debe especificar un perfil específico para el resumen del paciente. Para el caso de Chile se debe especificar el [Documento ](StructureDefinition-Composition-cl-ips.html)."
-  * type = #canonical
+  * type = #uri
 
 * parameter[+]
   * name = #return
