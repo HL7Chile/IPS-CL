@@ -17,7 +17,7 @@ Description: "Ejemplo sobre un documento clínico tipo Bundle que representa el 
 
 * meta.profile = "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Bundle-documento-ips-cl"
 * identifier.system = "urn:oid:2.16.152.1.10.1" //identificador ficticio del documento; el OID 2.16.152.1 es del MINSAL, para identificar a Chile
-* identifier.value = "IPS-Bundle-2024-001"
+* identifier.value = "BundleEjemplo"
 
 * type = #document //Tipo de bundle, en este caso es un documento
 

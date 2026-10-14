@@ -1,8 +1,15 @@
+### 0.7.0
+
+ - Se corrigen errores de la Guía y se disminuyen advertencias asociadas a los ejemplos
+ - Se elimina vinculación directa con Inmunización de ICVP
+
+
+
 ### 0.5.0
 
  - Se convalida según los perfiles IPS
  - Se actualiza dependencia de IPS a la 2.0.0 y la core 1.9.4
- - Se crea el perfil de [Inmunización ICVP](StructureDefinition-Inmunizacion-cl-ips-icvp.html) para homologar a un certificado internacional de vacuna
+ 
 
 ### 0.4.0
 

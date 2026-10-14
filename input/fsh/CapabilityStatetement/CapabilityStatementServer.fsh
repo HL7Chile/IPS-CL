@@ -160,7 +160,7 @@ El Servidor Cl IPS :
     * valueCode = #MAY
   * type = #Immunization
   * supportedProfile[0] = Canonical(Inmunizacion-cl-ips)
-  * supportedProfile[+] = Canonical(Inmunizacion-cl-ips-icvp)
+  //* supportedProfile[+] = Canonical(Inmunizacion-cl-ips-icvp)
 
 * rest.resource[+] //Medication
   * extension[0]

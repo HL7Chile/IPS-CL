@@ -3,3 +3,24 @@
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
+
+# Bundle
+El valor URL 'urn:oid:2.16.152.1.10.1' no puede resolverse
+El valor URL 'http://regcivil.cl/Validacion/RUN' no puede resolverse
+El valor URL 'https://datos.gob.cl/dataset/establecimientos-de-salud-vigentes/resource/2c44d782-3365-44e3-aefb-2c8b8363a1bc' no puede resolverse
+A definition for CodeSystem 'http://standardterms.edqm.eu' could not be found, so the code cannot be validated
+There are no valid display names found for the code https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSTipoIdentificador#01 for language(s) 'en'. The display is 'RUN' which is a valid display for the default language
+El valor URL 'https://datos.gob.cl/dataset/establecimientos-de-salud-vigentes/resource/2c44d782-3365-44e3-aefb-2c8b8363a1bc' no puede resolverse
+A definition for CodeSystem 'http://standardterms.edqm.eu' could not be found, so the code cannot be validated
+A definition for CodeSystem 'urn:iso:std:iso:3166' could not be found, so the code cannot be validated
+A definition for CodeSystem 'urn:iso:std:iso:3166' version 'null' could not be found, so the code cannot be validated. Valid versions: 1.0.0 or 1.0.1
+
+
+# Dispositivo Observador
+
+El valor URL 'http://ortopedia.organization/devicesID' no puede resolverse
+
+# ImagingStudy
+
+Error validando código: corriendo sin servicios terminológicos
+The html source is not well formed: Found "</a>" expecting "</img>" 
