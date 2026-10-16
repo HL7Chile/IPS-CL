@@ -24,7 +24,7 @@ Description: "Resultados obtenidos para un examen de laboratorio"
 * status from ResultsStatusUvIps (required)
 
 * category MS
-* category only CodeableConceptIPS
+* category only CodeableConcept
 * category 1..*
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
@@ -37,7 +37,7 @@ Description: "Resultados obtenidos para un examen de laboratorio"
 
 * code 1..1 MS
 * code ^short = "Concepto - referencia a una terminología o simplemente a un texto"
-* code only CodeableConceptIPS
+* code only CodeableConcept
 * code from ResultsLaboratoryPathologyObservationUvIps (preferred)
 
 * subject 1..1 MS
@@ -61,11 +61,11 @@ Description: "Resultados obtenidos para un examen de laboratorio"
 * valueQuantity ^short = "Una cantidad medida utilizando UCUM (Unified Code for Units of Measure)."
 * valueCodeableConcept MS
   * ^short = "Concepto - referencia a una terminología o simplemente a un texto"
-* valueCodeableConcept only CodeableConceptIPS
+* valueCodeableConcept only CodeableConcept
 * valueCodeableConcept from ResultsCodedValuesLaboratoryPathologyUvIps (preferred)
 
 
-* interpretation only CodeableConceptIPS
+* interpretation only CodeableConcept
   * ^short = "Concepto que referencia a una terminología o un texto acorde"
 
 * specimen only Reference(Specimen-cl-ips)
@@ -80,12 +80,12 @@ Description: "Resultados obtenidos para un examen de laboratorio"
   * code ^short = "Tipo de componente de la observación"
 
 Instance: CategoryLaboratorio
-InstanceOf: CodeableConceptIPS
+InstanceOf: CodeableConcept
 Usage: #inline
 * coding = CodingLaboratorio
 
 Instance: CodingLaboratorio
-InstanceOf: CodingIPS
+InstanceOf: Coding
 Usage: #inline
 * system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * code = #laboratory

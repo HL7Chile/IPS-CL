@@ -17,7 +17,7 @@ Description: "Este perfil restringe el recurso Observation para representar la f
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
 * code MS
-* code only CodeableConceptIPS
+* code only CodeableConcept
   * ^short = "Concepto que referencia a una terminología o un texto acorde"
 * code from http://hl7.org/fhir/uv/ips/ValueSet/edd-method-uv-ips (required)
 * code ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"

@@ -25,10 +25,10 @@ Flag se utiliza para transmitir información sobre una alerta específica de una
 
 * status = #active (exactly)
 
-* category only CodeableConceptIPS
+//* category only CodeableConcept
 * category MS
   * ^short = "Concepto - referencia a una terminología o sólo texto"
 
-* code only CodeableConceptIPS
+//* code only CodeableConcept
 * code MS
   * ^short = "Concepto - referencia a una terminología o sólo texto"

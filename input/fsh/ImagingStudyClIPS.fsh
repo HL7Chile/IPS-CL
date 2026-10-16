@@ -27,11 +27,11 @@ Description: "Estudio de imagenología realizado a un paciente, del cual se obti
   * ^short = "Cuando se inició el estudio"
 * procedureCode MS
   * ^short = "Concepto - referencia a una terminología o sólo texto"
-* procedureCode only CodeableConceptIPS
+//* procedureCode only CodeableConcept
 * procedureCode from ResultsRadiologyObservationUvIps (extensible)
 * reasonCode MS
   * ^short = "Concepto - referencia a una terminología o sólo texto"
-* reasonCode only CodeableConceptIPS
+//* reasonCode only CodeableConcept
 * series MS
   * ^short = "Cada estudio tiene una o más series de instancias"
   * uid MS

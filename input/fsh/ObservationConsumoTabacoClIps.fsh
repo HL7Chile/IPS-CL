@@ -16,8 +16,7 @@ Description: "Este perfil restringe el recurso Observation para representar la e
 * ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-* category only CodeableConceptIPS
-  * ^short = "Concepto que referencia a una terminología o un texto acorde"
+* category  ^short = "Concepto que referencia a una terminología o un texto acorde"
 * category MS
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
@@ -27,7 +26,6 @@ Description: "Este perfil restringe el recurso Observation para representar la e
 * category contains historialSocial 1..1 MS
 * category[historialSocial] = CategorySocialHistory
 
-* code only CodeableConceptIPS
 * code = loinc#72166-2
 * code MS
   * ^short = "Concepto que referencia a una terminología o un texto acorde"
@@ -44,7 +42,6 @@ Description: "Este perfil restringe el recurso Observation para representar la e
 
 * valueCodeableConcept 0..1
   * ^short = "Concepto que referencia a una terminología o un texto acorde"
-* valueCodeableConcept only CodeableConceptIPS
 * valueCodeableConcept from CurrentSmokingStatusUvIps (preferred)
 
 

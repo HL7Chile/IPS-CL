@@ -20,5 +20,5 @@ Description:    "Este perfil restringe el recurso profesional para representar a
 * organization MS
 * organization only Reference(Organizacion-cl-ips)
 * code ^short = "Concepto - referencia a una terminología o simplemente a un texto"
-* code only CodeableConceptIPS
+* code only CodeableConcept
 * code from HealthcareProfessionalRolesUvIps (preferred)

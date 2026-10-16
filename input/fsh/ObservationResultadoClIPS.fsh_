@@ -21,7 +21,7 @@ Description: "Observaciones que pueden ser resultados de algún examén de labor
 
 * status 1..1 MS
 * category MS
-* category only CodeableConceptIPS
+* category only CodeableConcept
   * ^short = "Concepto que referencia a una terminología o un texto acorde"
 * code 1..1 MS
 * subject 1..1 MS

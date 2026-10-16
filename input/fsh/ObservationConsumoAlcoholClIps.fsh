@@ -15,8 +15,8 @@ Description: "Este perfil restringe el recurso Observation para representar la e
 * ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-* category only CodeableConceptIPS
-  * ^short = "Concepto que referencia a una terminología o un texto acorde"
+//* category only CodeableConcept
+* category ^short = "Concepto que referencia a una terminología o un texto acorde"
 * category MS
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
@@ -26,7 +26,7 @@ Description: "Este perfil restringe el recurso Observation para representar la e
 * category contains historialSocial 1..1 MS
 * category[historialSocial] = CategorySocialHistory
 
-* code only CodeableConceptIPS
+//* code only CodeableConcept
 * code = loinc#74013-4
 * code MS
 
@@ -47,12 +47,12 @@ Description: "Este perfil restringe el recurso Observation para representar la e
 //* component ^mustSupport = false
 
 Instance: CategorySocialHistory
-InstanceOf: CodeableConceptIPS
+InstanceOf: CodeableConcept
 Usage: #inline
 * coding = CodingSocialHistory
 
 Instance: CodingSocialHistory
-InstanceOf: CodingIPS
+InstanceOf: Coding
 Usage: #inline
 * system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * code = #social-history

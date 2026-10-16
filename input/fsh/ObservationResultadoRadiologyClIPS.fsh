@@ -28,7 +28,7 @@ Description: "Resultados obtenidos para un examen imagenológico"
 * status from ResultsStatusUvIps (required)
 
 * category 1..*
-* category only CodeableConceptIPS
+* category only CodeableConcept
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
@@ -38,7 +38,7 @@ Description: "Resultados obtenidos para un examen imagenológico"
 * category[radiologia] = CategoryRadiologia
   * ^short = "Categoría de tipo: Radiología"
 
-* code only CodeableConceptIPS
+* code only CodeableConcept
 * code ^short = "Concepto - referencia a una terminología o simplemente a un texto"
 * code from ResultsRadiologyObservationUvIps (extensible)
 
@@ -58,7 +58,7 @@ Description: "Resultados obtenidos para un examen imagenológico"
 * valueString MS
 * valueString ^short = "Resultado Actual"
 
-* interpretation only CodeableConceptIPS
+* interpretation only CodeableConcept
   * ^short = "Concepto que referencia a una terminología o un texto acorde"
 
 * specimen only Reference(Specimen-cl-ips)
@@ -86,46 +86,46 @@ Description: "Resultados obtenidos para un examen imagenológico"
 //   observacionMedicionMuestraDatos 0..*
 
 // * component[observacionTextual]
-//   * code only CodeableConceptIPS
+//   * code only CodeableConcept
 //   * code ^short = "Concepto - referencia a una terminología o simplemente a un texto"
 //   * code from ResultsRadiologyTextualObservationUvIps (extensible)
 //   * value[x] only string
 
 // * component[observacionCodigo]
-//   * code only CodeableConceptIPS
+//   * code only CodeableConcept
 //   * code ^short = "Concepto - referencia a una terminología o simplemente a un texto"
 //   * code from ResultsRadiologyObservationUvIps (extensible)
-//   * value[x] only CodeableConceptIPS
+//   * value[x] only CodeableConcept
 
 // * component[observacionMedicionNumericaCuantitativa]
-//   * code only CodeableConceptIPS
+//   * code only CodeableConcept
 //   * code ^short = "Concepto - referencia a una terminología o simplemente a un texto"
 //   * code from ResultsRadiologyMeasurementObservationUvIps (extensible)
 
 // * component[observacionMedicionRangoNumerico]
-//   * code only CodeableConceptIPS
+//   * code only CodeableConcept
 //   * code ^short = "Concepto - referencia a una terminología o simplemente a un texto"
 //   * code from ResultsRadiologyMeasurementObservationUvIps (extensible)
 //   * value[x] only RangeIPS
 
 // * component[observacionMedicionRadioNumerico]
-//   * code only CodeableConceptIPS
+//   * code only CodeableConcept
 //   * code ^short = "Concepto - referencia a una terminología o simplemente a un texto"
 //   * code from ResultsRadiologyMeasurementObservationUvIps (extensible)
 
 // * component[observacionMedicionMuestraDatos]
-//   * code only CodeableConceptIPS
+//   * code only CodeableConcept
 //   * code ^short = "Concepto - referencia a una terminología o simplemente a un texto"
 //   * code from ResultsRadiologyMeasurementObservationUvIps (extensible)
 //   * value[x] only SampledData
 
 Instance: CategoryRadiologia
-InstanceOf: CodeableConceptIPS
+InstanceOf: CodeableConcept
 Usage: #inline
 * coding = CodingRadiologia
 
 Instance: CodingRadiologia
-InstanceOf: CodingIPS
+InstanceOf: Coding
 Usage: #inline
 * system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * code = #imaging

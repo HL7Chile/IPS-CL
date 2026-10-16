@@ -37,5 +37,5 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Devi
 * device MS
   * ^short = "Referencia al dispositivo" 
 
-* bodySite only CodeableConceptIPS
+* bodySite only CodeableConcept
   * ^short = "Concepto - referencia a una terminología o sólo texto"

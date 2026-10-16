@@ -21,7 +21,7 @@ Describe el evento de un paciente al que se le ha administrado una vacuna o un r
 
 * status MS
 * vaccineCode 1..1 MS
-* vaccineCode only CodeableConceptIPS
+//* vaccineCode only CodeableConcept
   * ^short = "Código de la Vacuna que fue administrada o será administrada" 
 * vaccineCode from VaccinesUvIps (preferred)
 * vaccineCode ^binding.extension[0].extension[0].url = "key"
@@ -56,11 +56,11 @@ Describe el evento de un paciente al que se le ha administrado una vacuna o un r
 * occurrence[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
 * occurrence[x].extension[data-absent-reason] ^short = "occurrence[x] razón de la ausencia"
 * occurrence[x].extension[data-absent-reason] ^definition = "Razón por la cual existió ausencia."
-* site only CodeableConceptIPS
+//* site only CodeableConcept
 * site from SNOMEDCTBodyStructures (preferred)
 * site ^binding.extension[0].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
 * site ^binding.extension[=].valueString = "SNOMEDCTBodyStructures"
-* route only CodeableConceptIPS
+//* route only CodeableConcept
 * route from MedicineRouteOfAdministrationUvIps (preferred)
 * route ^binding.extension[0].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
 * route ^binding.extension[=].valueString = "ImmunizationRoute"

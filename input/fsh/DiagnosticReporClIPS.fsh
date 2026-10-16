@@ -19,10 +19,10 @@ Description: "Reporte resultado de un o varios estudios para diagnosticar una en
 * status 1..1 MS
 * status = #final
 * category 1..1 MS
-* category only CodeableConceptIPS
+//* category only CodeableConcept
   * ^short = "Concepto - referencia a una terminología o sólo texto"
 * code 1..1 MS
-* code only CodeableConceptIPS
+//* code only CodeableConcept
   * ^short = "Concepto - referencia a una terminología o sólo texto"
 * subject 1..1 MS
   * ^short = "El sujeto del informe, generalmente, pero no siempre, es el paciente"

@@ -15,7 +15,6 @@ Description: "Este perfil restringe el recurso Observation para representar el e
 * ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-* code only CodeableConceptIPS
 * code = loinc#82810-3
 * code MS
   * ^short = "Concepto que referencia a una terminología o un texto acorde"
@@ -31,7 +30,7 @@ Description: "Este perfil restringe el recurso Observation para representar el e
 
 * value[x]  0..1 MS
   * ^short = "Resultado Actual"
-* valueCodeableConcept only CodeableConceptIPS
+* valueCodeableConcept 
   * ^short = "Concepto que referencia a una terminología o un texto acorde"
 * valueCodeableConcept from PregnancyStatusUvIps (preferred)
 

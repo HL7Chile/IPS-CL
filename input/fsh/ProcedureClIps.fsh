@@ -16,7 +16,7 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Proc
 
 * code 1..1 MS
   * ^short = "Concepto - referencia a una terminología o simplemente a un texto"
-* code only CodeableConceptIPS
+* code only CodeableConcept
 * code from ProceduresUvIps (preferred)
 * subject 1..1 MS
   * ^short = "¿Para quién o para qué grupo es la solicitud de medicación?"
@@ -37,6 +37,6 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Proc
   * onBehalfOf only Reference(Organizacion-cl-ips)
   * onBehalfOf ^short = "Organización para la cual actuaba el dispositivo o el profesional"
 
-* bodySite only CodeableConceptIPS
+* bodySite only CodeableConcept
   * ^short = "Concepto - referencia a una terminología o simplemente a un texto"
 * bodySite from SNOMEDCTBodyStructures (example)

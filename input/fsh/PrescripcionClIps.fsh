@@ -16,7 +16,7 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Medi
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
 * status ^comment = "En el alcance de IPS en \"entered-in-error\" no es aceptable"
-* medication[x] only CodeableConceptIPS  or Reference(MedicamentoClIps)
+* medication[x] only CodeableConcept  or Reference(MedicamentoClIps)
 * medication[x] MS
   * ^short = "Medicamentos que deben tomarse"
 * medication[x] from MedicationsUvIps (preferred)
@@ -33,7 +33,7 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Medi
   * ^short = "Instrucciones de dosificación en texto libre, p. ej. SIG"
 * dosageInstruction.timing MS
   * ^short = "Cuándo se debe administrar la medicación"
-* dosageInstruction.route only CodeableConceptIPS 
+* dosageInstruction.route only CodeableConcept 
 * dosageInstruction.route from MedicineRouteOfAdministrationUvIps (preferred)
 * dosageInstruction.route ^binding.description = "EDQM"
 * dosageInstruction.route ^short = "Concepto - referencia a una terminología o simplemente a un texto"

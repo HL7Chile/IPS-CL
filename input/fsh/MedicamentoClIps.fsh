@@ -16,7 +16,7 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Medi
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
 * code 1..1 MS
-* code only CodeableConceptIPS
+//* code only CodeableConcept
  
 * code from MedicationsUvIps (preferred)
 * code ^short = "Medicación administrada o que se iba a administrar (código de medicación de cualquier sistema de códigos)"
@@ -40,12 +40,12 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Medi
 * code ^binding.extension[=].extension[=].valueMarkdown = "Códigos de medicamentos como extensión SNOMED para uso nacional"
 * code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 * code ^binding.description = "SNOMED CT medicamentos (Producto farmacéutico / biológico) o un código para medicamento ausente/desconocido"
-* form only CodeableConceptIPS
+//* form only CodeableConcept
 * form MS
 * form from MedicineDoseFormUvIps (preferred)
   * ^short = "Describe la forma del producto: Polvo, cápsula, comprimido, etc."
 * ingredient MS
-* ingredient.item[x] only CodeableConceptIPS or Reference(Substance or Medication)
+//* ingredient.item[x] only CodeableConcept or Reference(Substance or Medication)
 * ingredient.item[x] MS
 * ingredient.item[x] from MedicationsUvIps (preferred)
 //* ingredient.item[x] ^comment = "The IDMP ISO 11238 standard addresses the identification and exchange of regulated information on substances. \r\nThe Global Ingredient Archival System (GInAS) will provide a common global identifier for all of the substances used in medicinal products, providing a definition of substances globally consistent with this standard.\r\nThose identifiers however are yet available for concrete usage, therefore in this version of the template, SNOMED CT has been chosen as reference terminology also for the active substances.\r\nThis choice will be revised based on the availability and the maturity of GInAS."

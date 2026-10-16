@@ -15,7 +15,7 @@ Description: "Muestra por la cual hicieron el estudio"
 
 * type 1..1 MS
 * type ^short = "Concepto que referencia a una terminología o un texto acorde"
-* type only CodeableConceptIPS
+* type only CodeableConcept
 * type from ResultsSpecimenTypeUvIps (preferred)
 
 * subject MS
@@ -27,12 +27,12 @@ Description: "Muestra por la cual hicieron el estudio"
 * collection MS
   * ^short = "Detalle de la collección"
   * method ^short = "Concepto que referencia a una terminología o un texto acorde"
-  * method only CodeableConceptIPS
+  * method only CodeableConcept
   * method from ResultsSpecimenCollectionMethodUvIps (preferred)
-  * bodySite only CodeableConceptIPS
+  * bodySite only CodeableConcept
   * bodySite ^short = "Concepto que referencia a una terminología o un texto acorde"
   * bodySite from BodySiteUvIps (preferred)
   * fastingStatus[x] ^short = "Si el paciente se abstuvo de alimentos y/o bebidas, y por cuánto tiempo"
   * fastingStatus[x] MS
-  * fastingStatus[x] only CodeableConceptIPS or Duration
+  * fastingStatus[x] only CodeableConcept or Duration
  

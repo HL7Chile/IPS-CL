@@ -18,7 +18,7 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Devi
 * ^purpose = "Este perfil restringe la representación de un dispositivo médico utilizado o implantado en el paciente, en el contexto del resumen internacional del paciente según lo especificado por el proyecto IPS de HL7 Chile."
 //* . ^comment = "Este perfil aplica las reglas definidas por HL7 International para representar el UDI en el estándar FHIR, mediante el documento Dispositivos médicos y patrón de identificación única de dispositivos (UDI), versión 1"
 
-* type only CodeableConceptIPS
+//* type only CodeableConcept
 * type MS
 * type from http://hl7.org/fhir/uv/ips/ValueSet/medical-devices-uv-ips (preferred)
 * type ^short = "Tipo de dispositivo."

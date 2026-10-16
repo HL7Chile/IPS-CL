@@ -22,19 +22,19 @@ Representación de un problema en el resumen internacional del paciente."
 * ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-* clinicalStatus only CodeableConceptIPS
+//* clinicalStatus only CodeableConcept
 //* clinicalStatus ^short = "El estatus en el cual se encuentra la condición: active| recurrece | relapse | inactive | remission | resolved"
 * clinicalStatus ^short = "Concepto que referencia a una terminología o un texto acorde"
 * clinicalStatus from ConditionClinicalStatus
   * ^binding.description = "Códigos definidos por estándar"
 
-* verificationStatus only CodeableConceptIPS
+//* verificationStatus only CodeableConcept
 //* verificationStatus ^short = "Estado de verificación de la condición o diagnóstico: unconfirmed | provisional | differential | confirmed | refuted | entered-in-error"
 * verificationStatus ^short = "Concepto que referencia a una terminología o un texto acorde"
 * verificationStatus from ConditionVerificationSeverity
   * ^binding.description = "Códigos definidos por estándar"
 
-* category only CodeableConceptIPS
+//* category only CodeableConcept
 * category MS
 * category ^short = "Concepto que referencia a una terminología o un texto acorde"
 
@@ -51,18 +51,18 @@ Representación de un problema en el resumen internacional del paciente."
 
 * severity MS
   * ^short = "Grado de severidad del problema"
-* severity only CodeableConceptIPS
+//* severity only CodeableConcept
 * severity from ConditionSeverity (preferred)
 
 * code 1..1 MS
   * ^short = "Código del problema clínico"
-* code only CodeableConceptIPS
+//* code only CodeableConcept
 * code from ProblemsUvIps (preferred)
   * ^binding.description = "Código para un problema clínico (o problema ausente/desconocido) que se selecciona de SNOMED CT."
 
 * bodySite MS
   * ^short = "Ubicación del cuerpo donde se presenta el problema"
-* bodySite only CodeableConceptIPS
+//* bodySite only CodeableConcept
 * bodySite from ConditionBodySite (example)
 
 * subject 1..1 MS

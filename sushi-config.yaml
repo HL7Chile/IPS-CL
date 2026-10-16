@@ -28,9 +28,9 @@ publisher:
 dependencies:
   hl7.fhir.cl.clcore: 1.9.4
   hl7.fhir.uv.ips: current
-  smart.who.int.icvp: 0.2.0
-  smart.who.int.pcmt: 0.1.0
-  smart.who.int.pcmt-vaxprequal: 0.2.0
+  #smart.who.int.icvp: 0.2.0
+  #smart.who.int.pcmt: 0.1.0
+  #smart.who.int.pcmt-vaxprequal: 0.2.0
   hl7.fhir.uv.extensions.r4: 5.3.0
  #hl7.fhir.uv.extensions.r4: 5.3.0-ballot-tc1
   # hl7.fhir.cl.clcore:

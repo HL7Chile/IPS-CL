@@ -27,7 +27,7 @@ El conjunto de datos IPS es mínimo y no exhaustivo; independiente de la especia
 * identifier MS
   * ^short = "Identificador independiente de la versión para la Composición"
 * status MS
-* type only CodeableConceptIPS
+//* type only CodeableConcept
 * type = loinc#60591-5
 * type MS
 * type ^short = "Tipo de Documento (\"Resumen de Paciente\")"
@@ -79,7 +79,7 @@ El conjunto de datos IPS es mínimo y no exhaustivo; independiente de la especia
 * section ^short = "Secciones que componen el IPS"
 * section ^definition = "Las seccion es raíz que componen el documento IPS."
 * section.code 1.. MS
-* section.code only CodeableConceptIPS
+//* section.code only CodeableConcept
 * section.text 1.. MS
 * section.emptyReason ..0
 * section.emptyReason ^mustSupport = false

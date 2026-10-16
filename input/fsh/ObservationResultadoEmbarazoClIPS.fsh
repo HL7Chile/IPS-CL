@@ -16,7 +16,7 @@ Description: "Este perfil restringe el recurso Observation para representar un r
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
 * code MS
-* code only CodeableConceptIPS
+* code only CodeableConcept
 * code from PregnanciesSummaryUvIps (required)
 * code ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
 * code ^binding.extension.valueString = "Códigos de Observaciones"
