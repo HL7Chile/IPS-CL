@@ -27,7 +27,7 @@ publisher:
 #
 dependencies:
   hl7.fhir.cl.clcore: 1.9.4
-  hl7.fhir.uv.ips: current
+  hl7.fhir.uv.ips: 2.0.1
   #smart.who.int.icvp: 0.2.0
   #smart.who.int.pcmt: 0.1.0
   #smart.who.int.pcmt-vaxprequal: 0.2.0
@@ -99,7 +99,8 @@ pages:
 # http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
 #
 parameters:
-  ips-comparison: 2.0.0
+  auto-oid-root: 2.16.840.1.113883.2.22.40.13
+  ips-comparison: 2.0.1
   pin-canonicals: pin-multiples
   path-expansion-params: "Parameters-SNOMEDExpansionParameters.json"
 #   excludettl: true

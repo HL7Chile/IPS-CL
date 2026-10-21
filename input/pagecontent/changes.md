@@ -2,7 +2,7 @@
 
  - Se corrigen errores de la Guía y se disminuyen advertencias asociadas a los ejemplos
  - Se elimina vinculación directa con Inmunización de ICVP
-
+ - Se actualiza a la versión del IPS 2.0.1
 
 
 ### 0.5.0
