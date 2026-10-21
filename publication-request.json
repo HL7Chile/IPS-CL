@@ -7,6 +7,6 @@
     "status": "draft",
     "sequence": "STU3",
     "first": false,
-    "mode": "milestone",
+    "mode": "working",
     "fhirversion": "4.0.1"
 }
