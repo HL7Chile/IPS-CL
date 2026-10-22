@@ -39,6 +39,10 @@ Esta guía tiene como objetivo proporcionar una traducción y adaptación del In
 
 {% include cross-version-analysis.xhtml %}
 
+### Analisis de versiones cruzadas
+
+{% include expansion-params.xhtml %}
+
 ### Declaracion de propiedad intelectual
 
 {% include ip-statements.xhtml %}
