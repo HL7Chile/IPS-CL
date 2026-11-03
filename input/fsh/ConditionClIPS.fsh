@@ -75,10 +75,9 @@ Representación de un problema en el resumen internacional del paciente."
 * onset[x] MS
   * ^short = "Fecha, fecha y hora estimada o real."
 
-* onset[x] only dateTime or Period
+* onset[x] MS
+* onsetDateTime 0..1 MS
+// * onset[x] ^type[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+// * onset[x] ^type[=].extension.valueBoolean = true
 
-* onset[x] ^type[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* onset[x] ^type[=].extension.valueBoolean = true
-* onset[x] ^type[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* onset[x] ^type[=].extension.valueBoolean = false
 

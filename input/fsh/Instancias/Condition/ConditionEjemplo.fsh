@@ -27,6 +27,6 @@ Description: "Ejemplo de una condición que padece el paciente."
 
 * subject = Reference(PacienteClIpsEjemplo)
 
-* onsetPeriod.start = "2023-08-04" //periodo de inicio de la condicion
+* onsetDateTime = "2023-08-04" //periodo de inicio de la condicion
 
 * asserter = Reference(PrestadorMedInternaClIpsEjemplo)

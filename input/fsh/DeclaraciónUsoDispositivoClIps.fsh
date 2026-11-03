@@ -15,6 +15,8 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Devi
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #trial-use
 
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
+* ^extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips"
 
 * ^version = "0.1.0"
 * ^status = #active
@@ -30,8 +32,9 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Devi
 
 * timing[x] 1.. MS
 * timing[x] ^short = "Con qué frecuencia se utilizó el dispositivo"
-* timing[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
-* timing[x].extension[data-absent-reason] ^definition = "Proporciona una razón por la cual no se encuentra la frecuencia con la que se utilizó el dispositivo"
+// * timing[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
+// * timing[x].extension[data-absent-reason] ^definition = "Proporciona una razón por la cual no se encuentra la frecuencia con la que se utilizó el dispositivo"
+* timingDateTime 0..1 MS
 
 * device only Reference(Dispositivo-cl-ips)
 * device MS

@@ -14,6 +14,8 @@ Este perfil describe un dispositivo que desempeña el papel de observador o ejec
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #trial-use
 
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
+* ^extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-observer-uv-ips"
 
 //* ^version = "0.1.1"
 * ^status = #active

@@ -10,6 +10,9 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Devi
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #trial-use
 
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
+* ^extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips"
+
 //* ^version = "0.1.1"
 * ^status = #active
 * ^experimental = false
@@ -19,6 +22,10 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Devi
 //* . ^comment = "Este perfil aplica las reglas definidas por HL7 International para representar el UDI en el estándar FHIR, mediante el documento Dispositivos médicos y patrón de identificación única de dispositivos (UDI), versión 1"
 
 //* type only CodeableConcept
+
+* udiCarrier MS
+  * ^short = "Identificador único de dispositivo (UDI) en formato de código de barras o similar"
+
 * type MS
 * type from http://hl7.org/fhir/uv/ips/ValueSet/medical-devices-uv-ips (preferred)
 * type ^short = "Tipo de dispositivo."

@@ -10,6 +10,9 @@ Description: "Reporte resultado de un o varios estudios para diagnosticar una en
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #trial-use
 
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
+* ^extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips"
+
 //* ^version = "0.1.1"
 * ^publisher = "Hl7 Chile"
 * ^status = #active
@@ -17,7 +20,7 @@ Description: "Reporte resultado de un o varios estudios para diagnosticar una en
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
 * status 1..1 MS
-* status = #final
+
 * category 1..1 MS
 //* category only CodeableConcept
   * ^short = "Concepto - referencia a una terminología o sólo texto"
@@ -31,10 +34,11 @@ Description: "Reporte resultado de un o varios estudios para diagnosticar una en
 * subject only Reference(PacienteCLIps or Group) 
 * effective[x] 1..1 MS
   * ^short = "Tiempo o periodo de tiempo clínicamente relevante para el informe"
-* effective[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
-* effective[x].extension[data-absent-reason] ^short = "Motivo por el cual no se encuentra el dato"
-* effective[x].extension[data-absent-reason].value[x] from $VSdataabsentreason (required)
-* effective[x].extension[data-absent-reason].value[x] ^binding.description = "Es usado para especificar porque el elemento esperado  por algún motivo el dato no se encuentra"
+* effectiveDateTime 0..1 MS
+// * effective[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
+// * effective[x].extension[data-absent-reason] ^short = "Motivo por el cual no se encuentra el dato"
+// * effective[x].extension[data-absent-reason].value[x] from $VSdataabsentreason (required)
+// * effective[x].extension[data-absent-reason].value[x] ^binding.description = "Es usado para especificar porque el elemento esperado  por algún motivo el dato no se encuentra"
 
 * performer MS
   * ^short = "Servicio de Diagnóstico Responsable"
