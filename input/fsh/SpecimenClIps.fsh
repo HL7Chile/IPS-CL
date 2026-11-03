@@ -7,10 +7,10 @@ Description: "Muestra por la cual hicieron el estudio"
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 1
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
-* ^extension[=].valueCode = #draft
+* ^extension[=].valueCode = #trial-use
 
 * ^version = "0.1.0"
-* ^status = #draft
+* ^status = #active
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
 * type 1..1 MS

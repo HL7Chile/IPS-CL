@@ -13,11 +13,11 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Devi
 * ^extension[=].valueInteger = 1
 
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
-* ^extension[=].valueCode = #draft
+* ^extension[=].valueCode = #trial-use
 
 
 * ^version = "0.1.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 //* ^purpose = "Este perfil restringe la representación de una declaración sobre un dispositivo médico utilizado o implantado en el paciente, parte de la sección \"Dispositivos médicos\" del recurso Composición que representa el resumen internacional del paciente, según lo especificado por el proyecto IPS de HL7 Chile."

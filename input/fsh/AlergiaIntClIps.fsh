@@ -8,11 +8,11 @@ Description: "Este perfil restringe el recurso de Alergias e Intolerancias para 
 * ^extension[=].valueInteger = 1 //nivel de madurez del perfil dentro del estándar
 
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
-* ^extension[=].valueCode = #draft
+* ^extension[=].valueCode = #trial-use
 
 
 //* ^version = "0.1.1"
-* ^status = #draft
+* ^status = #active
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
 * extension contains $allergyintolerance-abatement named abatement 0..1

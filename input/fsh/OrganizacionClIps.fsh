@@ -8,10 +8,13 @@ Description: "Este perfil restringe el recurso Organización para representar a 
 * ^extension[=].valueInteger = 1
 
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
-* ^extension[=].valueCode = #draft
+* ^extension[=].valueCode = #trial-use
+
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
+* ^extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"
 
 //* ^version = "0.1.1"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 

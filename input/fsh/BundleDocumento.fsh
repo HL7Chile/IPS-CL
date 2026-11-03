@@ -10,11 +10,11 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
 * ^extension[=].valueInteger = 1
 
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
-* ^extension[=].valueCode = #draft
+* ^extension[=].valueCode = #trial-use
 
 
 //* ^version = "0.1.1"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 

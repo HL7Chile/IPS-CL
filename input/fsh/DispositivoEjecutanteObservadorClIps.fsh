@@ -12,11 +12,11 @@ Este perfil describe un dispositivo que desempeña el papel de observador o ejec
 * ^extension[=].valueInteger = 1
 
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
-* ^extension[=].valueCode = #draft
+* ^extension[=].valueCode = #trial-use
 
 
 //* ^version = "0.1.1"
-* ^status = #draft
+* ^status = #active
 * ^publisher = "Hl7 Chile"
 * ^contact.name = "Hl7 Chile"
 * ^contact.telecom.system = #url

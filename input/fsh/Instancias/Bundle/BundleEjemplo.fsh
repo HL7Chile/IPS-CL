@@ -72,7 +72,7 @@ Usage: #inline
 * relatesTo.code = #appends //este documento agrega informacion adicional al documento de destino
 
 //un OID es un identificador para estándares, en este caso FHIR. los 1ros numeros representan el país, el resto representa una institucion
-* relatesTo.targetIdentifier.system = ""https://hl7chile.cl/fhir/ig/clips/identifier" " //identificador ficticio; el OID 2.16.152.1 es del MINSAL, para identificar a Chile
+* relatesTo.targetIdentifier.system = "https://hl7chile.cl/fhir/ig/clips/identifier" //identificador ficticio; el OID 2.16.152.1 es del MINSAL, para identificar a Chile
 * relatesTo.targetIdentifier.value = "IPS-CL-2024-001"
 
 * section[0].title = "Medicamentos"

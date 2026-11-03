@@ -11,11 +11,11 @@ El conjunto de datos IPS es mínimo y no exhaustivo; independiente de la especia
 * ^extension[=].valueInteger = 1
 
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
-* ^extension[=].valueCode = #draft
+* ^extension[=].valueCode = #trial-use
 
 
 //* ^version = "0.1.1"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 * ^copyright = "HL7 International"
