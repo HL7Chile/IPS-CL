@@ -12,6 +12,8 @@ Este perfil representa las restricciones aplicadas al recurso Bundle por la Guí
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #trial-use
 
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
+* ^extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips"
 
 //* ^version = "0.1.1"
 * ^status = #active

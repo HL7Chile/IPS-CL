@@ -13,6 +13,8 @@ El conjunto de datos IPS es mínimo y no exhaustivo; independiente de la especia
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #trial-use
 
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
+* ^extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips"
 
 //* ^version = "0.1.1"
 * ^status = #active
