@@ -10,7 +10,10 @@ Description: "Resultados obtenidos para un examen de laboratorio"
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #trial-use
 
-* ^version = "0.1.0"
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
+* ^extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"
+
+//* ^version = "0.1.0"
 * ^publisher = "Hl7 Chile"
 * ^status = #active
 * ^experimental = false
@@ -45,12 +48,8 @@ Description: "Resultados obtenidos para un examen de laboratorio"
 
 * effective[x] 1..1 MS
 * effective[x] only dateTime or Period
-* effective[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
-* effective[x].extension[data-absent-reason] ^short = "Motivo por el cual no se encuentra el dato"
-* effective[x].extension[data-absent-reason].value[x] from $VSdataabsentreason (required)
-* effective[x].extension[data-absent-reason].value[x] ^binding.description = "Es usado para especificar porque el elemento esperado  por algún motivo el dato no se encuentra"
+* effectiveDateTime 0..1 MS
 
-* performer 1..* MS
 * performer only Reference(Prestador-cl-ips or RolPrestador-cl-ips or Organizacion-cl-ips or CareTeam or Paciente-cl-ips or RelatedPerson)
 
 * value[x] 1..1 MS

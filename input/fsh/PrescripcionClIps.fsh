@@ -8,13 +8,17 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Medi
 * ^extension[=].valueInteger = 1
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #trial-use
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
+* ^extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationRequest-uv-ips"
 
 
 //* ^version = "0.1.1"
 * ^status = #active
 * ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-
+* status 1..1 MS
+* intent 1..1 MS
+* doNotPerform 0..1 MS 
 * status ^comment = "En el alcance de IPS en \"entered-in-error\" no es aceptable"
 * medication[x] only CodeableConcept  or Reference(MedicamentoClIps)
 * medication[x] MS
@@ -37,6 +41,6 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Medi
 * dosageInstruction.route from MedicineRouteOfAdministrationUvIps (preferred)
 * dosageInstruction.route ^binding.description = "EDQM"
 * dosageInstruction.route ^short = "Concepto - referencia a una terminología o simplemente a un texto"
-* dispenseRequest.validityPeriod.extension contains DataAbsentReason named data-absent-reason 0..1
-* dispenseRequest.validityPeriod.extension[data-absent-reason] ^short = "razón de ausencia del periodo de validez"
-* dispenseRequest.validityPeriod.extension[data-absent-reason] ^definition = "Razón por la cual periodo de validez no se encuentra como dato."
+// * dispenseRequest.validityPeriod.extension contains DataAbsentReason named data-absent-reason 0..1
+// * dispenseRequest.validityPeriod.extension[data-absent-reason] ^short = "razón de ausencia del periodo de validez"
+// * dispenseRequest.validityPeriod.extension[data-absent-reason] ^definition = "Razón por la cual periodo de validez no se encuentra como dato."

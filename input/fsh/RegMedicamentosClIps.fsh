@@ -8,13 +8,16 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Medi
 * ^extension[=].valueInteger = 1
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #trial-use
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
+* ^extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips"
 
 //* ^version = "0.1.1"
 * ^status = #active
 * ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-
+* status 1..1 MS
 * status ^comment = "En IPS el alcance del proyecto impide el uso del concepto entered-in-error"
+* medication[x] 1..1 MS
 * medication[x] only CodeableConcept or Reference(Medicamento-cl-ips)
 * medication[x] MS
   * ^short = "Medicamento que está tomando"
@@ -28,9 +31,10 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Medi
   * ^short = "Referencia literal, interna o url absoluta"
 * effective[x] 1..1 MS
   * ^short = "La fecha/hora o el intervalo en que se toma/se tomó/se tomará la medicación"
-* effective[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
-* effective[x].extension[data-absent-reason] ^short = "effective[x] razón de no existencia"
-* effective[x].extension[data-absent-reason] ^definition = "Indica la razón por la cual la fecha no se encuentra registrada."
+* effectiveDateTime 0..1 MS
+//* effective[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
+// * effective[x].extension[data-absent-reason] ^short = "effective[x] razón de no existencia"
+// * effective[x].extension[data-absent-reason] ^definition = "Indica la razón por la cual la fecha no se encuentra registrada."
 * dosage MS
   * ^short = "Detalles de cómo se toma/se tomaba o debería tomarse la medicación"
 * dosage.text MS

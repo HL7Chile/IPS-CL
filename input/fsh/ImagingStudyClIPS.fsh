@@ -10,6 +10,9 @@ Description: "Estudio de imagenología realizado a un paciente, del cual se obti
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #trial-use
 
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
+* ^extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/StructureDefinition/ImagingStudy-uv-ips"
+
 //* ^version = "0.1.1"
 * ^status = #active
 * ^experimental = false
@@ -34,13 +37,13 @@ Description: "Estudio de imagenología realizado a un paciente, del cual se obti
 //* reasonCode only CodeableConcept
 * series MS
   * ^short = "Cada estudio tiene una o más series de instancias"
-  * uid MS
+  * uid 1..1 MS
     * ^short = "UID de instancia de serie DICOM para la serie"
-  * modality MS
+  * modality 1..1 MS
     * ^short = "La modalidad de las instancias de la serie"
   * instance MS
     * ^short = "Una única instancia de SOP de la serie"
-    * uid MS
+    * uid 1..1 MS
       * ^short = "UID de instancia de DICOM SOP"
-    * sopClass MS
+    * sopClass 1..1 MS
       * ^short = "Tipo de clase DICOM"

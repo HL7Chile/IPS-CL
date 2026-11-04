@@ -15,6 +15,9 @@ Flag se utiliza para transmitir información sobre una alerta específica de una
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #trial-use
 
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
+* ^extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips"
+
 //* ^version = "0.1.1"
 * ^status = #active
 * ^experimental = false
@@ -23,7 +26,7 @@ Flag se utiliza para transmitir información sobre una alerta específica de una
 
 * extension contains FlagPriority named flag-priority 0..1 MS
 
-* status = #active (exactly)
+* status = #active
 
 //* category only CodeableConcept
 * category MS
@@ -32,3 +35,9 @@ Flag se utiliza para transmitir información sobre una alerta específica de una
 //* code only CodeableConcept
 * code MS
   * ^short = "Concepto - referencia a una terminología o sólo texto"
+
+* subject only Reference(Paciente-cl-ips)
+* subject 1..1 MS
+  * ^short = "Paciente al que se aplica la alerta"
+  * reference 1..1 MS
+    * ^short = "Referencia literal, interna o url absoluta"

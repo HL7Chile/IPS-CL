@@ -13,6 +13,9 @@ Describe el evento de un paciente al que se le ha administrado una vacuna o un r
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #trial-use
 
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
+* ^extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips"
+
 
 //* ^version = "0.1.1"
 * ^status = #active
@@ -53,9 +56,11 @@ Describe el evento de un paciente al que se le ha administrado una vacuna o un r
 * patient MS
 * patient.reference 1.. MS
 * occurrence[x] 1..1 MS
-* occurrence[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
-* occurrence[x].extension[data-absent-reason] ^short = "occurrence[x] razón de la ausencia"
-* occurrence[x].extension[data-absent-reason] ^definition = "Razón por la cual existió ausencia."
+* occurrence[x] ^short = "Fecha y hora de la administración de la vacuna"
+* occurrenceDateTime 0..1 MS
+// * occurrence[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
+// * occurrence[x].extension[data-absent-reason] ^short = "occurrence[x] razón de la ausencia"
+// * occurrence[x].extension[data-absent-reason] ^definition = "Razón por la cual existió ausencia."
 //* site only CodeableConcept
 * site from SNOMEDCTBodyStructures (preferred)
 * site ^binding.extension[0].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
@@ -66,6 +71,10 @@ Describe el evento de un paciente al que se le ha administrado una vacuna o un r
 * route ^binding.extension[=].valueString = "ImmunizationRoute"
 * protocolApplied.targetDisease from VaccineTargetDiseasesUvIps (preferred)
 * protocolApplied.targetDisease ^binding.description = "La enfermedad o enfermedades concretas contra las que se ha inmunizado al paciente."
+
+* isSubpotent 0..1 MS
+* isSubpotent ^short = "Potencia de la dosis"
+
 /*
 * protocolApplied.targetDisease ^short = "Enfermedades prevenibles mediante vacunación"
 * protocolApplied.targetDisease ^definition = "La enfermedad concreta contra la que se ha inmunizado al paciente. Los enlaces de conformidad adicionales proporcionados para el uso de este elemento en contextos específicos (jurisdiccionales o de otro tipo) incluyen (estos enlaces se representan en la StructureDefinition como instancias de la extensión [elementdefinition-additionalBinding](http://hl7.org/fhir/tools/StructureDefinition/additional-binding)):\n[targetDiseases-uv-ips](http://hl7.org/fhir/uv/ips/ValueSet/target-diseases-uv-ips)"

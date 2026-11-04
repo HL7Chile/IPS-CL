@@ -9,7 +9,8 @@ Description:    "Este perfil restringe el recurso profesional para representar a
 
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #trial-use
-
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
+* ^extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/StructureDefinition/PractitionerRole-uv-ips"
 
 //* ^version = "0.1.1"
 * ^status = #active

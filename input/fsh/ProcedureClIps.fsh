@@ -8,6 +8,8 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Proc
 * ^extension[=].valueInteger = 1
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #trial-use
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
+* ^extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"
 
 //* ^version = "0.1.1"
 * ^status = #active
@@ -25,10 +27,8 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Proc
 * subject only Reference(Paciente-cl-ips)
 * performed[x] 1..1 MS
   * ^short = "Cuando se realizó el procedimiento"
-* performed[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
-* performed[x].extension[data-absent-reason] ^short = "effective[x] razón de no existencia"
-* performed[x].extension[data-absent-reason] ^definition = "Indica la razón por la cual la fecha no se encuentra registrada."
-
+* performed[x] only dateTime or Period or String or Age or Range
+* performedDateTime 0..1 MS
 * asserter only Reference(PacienteCl or RelatedPerson or PrestadorCL or CoreRolClinicoCl)
 * asserter ^short = "Persona que afirma este procedimiento"
 * performer

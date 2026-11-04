@@ -9,7 +9,8 @@ Description: "Este perfil restringe el recurso Observation para representar la f
 
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #trial-use
-
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
+* ^extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips"
 
 //* ^version = "0.1.1"
 * ^status = #active
@@ -20,8 +21,8 @@ Description: "Este perfil restringe el recurso Observation para representar la f
 * code only CodeableConcept
   * ^short = "Concepto que referencia a una terminología o un texto acorde"
 * code from http://hl7.org/fhir/uv/ips/ValueSet/edd-method-uv-ips (required)
-* code ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
-* code ^binding.extension.valueString = "Códigos de Observaciones"
+// * code ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
+// * code ^binding.extension.valueString = "Códigos de Observaciones"
 
 * subject 1.. MS
 * subject only Reference(Paciente-cl-ips)
@@ -30,8 +31,8 @@ Description: "Este perfil restringe el recurso Observation para representar la f
 
 * effective[x] 1.. MS
 * effective[x] only dateTime
-* effective[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
-* effective[x].extension[data-absent-reason] ^short = "Motivo por el cual no se encuentra el dato"
+// * effective[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
+// * effective[x].extension[data-absent-reason] ^short = "Motivo por el cual no se encuentra el dato"
 
 * value[x] 0..1 MS
   * ^short = "Resultado Actual"
@@ -39,20 +40,20 @@ Description: "Este perfil restringe el recurso Observation para representar la f
 * valueDateTime ^short = "Resultado Actual" 
 
 
-* bodySite ..0
+//* bodySite ..0
 //* bodySite ^mustSupport = false
 
-* method ..0
+//* method ..0
 //* method ^mustSupport = false
 
-* specimen ..0
+//* specimen ..0
 //* specimen ^mustSupport = false
 
-* device ..0
+//* device ..0
 //* device ^mustSupport = false
 
-* referenceRange ..0
+//* referenceRange ..0
 //* referenceRange ^mustSupport = false
 
-* component ..0
+//* component ..0
 //* component ^mustSupport = false

@@ -8,8 +8,10 @@ Description: "Muestra por la cual hicieron el estudio"
 * ^extension[=].valueInteger = 1
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #trial-use
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
+* ^extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips"
 
-* ^version = "0.1.0"
+
 * ^status = #active
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 

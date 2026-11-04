@@ -31,6 +31,7 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Devi
   * ^short = "Referencia literal, interna o url absoluta"
 
 * timing[x] 1.. MS
+* timing[x] only dateTime or Period
 * timing[x] ^short = "Con qué frecuencia se utilizó el dispositivo"
 // * timing[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
 // * timing[x].extension[data-absent-reason] ^definition = "Proporciona una razón por la cual no se encuentra la frecuencia con la que se utilizó el dispositivo"

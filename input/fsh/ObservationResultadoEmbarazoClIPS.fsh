@@ -10,16 +10,18 @@ Description: "Este perfil restringe el recurso Observation para representar un r
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #trial-use
 
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
+* ^extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-outcome-uv-ips"
+
 //* ^version = "0.1.1"
 * ^status = #active
 * ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
 * code MS
-* code only CodeableConcept
 * code from PregnanciesSummaryUvIps (required)
-* code ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
-* code ^binding.extension.valueString = "Códigos de Observaciones"
+// * code ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
+// * code ^binding.extension.valueString = "Códigos de Observaciones"
 
 * subject 1.. MS
 * subject only Reference(Paciente-cl-ips)
@@ -27,24 +29,24 @@ Description: "Este perfil restringe el recurso Observation para representar un r
 
 * effective[x] 1.. MS
 * effective[x] only dateTime
-* effective[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
-* effective[x].extension[data-absent-reason] ^short = "Motivo por el cual no se encuentra el dato"
+// * effective[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
+// * effective[x].extension[data-absent-reason] ^short = "Motivo por el cual no se encuentra el dato"
 
 * value[x] 0..1 MS
 //* valueQuantity only Quantity
 * valueQuantity ^short = "Una cantidad medida utilizando UCUM (Unified Code for Units of Measure)."
 
-* bodySite ..0
+//* bodySite ..0
 //* bodySite ^mustSupport = false
 
-* specimen ..0
+//* specimen ..0
 //* specimen ^mustSupport = false
 
-* device ..0
+//* device ..0
 //* device ^mustSupport = false
 
-* referenceRange ..0
+//* referenceRange ..0
 //* referenceRange ^mustSupport = false
 
-* component ..0
+//* component ..0
 //* component ^mustSupport = false

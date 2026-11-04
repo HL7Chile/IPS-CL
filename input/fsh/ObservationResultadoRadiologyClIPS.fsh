@@ -12,6 +12,9 @@ Description: "Resultados obtenidos para un examen imagenológico"
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #trial-use
 
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
+* ^extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips"
+
 //* ^version = "0.1.1"
 * ^status = #active
 * ^experimental = false
@@ -48,8 +51,7 @@ Description: "Resultados obtenidos para un examen imagenológico"
 * effective[x] 1..1 MS
 * effective[x] obeys ips-1
 * effective[x] only dateTime or Period
-* effective[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
-* effective[x].extension[data-absent-reason] ^short = "Motivo por el cual no se encuentra el dato"
+* effectiveDateTime 0..1 MS
 
 * performer 1..* MS
 * performer only Reference(Prestador-cl-ips or RolPrestador-cl-ips or Organizacion-cl-ips or CareTeam or Paciente-cl-ips or RelatedPerson)

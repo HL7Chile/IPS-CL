@@ -9,6 +9,9 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Medi
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #trial-use
 
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
+* ^extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/StructureDefinition/Medication-uv-ips"
+
 
 //* ^version = "0.1.1"
 * ^status = #active
@@ -41,6 +44,9 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Medi
 * code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 * code ^binding.description = "SNOMED CT medicamentos (Producto farmacéutico / biológico) o un código para medicamento ausente/desconocido"
 //* form only CodeableConcept
+* status MS
+* status ^short = "active | #inactive | #entered-in-error"
+* status ^binding.description = "un código que indica si el medicamento es actualmente activo, inactivo o ingresado por error"
 * form MS
 * form from MedicineDoseFormUvIps (preferred)
   * ^short = "Describe la forma del producto: Polvo, cápsula, comprimido, etc."

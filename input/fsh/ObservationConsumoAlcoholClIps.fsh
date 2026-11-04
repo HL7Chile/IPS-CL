@@ -10,6 +10,9 @@ Description: "Este perfil restringe el recurso Observation para representar la e
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #trial-use
 
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
+* ^extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips"
+
 //* ^version = "0.1.1"
 * ^status = #active
 * ^experimental = false
@@ -21,7 +24,7 @@ Description: "Este perfil restringe el recurso Observation para representar la e
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
-* category ^slicing.description = "Slicing para obligar el uso de una categoria de tipo: \"radiologia\""
+* category ^slicing.description = "Slicing para obligar el uso de una categoria de tipo: \"Historial Social\""
 * category ^slicing.ordered = false
 * category contains historialSocial 1..1 MS
 * category[historialSocial] = CategorySocialHistory
@@ -37,13 +40,12 @@ Description: "Este perfil restringe el recurso Observation para representar la e
 
 * effective[x] 1.. MS
 * effective[x] only dateTime
-* effective[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
-* effective[x].extension[data-absent-reason] ^short = "effective[x] absence reason"
+
 
 * valueQuantity 0..1
 * valueQuantity ^short = "Una cantidad medida utilizando UCUM (Unified Code for Units of Measure)."
 
-* component ..0
+
 //* component ^mustSupport = false
 
 Instance: CategorySocialHistory

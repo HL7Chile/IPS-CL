@@ -10,6 +10,9 @@ Description: "Este perfil restringe el recurso Observation para representar el e
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #trial-use
 
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile"
+* ^extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips"
+
 //* ^version = "0.1.1"
 * ^status = #active
 * ^experimental = false
@@ -25,8 +28,7 @@ Description: "Este perfil restringe el recurso Observation para representar el e
 
 * effective[x] 1.. MS
 * effective[x] only dateTime
-* effective[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
-* effective[x].extension[data-absent-reason] ^short = "Motivo por el cual no se encuentra el dato"
+
 
 * value[x]  0..1 MS
   * ^short = "Resultado Actual"
@@ -34,13 +36,13 @@ Description: "Este perfil restringe el recurso Observation para representar el e
   * ^short = "Concepto que referencia a una terminología o un texto acorde"
 * valueCodeableConcept from PregnancyStatusUvIps (preferred)
 
-* bodySite ..0
+//* bodySite ..0
 
-* specimen ..0
+//* specimen ..0
 
-* device ..0
+//* device ..0
 
-* referenceRange ..0
+//* referenceRange ..0
 
 * hasMember only Reference(Observation-embarazo-fecha-estimada-de-parto-cl-ips)
 * hasMember MS
@@ -48,4 +50,4 @@ Description: "Este perfil restringe el recurso Observation para representar el e
 * hasMember.reference 1.. MS
   * ^short = "Referencia literal, interna o url absoluta"
 
-* component ..0
+//* component ..0
