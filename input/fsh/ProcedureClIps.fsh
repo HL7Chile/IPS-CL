@@ -27,7 +27,7 @@ Description: "Este perfil representa las restricciones aplicadas al recurso Proc
 * subject only Reference(Paciente-cl-ips)
 * performed[x] 1..1 MS
   * ^short = "Cuando se realizó el procedimiento"
-* performed[x] only dateTime or Period or String or Age or Range
+* performed[x] only dateTime or Period or string or Age or Range
 * performedDateTime 0..1 MS
 * asserter only Reference(PacienteCl or RelatedPerson or PrestadorCL or CoreRolClinicoCl)
 * asserter ^short = "Persona que afirma este procedimiento"
