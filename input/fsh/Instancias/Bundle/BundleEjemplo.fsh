@@ -292,7 +292,7 @@ Usage: #inline
 
 * patient = Reference(urn:uuid:a4104fff-1237-4cc4-8b7e-6c4c235f282a) //Para quien es la prescripción de medicacion
 
-* onsetDateTime = "2005"
+* onsetDateTime = "2015"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
