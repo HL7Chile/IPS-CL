@@ -17,8 +17,7 @@ Description: "Ejemplo sobre la declaración de uso de medicación del paciente."
 
 * subject = Reference(PacienteClIpsEjemplo)
 
-* effectivePeriod.start = "2019-02-04"
-* effectivePeriod.end = "2019-02-07"
+* effectiveDateTime = "2019-02-04"
 
 * dosage.text = "Administrar 500 mg/día"
 * dosage.timing.repeat.frequency = 1 //con que frecuencia ocurre el evento: el tratamiento es una vez

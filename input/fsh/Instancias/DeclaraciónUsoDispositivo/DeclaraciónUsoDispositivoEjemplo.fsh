@@ -11,8 +11,7 @@ Description: "Ejemplo sobre la declaración de uso de un dispositivo médico"
 
 * subject = Reference(PacienteClIpsEjemplo)
 
-* timingPeriod.start = "2022-12-20" //Fecha en las que se uso el dispositivo
-* timingPeriod.end = "2023-04-03"
+* timingDateTime = "2022-12-20" //Fecha en las que se uso el dispositivo"2023-04-03"
 
 * device = Reference(Dispositivo-CL-Ejemplo)
 

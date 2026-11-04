@@ -232,8 +232,7 @@ Usage: #inline
 
 * subject = Reference(urn:uuid:a4104fff-1237-4cc4-8b7e-6c4c235f282a)
 
-* effectivePeriod.start = "2019-02-04"
-* effectivePeriod.end = "2019-02-07"
+* effectiveDateTime = "2019-02-04"
 
 * dosage.text = "Administrar 500 mg/día"
 * dosage.timing.repeat.frequency = 1 //con que frecuencia ocurre el evento: el tratamiento es una vez
@@ -293,10 +292,8 @@ Usage: #inline
 
 * patient = Reference(urn:uuid:a4104fff-1237-4cc4-8b7e-6c4c235f282a) //Para quien es la prescripción de medicacion
 
-* onsetAge.value = 11
-* onsetAge.system = ucum
-* onsetAge.code = #a
-* onsetAge.unit = "años"
+* onsetDateTime = "2005"
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 Instance: fd5676b3-0011-49a3-9c21-d1bd8458f350
@@ -319,4 +316,4 @@ Usage: #inline
 
 * subject = Reference(urn:uuid:a4104fff-1237-4cc4-8b7e-6c4c235f282a)
 
-* onsetPeriod.start = "2023-08-04" //periodo de inicio de la condicion
+* onsetDateTime = "2023-08-04" //periodo de inicio de la condicion
